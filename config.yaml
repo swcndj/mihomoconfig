@@ -1,0 +1,326 @@
+# ======================================== 全局配置 ========================================
+mixed-port: 7890
+tproxy-port: 7893
+ipv6: false
+allow-lan: true
+log-level: warning
+unified-delay: true
+tcp-concurrent: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+external-controller: 0.0.0.0:9090
+external-ui: ui
+external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
+
+geodata-mode: true
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+  geoip: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@releauise/geosite.dat"
+  mmdb: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+  asn: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb"
+# ======================================== DNS ========================================
+dns:
+  enable: true
+  cache-algorithm: arc
+  prefer-h3: false
+  respect-rules: true
+  listen: 0.0.0.0:1053
+  ipv6: false
+  enhanced-mode: redir-host
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver-policy:
+    'rule-set:AWAvenue-Ads,category-ads-all': rcode://success
+    'rule-set:cloudflare,github,youtube,google,netflix,telegram,twitter,category-ai-!cn,geolocation-!cn':
+    - https://cloudflare-dns.com/dns-query#disable-ipv6=true
+    - https://dns.google/dns-query#disable-ipv6=true
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+# ======================================== 域名嗅探 ========================================
+sniffer:
+  enable: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  skip-domain:
+    - "Mijia Cloud"
+    - "+.push.apple.com"
+# ======================================== Tun模式 ========================================
+tun:
+  enable: false
+  stack: mixed
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+# ======================================== 代理集合 ========================================
+proxy-providers:
+  mergenodes:
+    type: http
+    url: "https://cdn.jsdelivr.net/gh/swcndj/mihomoconfig@main/nodes.yaml"
+    interval: 21600
+    path: ./providers/mergenodes.yaml
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+# ======================================== 代理组 ========================================
+proxy-groups:
+  - name: "自动选择"
+    type: url-test
+    tolerance: 50
+    default-selected: hysteria2
+    disable-udp: false
+    include-all-providers: true
+  - name: "负载均衡"
+    type: load-balance
+    strategy: consistent-hashing
+    default-selected: hysteria2
+    disable-udp: false
+    include-all-providers: true
+# ======================================== 规则订阅 ========================================
+rule-providers:
+  ip_private:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs"
+    path: ./rules/ip_private.mrs
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+  private:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"
+    path: ./rules/private.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  AWAvenue-Ads:
+    type: http
+    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.mrs"
+    path: ./rules/AWAvenue-Ads.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  category-ads-all:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs"
+    path: ./rules/category-ads-all.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  youtube:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"
+    path: ./rules/youtube.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  google:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"
+    path: ./rules/google.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  onedrive:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/onedrive.mrs"
+    path: ./rules/onedrive.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  microsoft@cn:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft@cn.mrs"
+    path: ./rules/microsoft@cn.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  github:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"
+    path: ./rules/github.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  microsoft:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"
+    path: ./rules/microsoft.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  netflix:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"
+    path: ./rules/netflix.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  telegram:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"
+    path: ./rules/telegram.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  twitter:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.mrs"
+    path: ./rules/twitter.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  category-ai-!cn:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs"
+    path: ./rules/category-ai-!cn.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  category-games@cn:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-games@cn.mrs"
+    path: ./rules/category-games@cn.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  category-game-platforms-download@cn:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-game-platforms-download@cn.mrs"
+    path: ./rules/category-game-platforms-download@cn.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  apple:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.mrs"
+    path: ./rules/apple.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  cloudflare:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cloudflare.mrs"
+    path: ./rules/cloudflare.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  tracker:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tracker.mrs"
+    path: ./rules/tracker.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  cn:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"
+    path: ./rules/cn.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  geolocation-!cn:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"
+    path: ./rules/geolocation-!cn.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  ip_google:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"
+    path: ./rules/ip_google.mrs
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+  ip_netflix:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs"
+    path: ./rules/ip_netflix.mrs
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+  ip_telegram:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"
+    path: ./rules/ip_telegram.mrs
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+  ip_twitter:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/twitter.mrs"
+    path: ./rules/ip_twitter.mrs
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+  ip_cloudflare:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cloudflare.mrs"
+    path: ./rules/ip_cloudflare.mrs
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+  ip_cn:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"
+    path: ./rules/ip_cn.mrs
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+# ======================================== 路由规则 ========================================
+rules:
+  # 广告拒绝
+  - RULE-SET,AWAvenue-Ads,REJECT
+  - RULE-SET,category-ads-all,REJECT
+  # 私有域名和IP直连
+  - RULE-SET,private,DIRECT
+  - RULE-SET,ip_private,DIRECT,no-resolve
+  # 国外域名分流
+  - RULE-SET,cloudflare,自动选择
+  - RULE-SET,github,自动选择
+  - RULE-SET,youtube,自动选择
+  - RULE-SET,google,自动选择
+  - RULE-SET,netflix,自动选择
+  - RULE-SET,telegram,自动选择
+  - RULE-SET,twitter,自动选择
+  - RULE-SET,category-ai-!cn,自动选择
+  - RULE-SET,category-games@cn,DIRECT
+  - RULE-SET,category-game-platforms-download@cn,DIRECT
+  - RULE-SET,onedrive,DIRECT
+  - RULE-SET,microsoft,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,tracker,DIRECT
+  # 国内域名直连
+  - DOMAIN-SUFFIX,loz.dpdns.org,DIRECT
+  - DOMAIN-SUFFIX,gamer520.com,DIRECT
+  - RULE-SET,cn,DIRECT
+  # 国外域名兜底代理
+  - RULE-SET,geolocation-!cn,自动选择
+  # 国外IP分流
+  - RULE-SET,ip_cloudflare,自动选择,no-resolve
+  - RULE-SET,ip_google,自动选择,no-resolve
+  - RULE-SET,ip_netflix,自动选择,no-resolve
+  - RULE-SET,ip_telegram,自动选择,no-resolve
+  - RULE-SET,ip_twitter,自动选择,no-resolve
+  # 国内IP直连
+  - RULE-SET,ip_cn,DIRECT,no-resolve
+  # 兜底
+  - MATCH,自动选择
