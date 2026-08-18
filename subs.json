@@ -1,13 +1,13 @@
 [
-  "https://raw.githubusercontent.com/free-nodes/clashfree/main/sub.yml",
-  "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.meta.yml",
-  "https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml",
-  "https://raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/feat/ai-crawler-v2/nodes/merged.yaml",
-  "https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash",
-  "https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml",
-  "https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml",
-  "https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml",
-  "https://fastly.jsdelivr.net/gh/dongchengjie/airport@main/subs/merged/tested_within.yaml",
-  "https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml",
-  "https://raw.githubusercontent.com/zhuhaiauk/free-nodes/main/clash_config.yaml"
+  "https://cdn.jsdelivr.net/gh/free-nodes/clashfree@main/sub.yml",
+  "https://cdn.jsdelivr.net/gh/chengaopan/AutoMergePublicNodes@master/list.meta.yml",
+  "https://cdn.jsdelivr.net/gh/free18/v2ray@main/c.yaml",
+  "https://cdn.jsdelivr.net/gh/Barabama/FreeNodes@feat/ai-crawler-v2/nodes/merged.yaml",
+  "https://cdn.jsdelivr.net/gh/ripaojiedian/freenode@main/clash",
+  "https://cdn.jsdelivr.net/gh/snakem982/proxypool@main/source/clash-meta-2.yaml",
+  "https://cdn.jsdelivr.net/gh/PuddinCat/BestClash@main/proxies.yaml",
+  "https://cdn.jsdelivr.net/gh/shaoyouvip/free@main/all.yaml",
+  "https://cdn.jsdelivr.net/gh/dongchengjie/airport@main/subs/merged/tested_within.yaml",
+  "https://cdn.jsdelivr.net/gh/ovmvo/FreeSub@main/sub/permanent/mihomo.yaml",
+  "https://cdn.jsdelivr.net/gh/zhuhaiuk/free-nodes@main/clash_config.yaml"
 ]
