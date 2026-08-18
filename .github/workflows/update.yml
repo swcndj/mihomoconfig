@@ -1,0 +1,25 @@
+name: Merge Nodes
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install deps
+        run: npm install yaml node-fetch
+      - name: Run merge script
+        run: node merge.js
+      - name: Commit & Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add nodes.yaml
+          git commit -m "Auto update nodes.yaml" || echo "No change"
+          git push
