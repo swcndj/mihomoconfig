@@ -20,9 +20,6 @@ const REQUEST_TIMEOUT = 15000;
 
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
-/**
- * 带超时请求
- */
 async function fetchWithTimeout(url) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT);
@@ -34,16 +31,10 @@ async function fetchWithTimeout(url) {
   }
 }
 
-/**
- * 深度清洗对象（消除 yaml 内部标记）
- */
 function cleanProxyObj(obj) {
   return JSON.parse(JSON.stringify(obj));
 }
 
-/**
- * 计算节点指纹（去重依据）
- */
 function getFingerprint(p) {
   const type = p.type.toLowerCase();
   if (type === 'vless' && p['reality-opts']?.['public-key']) {
@@ -56,7 +47,6 @@ function getFingerprint(p) {
 (async function main() {
   console.log(`===== 开始处理，共 ${SUBS.length} 个订阅 =====\n`);
 
-  // 存放所有通过类型过滤 + 地区匹配的候选节点（未去重、未重命名）
   const allCandidates = [];
 
   for (let i = 0; i < SUBS.length; i++) {
@@ -84,14 +74,21 @@ function getFingerprint(p) {
       }
       console.log(`  📥 原始节点数：${rawProxies.length}`);
 
-      // 1. 类型过滤
+      // ========== 类型过滤（含 vless 特殊过滤：仅检查 reality-opts 存在） ==========
       const typeFiltered = rawProxies.filter(p => {
         if (!p || !p.type) return false;
-        return !SKIP_TYPES.has(p.type.toLowerCase());
+        const typeLower = p.type.toLowerCase();
+        // 1. 排除指定类型
+        if (SKIP_TYPES.has(typeLower)) return false;
+        // 2. 如果是 vless，必须存在 reality-opts 字段（不再检查内部属性）
+        if (typeLower === 'vless') {
+          return p['reality-opts'] != null;   // 👈 简化条件
+        }
+        return true;
       });
-      console.log(`  🔍 类型过滤后：${typeFiltered.length}`);
+      console.log(`  🔍 类型过滤后（vless 仅保留有 reality-opts 的）：${typeFiltered.length}`);
 
-      // 2. 地区匹配（仅筛选，不重命名）
+      // 地区匹配（筛选）
       let matchedCount = 0;
       for (const rawP of typeFiltered) {
         const p = cleanProxyObj(rawP);
@@ -100,7 +97,6 @@ function getFingerprint(p) {
         const hit = REGION_RULES.find(r => r.reg.test(p.name));
         if (!hit) continue;
 
-        // 暂存原始名称（保留给后续重命名用）
         allCandidates.push(p);
         matchedCount++;
       }
@@ -127,13 +123,12 @@ function getFingerprint(p) {
   const regionCounter = {};
   for (const p of uniqueProxies) {
     const hit = REGION_RULES.find(r => r.reg.test(p.name));
-    if (!hit) continue; // 理论上都有
+    if (!hit) continue;
     regionCounter[hit.name] = (regionCounter[hit.name] || 0) + 1;
     const seq = String(regionCounter[hit.name]).padStart(2, "0");
     p.name = `${hit.flag} ${hit.name} ${seq} | ${p.type}`;
   }
 
-  // 输出统计
   console.log('\n===== 处理完成 =====');
   console.log(`总有效节点数（去重后）：${uniqueProxies.length}`);
   console.log('各地区数量：');
@@ -141,7 +136,6 @@ function getFingerprint(p) {
     console.log(`  ${name}：${count}`);
   }
 
-  // 生成 YAML
   const outputDoc = new yaml.Document();
   outputDoc.set("proxies", uniqueProxies);
   const outputYaml = outputDoc.toString({
