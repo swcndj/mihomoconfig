@@ -73,7 +73,7 @@ tun:
 proxy-providers:
   mergenodes:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/swcndj/mihomoconfig@main/nodes.yaml"
+    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/nodes.yaml"
     interval: 10800
     path: ./providers/mergenodes.yaml
     health-check:
