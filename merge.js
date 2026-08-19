@@ -1,4 +1,3 @@
-
 const fs = require('fs');
 const yaml = require('yaml');
 
@@ -71,7 +70,7 @@ function cleanProxyObj(obj) {
       } else if (doc && Array.isArray(doc.proxies)) {
         rawProxies = doc.proxies;
       } else {
-        console.log(`  ⚠️  未找到 proxies 数组，跳过`);
+        console.log(`  ⚠️ 未找到 proxies 数组，跳过`);
         continue;
       }
       console.log(`  📥 原始节点数：${rawProxies.length}`);
@@ -100,7 +99,7 @@ function cleanProxyObj(obj) {
         // 同地区自增编号
         regionCounter[hit.name] = (regionCounter[hit.name] || 0) + 1;
         const seq = String(regionCounter[hit.name]).padStart(2, "0");
-        p.name = `${hit.flag} ${hit.name} #${seq} | ${p.type}`;
+        p.name = `${hit.flag} ${hit.name} ${seq} | ${p.type}`;
 
         allProxies.push(p);
         validCount++;
