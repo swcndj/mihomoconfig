@@ -91,8 +91,15 @@ function cleanProxyObj(obj) {
         const hit = REGION_RULES.find(r => r.reg.test(p.name));
         if (!hit) continue;
 
-        // server+port 去重
-        const fp = `${p.server}:${p.port}`;
+        // 复合指纹去重
+        let fp;
+        if(p.type.toLowerCase() === 'vless' && p['reality-opts']?.['public-key']){
+          // vless‑reality：以type+server+uuid+public‑key作为重复依据，忽略port
+          fp = `${p.type}|${p.server}|${p.uuid}|${p['reality-opts']['public-key']}`;
+        }else{
+          // 其余协议：type + server + port
+          fp = `${p.type}|${p.server}|${p.port}`;
+        }
         if (seen.has(fp)) continue;
         seen.add(fp);
 
