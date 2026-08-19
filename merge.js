@@ -2,7 +2,6 @@ const fs = require('fs');
 const yaml = require('yaml');
 
 // ========== 配置区 ==========
-// 地区匹配规则：国旗 + 中文 + 大小写缩写
 const REGION_RULES = [
   { reg: /香港|HK|HKG|hk|🇭🇰/, flag: "🇭🇰", name: "香港" },
   { reg: /台湾|TW|tw|🇹🇼/, flag: "🇹🇼", name: "台湾" },
@@ -12,21 +11,17 @@ const REGION_RULES = [
   { reg: /韩国|KR|KOR|kr|🇰🇷/, flag: "🇰🇷", name: "韩国" },
 ];
 
-// 排除的节点类型：只排除策略组和非代理协议，主流代理协议全部保留
 const SKIP_TYPES = new Set(["http","socks5","ss","ssr","snell","vmess","trojan","hysteria","wireguard","tailscale","ssh","openvpn"]);
 
 const SUBS = JSON.parse(fs.readFileSync("./subs.json", "utf8"));
 const OUTPUT_FILE = "nodes.yaml";
-const REQUEST_TIMEOUT = 15000; // 单个订阅超时时间（毫秒）
+const REQUEST_TIMEOUT = 15000;
 // ========================================================
 
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
-const regionCounter = {};
-const seen = new Set();
-let allProxies = [];
 
 /**
- * 带超时的请求，兼容 node-fetch v3
+ * 带超时请求
  */
 async function fetchWithTimeout(url) {
   const controller = new AbortController();
@@ -40,14 +35,29 @@ async function fetchWithTimeout(url) {
 }
 
 /**
- * 深度清洗对象：消除 yaml 内部特殊标记，根治输出乱 "-" 问题
+ * 深度清洗对象（消除 yaml 内部标记）
  */
 function cleanProxyObj(obj) {
   return JSON.parse(JSON.stringify(obj));
 }
 
+/**
+ * 计算节点指纹（去重依据）
+ */
+function getFingerprint(p) {
+  const type = p.type.toLowerCase();
+  if (type === 'vless' && p['reality-opts']?.['public-key']) {
+    return `${type}|${p.server}|${p.uuid}|${p['reality-opts']['public-key']}`;
+  } else {
+    return `${type}|${p.server}|${p.port}`;
+  }
+}
+
 (async function main() {
   console.log(`===== 开始处理，共 ${SUBS.length} 个订阅 =====\n`);
+
+  // 存放所有通过类型过滤 + 地区匹配的候选节点（未去重、未重命名）
+  const allCandidates = [];
 
   for (let i = 0; i < SUBS.length; i++) {
     const subUrl = SUBS[i];
@@ -63,7 +73,6 @@ function cleanProxyObj(obj) {
       const text = await res.text();
       const doc = yaml.parse(text);
 
-      // 兼容两种格式：完整配置（有proxies字段） / 纯节点数组
       let rawProxies = [];
       if (Array.isArray(doc)) {
         rawProxies = doc;
@@ -75,15 +84,15 @@ function cleanProxyObj(obj) {
       }
       console.log(`  📥 原始节点数：${rawProxies.length}`);
 
-      // 第一步：类型过滤
+      // 1. 类型过滤
       const typeFiltered = rawProxies.filter(p => {
         if (!p || !p.type) return false;
         return !SKIP_TYPES.has(p.type.toLowerCase());
       });
       console.log(`  🔍 类型过滤后：${typeFiltered.length}`);
 
-      // 第二步：地区匹配 + 去重 + 重命名
-      let validCount = 0;
+      // 2. 地区匹配（仅筛选，不重命名）
+      let matchedCount = 0;
       for (const rawP of typeFiltered) {
         const p = cleanProxyObj(rawP);
         if (!p.name || !p.server || !p.port) continue;
@@ -91,44 +100,50 @@ function cleanProxyObj(obj) {
         const hit = REGION_RULES.find(r => r.reg.test(p.name));
         if (!hit) continue;
 
-        // 复合指纹去重
-        let fp;
-        if(p.type.toLowerCase() === 'vless' && p['reality-opts']?.['public-key']){
-          // vless‑reality：以type+server+uuid+public‑key作为重复依据，忽略port
-          fp = `${p.type}|${p.server}|${p.uuid}|${p['reality-opts']['public-key']}`;
-        }else{
-          // 其余协议：type + server + port
-          fp = `${p.type}|${p.server}|${p.port}`;
-        }
-        if (seen.has(fp)) continue;
-        seen.add(fp);
-
-        // 同地区自增编号
-        regionCounter[hit.name] = (regionCounter[hit.name] || 0) + 1;
-        const seq = String(regionCounter[hit.name]).padStart(2, "0");
-        p.name = `${hit.flag} ${hit.name} ${seq} | ${p.type}`;
-
-        allProxies.push(p);
-        validCount++;
+        // 暂存原始名称（保留给后续重命名用）
+        allCandidates.push(p);
+        matchedCount++;
       }
-      console.log(`  ✅ 地区匹配有效节点：${validCount}\n`);
+      console.log(`  ✅ 地区匹配候选节点数：${matchedCount}\n`);
 
     } catch (e) {
       console.log(`  ❌ 处理失败：${e.message}\n`);
     }
   }
 
+  // ========== 全局去重 ==========
+  const seen = new Set();
+  const uniqueProxies = [];
+  for (const p of allCandidates) {
+    const fp = getFingerprint(p);
+    if (seen.has(fp)) continue;
+    seen.add(fp);
+    uniqueProxies.push(p);
+  }
+  console.log(`\n全局候选节点总数：${allCandidates.length}`);
+  console.log(`去重后节点数：${uniqueProxies.length}`);
+
+  // ========== 统一重命名 ==========
+  const regionCounter = {};
+  for (const p of uniqueProxies) {
+    const hit = REGION_RULES.find(r => r.reg.test(p.name));
+    if (!hit) continue; // 理论上都有
+    regionCounter[hit.name] = (regionCounter[hit.name] || 0) + 1;
+    const seq = String(regionCounter[hit.name]).padStart(2, "0");
+    p.name = `${hit.flag} ${hit.name} ${seq} | ${p.type}`;
+  }
+
   // 输出统计
-  console.log('===== 处理完成 =====');
-  console.log(`总有效节点数：${allProxies.length}`);
+  console.log('\n===== 处理完成 =====');
+  console.log(`总有效节点数（去重后）：${uniqueProxies.length}`);
   console.log('各地区数量：');
   for (const [name, count] of Object.entries(regionCounter)) {
     console.log(`  ${name}：${count}`);
   }
 
-  // 生成标准 yaml，强制块模式，禁用流式大括号
+  // 生成 YAML
   const outputDoc = new yaml.Document();
-  outputDoc.set("proxies", allProxies);
+  outputDoc.set("proxies", uniqueProxies);
   const outputYaml = outputDoc.toString({
     indent: 2,
     flow: false,
