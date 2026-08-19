@@ -74,7 +74,7 @@ proxy-providers:
   mergenodes:
     type: http
     url: "https://cdn.jsdelivr.net/gh/swcndj/mihomoconfig@main/nodes.yaml"
-    interval: 21600
+    interval: 10800
     path: ./providers/mergenodes.yaml
     health-check:
       enable: true
