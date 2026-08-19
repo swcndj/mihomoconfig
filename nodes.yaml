@@ -921,34 +921,14 @@ proxies:
     client-fingerprint: chrome
     network: tcp
     udp: true
-  - down: ""
-    fingerprint: ""
-    name: 🇸🇬 新加坡 17 | hysteria2
-    obfs: ""
-    obfs-password: ""
-    password: 1427eb10-7529-4d38-a6a2-01b337868b37
-    port: "4466"
-    server: 140.99.130.34
-    skip-cert-verify: true
-    sni: sg3.xiaoliyu.cyou
-    type: hysteria2
-    up: ""
-  - client-fingerprint: ios
-    encryption: none
-    flow: xtls-rprx-vision
-    name: 🇸🇬 新加坡 18 | vless
-    network: raw
-    port: "443"
-    reality-opts:
-      public-key: XWq8LYWB6VK_m3a4274NwasY4sLv8yFComcZjvfBNiw
-      short-id: 37f4c87d
-    server: cloudgp-sgp-a.outleft-hy.xyz
-    servername: www.apple.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: 929c5ce8-222b-4d93-a80f-9ed580e2e8c1
-    xudp: true
+  - multiplexing: MULTIPLEXING_LOW
+    name: 🇺🇸 美国 44 | mieru
+    password: dongtaiwang.com
+    port: 34567
+    server: 157.254.223.44
+    transport: TCP
+    type: mieru
+    username: dongtaiwang.com
   - name: 🇭🇰 香港 10 | hysteria2
     type: hysteria2
     server: 202.146.222.174
@@ -1285,7 +1265,7 @@ proxies:
     tls: true
     udp: true
     uuid: cdb7d825-9892-4d6f-80b8-7add83159dac
-  - name: 🇺🇸 美国 44 | hysteria2
+  - name: 🇺🇸 美国 45 | hysteria2
     type: hysteria2
     server: hy2.123266.xyz
     port: 33333
@@ -1293,7 +1273,7 @@ proxies:
     skip-cert-verify: true
     sni: hy2.123266.xyz
     tfo: false
-  - name: 🇺🇸 美国 45 | hysteria2
+  - name: 🇺🇸 美国 46 | hysteria2
     type: hysteria2
     server: 185.106.96.231
     port: 443
@@ -1301,7 +1281,7 @@ proxies:
     skip-cert-verify: false
     sni: s559.ccgfw.top
     tfo: false
-  - name: 🇺🇸 美国 46 | hysteria2
+  - name: 🇺🇸 美国 47 | hysteria2
     type: hysteria2
     server: wuhantravel.duckdns.org
     port: 8443
@@ -1310,7 +1290,7 @@ proxies:
     password: MySecurePassword123
     sni: wuhantravel.duckdns.org
     udp: true
-  - name: 🇺🇸 美国 47 | hysteria2
+  - name: 🇺🇸 美国 48 | hysteria2
     type: hysteria2
     server: hy2-new.aspidnet.xyz
     port: 443
@@ -1320,7 +1300,7 @@ proxies:
     skip-cert-verify: true
     sni: hy2-new.aspidnet.xyz
     tfo: false
-  - name: 🇺🇸 美国 48 | hysteria2
+  - name: 🇺🇸 美国 49 | hysteria2
     type: hysteria2
     server: 161.104.88.46
     port: 443
@@ -1328,14 +1308,6 @@ proxies:
     skip-cert-verify: true
     sni: k71530.w-mebel.pro
     tfo: false
-  - name: 🇺🇸 美国 49 | mieru
-    type: mieru
-    server: 157.254.223.44
-    port: 34567
-    multiplexing: MULTIPLEXING_LOW
-    password: dongtaiwang.com
-    transport: TCP
-    username: dongtaiwang.com
   - name: 🇺🇸 美国 50 | vless
     type: vless
     server: 64.23.143.23
@@ -1643,16 +1615,68 @@ proxies:
     udp: true
     uuid: 43a13764-23dd-4e01-8b79-cde8a16e13ce
     servername: www.cloudflare.com
-  - name: 🇭🇰 香港 25 | hysteria2
-    password: 1427eb10-7529-4d38-a6a2-01b337868b37
-    port: 4433
-    server: hk2.xiaoliyu.cyou
+  - down: ""
+    fingerprint: ""
+    name: 🇯🇵 日本 14 | hysteria2
+    obfs: ""
+    obfs-password: ""
+    password: 6c077487-06af-4fb1-9e46-d485d98f0a31
+    port: 52454
+    server: 45.88.43.116
     skip-cert-verify: true
+    sni: www.bing.com
     type: hysteria2
-    sni: hk2.xiaoliyu.cyou
+    up: ""
+  - down: ""
+    fingerprint: ""
+    name: 🇸🇬 新加坡 17 | hysteria2
+    obfs: ""
+    obfs-password: ""
+    password: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
+    port: 4466
+    server: 140.99.130.34
+    skip-cert-verify: true
+    sni: sg3.xiaoliyu.cyou
+    type: hysteria2
+    up: ""
+  - down: ""
+    fingerprint: ""
+    name: 🇸🇬 新加坡 18 | hysteria2
+    obfs: ""
+    obfs-password: ""
+    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+    port: 443
+    server: 18.141.233.65
+    skip-cert-verify: true
+    sni: vpn-sg-001.fastervpn.world
+    type: hysteria2
+    up: ""
+  - alpn:
+      - h3
+    congestion-controller: cubic
+    disable-sni: false
+    name: 🇺🇸 美国 66 | tuic
+    password: 402df54f-d686-4785-b5da-14ed5f257860
+    port: 32910
+    reduce-rtt: true
+    request-timeout: 8000
+    server: tissues-balloons.tun.ply.gg
+    skip-cert-verify: true
+    sni: tissues-balloons.tun.ply.gg
+    type: tuic
+    udp-relay-mode: native
+    uuid: 402df54f-d686-4785-b5da-14ed5f257860
+    version: 5
+  - name: 🇰🇷 韩国 10 | anytls
+    password: 12f89940-c542-4356-9270-01954caf721a
+    port: 40042
+    server: kr2.catzl.top
+    type: anytls
+    udp: true
+    sni: kr2.catzl.top
   - auth: fa66f1e6-b12e-4f21-8597-1ad4dd7654b1
     down: 100 Mbps
-    name: 🇺🇸 美国 66 | hysteria2
+    name: 🇺🇸 美国 67 | hysteria2
     password: fa66f1e6-b12e-4f21-8597-1ad4dd7654b1
     port: 32926
     server: tissues-halls.tun.ply.gg
@@ -1661,15 +1685,37 @@ proxies:
     type: hysteria2
     udp: true
     up: 100 Mbps
+  - name: 🇹🇼 台湾 03 | anytls
+    password: 12f89940-c542-4356-9270-01954caf721a
+    port: 40072
+    server: tw2.catzl.top
+    type: anytls
+    udp: true
+    sni: tw2.catzl.top
+  - name: 🇺🇸 美国 68 | anytls
+    password: 12f89940-c542-4356-9270-01954caf721a
+    port: 40022
+    server: us2.catzl.top
+    type: anytls
+    udp: true
+    sni: us2.catzl.top
+  - name: 🇭🇰 香港 25 | anytls
+    type: anytls
+    server: 45.144.136.244
+    port: 443
+    password: 3QZglKmlgzc9zBCDD5W8tQ==
+    udp: true
+    sni: www.bing.com
+    skip-cert-verify: true
   - name: 🇸🇬 新加坡 19 | vless
     type: vless
-    server: 162.128.87.50
+    server: 162.128.69.118
     port: 443
-    uuid: be154d71-04ca-4389-8a89-d14219b25cd7
+    uuid: e1497c37-4943-4b99-918b-ee52a0976d29
     flow: xtls-rprx-vision
     tls: true
     servername: www.bing.com
-    client-fingerprint: firefox
+    client-fingerprint: chrome
     reality-opts:
-      public-key: kwZBG2HBA1WN4eZW1GK0D9OVC4TPEs5J-ZeeBA2bVBw
-      short-id: 08f1620e7ad50ca8
+      public-key: l7JQh1wolRUB1fiUDIMjbgKksM2hMfQaOr4yeFUZLQk
+      short-id: 905354e3cbb8e2fb
