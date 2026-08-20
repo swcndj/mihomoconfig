@@ -10,13 +10,25 @@ const REGION_RULES = [
   { reg: /新加坡|SG|SGP|sg|🇸🇬/, flag: "🇸🇬", name: "新加坡" },
   { reg: /韩国|KR|KOR|kr|🇰🇷/, flag: "🇰🇷", name: "韩国" },
 ];
-// 排除的节点类型：只排除策略组和非代理协议，主流代理协议全部保留
+// 排除的节点类型：黑名单协议直接丢弃
 const SKIP_TYPES = new Set(["http","socks5","ss","ssr","snell","vmess","trojan","hysteria","wireguard","tailscale","ssh","openvpn"]);
 const SUBS = JSON.parse(fs.readFileSync("./subs.json", "utf8"));
 const OUTPUT_FILE = "nodes.yaml";
 const REQUEST_TIMEOUT = 15000; // 单个订阅超时时间（毫秒）
 // ========================================================
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+
+/**
+ * 深度清洗对象：消除 yaml 内部特殊标记
+ * reality协议删除无效 skip‑cert‑verify
+ */
+function cleanProxyObj(obj) {
+  const o = JSON.parse(JSON.stringify(obj));
+  if(o.type?.toLowerCase() === "vless" && (o["reality-opts"] || o["xhttp-opts"])){
+    delete o["skip-cert-verify"];
+  }
+  return o;
+}
 
 /**
  * 带超时的请求，兼容 node‑fetch v3
@@ -30,18 +42,6 @@ async function fetchWithTimeout(url) {
   } finally {
     clearTimeout(timer);
   }
-}
-
-/**
- * 深度清洗对象：消除 yaml 内部特殊标记，根治输出乱 "-" 问题
- * reality协议删除无效 skip‑cert‑verify
- */
-function cleanProxyObj(obj) {
-  const o = JSON.parse(JSON.stringify(obj));
-  if(o.type?.toLowerCase() === "vless" && (o["reality‑opts"] || o["xhttp‑opts"])){
-    delete o["skip‑cert‑verify"];
-  }
-  return o;
 }
 
 (async function main() {
@@ -80,30 +80,35 @@ function cleanProxyObj(obj) {
   console.log(`总原始汇总节点数：${allRawProxies.length}`);
 
   // --------------------------
-  // ① 类型过滤
-  // vless 强制要求 reality‑opts 或者 xhttp‑opts，普通tls vless直接丢弃
+  // ① 类型过滤，先清洗对象，修复键名横杠问题
   // --------------------------
-  const typeFiltered = allRawProxies.filter(p => {
+  let statVlessTotal = 0;
+  let statVlessDrop = 0;
+  const typeFiltered = allRawProxies.filter(rawP => {
+    const p = cleanProxyObj(rawP);
     if (!p || !p.type) return false;
     const t = p.type.toLowerCase();
+
+    if(t === 'vless') statVlessTotal++;
+
     if (SKIP_TYPES.has(t)) return false;
 
-    if(t === "vless"){
-      // vless必须具备 reality‑opts / xhttp‑opts 二选一
-      const hasReality = !!p["reality‑opts"];
-      const hasXhttp = !!p["xhttp‑opts"];
+    if (t === "vless") {
+      const hasReality = !!p["reality-opts"];
+      const hasXhttp = !!p["xhttp-opts"];
+      if (!(hasReality || hasXhttp)) statVlessDrop++;
       return hasReality || hasXhttp;
     }
     return true;
   });
+  console.log(`ℹ️调试：vless总数量 ${statVlessTotal}，缺少reality/xhttp被过滤 ${statVlessDrop}`);
   console.log(`✅【类型过滤后剩余】：${typeFiltered.length}`);
 
   // --------------------------
-  // ② 地区过滤
+  // ② 地区过滤（typeFiltered已经全部clean完毕，不再重复清洗）
   // --------------------------
   const regionFiltered = [];
-  for (const rawP of typeFiltered) {
-    const p = cleanProxyObj(rawP);
+  for (const p of typeFiltered) {
     if (!p.name || !p.server || !p.port) continue;
     const hit = REGION_RULES.find(r => r.reg.test(p.name));
     if(hit){
@@ -120,8 +125,8 @@ function cleanProxyObj(obj) {
   for(const item of regionFiltered){
     const {p, hit} = item;
     let fp;
-    if(p.type.toLowerCase() === 'vless' && p['reality‑opts']?.['public‑key']){
-      fp = `${p.type}|${p.server}|${p.uuid}|${p['reality‑opts']['public‑key']}`;
+    if(p.type.toLowerCase() === 'vless' && p['reality-opts']?.['public-key']){
+      fp = `${p.type}|${p.server}|${p.uuid}|${p['reality-opts']['public-key']}`;
     }else{
       fp = `${p.type}|${p.server}|${p.port}`;
     }
