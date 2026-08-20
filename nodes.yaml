@@ -1132,33 +1132,17 @@ proxies:
     transport: TCP
   - down: ""
     fingerprint: ""
-    name: 92 🇺🇸 美国 | hysteria2
+    name: 92 🇸🇬 新加坡 | hysteria2
     obfs: ""
     obfs-password: ""
-    password: 57ec0f01-0c00-4a69-ad67-937b4735640b
-    port: "35193"
-    server: 40t2.wxgqlfx.vip
-    skip-cert-verify: true
-    sni: 40t2.wxgqlfx.vip
+    password: 9gWt2z3KdC9VI8kAQYVvvSvhT9e05CfI
+    port: "12645"
+    server: 64.235.45.208
+    skip-cert-verify: false
+    sni: vip-sg-1.hkd4fwmg.vip
     type: hysteria2
     up: ""
-  - client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    name: 93 🇭🇰 香港 | vless
-    network: tcp
-    port: "8443"
-    reality-opts:
-      public-key: psBgpjOLk-vmOts84wgm_T0qqqaZHd9Reekul4L3ugA
-      short-id: 42fe6ff20442d025
-    server: 186.246.19.131
-    servername: gem.cryptoofarm.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: ef18d810-719c-4bf1-83c6-615d01f217eb
-    xudp: true
-  - name: 94 🇭🇰 香港 | hysteria2
+  - name: 93 🇭🇰 香港 | hysteria2
     type: hysteria2
     server: 202.146.222.174
     port: 443
@@ -1166,7 +1150,7 @@ proxies:
     skip-cert-verify: true
     sni: https://t.me/WangCai2🇨🇳
     tfo: false
-  - name: 95 🇭🇰 香港 | vless
+  - name: 94 🇭🇰 香港 | vless
     type: vless
     server: 64.49.45.57
     port: 15540
@@ -1184,7 +1168,7 @@ proxies:
     tls: true
     udp: true
     uuid: f8e32ccb-7e0b-4966-837a-2a9503bc3d82
-  - name: 96 🇭🇰 香港 | vless
+  - name: 95 🇭🇰 香港 | vless
     type: vless
     server: 64.49.46.222
     port: 51008
@@ -1202,7 +1186,7 @@ proxies:
     tls: true
     udp: true
     uuid: a7e9b227-57bb-44b3-ac47-58367a40adf8
-  - name: 97 🇭🇰 香港 | vless
+  - name: 96 🇭🇰 香港 | vless
     type: vless
     server: vip.bcjdvip.com
     port: 14008
@@ -1218,7 +1202,7 @@ proxies:
     tls: true
     udp: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 98 🇭🇰 香港 | vless
+  - name: 97 🇭🇰 香港 | vless
     type: vless
     server: vip.bcjdvip.com
     port: 14001
@@ -1234,7 +1218,7 @@ proxies:
     tls: true
     udp: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 99 🇭🇰 香港 | vless
+  - name: 98 🇭🇰 香港 | vless
     type: vless
     server: vip.bcjdvip.com
     port: 14007
@@ -1250,7 +1234,7 @@ proxies:
     tls: true
     udp: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 100 🇭🇰 香港 | vless
+  - name: 99 🇭🇰 香港 | vless
     type: vless
     server: vip.bcjdvip.com
     port: 14006
@@ -1266,7 +1250,7 @@ proxies:
     tls: true
     udp: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 101 🇭🇰 香港 | vless
+  - name: 100 🇭🇰 香港 | vless
     type: vless
     server: vip.bcjdvip.com
     port: 14009
@@ -1282,7 +1266,7 @@ proxies:
     tls: true
     udp: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 102 🇭🇰 香港 | vless
+  - name: 101 🇭🇰 香港 | vless
     type: vless
     server: vip.bcjdvip.com
     port: 14010
@@ -1298,7 +1282,7 @@ proxies:
     tls: true
     udp: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 103 🇭🇰 香港 | vless
+  - name: 102 🇭🇰 香港 | vless
     type: vless
     server: 64.49.46.182
     port: 31435
@@ -1316,7 +1300,7 @@ proxies:
     tls: true
     udp: true
     uuid: b66d5953-8fed-4374-bf27-26dc07382b08
-  - name: 104 🇭🇰 香港 | vless
+  - name: 103 🇭🇰 香港 | vless
     type: vless
     server: vip.bcjdvip.com
     port: 14003
@@ -1331,7 +1315,7 @@ proxies:
     tfo: false
     tls: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 105 🇭🇰 香港 | vless
+  - name: 104 🇭🇰 香港 | vless
     type: vless
     server: vip.bcjdvip.com
     port: 14002
@@ -1347,7 +1331,7 @@ proxies:
     tls: true
     udp: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 106 🇭🇰 香港 | vless
+  - name: 105 🇭🇰 香港 | vless
     type: vless
     server: vip.bcjdvip.com
     port: 14005
@@ -1363,7 +1347,7 @@ proxies:
     tls: true
     udp: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 107 🇭🇰 香港 | vless
+  - name: 106 🇭🇰 香港 | vless
     type: vless
     server: 31.77.146.252
     port: 443
@@ -1380,7 +1364,7 @@ proxies:
     tls: true
     udp: true
     uuid: 52590634-cfce-4db7-abcc-d075175a3088
-  - name: 108 🇹🇼 台湾 | vless
+  - name: 107 🇹🇼 台湾 | vless
     type: vless
     server: 45.206.0.68
     port: 8443
@@ -1397,7 +1381,7 @@ proxies:
     tls: true
     udp: true
     uuid: 52faee73-e0fe-4661-992d-67259257170f
-  - name: 109 🇯🇵 日本 | hysteria2
+  - name: 108 🇯🇵 日本 | hysteria2
     type: hysteria2
     server: 13.231.108.76
     port: 443
@@ -1405,7 +1389,7 @@ proxies:
     skip-cert-verify: true
     sni: https://t.me/WangCai2🇨🇳
     tfo: false
-  - name: 110 🇯🇵 日本 | vless
+  - name: 109 🇯🇵 日本 | vless
     type: vless
     server: 13.231.185.74
     port: 47381
@@ -1423,7 +1407,7 @@ proxies:
     tls: true
     udp: true
     uuid: c6508e59-dd68-4dc0-b14f-3192e84ef843
-  - name: 111 🇯🇵 日本 | vless
+  - name: 110 🇯🇵 日本 | vless
     type: vless
     server: 8.209.229.10
     port: 15542
@@ -1444,7 +1428,7 @@ proxies:
       mode: auto
       path: /them
       x-padding-bytes: 100-1000
-  - name: 112 🇯🇵 日本 | vless
+  - name: 111 🇯🇵 日本 | vless
     type: vless
     server: 172.207.210.238
     port: 443
@@ -1461,7 +1445,7 @@ proxies:
     tls: true
     udp: true
     uuid: 39d1c043-7bc5-4876-9d07-58574c023850
-  - name: 113 🇯🇵 日本 | vless
+  - name: 112 🇯🇵 日本 | vless
     type: vless
     server: 103.100.158.180
     port: 443
@@ -1478,7 +1462,7 @@ proxies:
     tls: true
     udp: true
     uuid: 51336138-2480-485a-8723-b6a688b69b14
-  - name: 114 🇰🇷 韩国 | vless
+  - name: 113 🇰🇷 韩国 | vless
     type: vless
     server: 43.108.48.169
     port: 40701
@@ -1494,7 +1478,7 @@ proxies:
     tls: true
     udp: true
     uuid: cdb7d825-9892-4d6f-80b8-7add83159dac
-  - name: 115 🇺🇸 美国 | hysteria2
+  - name: 114 🇺🇸 美国 | hysteria2
     type: hysteria2
     server: hy2.123266.xyz
     port: 33333
@@ -1502,7 +1486,7 @@ proxies:
     skip-cert-verify: true
     sni: hy2.123266.xyz
     tfo: false
-  - name: 116 🇺🇸 美国 | hysteria2
+  - name: 115 🇺🇸 美国 | hysteria2
     type: hysteria2
     server: 185.106.96.231
     port: 443
@@ -1510,7 +1494,7 @@ proxies:
     skip-cert-verify: false
     sni: s559.ccgfw.top
     tfo: false
-  - name: 117 🇺🇸 美国 | hysteria2
+  - name: 116 🇺🇸 美国 | hysteria2
     type: hysteria2
     server: wuhantravel.duckdns.org
     port: 8443
@@ -1519,7 +1503,7 @@ proxies:
     password: MySecurePassword123
     sni: wuhantravel.duckdns.org
     udp: true
-  - name: 118 🇺🇸 美国 | hysteria2
+  - name: 117 🇺🇸 美国 | hysteria2
     type: hysteria2
     server: hy2-new.aspidnet.xyz
     port: 443
@@ -1529,7 +1513,7 @@ proxies:
     skip-cert-verify: true
     sni: hy2-new.aspidnet.xyz
     tfo: false
-  - name: 119 🇺🇸 美国 | hysteria2
+  - name: 118 🇺🇸 美国 | hysteria2
     type: hysteria2
     server: 161.104.88.46
     port: 443
@@ -1537,7 +1521,7 @@ proxies:
     skip-cert-verify: true
     sni: k71530.w-mebel.pro
     tfo: false
-  - name: 120 🇺🇸 美国 | vless
+  - name: 119 🇺🇸 美国 | vless
     type: vless
     server: 64.23.143.23
     port: 34045
@@ -1551,7 +1535,7 @@ proxies:
     skip-cert-verify: false
     tls: true
     uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
-  - name: 121 🇺🇸 美国 | vless
+  - name: 120 🇺🇸 美国 | vless
     type: vless
     server: 112.121.184.10
     port: 26057
@@ -1568,7 +1552,7 @@ proxies:
     tls: true
     udp: true
     uuid: 970ffe5a-2c53-4b94-af3f-c95ddd417c1c
-  - name: 122 🇺🇸 美国 | vless
+  - name: 121 🇺🇸 美国 | vless
     type: vless
     server: 38.244.20.153
     port: 443
@@ -1585,7 +1569,7 @@ proxies:
     tls: true
     udp: true
     uuid: 8f59f1a9-9a0b-41c0-8532-ca56699bcaa1
-  - name: 123 🇺🇸 美国 | vless
+  - name: 122 🇺🇸 美国 | vless
     type: vless
     server: 38.244.20.47
     port: 443
@@ -1602,7 +1586,7 @@ proxies:
     tls: true
     udp: true
     uuid: a54fec73-26a1-4c05-b948-6a01c157927e
-  - name: 124 🇺🇸 美国 | vless
+  - name: 123 🇺🇸 美国 | vless
     type: vless
     server: 38.244.20.69
     port: 443
@@ -1618,7 +1602,7 @@ proxies:
     tls: true
     udp: true
     uuid: 057f3c26-0fe7-4315-aabc-90c79d413d70
-  - name: 125 🇺🇸 美国 | vless
+  - name: 124 🇺🇸 美国 | vless
     type: vless
     server: 38.244.21.243
     port: 443
@@ -1635,7 +1619,7 @@ proxies:
     tls: true
     udp: true
     uuid: e490adc9-f324-46fb-b311-9f3f95b0a0dd
-  - name: 126 🇺🇸 美国 | vless
+  - name: 125 🇺🇸 美国 | vless
     type: vless
     server: 15.204.97.197
     port: 23576
@@ -1650,7 +1634,7 @@ proxies:
     skip-cert-verify: false
     tls: true
     uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  - name: 127 🇺🇸 美国 | vless
+  - name: 126 🇺🇸 美国 | vless
     type: vless
     server: 15.204.97.216
     port: 23576
@@ -1665,7 +1649,7 @@ proxies:
     skip-cert-verify: false
     tls: true
     uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  - name: 128 🇺🇸 美国 | vless
+  - name: 127 🇺🇸 美国 | vless
     type: vless
     server: us2-r.link-t7.com
     port: 10239
@@ -1687,7 +1671,7 @@ proxies:
     sid: 686c0ef0
     tls: true
     uuid: 418DA912-0248-4762-8D21-5CB38467CA4D
-  - name: 129 🇺🇸 美国 | vless
+  - name: 128 🇺🇸 美国 | vless
     type: vless
     server: 108.62.60.24
     port: 443
@@ -1703,7 +1687,7 @@ proxies:
     tls: true
     udp: true
     uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-  - name: 130 🇺🇸 美国 | vless
+  - name: 129 🇺🇸 美国 | vless
     type: vless
     server: 40.160.227.243
     port: 443
@@ -1719,7 +1703,7 @@ proxies:
     tls: true
     udp: true
     uuid: 88cb5a9f-f464-4e3b-8ca0-a74edf911205
-  - name: 131 🇺🇸 美国 | vless
+  - name: 130 🇺🇸 美国 | vless
     type: vless
     server: us3-r.link-t7.com
     port: 10240
@@ -1741,7 +1725,7 @@ proxies:
     sid: 686c0ef0
     tls: true
     uuid: 418DA912-0248-4762-8D21-5CB38467CA4D
-  - name: 132 🇺🇸 美国 | vless
+  - name: 131 🇺🇸 美国 | vless
     type: vless
     server: 162.218.95.14
     port: 443
@@ -1757,7 +1741,7 @@ proxies:
     tls: true
     udp: true
     uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-  - name: 133 🇺🇸 美国 | vless
+  - name: 132 🇺🇸 美国 | vless
     type: vless
     server: 163.123.141.45
     port: 443
@@ -1778,7 +1762,7 @@ proxies:
         Xhttp-Verify: 3769e495-72dc-42ea-95eb-093cb0e4a6f8
       host: s4117.wagahaha.xyz
       path: /632f3ba5cd0889698a3e4b43d19aa601
-  - name: 134 🇺🇸 美国 | vless
+  - name: 133 🇺🇸 美国 | vless
     type: vless
     server: s4120.wagahaha.xyz
     port: 443
@@ -1799,7 +1783,7 @@ proxies:
         Xhttp-Verify: 3769e495-72dc-42ea-95eb-093cb0e4a6f8
       host: s4117.wagahaha.xyz
       path: /632f3ba5cd0889698a3e4b43d19aa601
-  - name: 135 🇺🇸 美国 | vless
+  - name: 134 🇺🇸 美国 | vless
     type: vless
     server: s4119.wagahaha.xyz
     port: 443
@@ -1820,7 +1804,7 @@ proxies:
         Xhttp-Verify: 3769e495-72dc-42ea-95eb-093cb0e4a6f8
       host: s4117.wagahaha.xyz
       path: /632f3ba5cd0889698a3e4b43d19aa601
-  - name: 136 🇺🇸 美国 | vless
+  - name: 135 🇺🇸 美国 | vless
     type: vless
     server: 89.144.35.230
     port: 54582
@@ -1842,7 +1826,7 @@ proxies:
     xudp: true
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 137 🇭🇰 香港 | vless
+    name: 136 🇭🇰 香港 | vless
     network: tcp
     port: 59750
     reality-opts:
@@ -1855,7 +1839,7 @@ proxies:
     uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
     servername: www.amd.com
   - client-fingerprint: chrome
-    name: 138 🇺🇸 美国 | vless
+    name: 137 🇺🇸 美国 | vless
     network: tcp
     port: 40056
     reality-opts:
@@ -1868,7 +1852,7 @@ proxies:
     uuid: 090122da-ad6b-42a1-92d7-bab2630e2511
     servername: www.cloudflare.com
   - client-fingerprint: chrome
-    name: 139 🇰🇷 韩国 | vless
+    name: 138 🇰🇷 韩国 | vless
     network: tcp
     port: 8686
     reality-opts:
@@ -1882,7 +1866,7 @@ proxies:
     servername: www.apple.com
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 140 🇯🇵 日本 | vless
+    name: 139 🇯🇵 日本 | vless
     network: tcp
     port: 20725
     reality-opts:
@@ -1895,7 +1879,7 @@ proxies:
     uuid: 6dcb725e-947e-4bbe-bb35-903374d57179
     servername: buylite.tv.apple.com
   - client-fingerprint: chrome
-    name: 141 🇺🇸 美国 | vless
+    name: 140 🇺🇸 美国 | vless
     network: tcp
     port: 30906
     reality-opts:
@@ -1908,97 +1892,66 @@ proxies:
     uuid: 43a13764-23dd-4e01-8b79-cde8a16e13ce
     servername: www.cloudflare.com
   - client-fingerprint: chrome
-    encryption: none
-    name: 142 🇺🇸 美国 | vless
-    network: xhttp
-    port: 13456
-    reality-opts:
-      public-key: krYEkISvZ1UdNetNSPXNen2mW5xEw980yFkrhYyTRWQ
-      short-id: 057b863d7bc5
-    server: roundhouse.proxy.rlwy.net
-    tls: true
-    type: vless
-    udp: true
-    uuid: 0376de39-4ba8-4533-aeda-472c4b479762
-    xhttp-opts:
-      mode: auto
-      path: /
-      x-padding-bytes: 100-1000
-    xudp: true
-    servername: is1-ssl.mzstatic.com
-  - alpn:
-      - h2
-      - http/1.1
-    client-fingerprint: chrome
-    encryption: none
-    name: 143 🇺🇸 美国 | vless
-    network: xhttp
-    port: 443
-    server: 69.46.46.49
-    tls: true
-    type: vless
-    udp: true
-    uuid: 589fd36b-5e51-4db4-83a5-e1493af8f2d7
-    xhttp-opts:
-      mode: auto
-      path: /
-      x-padding-bytes: 100-1000
-    xudp: true
-    servername: 3x-ui-production-b654.up.railway.app
-  - name: 144 🇰🇷 韩国 | anytls
-    password: ae4085de-3130-47c6-9021-851feb27cb53
-    port: 40041
-    server: kr1.catzl.top
-    type: anytls
-    udp: true
-    sni: kr1.catzl.top
-  - name: 145 🇹🇼 台湾 | anytls
-    password: ae4085de-3130-47c6-9021-851feb27cb53
-    port: 40072
-    server: tw2.catzl.top
-    type: anytls
-    udp: true
-    sni: tw2.catzl.top
-  - name: 146 🇺🇸 美国 | anytls
-    password: ae4085de-3130-47c6-9021-851feb27cb53
-    port: 40022
-    server: us2.catzl.top
-    type: anytls
-    udp: true
-    sni: us2.catzl.top
-  - name: 147 🇹🇼 台湾 | anytls
-    password: ae4085de-3130-47c6-9021-851feb27cb53
-    port: 40073
-    server: tw3.catzl.top
-    type: anytls
-    udp: true
-    sni: tw3.catzl.top
-  - name: 148 🇰🇷 韩国 | anytls
-    password: ae4085de-3130-47c6-9021-851feb27cb53
-    port: 40042
-    server: kr2.catzl.top
-    type: anytls
-    udp: true
-    sni: kr2.catzl.top
-  - name: 149 🇹🇼 台湾 | anytls
-    password: ae4085de-3130-47c6-9021-851feb27cb53
-    port: 40071
-    server: tw1.catzl.top
-    type: anytls
-    udp: true
-    sni: tw1.catzl.top
-  - name: 150 🇯🇵 日本 | vless
-    type: vless
-    server: 103.100.158.63
-    port: 443
-    uuid: ea1c1e20-7263-4b08-a01b-690b29af66b3
-    udp: true
-    network: tcp
     flow: xtls-rprx-vision
-    tls: true
-    servername: www.apple.com
-    client-fingerprint: chrome
-    skip-cert-verify: true
+    name: 141 🇯🇵 日本 | vless
+    network: tcp
+    port: 443
     reality-opts:
       public-key: T587xqua0Nrs0YreQRWJAP9Wto94NcbbhKPK4DkSi0c
       short-id: 2223411c2ad9c55f
+    server: 103.100.158.63
+    skip-cert-verify: true
+    tfo: false
+    tls: true
+    type: vless
+    uuid: ea1c1e20-7263-4b08-a01b-690b29af66b3
+    servername: www.apple.com
+  - client-fingerprint: chrome
+    name: 142 🇰🇷 韩国 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: pR7MPTAA4cZsW9AO-twMzuogiWGMKPiheTg70fcWWWs
+      short-id: 0a427bc3
+    server: 119.28.161.143
+    skip-cert-verify: true
+    tfo: false
+    tls: true
+    type: vless
+    uuid: 1ebb0858-218a-4dee-8746-36a67bc64462
+    servername: apple.com
+  - client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    name: 143 🇭🇰 香港 | vless
+    network: tcp
+    port: 8443
+    reality-opts:
+      public-key: psBgpjOLk-vmOts84wgm_T0qqqaZHd9Reekul4L3ugA
+      short-id: 42fe6ff20442d025
+    server: gem.cryptoofarm.com
+    skip-cert-verify: true
+    tfo: false
+    tls: true
+    type: vless
+    uuid: ef18d810-719c-4bf1-83c6-615d01f217eb
+    servername: gem.cryptoofarm.com
+  - client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    http-opts:
+      headers: {}
+      path:
+        - /
+    name: 144 🇸🇬 新加坡 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: 8tDuCgf0_I1q5Ib_KgSR3v13Gb1QY6Q7AVTuU0xQXVc
+      short-id: c6a6326c7e249a68
+    server: 163.128.99.217
+    tls: true
+    type: vless
+    udp: true
+    uuid: 853d2e30-ea80-41e6-99d3-820c1bbf6860
+    xudp: true
+    servername: www.apple.com
