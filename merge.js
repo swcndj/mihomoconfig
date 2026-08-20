@@ -11,7 +11,7 @@ const REGION_RULES = [
   { reg: /韩国|KR|KOR|kr|🇰🇷/, flag: "🇰🇷", name: "韩国" },
 ];
 
-const SKIP_TYPES = new Set(["http","socks5","ss","ssr","snell","vmess","trojan","hysteria","wireguard","tailscale","ssh","openvpn"]);
+const SKIP_TYPES = new Set(["rematch","http","socks5","ss","ssr","snell","vmess","trojan","hysteria","wireguard","tailscale","ssh","zerotier","openvpn"]);
 
 const SUBS = JSON.parse(fs.readFileSync("./subs.json", "utf8"));
 const OUTPUT_FILE = "nodes.yaml";
