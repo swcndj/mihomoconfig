@@ -117,14 +117,14 @@ rule-providers:
     format: mrs
   category-ads-all:
     type: http
-    url: "/geo/geosite/category-ads-all.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs"
     path: ./rules/category-ads-all.mrs
     interval: 86400
     behavior: domain
     format: mrs
   youtube:
     type: http
-    url: "/geo/geosite/youtube.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"
     path: ./rules/youtube.mrs
     interval: 86400
     behavior: domain
