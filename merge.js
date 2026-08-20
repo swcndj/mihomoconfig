@@ -2,8 +2,8 @@ const fs = require('fs');
 const yaml = require('yaml');
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
-// ========== 配置区 ==========
-// 需要匹配的地区（正则 + 国旗 + 显示名称）
+// -------------------------------------------------- 配置区 --------------------------------------------------
+// 需要匹配的地区
 const REGION_RULES = [
   { reg: /香港|HK|HKG|hk|🇭🇰/, flag: "🇭🇰", name: "香港" },
   { reg: /台湾|TW|tw|🇹🇼/, flag: "🇹🇼", name: "台湾" },
@@ -14,15 +14,11 @@ const REGION_RULES = [
 ];
 
 // 黑名单协议（直接丢弃）
-const SKIP_TYPES = new Set([
-  "http", "socks5", "ss", "ssr", "snell", "vmess",
-  "trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"
-]);
+const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "snell", "vmess","trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
 
 const SUBS = JSON.parse(fs.readFileSync("./subs.json", "utf8"));
 const OUTPUT_FILE = "nodes.yaml";
-const REQUEST_TIMEOUT = 15000; // 单个订阅超时（毫秒）
-// ========================================================
+const REQUEST_TIMEOUT = 15000; 
 
 // 带超时的请求
 async function fetchWithTimeout(url) {
@@ -41,6 +37,7 @@ function isValidNode(node) {
   return !!(node && node.type);
 }
 
+// -------------------------------------------------- 配置区 --------------------------------------------------
 (async function main() {
   console.log(`===== 开始处理，共 ${SUBS.length} 个订阅 =====\n`);
 
