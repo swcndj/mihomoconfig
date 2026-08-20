@@ -119,7 +119,7 @@ function isValidNode(node) {
   for (const { p, hit } of dedupList) {
     globalSeq++;
     const seq = String(globalSeq).padStart(2, '0');
-    p.name = `${hit.flag} ${hit.name} ${seq} | ${p.type}`;
+    p.name = `${seq} ${hit.flag} ${hit.name} | ${p.type}`;
     finalProxies.push(p);
   }
 
