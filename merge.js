@@ -19,15 +19,6 @@ const OTHER_SAMPLE_RATIO = 0.20; // 非匹配地区随机抽取比例
 // ========================================================
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
-// 深度清洗对象：消除 yaml 内部特殊标记，reality协议删除无效 skip-cert-verify
-function cleanProxyObj(obj) {
-  const o = JSON.parse(JSON.stringify(obj));
-  if(o.type?.toLowerCase() === "vless" && (o["reality-opts"] || o["xhttp-opts"])){
-    delete o["skip-cert-verify"];
-  }
-  return o;
-}
-
 // 带超时的请求，兼容 node‑fetch v3
 async function fetchWithTimeout(url) {
   const controller = new AbortController();
@@ -88,10 +79,19 @@ function sampleRandom(arr, count) {
   console.log(`总原始汇总节点数：${allRawProxies.length}`);
 
   // --------------------------
-  // ① 类型过滤，先清洗对象
+  // ① 类型过滤 + encryption 异常检查（仅校验 encryption）
   // --------------------------
   const typeFiltered = allRawProxies.filter(rawP => {
-    const p = cleanProxyObj(rawP);
+    // ===== encryption 异常校验 =====
+    if (rawP.type && rawP.type.toLowerCase() === 'vless') {
+      const enc = rawP.encryption;
+      if (enc && typeof enc === 'string' && enc.length > 50) {
+        return false; // 丢弃该节点
+      }
+    }
+
+    // 直接使用 rawP，不再调用 cleanProxyObj
+    const p = rawP;
     if (!p || !p.type) return false;
     const t = p.type.toLowerCase();
     if (SKIP_TYPES.has(t)) return false;
@@ -123,7 +123,7 @@ function sampleRandom(arr, count) {
   console.log(`✅【地区匹配节点】：${matchRegionList.length}`);
   console.log(`✅【其他候选节点】：${otherCandidateList.length}`);
 
-  // 随机抽取10%
+  // 随机抽取
   const sampleCount = Math.floor(otherCandidateList.length * OTHER_SAMPLE_RATIO);
   const sampledOtherList = sampleRandom(otherCandidateList, sampleCount);
   console.log(`✅【其他候选节点随机抽取数量 ${OTHER_SAMPLE_RATIO*100}%】：${sampledOtherList.length}`);
