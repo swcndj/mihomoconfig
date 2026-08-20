@@ -2,7 +2,7 @@ name: Merge Nodes
 on:
   workflow_dispatch:
   schedule:
-    - cron: "7 */3 * * *"
+    - cron: "7 */2 * * *"
       timezone: "Asia/Shanghai" 
 permissions:
   contents: write
