@@ -74,19 +74,18 @@ function getFingerprint(p) {
       }
       console.log(`  📥 原始节点数：${rawProxies.length}`);
 
-      // ========== 类型过滤（含 vless 特殊过滤：仅检查 reality-opts 存在） ==========
+      // ========== 类型过滤（vless 仅保留有 reality-opts 或 xhttp-opts 的） ==========
       const typeFiltered = rawProxies.filter(p => {
         if (!p || !p.type) return false;
         const typeLower = p.type.toLowerCase();
-        // 1. 排除指定类型
+        // 排除指定类型
         if (SKIP_TYPES.has(typeLower)) return false;
-        // 2. 如果是 vless，必须存在 reality-opts 字段（不再检查内部属性）
         if (typeLower === 'vless') {
-          return p['reality-opts'] != null;   // 👈 简化条件
+          return (p['reality-opts'] != null) || (p['xhttp-opts'] != null);
         }
         return true;
       });
-      console.log(`  🔍 类型过滤后（vless 仅保留有 reality-opts 的）：${typeFiltered.length}`);
+      console.log(`  🔍 类型过滤后：${typeFiltered.length}`);
 
       // 地区匹配（筛选）
       let matchedCount = 0;
