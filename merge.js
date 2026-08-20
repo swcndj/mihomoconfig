@@ -19,7 +19,9 @@ const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "snell", "vmess","tro
 const SUBS = JSON.parse(fs.readFileSync("./subs.json", "utf8"));
 const OUTPUT_FILE = "nodes.yaml";
 const REQUEST_TIMEOUT = 15000; 
+// -------------------------------------------------- 配置区 --------------------------------------------------
 
+// -------------------------------------------------- 工具函数 --------------------------------------------------
 // 带超时的请求
 async function fetchWithTimeout(url) {
   const controller = new AbortController();
@@ -36,12 +38,13 @@ async function fetchWithTimeout(url) {
 function isValidNode(node) {
   return !!(node && node.type);
 }
+// -------------------------------------------------- 工具函数 --------------------------------------------------
 
-// -------------------------------------------------- 配置区 --------------------------------------------------
+// -------------------------------------------------- 主程序区 --------------------------------------------------
 (async function main() {
   console.log(`===== 开始处理，共 ${SUBS.length} 个订阅 =====\n`);
 
-  // 1. 抓取所有订阅的原始节点
+  // 1. 抓取所有原始订阅节点
   const allRawProxies = [];
   for (let i = 0; i < SUBS.length; i++) {
     const subUrl = SUBS[i];
@@ -68,29 +71,26 @@ function isValidNode(node) {
 
   console.log(`\n总原始节点数：${allRawProxies.length}`);
 
-  // 2. 过滤：类型 + 地区匹配（无 encryption 校验）
+  // 2. 类型过滤 + 地区匹配
   const matchedNodes = [];
   for (const p of allRawProxies) {
-    // ① 基础校验
     if (!isValidNode(p)) continue;
     const type = p.type.toLowerCase();
     if (SKIP_TYPES.has(type)) continue;
 
-    // ② 只保留 vless 且含 reality 或 xhttp 的节点
     if (type === 'vless') {
       const hasReality = !!p['reality-opts'];
       const hasXhttp = !!p['xhttp-opts'];
       if (!hasReality && !hasXhttp) continue;
     }
 
-    // ③ 地区匹配
     const hit = REGION_RULES.find(r => r.reg.test(p.name || ''));
-    if (!hit) continue; // 不匹配的地区直接跳过
+    if (!hit) continue;
 
     matchedNodes.push({ p, hit });
   }
 
-  console.log(`✅ 地区匹配节点数：${matchedNodes.length}`);
+  console.log(`✅ 类型过滤 + 地区匹配节点数：${matchedNodes.length}`);
 
   // 3. 去重（复合指纹）
   const seen = new Set();
@@ -137,3 +137,4 @@ function isValidNode(node) {
   fs.writeFileSync(OUTPUT_FILE, doc.toString({ indent: 2, lineWidth: 0 }));
   console.log(`\n✅ 已保存至 ${OUTPUT_FILE}`);
 })();
+// -------------------------------------------------- 主程序区 --------------------------------------------------
