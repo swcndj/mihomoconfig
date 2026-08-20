@@ -827,30 +827,8 @@ proxies:
       - h2
       - http/1.1
     client-fingerprint: chrome
-    encryption: mlkem768x25519plus.native.0rtt.1wRO2UUgp1vx1XIx2wZLuYDC7N6a5F7SRlLrMp9PGwg
-    name: 🇺🇸 美国 34 | vless
-    network: xhttp
-    packet-encoding: xudp
-    port: 443
-    server: chatgpt.com
-    servername: sor.syaedu.com
-    sub_tag: C002-260622
-    tls: true
-    type: vless
-    udp: true
-    uuid: ccebf44c-e3ad-4092-8b35-41179a9dfa23
-    xhttp-opts:
-      host: sor.syaedu.com
-      mode: auto
-      path: /sor
-      x-padding-bytes: 100-1000
-    xudp: true
-  - alpn:
-      - h2
-      - http/1.1
-    client-fingerprint: chrome
     encryption: none
-    name: 🇺🇸 美国 35 | vless
+    name: 🇺🇸 美国 34 | vless
     network: xhttp
     packet-encoding: xudp
     port: 443
@@ -871,7 +849,7 @@ proxies:
       - http/1.1
     client-fingerprint: chrome
     encryption: none
-    name: 🇺🇸 美国 36 | vless
+    name: 🇺🇸 美国 35 | vless
     network: xhttp
     packet-encoding: xudp
     port: 16642
@@ -903,7 +881,7 @@ proxies:
     type: vless
     uuid: 814bd064-544d-4255-a070-5705c03f6da9
   - client-fingerprint: chrome
-    name: 🇺🇸 美国 37 | vless
+    name: 🇺🇸 美国 36 | vless
     port: 443
     reality-opts:
       public-key: 6p0aVCkOgd-xaxqSMANYABL6O4Tdbftnxjiy5qcmISQ
@@ -931,7 +909,7 @@ proxies:
     uuid: 94d2d711-76e5-4d82-a3c9-4f06fd5558c8
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 🇺🇸 美国 38 | vless
+    name: 🇺🇸 美国 37 | vless
     port: 16565
     reality-opts:
       public-key: JqblL-dYqxHH3pAju89x3OkXlBQ8k5LzO2Yoadi8ylk
@@ -1001,7 +979,7 @@ proxies:
     uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 🇺🇸 美国 39 | vless
+    name: 🇺🇸 美国 38 | vless
     port: 10006
     reality-opts:
       public-key: XUVBEFyxevBwoGwVlo31vXMR_wQ0h0UnhzC4jCeakkc
@@ -1012,7 +990,7 @@ proxies:
     type: vless
     uuid: 48b36b6a-eaa6-4843-9231-0bb8b38b5da5
   - client-fingerprint: chrome
-    name: 🇺🇸 美国 40 | vless
+    name: 🇺🇸 美国 39 | vless
     port: 443
     reality-opts:
       public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
@@ -1070,7 +1048,7 @@ proxies:
     auth: 9cfc9458e48c028ec03ff86ebc71c744
     sni: 150-230-252-217.liao.kdns.fr
     skip-cert-verify: true
-  - name: 🇺🇸 美国 41 | vless
+  - name: 🇺🇸 美国 40 | vless
     server: 217.19.122.88
     port: 9001
     type: vless
@@ -1086,7 +1064,7 @@ proxies:
       grpc-mode: gun
       grpc-service-name: grpc-reality
     udp: true
-  - name: 🇺🇸 美国 42 | vless
+  - name: 🇺🇸 美国 41 | vless
     server: 72.56.250.133
     port: 443
     type: vless
@@ -1102,7 +1080,7 @@ proxies:
       path: /
       host: deepl.com
     udp: true
-  - name: 🇺🇸 美国 43 | vless
+  - name: 🇺🇸 美国 42 | vless
     server: 213.171.24.132
     port: 443
     type: vless
@@ -1116,7 +1094,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 🇺🇸 美国 44 | vless
+  - name: 🇺🇸 美国 43 | vless
     server: 138.124.254.68
     port: 2096
     type: vless
@@ -1130,7 +1108,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 🇺🇸 美国 45 | vless
+  - name: 🇺🇸 美国 44 | vless
     server: 138.124.255.221
     port: 443
     type: vless
@@ -1144,7 +1122,7 @@ proxies:
     client-fingerprint: edge
     network: tcp
     udp: true
-  - name: 🇺🇸 美国 46 | vless
+  - name: 🇺🇸 美国 45 | vless
     server: 109.196.99.30
     port: 8443
     type: vless
@@ -1174,7 +1152,7 @@ proxies:
     udp: true
     sni: awsxjpbqwmxdnsh.jiedddym.com
     skip-cert-verify: true
-  - name: 🇺🇸 美国 47 | vless
+  - name: 🇺🇸 美国 46 | vless
     server: us.opngtr.nl
     port: 443
     type: vless
@@ -1188,7 +1166,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 🇺🇸 美国 48 | hysteria2
+  - name: 🇺🇸 美国 47 | hysteria2
     server: mg2.mangshe.xyz
     port: 2056
     type: hysteria2
@@ -1532,7 +1510,7 @@ proxies:
     tls: true
     udp: true
     uuid: cdb7d825-9892-4d6f-80b8-7add83159dac
-  - name: 🇺🇸 美国 49 | hysteria2
+  - name: 🇺🇸 美国 48 | hysteria2
     type: hysteria2
     server: hy2.123266.xyz
     port: 33333
@@ -1540,7 +1518,7 @@ proxies:
     skip-cert-verify: true
     sni: hy2.123266.xyz
     tfo: false
-  - name: 🇺🇸 美国 50 | hysteria2
+  - name: 🇺🇸 美国 49 | hysteria2
     type: hysteria2
     server: 185.106.96.231
     port: 443
@@ -1548,7 +1526,7 @@ proxies:
     skip-cert-verify: false
     sni: s559.ccgfw.top
     tfo: false
-  - name: 🇺🇸 美国 51 | hysteria2
+  - name: 🇺🇸 美国 50 | hysteria2
     type: hysteria2
     server: wuhantravel.duckdns.org
     port: 8443
@@ -1557,7 +1535,7 @@ proxies:
     password: MySecurePassword123
     sni: wuhantravel.duckdns.org
     udp: true
-  - name: 🇺🇸 美国 52 | hysteria2
+  - name: 🇺🇸 美国 51 | hysteria2
     type: hysteria2
     server: hy2-new.aspidnet.xyz
     port: 443
@@ -1567,7 +1545,7 @@ proxies:
     skip-cert-verify: true
     sni: hy2-new.aspidnet.xyz
     tfo: false
-  - name: 🇺🇸 美国 53 | hysteria2
+  - name: 🇺🇸 美国 52 | hysteria2
     type: hysteria2
     server: 161.104.88.46
     port: 443
@@ -1575,7 +1553,7 @@ proxies:
     skip-cert-verify: true
     sni: k71530.w-mebel.pro
     tfo: false
-  - name: 🇺🇸 美国 54 | mieru
+  - name: 🇺🇸 美国 53 | mieru
     type: mieru
     server: 157.254.223.44
     port: 34567
@@ -1583,7 +1561,7 @@ proxies:
     password: dongtaiwang.com
     transport: TCP
     username: dongtaiwang.com
-  - name: 🇺🇸 美国 55 | vless
+  - name: 🇺🇸 美国 54 | vless
     type: vless
     server: 64.23.143.23
     port: 34045
@@ -1597,7 +1575,7 @@ proxies:
     skip-cert-verify: false
     tls: true
     uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
-  - name: 🇺🇸 美国 56 | vless
+  - name: 🇺🇸 美国 55 | vless
     type: vless
     server: 112.121.184.10
     port: 26057
@@ -1614,7 +1592,7 @@ proxies:
     tls: true
     udp: true
     uuid: 970ffe5a-2c53-4b94-af3f-c95ddd417c1c
-  - name: 🇺🇸 美国 57 | vless
+  - name: 🇺🇸 美国 56 | vless
     type: vless
     server: 38.244.20.153
     port: 443
@@ -1631,7 +1609,7 @@ proxies:
     tls: true
     udp: true
     uuid: 8f59f1a9-9a0b-41c0-8532-ca56699bcaa1
-  - name: 🇺🇸 美国 58 | vless
+  - name: 🇺🇸 美国 57 | vless
     type: vless
     server: 38.244.20.47
     port: 443
@@ -1648,7 +1626,7 @@ proxies:
     tls: true
     udp: true
     uuid: a54fec73-26a1-4c05-b948-6a01c157927e
-  - name: 🇺🇸 美国 59 | vless
+  - name: 🇺🇸 美国 58 | vless
     type: vless
     server: 38.244.20.69
     port: 443
@@ -1664,7 +1642,7 @@ proxies:
     tls: true
     udp: true
     uuid: 057f3c26-0fe7-4315-aabc-90c79d413d70
-  - name: 🇺🇸 美国 60 | vless
+  - name: 🇺🇸 美国 59 | vless
     type: vless
     server: 38.244.21.243
     port: 443
@@ -1681,7 +1659,7 @@ proxies:
     tls: true
     udp: true
     uuid: e490adc9-f324-46fb-b311-9f3f95b0a0dd
-  - name: 🇺🇸 美国 61 | vless
+  - name: 🇺🇸 美国 60 | vless
     type: vless
     server: 15.204.97.197
     port: 23576
@@ -1696,7 +1674,7 @@ proxies:
     skip-cert-verify: false
     tls: true
     uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  - name: 🇺🇸 美国 62 | vless
+  - name: 🇺🇸 美国 61 | vless
     type: vless
     server: 15.204.97.216
     port: 23576
@@ -1711,7 +1689,7 @@ proxies:
     skip-cert-verify: false
     tls: true
     uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  - name: 🇺🇸 美国 63 | vless
+  - name: 🇺🇸 美国 62 | vless
     type: vless
     server: us2-r.link-t7.com
     port: 10239
@@ -1733,7 +1711,7 @@ proxies:
     sid: 686c0ef0
     tls: true
     uuid: 418DA912-0248-4762-8D21-5CB38467CA4D
-  - name: 🇺🇸 美国 64 | vless
+  - name: 🇺🇸 美国 63 | vless
     type: vless
     server: 108.62.60.24
     port: 443
@@ -1749,7 +1727,7 @@ proxies:
     tls: true
     udp: true
     uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-  - name: 🇺🇸 美国 65 | vless
+  - name: 🇺🇸 美国 64 | vless
     type: vless
     server: 40.160.227.243
     port: 443
@@ -1765,7 +1743,7 @@ proxies:
     tls: true
     udp: true
     uuid: 88cb5a9f-f464-4e3b-8ca0-a74edf911205
-  - name: 🇺🇸 美国 66 | vless
+  - name: 🇺🇸 美国 65 | vless
     type: vless
     server: us3-r.link-t7.com
     port: 10240
@@ -1787,7 +1765,7 @@ proxies:
     sid: 686c0ef0
     tls: true
     uuid: 418DA912-0248-4762-8D21-5CB38467CA4D
-  - name: 🇺🇸 美国 67 | vless
+  - name: 🇺🇸 美国 66 | vless
     type: vless
     server: 162.218.95.14
     port: 443
@@ -1803,7 +1781,7 @@ proxies:
     tls: true
     udp: true
     uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-  - name: 🇺🇸 美国 68 | vless
+  - name: 🇺🇸 美国 67 | vless
     type: vless
     server: 163.123.141.45
     port: 443
@@ -1824,7 +1802,7 @@ proxies:
         Xhttp-Verify: 3769e495-72dc-42ea-95eb-093cb0e4a6f8
       host: s4117.wagahaha.xyz
       path: /632f3ba5cd0889698a3e4b43d19aa601
-  - name: 🇺🇸 美国 69 | vless
+  - name: 🇺🇸 美国 68 | vless
     type: vless
     server: s4120.wagahaha.xyz
     port: 443
@@ -1845,7 +1823,7 @@ proxies:
         Xhttp-Verify: 3769e495-72dc-42ea-95eb-093cb0e4a6f8
       host: s4117.wagahaha.xyz
       path: /632f3ba5cd0889698a3e4b43d19aa601
-  - name: 🇺🇸 美国 70 | vless
+  - name: 🇺🇸 美国 69 | vless
     type: vless
     server: s4119.wagahaha.xyz
     port: 443
@@ -1866,26 +1844,6 @@ proxies:
         Xhttp-Verify: 3769e495-72dc-42ea-95eb-093cb0e4a6f8
       host: s4117.wagahaha.xyz
       path: /632f3ba5cd0889698a3e4b43d19aa601
-  - name: 🇺🇸 美国 71 | vless
-    type: vless
-    server: 89.144.35.230
-    port: 54582
-    client-fingerprint: chrome
-    encryption: mlkem768x25519plus.native.0rtt.0Rs8kQdBBMcc2SywqxkhzNVVzyIt_OZaYDNplvTPJKOwxAumLyogdAmy-lLJdlpIerxoMMZs2dlOCoI2H_igvKVg-1lc8Pge2EY-eki2tMPCzEhec7hFnVoDRydhygEXaAaebBpipjMntKVHqLJzwKomw5d-O0kAGaiF5nYPi-SU3NEBAXUPEWi9nMZeOEYPzzthXAcIVWw7yDlrGrOJQSVRyNmcUppT9hAwoNMPe2O5z0IN3rOdd7c3soKJ8oU6gwY38ynGbMEXGQqIBRWeYPYaptddWUZP28tus9xTwKQkIfeWWjsGOZcqGJMRRPevlIxRbfcAAJuCeTiz4yErDFsoMBYdzQl3BzIIcimWDEQIXZJCR6yyLSyJj8Fva7AgcAeg5BZs6_ZQdQFZfZpwjrwmp1kbdakCf-AzR9zBrOtR35IElzgBsgavbgZVY4B1THZ7DvFQVAq3hupm6_gaAaxg42qsleKyzPEs00VY-8DLRjauukNzTigjhfqom8liJnp8aALEnXhu7rdPIWuM91WEz4uTmbxBvARzuUAe7LceQtqiaHmebrp8N0mOKsSyh2PDVAmbWtjHCXJeDhhCMPUYXuiwUVICeUZV1TZxjmZ_xFFL8JZ8vAtewzs9AkiLXJaHNdIBbQRW5qx5BQfMM5vKjYhiXCxJugxu0zq57ksRxsF68oSW0jWbHXaF9EY91ABSZystAjitddC6QcGOUtqn6giKSVs2RXwEeNqZEsEELahYcPtM_PmTlXG-3pFfXalmcpC6bcVl14JLgkykbEtDy3qhBNaUa4osqDu4g8EgRVVuJlCFEcOW-qsQZedzkuhXa2UrUSgNBfVMYXCq16iiD6WKyVVww8CKj_WsPlyNrKIdu8RKENo_HZHN5gPEkgIGWvdpUVyJVbMHlGQ8wVKFDMgn3TyCmCx2_dXM0_eQDqjI3mXAonbAoFttwDhfbpcK4FjPWSkHZrMfAQU1QeodFxqBvBe8MMw1bLSu_mE8beORjEpmtWFr08O0zeUqBkKdOBwahQnB7mBx17JnjYSH0KZT2KF29SiBudHKz7mbThIxhglQH1hSfmSWs0k_d1uCR9Qvylsns9a3j4uwcvUFtZam7iVk2HxG-vMOihIYYomSALwNU0IN01Z3qddbW5uDdtIE0yA2fVVOxjMKVMeYybtarviaCdfNmvyJ4MrJUzoS82cp6TuOYgMZ8hosGMOH1xTMCZIMc9mf4UCRJqA3cRMH0PFj_ugQ62ohDld1dyZADdQx2igtUoYnjLKcIHVdTOp36TqaofugLKwF_aJSUmhi_Kheaju28kZskBaebUqT9VPBqcqYozdvXeeG8hUT6eiMAKSML4jHIJeYOpjOHhYNUEm9b4ATJOwstyQgQmE-P3teIQeYYRcimLpjCTczISEQJcUg68e3CgA8GCoLIaZVsmYKDMxbPJu7bWygU5bBH0Gc6sqf7uNy3kI0nEtAGNAUs6y9TFROQ2BgNeSMucRVNXZ1ePpJs8mx_xRn2ODAn0hImPlLiuOHniCPE_zni6TSyL8Typ11OvyVBIrIrAxWZwREOPs5lXV17t8
-    flow: xtls-rprx-vision
-    network: xhttp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: kfw5DgkyKiovC3dzb-o2PUYnZPnbYvbx2IwERUv9czY
-      short-id: 225e2cc8
-    servername: apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 5cfc52bc-e701-4160-89df-930a0c040576
-    xhttp-opts:
-      path: /5cfc52bc-e701-4160-89df-930a0c040576-xh
-    xudp: true
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
     name: 🇭🇰 香港 24 | vless
@@ -1901,7 +1859,7 @@ proxies:
     uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
     servername: www.amd.com
   - client-fingerprint: chrome
-    name: 🇺🇸 美国 72 | vless
+    name: 🇺🇸 美国 70 | vless
     network: tcp
     port: 40056
     reality-opts:
@@ -1941,7 +1899,7 @@ proxies:
     uuid: 6dcb725e-947e-4bbe-bb35-903374d57179
     servername: buylite.tv.apple.com
   - client-fingerprint: chrome
-    name: 🇺🇸 美国 73 | vless
+    name: 🇺🇸 美国 71 | vless
     network: tcp
     port: 30906
     reality-opts:
@@ -1953,6 +1911,14 @@ proxies:
     udp: true
     uuid: 43a13764-23dd-4e01-8b79-cde8a16e13ce
     servername: www.cloudflare.com
+  - name: 🇭🇰 香港 25 | hysteria2
+    type: hysteria2
+    server: fg7xl1div.d33tqmk.cc
+    port: 11255
+    password: 1dcc3b89-0b45-3908-9120-19741361d55d
+    sni: xk7qhk309.ckpfef.top
+    obfs: salamander
+    obfs-password: 1ol3tasb90
   - name: 🇰🇷 韩国 11 | vless
     type: vless
     server: kr1.miyazono-kaori.com
@@ -1969,363 +1935,17 @@ proxies:
     flow: xtls-rprx-vision
     name: 其他 01 | vless
     network: tcp
-    port: 49148
+    port: 443
     reality-opts:
-      public-key: NEA1IjKlGS6uiQxlx8zk9rERy3TnSl-nBmT4OuefwS0
-      short-id: f7ccd3ef6d
-    server: sub.mydailystory.xyz
-    servername: www.yahoo.com
+      public-key: Y3ZOCiewH7hdmI_0g648mSF1fEIHsotbeUN7bStCqGg
+      short-id: a8a0aaad375dd0b0
+    server: 134.122.55.72
+    servername: ai.android
     tls: true
     type: vless
     udp: true
-    uuid: 1b3dffb1-1bf6-4e39-8785-58d73a06af0f
+    uuid: 512790ac-e687-41f4-b655-e948181d4eb8
   - name: 其他 02 | vless
-    type: vless
-    server: usa.ldtp.com
-    port: 443
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: N--0r-eUKZ-23lmSHvsC4ywFbsAWRahFtxv_N02AgFY
-      short-id: df2becfa7b040c78
-    servername: usa.ldtp.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 0e49e208-e09e-49bc-afee-2907e5419107
-  - name: 其他 03 | vless
-    type: vless
-    server: 45.194.10.94
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 04 | vless
-    type: vless
-    server: 45.198.87.181
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
-      short-id: 2715592069f36fe7
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-  - client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    name: 其他 05 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: USffNprEM08MHiuVy5bj6-kvxugxycuZcgQDFJyz2Wc
-      short-id: 8f9d033ad6d2cebf
-    server: 45.95.233.125
-    servername: fr1.cyphervpn.pro
-    tls: true
-    type: vless
-    udp: true
-    uuid: 8bba3194-4856-46d1-8319-075817d87eb1
-  - name: 其他 06 | vless
-    type: vless
-    server: 132.243.231.89
-    port: 443
-    uuid: d96e05a1-18bb-45da-9e9f-ab7caab6952a
-    servername: se1.se-cdn.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
-      short-id: 2d6d073dc88f22a8
-    skip-cert-verify: true
-    udp: true
-  - name: 其他 07 | vless
-    type: vless
-    server: 45.194.10.180
-    port: 8443
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 其他 08 | vless
-    network: tcp
-    port: 8443
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    server: 45.194.10.79
-    servername: storage.yandex.net
-    tls: true
-    type: vless
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 09 | vless
-    type: vless
-    server: 45.194.10.58
-    port: 8443
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 10 | vless
-    type: vless
-    server: 54.37.1.175
-    port: 443
-    client-fingerprint: firefox
-    network: tcp
-    reality-opts:
-      public-key: YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M
-      short-id: 98fa0b00d09419f7
-    servername: play.google.com
-    skip-cert-verify: true
-    tls: true
-    udp: true
-    uuid: 296a5736-bc8c-45dd-9971-8bf44b28ed4e
-  - name: 其他 11 | vless
-    type: vless
-    server: 31.76.113.61
-    port: 443
-    client-fingerprint: edge
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
-      short-id: 7a3f9e2b1c8d4f6a
-    servername: it.s3-cloud.xyz
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-  - name: 其他 12 | vless
-    type: vless
-    server: 154.222.9.157
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo
-      short-id: 8d3293f0066e129a
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: aa5b231c-4e18-4ae6-b83c-a293f51c0dfa
-  - name: 其他 13 | vless
-    type: vless
-    server: 51.195.116.82
-    port: 443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: RWE5ORdQ2SzuFWX8DlaRP415wbhee9ynJkqC7yFPgQw
-      short-id: d13ddfca12760d03
-    servername: speedtest.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 21c25bef-eb3b-44a8-9b26-fa7f674e5bfc
-  - name: 其他 14 | vless
-    type: vless
-    server: 31.76.113.96
-    port: 443
-    client-fingerprint: edge
-    flow: xtls-rprx-vision
-    network: tcp
-    reality-opts:
-      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
-      short-id: 7a3f9e2b1c8d4f6a
-    servername: it.s3-cloud.xyz
-    skip-cert-verify: true
-    tls: true
-    udp: true
-    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 其他 15 | vless
-    port: 13443
-    reality-opts:
-      public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
-      short-id: a7f3c91b2e6d84c0
-    server: 144.31.76.198
-    servername: auto.cendora.ru
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-  - name: 其他 16 | vless
-    type: vless
-    server: 15.204.97.206
-    port: 23576
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    reality-opts:
-      public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-      short-id: "01"
-    servername: fuck.rkn
-    skip-cert-verify: false
-    tls: true
-    uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  - name: 其他 17 | vless
-    type: vless
-    server: 31.76.113.50
-    port: 443
-    client-fingerprint: edge
-    flow: xtls-rprx-vision
-    network: tcp
-    reality-opts:
-      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
-      short-id: 7a3f9e2b1c8d4f6a
-    servername: it.s3-cloud.xyz
-    skip-cert-verify: true
-    tls: true
-    udp: true
-    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-  - name: 其他 18 | vless
-    type: vless
-    server: 89.125.17.34
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    network: raw
-    packet-encoding: xudp
-    reality-opts:
-      public-key: o5RlLgMEwilD5WxzXjl4BvjUxX4xk4aC5i57yQVfgxw
-      short-id: 35a6e584703c
-    servername: api-maps.yandex.ru
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 79857559-20bb-40d0-a232-1a2fec5c1326
-  - name: 其他 19 | vless
-    type: vless
-    server: 157.230.254.149
-    port: 443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: raw
-    packet-encoding: xudp
-    reality-opts:
-      public-key: uDC0dV4encJJZ84nnweP4g8ggzgaxGGphSYfhV2ATxw
-      short-id: 0963b9822ae8b87e
-    servername: www.ocbc.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 2864749a-b45d-52c3-0f36-e64224f5480f
-  - name: 其他 20 | vless
-    type: vless
-    server: 194.87.31.22
-    port: 8443
-    client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: -FQM2tUbpiBjwjgla2mwkSkFhFIKQU0FQOvRi0ZD_mY
-      short-id: 540f5784c2481b5a
-    servername: mishaduck.duckdns.org
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: cf038a28-8f85-41fc-9e86-ba99a3fdd0d9
-  - client-fingerprint: chrome
-    grpc-opts:
-      grpc-service-name: xyz
-    name: 其他 21 | vless
-    network: grpc
-    port: 47407
-    reality-opts:
-      public-key: rtap40B_7pJfYxdJxgfihEJyn3UAFZSAcjU5d4WA1h0
-      short-id: 0467594079bb9d47
-    server: 5.101.85.4
-    servername: www.google.com
-    tls: true
-    type: vless
-    uuid: cc69278f-b497-4518-a346-5c0e11f1e9ae
-  - name: 其他 22 | vless
-    type: vless
-    server: disk.api-yandex.net
-    port: 2777
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: HyxhIAJ1VbVX77n76vXAps81yWRVbKCr8AC_71sM5Ao
-      short-id: 0f4dacf08722a29f
-    servername: ads.x5.ru
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: a48c736e-d3de-47b8-a6eb-ef1d6fd34c63
-  - name: 其他 23 | vless
-    type: vless
-    server: 31.76.113.63
-    port: 443
-    client-fingerprint: edge
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
-      short-id: 7a3f9e2b1c8d4f6a
-    servername: it.s3-cloud.xyz
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-  - name: 其他 24 | vless
     type: vless
     server: 192.3.120.11
     port: 50150
@@ -2342,127 +1962,90 @@ proxies:
     tls: true
     udp: true
     uuid: 9e367d4d-60d9-4c42-a1f7-f1c112a469dc
-  - name: 其他 25 | vless
+  - name: 其他 03 | vless
     type: vless
-    server: all27.allenshop100.ir
+    server: s4114.okgfwbackxyz.xyz
     port: 443
+    alpn:
+      - h2
+      - http/1.1
     client-fingerprint: firefox
     encryption: none
-    network: tcp
+    network: xhttp
     packet-encoding: xudp
-    reality-opts:
-      public-key: YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M
-      short-id: 98fa0b00d09419f7
-    servername: play.google.com
-    skip-cert-verify: true
-    tls: true
-    udp: true
-    uuid: 9cda451e-0adf-4df1-a5b4-7fec8f363c10
-  - type: vless
-    name: 其他 26 | vless
-    server: 31.77.56.235
-    port: 443
-    uuid: f61025f4-7973-4e3e-883c-a0fe85f0489c
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
+    servername: u691611uefbf089as4109.wagahaha.xyz
     skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 9794d18f-9280-3553-a7a5-a23da75aca76
+    xhttp-opts:
+      host: efbf089as4109.wagahaha.xyz
+      path: /c667fa719997b306520f82af01b753fe
+  - name: 其他 04 | vless
+    type: vless
+    server: 45.194.10.9
+    port: 8443
+    client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
     packet-encoding: xudp
     reality-opts:
-      public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
-    network: tcp
-    servername: pl.rexten.cc
-  - client-fingerprint: chrome
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - client-fingerprint: firefox
     flow: xtls-rprx-vision
-    name: 其他 27 | vless
+    name: 其他 05 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: USffNprEM08MHiuVy5bj6-kvxugxycuZcgQDFJyz2Wc
+      short-id: 8f9d033ad6d2cebf
+    server: fr2.cyphervpn.pro
+    servername: fr2.cyphervpn.pro
+    tls: true
+    type: vless
+    udp: true
+    uuid: 8bba3194-4856-46d1-8319-075817d87eb1
+  - client-fingerprint: safari
+    flow: xtls-rprx-vision
+    name: 其他 06 | vless
+    network: tcp
+    port: 40118
+    reality-opts:
+      public-key: x1nqrSzJzU5Hq7fr36PEmtBfOf98A2XiFuRzIsdcz20
+      short-id: 5895914d
+    server: apinbxs.eovay.com
+    servername: www.lamer.com.sg
+    tls: true
+    type: vless
+    udp: true
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  - name: 其他 07 | vless
+    type: vless
+    server: 45.198.87.149
     port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
     reality-opts:
       public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
       short-id: 2715592069f36fe7
-    server: 45.198.87.173
     servername: storage.yandex.net
-    skip-cert-verify: true
+    skip-cert-verify: false
     tls: true
-    type: vless
     udp: true
     uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-  - name: 其他 28 | vless
+  - name: 其他 08 | vless
     type: vless
-    server: 45.194.10.97
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 29 | hysteria2
-    type: hysteria2
-    server: 13.212.83.43
-    port: 443
-    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-    skip-cert-verify: true
-    sni: vpn-sg-001.fastervpn.world
-    tfo: false
-  - name: 其他 30 | vless
-    type: vless
-    server: 45.194.10.244
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 31 | vless
-    type: vless
-    server: nl.cnkstore.ru
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: o5RlLgMEwilD5WxzXjl4BvjUxX4xk4aC5i57yQVfgxw
-      short-id: 35a6e584703c
-    servername: api-maps.yandex.ru
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 79857559-20bb-40d0-a232-1a2fec5c1326
-  - name: 其他 32 | vless
-    type: vless
-    server: 45.144.48.114
-    port: 443
-    client-fingerprint: firefox
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: VWnyUuQJLQiWPYEvk43ndIPjy_WNVZbO1ItxX0NRnz8
-      short-id: db04ce8bdb8900f1
-    servername: nvidia.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 94a547fc-c789-40fa-82d8-53d9760cc053
-  - name: 其他 33 | vless
-    type: vless
-    server: 31.76.113.9
+    server: 31.76.113.50
     port: 443
     client-fingerprint: edge
     flow: xtls-rprx-vision
@@ -2475,200 +2058,42 @@ proxies:
     tls: true
     udp: true
     uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
+  - name: 其他 09 | vless
+    type: vless
+    server: 45.198.87.11
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+      short-id: 2715592069f36fe7
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 其他 34 | vless
+    name: 其他 10 | vless
     network: tcp
     port: 443
     reality-opts:
-      public-key: oGgupP3uX0TNyFwuxNYaFj-IQ8EPhCuKfJdaOHiMnV0
-      short-id: c334408a1056aaf8
-    server: nl16.sodahub.online
-    servername: v2rayNplus--v2rayNplus--v2rayNplus
+      public-key: HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs
+      short-id: 7a76f3c4b9dd
+    server: jdwadgw.cvewfjg.shop
+    servername: www.cloudflare.com
     tls: true
     type: vless
     udp: true
-    uuid: 8bba3194-4856-46d1-8319-075817d87eb1
-  - name: 其他 35 | hysteria2
-    obfs: salamander
-    obfs-password: uw9b2qq5rx
-    password: 6aab8efdf13945829ae3699c342be406
-    port: 443
-    server: 31.76.80.69
-    skip-cert-verify: false
-    sni: fiproxy1.lockdwn.com
-    tls: false
-    type: hysteria2
-  - name: 其他 36 | vless
+    uuid: 711c018e-2692-4aa8-93f3-544d83fcd16c
+  - name: 其他 11 | vless
     type: vless
-    server: pl-root.sworkingvpn.com
-    port: 443
-    client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    network: tcp
-    reality-opts:
-      public-key: AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI
-      short-id: 15bcc0a77c3cacdf
-    servername: pl-root.sworkingvpn.com
-    skip-cert-verify: true
-    tls: true
-    udp: true
-    uuid: baeb9020-8fcd-0018-b95d-f76507816e6d
-  - name: 其他 37 | vless
-    type: vless
-    server: 45.67.139.162
-    port: 80
-    client-fingerprint: chrome
-    encryption: none
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      _spider-x: /IqRlL3ysYi8AGOM
-      public-key: mjkj2VuAfc9eoRfIVNaHgUV7fZR40XgnjeE31hVVR24
-      short-id: c1
-    servername: www.sony.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 2c212fbb-08f9-4be0-a128-b10892111d6d
-  - client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    name: 其他 38 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: OncWhxWwzrKOFH21JT9WxcenacQuc7ZmuQy_rZFJ8xg
-      short-id: c6e19c434dc87df7
-    server: 46.62.250.164
-    servername: login.yahoo.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: 2c326e00-d936-42e1-b463-5022c90d4597
-  - name: 其他 39 | vless
-    type: vless
-    server: 89.124.118.227
-    port: 443
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: hLXvfh2eKV2aRlFGbWIc6pqlrhgX1uOaStQJTYfNDg0
-    servername: tv.apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 28acd046-f65e-402c-a25e-4a215af02796
-  - client-fingerprint: qq
-    flow: xtls-rprx-vision
-    name: 其他 40 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-    server: 78.159.250.214
-    servername: qq.utiltools.ru
-    tls: true
-    type: vless
-    udp: true
-    uuid: eb78e1f0-d921-4ca9-a889-261fcc5a0547
-  - name: 其他 41 | hysteria2
-    obfs: salamander
-    obfs-password: t-me-V2RayyNGvpn
-    password: IJMFOXhvbQ
-    port: 38871
-    server: 51.79.91.52
-    skip-cert-verify: true
-    sni: www.bing.com
-    tls: false
-    type: hysteria2
-  - name: 其他 42 | vless
-    type: vless
-    server: 45.194.10.27
+    server: 45.206.0.58
     port: 8443
     client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 43 | vless
-    type: vless
-    server: 45.194.10.146
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    name: 其他 44 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: USffNprEM08MHiuVy5bj6-kvxugxycuZcgQDFJyz2Wc
-      short-id: 8f9d033ad6d2cebf
-    server: 138.124.244.36
-    servername: fi2.cyphervpn.pro
-    tls: true
-    type: vless
-    udp: true
-    uuid: 8bba3194-4856-46d1-8319-075817d87eb1
-  - name: 其他 45 | vless
-    type: vless
-    server: 217.217.247.245
-    port: 443
-    client-fingerprint: qq
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-      short-id: 6ba85179e30d4fc2
-    servername: enterprisekitten.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 8ca5cbd3-ec16-4728-bedc-2bc0d82f0922
-  - name: 其他 46 | vless
-    type: vless
-    server: 185.232.204.90
-    port: 443
-    client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: HKpd1sbrhBds8SJSL0d22MAq_QyTR6EP6y5b5DYol3U
-    servername: www.wikihow.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: a34b5e88-cf0d-4c01-8199-2d1002d3c787
-  - name: 其他 47 | vless
-    type: vless
-    server: 45.206.0.53
-    port: 8443
-    client-fingerprint: firefox
     encryption: none
     flow: xtls-rprx-vision
     network: tcp
@@ -2681,112 +2106,127 @@ proxies:
     tls: true
     udp: true
     uuid: 52faee73-e0fe-4661-992d-67259257170f
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 其他 48 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: qoAuuFJ0eK1lAMHIqTt6LniY6qu1GIobrGthBcRHUXM
-      short-id: 9d84de9d9f7b85e9
-    server: de.edge-9d7c.com
-    servername: de.edge-9d7c.com
-    tls: true
+  - name: 其他 12 | vless
     type: vless
-    udp: true
-    uuid: bbae962a-b6e9-46e6-990c-6abf13e6b075
-  - name: 其他 49 | vless
-    type: vless
-    server: 45.196.31.143
-    port: 8443
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 其他 50 | vless
-    network: tcp
-    port: 8443
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    server: 45.194.10.45
-    servername: storage.yandex.net
-    tls: true
-    type: vless
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 51 | vless
-    type: vless
-    server: 13.38.52.64
-    port: 15469
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      _spider-x: /
-      public-key: Mr1b8zNNR1uPtf8dgfze_kBJbaVimS0NhJL0ff_2qm4
-      short-id: 0f8d9583dd332274
-    servername: yahoo.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: deb96819-bdaa-4f52-a536-d4751290ce47
-    xudp: true
-  - name: 其他 52 | vless
-    type: vless
-    server: 144.31.230.169
-    port: 443
+    server: 2.26.87.101
+    port: 4443
     client-fingerprint: chrome
+    encryption: none
+    flow: ""
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: cPnEvtfmLBeYzbYYklKblkllFRzRzCd0KgFM-19fSDM
+      short-id: c9
+    servername: eh.vk.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 0537e5d5-8d2f-4f82-b660-ebf94062f67e
+    xudp: true
+  - name: 其他 13 | vless
+    type: vless
+    server: 45.194.10.204
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 14 | vless
+    type: vless
+    server: 31.76.113.7
+    port: 443
+    client-fingerprint: edge
     flow: xtls-rprx-vision
     network: tcp
     reality-opts:
-      public-key: GhRS0DArxmmgxh0WYlA1vLu1HrS_1oiFmWRr0dZlPnk
-      short-id: 0f4f5970da2af8d7
-    servername: www.twitch.tv
+      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
+      short-id: 7a3f9e2b1c8d4f6a
+    servername: it.s3-cloud.xyz
     skip-cert-verify: true
     tls: true
     udp: true
-    uuid: 94d7eefa-5c27-4c82-b159-6048c351fb9a
-  - name: 其他 53 | vless
+    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
+  - name: 其他 15 | vless
     type: vless
-    server: 45.144.48.223
-    port: 443
-    uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
-    servername: pl.chick-team.ru
-    tls: true
-    flow: xtls-rprx-vision
+    server: 45.194.10.78
+    port: 8443
     client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
     reality-opts:
-      public-key: tPkLNwERe23qHETdRm0NN6TSF-bwvUeWKnmXR8CK3nc
-      short-id: 58d746158028c90d
-    skip-cert-verify: true
-    udp: true
-  - alpn:
-      - h3
-    name: 其他 54 | hysteria2
-    obfs: salamander
-    obfs-password: gu74jg3ym0e21zco
-    password: 09e4b638945d44bfa60b4fd00edad131
-    port: 52000
-    server: assets.gateway-stream.com
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
     skip-cert-verify: false
-    sni: assets.gateway-stream.com
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 16 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: xbS4eVahN5UjRzCJSx9xWZD3J5cQRK1_33lzC9doS3I
+      short-id: "4627"
+    server: cdn7.cloud-vk.com
+    servername: m.vk.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 4c9b944f-6637-4cc2-a71c-5213806084ae
+  - name: 其他 17 | vless
+    type: vless
+    server: 45.198.87.203
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+      short-id: 2715592069f36fe7
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+  - client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    name: 其他 18 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: USffNprEM08MHiuVy5bj6-kvxugxycuZcgQDFJyz2Wc
+      short-id: 8f9d033ad6d2cebf
+    server: 45.95.233.125
+    servername: fr1.cyphervpn.pro
+    tls: true
+    type: vless
+    udp: true
+    uuid: 8bba3194-4856-46d1-8319-075817d87eb1
+  - name: 其他 19 | hysteria2
+    password: umnDU7jgFYUjpVjVM2sW9HL0rRYLJNgzVwRu2HzWEhyZKkRx
+    port: 443
+    server: de.1.22.washing.help
+    skip-cert-verify: true
+    sni: germany1.h2corp.local
     tls: false
     type: hysteria2
-  - name: 其他 55 | vless
+  - name: 其他 20 | vless
     type: vless
     server: 45.194.10.133
     port: 8443
@@ -2803,210 +2243,78 @@ proxies:
     tls: true
     udp: true
     uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 56 | hysteria2
-    password: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 21 | vless
+    network: tcp
+    port: 9443
+    reality-opts:
+      public-key: 6RL8C_2Hi2awKka98Kkx62STPrDXSb25C5u66GIhXRI
+      short-id: b703abc44e905632
+    server: 46.253.132.135
+    servername: fr-1.converter.darkpn.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 27c1d725-629c-4e65-9271-d6f5df82c7e9
+  - name: 其他 22 | hysteria2
+    obfs: salamander
+    obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
+    password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
     port: 443
-    server: us65.mechvpn.online
-    skip-cert-verify: true
-    sni: us65.mechvpn.online
+    server: 130.49.161.70
+    skip-cert-verify: false
+    sni: hy2.aspidnet.xyz
     tls: false
     type: hysteria2
-  - name: 其他 57 | vless
-    type: vless
-    server: 45.198.87.71
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
-      short-id: 2715592069f36fe7
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-  - name: 其他 58 | vless
-    type: vless
-    server: 162.217.248.229
+  - client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    name: 其他 23 | vless
+    network: http
     port: 443
-    client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
     reality-opts:
-      public-key: N--0r-eUKZ-23lmSHvsC4ywFbsAWRahFtxv_N02AgFY
-      short-id: df2becfa7b040c78
-    servername: usa.ldtp.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 0e49e208-e09e-49bc-afee-2907e5419107
-  - name: 其他 59 | vless
-    type: vless
-    server: 45.194.10.14
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 60 | vless
-    type: vless
-    server: ee.cloudload.org
-    port: 443
-    client-fingerprint: qq
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: -g4of4WXB_tZXwESYpRXmCh310I_ikI8tVcHgBsIDR8
-      short-id: a1ab5a56bc42a1
-    servername: ee.cloudload.org
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 17550015-678f-43ad-b0d2-65c0a829bedb
-  - name: 其他 61 | vless
-    type: vless
-    server: 45.194.10.224
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 62 | vless
-    type: vless
-    server: 31.76.113.28
-    port: 443
-    client-fingerprint: edge
-    flow: xtls-rprx-vision
-    network: tcp
-    reality-opts:
-      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
-      short-id: 7a3f9e2b1c8d4f6a
-    servername: it.s3-cloud.xyz
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    server: 88.218.44.4
+    servername: dl.google.com
     skip-cert-verify: true
     tls: true
-    udp: true
-    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-  - name: 其他 63 | vless
     type: vless
-    server: 45.194.10.191
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
+    udp: true
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+  - client-fingerprint: firefox
     flow: xtls-rprx-vision
+    name: 其他 24 | vless
     network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 64 | vless
-    type: vless
-    server: 45.194.10.159
-    port: 8443
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 65 | vless
-    type: vless
-    server: 45.194.10.156
-    port: 8443
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 66 | vless
-    type: vless
-    server: 45.194.10.84
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 67 | vless
-    type: vless
-    server: nl2.miyazono-kaori.com
     port: 443
-    uuid: df816a3d-8e27-461f-955d-2e523d3c73f7
-    servername: www.philips.com
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
     reality-opts:
-      public-key: Ncb78PVwvwU2tB1eiOlJd0ZCG2CbqG7-dPIHztlq2yM
-      short-id: 69cc4c0d5e
-    skip-cert-verify: true
-    udp: true
-  - client-fingerprint: ios
-    flow: xtls-rprx-vision
-    name: 其他 68 | vless
-    network: grpc
-    port: 56625
-    reality-opts:
-      public-key: sVtMU2ZA5W6TLnBCZdgfXqDnOwWePrGVjSNnueDlYmM
-      short-id: 2619d1af5cad99b0
-    server: 90dde47a7ab24d1e.mbcloudy.ir
-    servername: icloud.com
+      public-key: USffNprEM08MHiuVy5bj6-kvxugxycuZcgQDFJyz2Wc
+      short-id: 8f9d033ad6d2cebf
+    server: 2.26.100.228
+    servername: fi3.cyphervpn.pro
     tls: true
     type: vless
     udp: true
-    uuid: ddf34d13-d411-4e60-9a33-0b3b7d439705
-  - name: 其他 69 | vless
+    uuid: 8bba3194-4856-46d1-8319-075817d87eb1
+  - name: 其他 25 | vless
+    type: vless
+    server: 45.194.10.168
+    port: 8443
+    client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 26 | vless
     type: vless
     server: 45.131.186.103
     port: 443
@@ -3022,370 +2330,57 @@ proxies:
     tls: true
     udp: true
     uuid: 98fdfffe-28d8-4580-a4d1-2d7e15bdde4a
-  - name: 其他 70 | vless
+  - name: 其他 27 | vless
     type: vless
-    server: 195.123.210.168
-    port: 13443
+    server: 85.90.197.131
+    port: 443
     uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-    servername: auto.cendora.ru
+    servername: eu-central.cendora.ru
     tls: true
     flow: xtls-rprx-vision
-    client-fingerprint: random
-    reality-opts:
-      public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
-      short-id: a7f3c91b2e6d84c0
-    skip-cert-verify: true
-    udp: true
-  - client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    name: 其他 71 | vless
-    network: tcp
-    port: 25565
-    reality-opts:
-      public-key: 4i3aVyDqVM-6wbiUQnfaXfBwQkNXxQp5YQZ4SRVbL2I
-    server: 176.108.245.184
-    servername: gp.x5.ru
-    tls: true
-    type: vless
-    udp: true
-    uuid: bfa96ee8-0d73-4f24-9b61-4833e8a04b9b
-  - name: 其他 72 | vless
-    type: vless
-    server: 31.76.113.62
-    port: 443
-    client-fingerprint: edge
-    flow: xtls-rprx-vision
-    network: tcp
-    reality-opts:
-      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
-      short-id: 7a3f9e2b1c8d4f6a
-    servername: it.s3-cloud.xyz
-    skip-cert-verify: true
-    tls: true
-    udp: true
-    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-  - name: 其他 73 | vless
-    type: vless
-    server: 144.31.131.33
-    port: 443
     client-fingerprint: chrome
-    encryption: none
+    reality-opts:
+      public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
+      short-id: 00bca5982f82d083
+    skip-cert-verify: true
+    udp: true
+  - name: 其他 28 | vless
+    type: vless
+    server: 162.217.248.229
+    port: 443
+    client-fingerprint: firefox
     flow: xtls-rprx-vision
     network: tcp
     packet-encoding: xudp
     reality-opts:
-      public-key: djH9iD2QV748ocK-wPH7HvDd03lu88zHhS4G-61w6Dc
-      short-id: a120
-    servername: cdn.cdnjst.org
+      public-key: N--0r-eUKZ-23lmSHvsC4ywFbsAWRahFtxv_N02AgFY
+      short-id: df2becfa7b040c78
+    servername: usa.ldtp.com
     skip-cert-verify: false
     tls: true
     udp: true
-    uuid: ae852d97-85f5-45cf-82a4-254eba345480
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 其他 74 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: aB_2Tcf0A5LoiIEZHztR_l-ZOFeJKxYRH67s_OVQ9C0
-      short-id: a91045bc
-    server: 163.5.153.153
-    servername: www.samsung.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: 0a76a766-d141-44b8-944e-dff757d7116f
-  - name: 其他 75 | vless
-    type: vless
-    server: 132.243.231.93
-    port: 443
-    uuid: f202c7ca-17b7-416d-b3a2-ac71d35afe9c
-    servername: se1.se-cdn.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
-      short-id: 2d6d073dc88f22a8
-    skip-cert-verify: true
-    udp: true
+    uuid: 0e49e208-e09e-49bc-afee-2907e5419107
   - client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    name: 其他 76 | vless
-    network: tcp
-    port: 8443
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    server: 45.194.10.76
-    servername: storage.yandex.net
-    tls: true
-    type: vless
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 77 | vless
-    type: vless
-    server: 51.89.229.134
-    port: 443
-    client-fingerprint: firefox
     encryption: none
-    network: tcp
-    reality-opts:
-      _spider-x: /
-      public-key: 4e4FI0siWxFtLCRCVDQurn1wLTuvKWhRY0zj1SaUcyw
-      short-id: a13a7cc5
-    servername: www.samsung.com
-    skip-cert-verify: false
-    tls: true
-    uuid: 53821f3c-5b03-456a-89f3-f8379f130752
-  - name: 其他 78 | vless
-    type: vless
-    server: 5.180.173.222
-    port: 448
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: y4_NnPQc2X8Bj97LpUL9r9xuK-R2pLwjd5cZbBw2HSo
-      short-id: 15052edc8120b63d
-    servername: www.googletagmanager.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 626b07bd-81c4-4212-be7a-27442a579620
-  - client-fingerprint: chrome
-    grpc-opts:
-      grpc-service-name: TunService
-    name: 其他 79 | vless
-    network: grpc
-    port: 8443
-    reality-opts:
-      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
-    server: 88.218.44.4
-    servername: download.nvidia.com
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
-  - name: 其他 80 | vless
-    type: vless
-    server: 93.114.194.131
-    port: 443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: 7ReQIe2kMtP4rCrptgH5glkOM-JGcSAPzHNxOED-Z0s
-      short-id: 247fd6dab1a34a48
-    servername: web.max.ru
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 146eb6cf-a99c-4022-85ca-022cf81502dc
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 其他 81 | vless
-    network: tcp
-    port: 8443
-    reality-opts:
-      public-key: upDCW94g-pSYQrmXvOrTVYlwBUrSKhYFF9QwrqObdVo
-      short-id: 3ca620a7ed5f3196
-    server: 23.26.37.120
-    servername: google.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: dcba77d7-bb59-4802-b32c-37fd7011fca4
-  - name: 其他 82 | hysteria2
-    password: Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s
-    port: 8443
-    server: 86.107.178.69
-    skip-cert-verify: true
-    sni: grape-zet-turbo-nl.yyuyy.com
-    tls: false
-    type: hysteria2
-  - client-fingerprint: safari
-    flow: xtls-rprx-vision
-    name: 其他 83 | vless
-    network: tcp
-    port: 30892
-    reality-opts:
-      public-key: YinI5MijeZpRatg6QNDvP0qXEif-6VHC6gV5yoji4i4
-      short-id: 3d31326f95
-    server: ipl2.lliinn.com
-    servername: us1p1.xn--ghq880n3na965a.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  - name: 其他 84 | hysteria2
-    type: hysteria2
-    server: 157.230.222.46
-    port: 8443
-    password: MySecurePassword123
-    skip-cert-verify: false
-    sni: wuhantravel.duckdns.org
-    tfo: false
-  - type: hysteria2
-    name: 其他 85 | hysteria2
-    server: srvhy1.ezcon24.online
-    port: 8443
-    password: 130e6aab-9eba-441e-9021-22cbccc72832
-    sni: srvhy1.ezcon24.online
-    skip-cert-verify: false
-    tfo: false
-  - name: 其他 86 | vless
-    type: vless
-    server: 31.76.38.18
-    port: 7443
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI
-      short-id: d82fb387
-    servername: icloud.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 6e41151e-ae07-4ea6-910e-7a3986b7bc0d
-  - name: 其他 87 | hysteria2
-    obfs: salamander
-    obfs-password: KevinZakarian
-    password: KevinZakarian
-    port: 8443
-    server: 179.61.132.96
-    skip-cert-verify: true
-    sni: 179.61.132.96
-    tls: false
-    type: hysteria2
-  - client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    name: 其他 88 | vless
-    port: 443
-    reality-opts:
-      public-key: xSvlclDt9Oz7WKqoCCyuT3mEGnLwyp5ciOUClsZADH8
-      short-id: d4331052
-    server: 217.177.74.229
-    servername: yandex.ru
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 23e18cb4-9db3-4eb1-93d3-26c62095159d
-  - client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    name: 其他 89 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: lQ8pnlOU0kqS77TA7Fftl8nSzktXLzFpOLGqCZEAhjg
-      short-id: aaec521b22bbe6cb
-    server: 185.221.163.211
-    servername: fin1.panel11.ru
-    tls: true
-    type: vless
-    udp: true
-    uuid: aeb9e730-5f9e-404d-a8af-9e2e68dc7f5d
-  - name: 其他 90 | hysteria2
-    password: gf1:gfhysteria2024
-    port: 443
-    server: 5.129.235.85
-    skip-cert-verify: true
-    sni: www.linux.com
-    type: hysteria2
-    udp: true
-  - name: 其他 91 | vless
-    server: 31.77.170.106
-    port: 443
-    type: vless
-    uuid: efd400cd-98e1-4a9b-a98c-6f4a3b7cce7f
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: TC8D2edifNXaro0S31ZiC9izi8tAmXJyxdOHptwNUTw
-      short-id: 660c1badc77a422b
-    servername: edge-nl.mystatic-cdn.ru
-    client-fingerprint: firefox
-    network: tcp
-    udp: true
-  - name: 其他 92 | vless
-    type: vless
-    server: mci.mgvip.ir
-    port: 8443
-    alpn:
-      - h2
-      - http/1.1
-    client-fingerprint: chrome
-    encryption: none
+    name: 其他 29 | vless
     network: xhttp
     packet-encoding: xudp
-    servername: mdmhi.mgvip.ir
-    skip-cert-verify: false
+    port: 443
+    server: 31.58.182.33
+    servername: deu683.lackerdeu.org
+    sub_tag: M003-260806
     tls: true
-    udp: true
-    uuid: 6d9d01fc-6842-4d8b-989d-459579e5ae14
-    xhttp-opts:
-      host: mdmhi.mgvip.ir
-      mode: auto
-      path: /
-  - name: 其他 93 | vless
     type: vless
-    server: 45.198.80.78
+    udp: true
+    uuid: 2cca8201-c93e-40eb-bd8a-fea4170c169e
+    xhttp-opts:
+      path: /api/v1/
+    xudp: true
+  - name: 其他 30 | vless
+    type: vless
+    server: 45.194.10.130
     port: 8443
     client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: zr8_rtHm86s_G1gfRwNtunStGngYZSdYkA3PyBFXpDg
-      short-id: 28047c78b3f5ee2c
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: d44fc964-652c-4790-bfdc-be9ae1e281f3
-  - name: 其他 94 | vless
-    type: vless
-    server: 141.98.6.213
-    port: 443
-    uuid: efd400cd-98e1-4a9b-a98c-6f4a3b7cce7f
-    servername: edge-nl.mystatic-cdn.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: qq
-    reality-opts:
-      public-key: TC8D2edifNXaro0S31ZiC9izi8tAmXJyxdOHptwNUTw
-      short-id: 660c1badc77a422b
-    skip-cert-verify: true
-    udp: true
-  - name: 其他 95 | vless
-    type: vless
-    server: 89.125.37.151
-    port: 443
-    uuid: d96e05a1-18bb-45da-9e9f-ab7caab6952a
-    servername: se1.se-cdn.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: edge
-    reality-opts:
-      public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
-      short-id: 2d6d073dc88f22a8
-    skip-cert-verify: true
-    udp: true
-  - name: 其他 96 | vless
-    type: vless
-    server: 45.194.10.98
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
     flow: xtls-rprx-vision
     network: tcp
     packet-encoding: xudp
@@ -3397,230 +2392,7 @@ proxies:
     tls: true
     udp: true
     uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 其他 97 | vless
-    network: tcp
-    port: 8443
-    reality-opts:
-      public-key: 3JGwSDrfkiCPdU3rvQP5m0z4Ag_UB_2w8Qq3VMXmo28
-      short-id: abc323
-    server: lithuania.boot-lee.ru
-    servername: sun6-22.userapi.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: 07ab8a15-a4a5-4a03-92b4-4e6a2e9aa5e7
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 其他 98 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: 5Tt-quE0unPIlD-aN03PqpjZ4eMh34Dq1FSbPuFMzGA
-    server: denode.kaguya.sbs
-    servername: denode.kaguya.sbs
-    tls: true
-    type: vless
-    udp: true
-    uuid: ba0f90b6-3c3c-4701-b2b6-afe57da05527
-  - name: 其他 99 | vless
-    type: vless
-    server: 45.206.0.49
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: dY9SNEllJMW63xo-JdXufhmjAxB_4uFw_QMjgufjiD8
-      short-id: ea10cd5686751ec5
-    servername: storage.yandex.net
-    skip-cert-verify: true
-    tls: true
-    udp: true
-    uuid: 52faee73-e0fe-4661-992d-67259257170f
-  - type: vless
-    name: 其他 100 | vless
-    server: 159.194.226.13
-    port: 443
-    uuid: b6c29ae7-4748-4049-b642-b695c0d2c776
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: qq
-    skip-cert-verify: false
-    packet-encoding: xudp
-    reality-opts:
-      public-key: fk_aUHA_JijqIiSXZH61Ur6WSfPQ-Ke7J1IGgEZAh0I
-    network: raw
-    encryption: none
-    servername: vk.ru
-  - name: 其他 101 | vless
-    type: vless
-    server: 15.204.97.198
-    port: 23576
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    reality-opts:
-      public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-      short-id: "01"
-    servername: fuck.rkn
-    skip-cert-verify: false
-    tls: true
-    uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  - name: 其他 102 | vless
-    type: vless
-    server: 38.146.29.115
-    port: 26653
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: KwIP45y2up5f_R2roCNd_dsvTuD97GtjCPzYg1hcuXU
-    servername: www.paypal.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 7f9668a1-f65c-4274-a392-98e36da03831
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 其他 103 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: pPGE5Uacj1AGAB_WLOXB_UUnVBOmuJGH0vTSfmRBKzM
-      short-id: 2e40144ddc07e8e1
-    server: at03.tunnely.ru
-    servername: at03.tunnely.ru
-    tls: true
-    type: vless
-    udp: true
-    uuid: 31649657-6c78-4c2c-b25b-5cd574b082b5
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 其他 104 | vless
-    port: 993
-    reality-opts:
-      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
-    server: 88.218.44.4
-    servername: dl.google.com
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
-  - name: 其他 105 | vless
-    type: vless
-    server: 89.106.64.15
-    port: 7000
-    encryption: none
-    network: xhttp
-    packet-encoding: xudp
-    skip-cert-verify: false
-    tls: false
-    udp: true
-    uuid: 0a715ede-593a-4018-8406-66e2c3b1169c
-    xhttp-opts:
-      host: a12.crowsvpn.shop
-      mode: stream-one
-      path: /
-      x-padding-bytes: 100-1000
-  - name: 其他 106 | vless
-    type: vless
-    server: 45.194.10.152
-    port: 8443
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 107 | vless
-    type: vless
-    server: 31.76.113.20
-    port: 443
-    client-fingerprint: edge
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
-      short-id: 7a3f9e2b1c8d4f6a
-    servername: it.s3-cloud.xyz
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 其他 108 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: QaGTNds_fcIYGRmIXtrcDQkvwM6qBMRRssy8Jr6f_DE
-      short-id: 1c480050
-    server: 91.107.156.122
-    servername: www.speedtest.net
-    tls: true
-    type: vless
-    udp: true
-    uuid: 73cb5127-86fa-41d0-ba56-1652e74e647d
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 其他 109 | vless
-    port: 50556
-    reality-opts:
-      public-key: tqZ-C6M7YzjR_sJ-V3OgU3tLUAv-KnJ9BQfIYfnVOHo
-      short-id: 23a3dee422d0cd1c
-    server: 193.163.203.76
-    servername: api-maps.yandex.ru
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 44fcf3b7-7baf-4b73-9f50-9f47967f7b29
-  - client-fingerprint: randomized
-    flow: xtls-rprx-vision
-    name: 其他 110 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: ivgTfLR13A6xBsicIA28OPoav2tXlsstTTmGuETfnSk
-      short-id: 6d6f13013d3e1d0c
-    server: f2.steptofsvo.com
-    servername: f2.steptofsvo.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: ab6a5359-0edf-41c3-8dfd-e4b005e80820
-  - client-fingerprint: random
-    flow: xtls-rprx-vision
-    name: 其他 111 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: fmgZqiXIsO-LWrQMCNsi8_o_EaShi4ubxajVI_m8TBA
-      short-id: d4e718a6ea7cdb2d
-    server: 45.158.127.50
-    servername: free.us2.laodavip.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: 2f3a2a4d-ca46-4012-a472-b559d379ad0a
-  - name: 其他 112 | vless
+  - name: 其他 31 | vless
     type: vless
     server: 45.198.87.235
     port: 8443
@@ -3637,271 +2409,7 @@ proxies:
     tls: true
     udp: true
     uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-  - name: 其他 113 | vless
-    type: vless
-    server: 45.198.87.156
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
-      short-id: 2715592069f36fe7
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-  - name: 其他 114 | vless
-    type: vless
-    server: 8.219.7.104
-    port: 38649
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: wU5dZIDKirBqFR4I3yLCkAadHou_n-8qG5xt-qcI7hE
-      short-id: 01d1df
-    servername: claw.cloud
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: f986775c-5abe-4950-a760-52cc9831a483
-  - name: 其他 115 | hysteria2
-    password: 085178e12d2211ec
-    port: 8445
-    server: nl.prisma-access.club
-    skip-cert-verify: true
-    sni: nl.prisma-access.club
-    tls: false
-    type: hysteria2
-  - name: 其他 116 | hysteria2
-    password: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-    port: 443
-    server: de200.mechvpn.online
-    skip-cert-verify: true
-    tls: false
-    type: hysteria2
-  - name: 其他 117 | vless
-    type: vless
-    server: 144.31.216.98
-    port: 8443
-    client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: Xb-A55KyH9nwjxKw85wksIUJs9KBGk5B8rLArXGVLiw
-      short-id: d9654598d4415f95
-    servername: service.mycloudsfere.abrdns.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: cf038a28-8f85-41fc-9e86-ba99a3fdd0d9
-  - name: 其他 118 | hysteria2
-    type: hysteria2
-    server: 13.250.29.150
-    port: 443
-    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-    skip-cert-verify: true
-    sni: vpn-sg-001.fastervpn.world
-    tfo: false
-  - name: 其他 119 | hysteria2
-    password: dsfa_k0123WFzerrf_kZ3490VNb03J_m30_s
-    port: 8443
-    server: 194.180.188.97
-    skip-cert-verify: true
-    sni: keyhop-offshore.roxa.org
-    tls: false
-    type: hysteria2
-  - name: 其他 120 | vless
-    type: vless
-    server: 95.85.227.25
-    port: 443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: PL-jIhHOxLpCUmnDvMEsB3YY3n8o7smiAT0P_SV6RCM
-      short-id: 19d6296d2621d9fa
-    servername: pol1.hatvpn.org
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: e3e90161-fe65-443a-a3a4-e0e3a73704ca
-  - name: 其他 121 | vless
-    server: 31.77.170.104
-    port: 443
-    type: vless
-    uuid: efd400cd-98e1-4a9b-a98c-6f4a3b7cce7f
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: TC8D2edifNXaro0S31ZiC9izi8tAmXJyxdOHptwNUTw
-      short-id: 660c1badc77a422b
-    servername: edge-nl.mystatic-cdn.ru
-    client-fingerprint: firefox
-    network: tcp
-    udp: true
-  - name: 其他 122 | hysteria2
-    obfs: salamander
-    obfs-password: "@JavidnamanIran-Javid-SHAH-KingRezaPahlavi"
-    password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
-    port: 35000
-    server: 181.214.99.162
-    skip-cert-verify: false
-    sni: api.kermanshahi.org
-    tls: false
-    type: hysteria2
-  - name: 其他 123 | vless
-    type: vless
-    server: 167.233.201.150
-    port: 443
-    client-fingerprint: chrome
-    encryption: none
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      _spider-x: /
-      public-key: Qr6_9TMQYMCB2hVSYeONcMvxBqIaT0mzPUy8nIivV1g
-      short-id: b58b
-    servername: play.google.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: a98b4797-226e-4c40-8b17-73b22cf94c8e
-  - client-fingerprint: qq
-    flow: xtls-rprx-vision
-    name: 其他 124 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
-    server: 192.142.12.67
-    servername: linkvault.fyi
-    tls: true
-    type: vless
-    udp: true
-    uuid: 2aed6a64-0cf7-0003-acd5-b75774c8cfa3
-  - client-fingerprint: ios
-    flow: xtls-rprx-vision
-    name: 其他 125 | vless
-    network: tcp
-    port: 44788
-    reality-opts:
-      public-key: dDf2TcDNn3Kk8pAp4EnNC4ZUAmGkzAapRFGFe-41IEk
-      short-id: 86f6705960e3e3
-    server: apibgp.ianai.it.com
-    servername: iosapps.itunes.apple.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  - name: 其他 126 | hysteria2
-    obfs: salamander
-    obfs-password: txwr28j1lntoy0sj
-    password: m3bqxk03mg221yi2
-    port: 52067
-    server: assets.gateway-stream.com
-    skip-cert-verify: false
-    sni: assets.gateway-stream.com
-    tls: false
-    type: hysteria2
-  - name: 其他 127 | vless
-    type: vless
-    server: 45.194.10.226
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 128 | vless
-    type: vless
-    server: 37.202.205.75
-    port: 443
-    uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
-    servername: it.savesafe.cc
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: UknJiwNyRmwBTaQCyY3mpq9blOPEgBFPV_NYJIgBKCs
-      short-id: 62b6d6e51d461d78
-    skip-cert-verify: true
-    udp: true
-  - name: 其他 129 | hysteria2
-    type: hysteria2
-    server: 13.212.61.62
-    port: 443
-    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-    skip-cert-verify: true
-    sni: vpn-sg-001.fastervpn.world
-    tfo: false
-  - name: 其他 130 | vless
-    type: vless
-    server: 45.194.10.107
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 131 | hysteria2
-    type: hysteria2
-    server: 13.229.54.181
-    port: 443
-    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-    skip-cert-verify: true
-    sni: vpn-sg-001.fastervpn.world
-    tfo: false
-  - name: 其他 132 | vless
-    type: vless
-    server: 45.194.10.41
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 133 | hysteria2
-    password: 22d891f5-ad85-4824-b0b8-e30cf3d37eb5
-    port: 2056
-    server: lsj1.mangshe.xyz
-    skip-cert-verify: true
-    sni: lsj1.mangshe.xyz
-    tls: false
-    type: hysteria2
-  - name: 其他 134 | vless
+  - name: 其他 32 | vless
     type: vless
     server: 45.194.10.189
     port: 8443
@@ -3918,60 +2426,83 @@ proxies:
     tls: true
     udp: true
     uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 135 | hysteria2
-    type: hysteria2
-    server: 65.109.177.191
+  - type: vless
+    name: 其他 33 | vless
+    server: 152.53.173.90
     port: 443
-    obfs: salamander
-    obfs-password: t-me-V2RayyNGvpn
-    password: t-me-V2RayyNGvpn
-    skip-cert-verify: true
-    sni: www.oracle.com
-    tfo: false
-  - name: 其他 136 | vless
-    type: vless
-    server: 90.156.255.198
-    port: 51114
-    client-fingerprint: chrome
-    encryption: none
-    network: tcp
+    uuid: f4dbc770-016d-4a0f-82f0-d83ee6f45da3
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: random
+    skip-cert-verify: false
     packet-encoding: xudp
     reality-opts:
-      _spider-x: /
-      public-key: lf7NJGZAcj3b-YdbsmD6oEISr0dZRjp_gM8ZhLHwb0U
-      short-id: 772e
-    servername: yahoo.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 8b575b35-3c7c-42b0-ac80-2aa6b0d7717c
-    xudp: true
-  - name: 其他 137 | hysteria2
-    obfs: salamander
-    obfs-password: v8h63irhnay97090
-    password: d86efa900c2f4bb6bde662f1ef6413b8
-    port: 52029
-    server: assets.gateway-stream.com
-    sni: assets.gateway-stream.com
-    tls: false
-    type: hysteria2
-  - name: 其他 138 | vless
+      public-key: HAuFt4Q6WDEwNYO1BOTpekM2HXwTaZxXYVReYyP3NVI
+    network: tcp
+    servername: fastsync.xyz
+  - name: 其他 34 | vless
     type: vless
-    server: 45.194.10.164
-    port: 8443
+    server: 15.223.121.250
+    port: 41087
     client-fingerprint: firefox
+    encryption: none
     flow: xtls-rprx-vision
     network: tcp
     packet-encoding: xudp
     reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
+      _spider-x: /
+      public-key: aoGL5vNnsEuKoBXQFXyHTxjvcdAn3SxT4qUgV6aJxnw
+      short-id: 190d259bbd40d4c3
+    servername: www.tesla.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 57d94cf7-ca36-4c2a-bec5-90cf38588cda
+    xudp: true
+  - name: 其他 35 | vless
+    type: vless
+    server: 45.198.87.60
+    port: 8443
+    alpn:
+      - networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+      short-id: 2715592069f36fe7
     servername: storage.yandex.net
     skip-cert-verify: false
     tls: true
     udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 139 | vless
+    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+  - name: 其他 36 | vless
+    type: vless
+    server: mci.mgvip.ir
+    port: 443
+    alpn:
+      - h2
+      - http/1.1
+    client-fingerprint: chrome
+    encryption: none
+    network: xhttp
+    packet-encoding: xudp
+    servername: ihvi.mgvip.ir
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 6d9d01fc-6842-4d8b-989d-459579e5ae14
+    xhttp-opts:
+      headers:
+        "1": snapp.ir
+      host: ihvi.mgvip.ir
+      mode: auto
+      path: /
+      x-padding-bytes: 100-1000
+  - name: 其他 37 | vless
     type: vless
     server: 45.194.10.115
     port: 8443
@@ -3988,9 +2519,69 @@ proxies:
     tls: true
     udp: true
     uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 140 | vless
+  - name: 其他 38 | vless
     type: vless
-    server: rezerv21.yunus.guru
+    server: 163.5.153.153
+    port: 443
+    uuid: 0a76a766-d141-44b8-944e-dff757d7116f
+    udp: true
+    network: tcp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: www.samsung.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: aB_2Tcf0A5LoiIEZHztR_l-ZOFeJKxYRH67s_OVQ9C0
+      short-id: a91045bc
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 39 | vless
+    port: 8443
+    reality-opts:
+      public-key: A9jwrodyycJJV-apFQ91_rrh1vfJ_hSzZGNP9GBPGCM
+      short-id: 92d0c4089b6c1da3
+    server: 132.243.231.122
+    servername: io.ozone.ru
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: 7625adbb-52f7-4ff4-95f8-677471071a77
+  - name: 其他 40 | vless
+    type: vless
+    server: 31.76.113.91
+    port: 443
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: ""
+    reality-opts:
+      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
+      short-id: 7a3f9e2b1c8d4f6a
+    servername: it.s3-cloud.xyz
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
+  - name: 其他 41 | vless
+    type: vless
+    server: 45.206.0.45
+    port: 8443
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: dY9SNEllJMW63xo-JdXufhmjAxB_4uFw_QMjgufjiD8
+      short-id: ea10cd5686751ec5
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 52faee73-e0fe-4661-992d-67259257170f
+  - name: 其他 42 | vless
+    type: vless
+    server: 144.124.251.49
     port: 443
     client-fingerprint: firefox
     flow: xtls-rprx-vision
@@ -4004,88 +2595,26 @@ proxies:
     tls: true
     udp: true
     uuid: a5ea9247-79f3-4655-aece-3fb51e1e669e
-  - client-fingerprint: qq
-    flow: xtls-rprx-vision
-    name: 其他 141 | vless
-    network: tcp
-    port: 443
+  - client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: TunService
+    name: 其他 43 | vless
+    network: grpc
+    port: 8443
     reality-opts:
-      public-key: OCLtjVdRxsou3429LRfjkDYgiAPs24TSgSeFZpChCEw
-      short-id: d67ec5a8fc40ebea
-    server: cur02.myxasecure.space
-    servername: cur02.myxasecure.space
-    tls: true
-    type: vless
-    udp: true
-    uuid: c04bf2df-2b7f-44da-a893-3792d3910fd8
-  - client-fingerprint: ios
-    flow: xtls-rprx-vision
-    name: 其他 142 | vless
-    port: 443
-    reality-opts:
-      public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-      short-id: c39cc7310a
-    server: 169.40.42.229
-    servername: yahoo.com
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    server: 88.218.44.4
+    servername: download.nvidia.com
     skip-cert-verify: true
     tls: true
     type: vless
     udp: true
-    uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  - name: 其他 143 | hysteria2
-    password: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-    port: 443
-    server: at133.mechvpn.online
-    sni: at133.mechvpn.online
-    tls: false
-    type: hysteria2
-  - name: 其他 144 | hysteria2
-    password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-    port: 8443
-    server: 85.204.107.164
-    skip-cert-verify: true
-    sni: grape-zet-ro-turbo.bumbleshrimp.com
-    tls: false
-    type: hysteria2
-  - name: 其他 145 | vless
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+  - name: 其他 44 | vless
     type: vless
-    server: 31.76.113.122
-    port: 443
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
-      short-id: 7a3f9e2b1c8d4f6a
-    servername: it.s3-cloud.xyz
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-  - name: 其他 146 | vless
-    type: vless
-    server: node-fi.dostup-est.info
+    server: 45.194.10.251
     port: 8443
     client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: Ubibgn_MlW_zHo9LwjNH_b6SLNWwTJFwq7wW2ggLtUs
-      short-id: 88ce6b586fcaf681
-    servername: cdnjs.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: c931f737-cafe-4e4f-998a-a65517941256
-    xudp: true
-  - name: 其他 147 | vless
-    type: vless
-    server: 45.194.10.50
-    port: 8443
-    client-fingerprint: firefox
     encryption: none
     flow: xtls-rprx-vision
     network: tcp
@@ -4098,9 +2627,9 @@ proxies:
     tls: true
     udp: true
     uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 148 | vless
+  - name: 其他 45 | vless
     type: vless
-    server: 45.198.87.32
+    server: 144.31.219.208
     port: 8443
     client-fingerprint: chrome
     encryption: none
@@ -4108,194 +2637,47 @@ proxies:
     network: tcp
     packet-encoding: xudp
     reality-opts:
-      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
-      short-id: 2715592069f36fe7
-    servername: storage.yandex.net
+      public-key: EIlnBMyH--EIasnzGPJAAFSP5WM_4FNU4ktFUQI0O00
+      short-id: a13edee689fca1da
+    servername: cdn2.swaginozip.fun
     skip-cert-verify: false
     tls: true
     udp: true
-    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-  - client-fingerprint: safari
-    flow: xtls-rprx-vision
-    name: 其他 149 | vless
-    network: tcp
-    port: 40118
-    reality-opts:
-      public-key: x1nqrSzJzU5Hq7fr36PEmtBfOf98A2XiFuRzIsdcz20
-      short-id: 5895914d
-    server: apinbxs.eovay.com
-    servername: www.lamer.com.sg
-    tls: true
+    uuid: cf038a28-8f85-41fc-9e86-ba99a3fdd0d9
+  - name: 其他 46 | vless
     type: vless
+    server: 158.160.161.175
+    port: 443
+    client-fingerprint: qq
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: 6QIHdF1dvSK8mDPOeWXvGIqJmZ2ySq5fyc7N15h1WFE
+      short-id: 34256b39b4ebb864
+    servername: rezerv7.yunus.guru
+    skip-cert-verify: false
+    tls: true
     udp: true
-    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    uuid: a5ea9247-79f3-4655-aece-3fb51e1e669e
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 其他 150 | vless
+    name: 其他 47 | vless
     network: tcp
     port: 443
     reality-opts:
-      public-key: T7cxFOGNMLKqZiEustm2sOfwOovHyHnLcGDWfSmaU1c
-    server: 31.77.154.51
-    servername: it-one.quiet-rogue.site
+      public-key: SUfGUYeyXhvcomjjiVWlkEK1wSL6Q0wCRNVAzrxaI3Q
+      short-id: 62a71a3bc82af165
+    server: 43.159.51.6
+    servername: www.cloudflare.com
     tls: true
     type: vless
     udp: true
-    uuid: 71cada65-d23e-418c-88e4-a06188d14689
-  - alpn:
-      - h3
-    name: 其他 151 | hysteria2
-    obfs: salamander
-    obfs-password: "@JavidnamanIran-Javid-SHAH-KingRezaPahlavi"
-    password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
-    port: 35000
-    server: 5.175.249.174
-    skip-cert-verify: false
-    sni: api.kermanshahi.org
-    tls: false
-    type: hysteria2
-  - name: 其他 152 | vless
+    uuid: ea535933-6fe2-45ae-b737-5b2d47e04bb4
+  - name: 其他 48 | vless
     type: vless
-    server: 195.74.93.254
-    port: 443
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: 7ReQIe2kMtP4rCrptgH5glkOM-JGcSAPzHNxOED-Z0s
-      short-id: 247fd6dab1a34a48
-    servername: web.max.ru
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 146eb6cf-a99c-4022-85ca-022cf81502dc
-  - name: 其他 153 | vless
-    type: vless
-    server: 162.159.90.45
-    port: 2083
-    encryption: none
-    network: xhttp
-    packet-encoding: xudp
-    servername: RgeTHowthEweStwAswOn.FaIrisFair.IR
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 4aa8a9c5-db16-4d44-9276-dc139384e0b6
-    xhttp-opts:
-      headers:
-        User-Agent: Mozilla/5.0+(Linux;+Android+10;+K)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/122.0.0.0+Safari/537.36
-      host: IfoRgeTHowthEweStwAswOn.faIRisfAir.ir
-      mode: auto
-      path: /
-  - name: 其他 154 | vless
-    type: vless
-    server: 174.138.21.249
-    port: 443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: raw
-    packet-encoding: xudp
-    reality-opts:
-      public-key: uDC0dV4encJJZ84nnweP4g8ggzgaxGGphSYfhV2ATxw
-      short-id: 0963b9822ae8b87e
-    servername: www.adobe.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 2864749a-b45d-52c3-0f36-e64224f5480f
-  - name: 其他 155 | vless
-    type: vless
-    server: 45.198.87.193
-    port: 8443
-    client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
-      short-id: 2715592069f36fe7
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-  - name: 其他 156 | vless
-    type: vless
-    server: 45.194.10.25
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 157 | hysteria2
-    type: hysteria2
-    server: 13.229.106.122
-    port: 443
-    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-    skip-cert-verify: true
-    sni: vpn-sg-001.fastervpn.world
-    tfo: false
-  - name: 其他 158 | vless
-    type: vless
-    server: 31.76.113.56
-    port: 443
-    client-fingerprint: edge
-    flow: xtls-rprx-vision
-    network: tcp
-    reality-opts:
-      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
-      short-id: 7a3f9e2b1c8d4f6a
-    servername: it.s3-cloud.xyz
-    skip-cert-verify: true
-    tls: true
-    udp: true
-    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-  - name: 其他 159 | vless
-    type: vless
-    server: 31.76.113.124
-    port: 443
-    client-fingerprint: edge
-    flow: xtls-rprx-vision
-    network: tcp
-    reality-opts:
-      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
-      short-id: 7a3f9e2b1c8d4f6a
-    servername: it.s3-cloud.xyz
-    skip-cert-verify: true
-    tls: true
-    udp: true
-    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-  - name: 其他 160 | vless
-    type: vless
-    server: 45.194.10.233
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 161 | vless
-    type: vless
-    server: 51.158.206.96
+    server: 51.158.206.97
     port: 23576
     client-fingerprint: chrome
     encryption: none
@@ -4308,35 +2690,11 @@ proxies:
     skip-cert-verify: false
     tls: true
     uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  - name: 其他 162 | vless
+  - name: 其他 49 | vless
     type: vless
-    server: fll.gazladder.work
-    port: 443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: j97RCvxVfMu5XWcXuAc4s8TnBTdl8PQrNFrZDQpAkng
-      short-id: b415b8d7a6106ace
-    servername: fll.gazladder.work
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 2e146372-aafa-42e6-aaa6-b2a7185225ce
-  - name: 其他 163 | hysteria2
-    password: bce6c821-200d-421f-bf3d-7159e5246ea0
-    port: 33333
-    server: 155.248.209.237
-    skip-cert-verify: true
-    sni: hy2.123266.xyz
-    type: hysteria2
-  - name: 其他 164 | vless
-    type: vless
-    server: 45.194.10.199
+    server: 45.194.10.205
     port: 8443
-    client-fingerprint: firefox
+    client-fingerprint: chrome
     encryption: none
     flow: xtls-rprx-vision
     network: tcp
@@ -4349,128 +2707,58 @@ proxies:
     tls: true
     udp: true
     uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 165 | vless
+  - name: 其他 50 | vless
     type: vless
-    server: 154.222.9.19
-    port: 8443
-    client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo
-      short-id: 8d3293f0066e129a
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: aa5b231c-4e18-4ae6-b83c-a293f51c0dfa
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 其他 166 | vless
-    network: tcp
+    server: 8.209.242.121
     port: 443
-    reality-opts:
-      public-key: QocXHwad0mV7WA5jSAcqDac3uuVBEp1WF775-CilniE
-      short-id: 45ba18f429ad1f28
-    server: de.vrsvpn.com
-    servername: web.max.ru
-    tls: true
-    type: vless
-    udp: true
-    uuid: 0b9bcbc1-b289-4a64-86fa-a5b731b65384
-  - name: 其他 167 | vless
-    type: vless
-    server: 31.76.113.119
-    port: 443
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
-      short-id: 7a3f9e2b1c8d4f6a
-    servername: it.s3-cloud.xyz
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-    xudp: true
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 其他 168 | vless
-    port: 8443
-    reality-opts:
-      public-key: A9jwrodyycJJV-apFQ91_rrh1vfJ_hSzZGNP9GBPGCM
-      short-id: 92d0c4089b6c1da3
-    server: 132.243.231.122
-    servername: io.ozone.ru
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 7625adbb-52f7-4ff4-95f8-677471071a77
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 其他 169 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: X5WLfJ82KCpBanu2EwML11CwJUM2NczTonML5hHwW2o
-      short-id: b5b39d420f404069
-    server: 49.13.135.58
-    servername: github.io
-    tls: true
-    type: vless
-    udp: true
-    uuid: 18e82ee0-3b88-48d1-9292-484c8051f690
-  - name: 其他 170 | hysteria2
-    obfs: salamander
-    obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
-    password: cd74c0a406664a5bc0bac098220a2468
-    port: 443
-    server: nl2.sferavpn.pro
-    skip-cert-verify: true
-    sni: nl2.sferavpn.pro
-    tls: false
-    type: hysteria2
-  - name: 其他 171 | vless
-    type: vless
-    server: 64.188.79.53
-    port: 48161
-    client-fingerprint: firefox
+    client-fingerprint: qq
     encryption: none
     flow: xtls-rprx-vision
     network: tcp
     packet-encoding: xudp
     reality-opts:
-      _spider-x: /vLsiCccMXAczIgJ
-      public-key: cm3MNPIRmySoBcEgeH6QEuVyoPbBQyjRhs8UF_swl1E
-      short-id: 41388e02247a3902
-    servername: github.com
+      public-key: 4-rbY6ItUutAV13q9VdEcWtCc2H2C382F4Y7IwfCwQw
+      short-id: ffff
+    servername: developer.mozilla.org
     skip-cert-verify: false
     tls: true
     udp: true
-    uuid: 72362320-3c4c-42cf-b76c-82f7b1832c47
-  - name: 其他 172 | vless
+    uuid: ee7381ee-db2b-404c-b7fc-87f5369a7643
+  - name: 其他 51 | vless
     type: vless
-    server: 45.198.87.218
-    port: 8443
+    server: 45.144.48.114
+    port: 443
     client-fingerprint: firefox
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: VWnyUuQJLQiWPYEvk43ndIPjy_WNVZbO1ItxX0NRnz8
+      short-id: db04ce8bdb8900f1
+    servername: nvidia.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 94a547fc-c789-40fa-82d8-53d9760cc053
+  - name: 其他 52 | vless
+    type: vless
+    server: 45.194.10.167
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
     flow: xtls-rprx-vision
     network: tcp
     packet-encoding: xudp
     reality-opts:
-      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
-      short-id: 2715592069f36fe7
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
     servername: storage.yandex.net
     skip-cert-verify: false
     tls: true
     udp: true
-    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-  - name: 其他 173 | vless
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 53 | vless
     type: vless
-    server: 45.194.10.43
+    server: 45.194.10.236
     port: 8443
     client-fingerprint: firefox
     encryption: none
@@ -4487,217 +2775,21 @@ proxies:
     uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 其他 174 | vless
+    name: 其他 54 | vless
     network: tcp
-    port: 443
-    reality-opts:
-      public-key: HS4Gr-vMqAOKdxn1Qr2Kwvh3UCIgr3eYWOvUTvuhJh4
-      short-id: 89965a0c305affd3
-    server: xxl.orbit-escape.ru
-    servername: xxl.orbit-escape.ru
-    tls: true
-    type: vless
-    udp: true
-    uuid: 27c1d725-629c-4e65-9271-d6f5df82c7e9
-  - name: 其他 175 | vless
-    type: vless
-    server: 31.76.113.58
-    port: 443
-    client-fingerprint: edge
-    flow: xtls-rprx-vision
-    network: tcp
-    reality-opts:
-      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
-      short-id: 7a3f9e2b1c8d4f6a
-    servername: it.s3-cloud.xyz
-    skip-cert-verify: true
-    tls: true
-    udp: true
-    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-  - name: 其他 176 | vless
-    port: 19747
-    server: 77.73.232.61
-    type: vless
-    network: tcp
-    udp: true
-    servername: yahoo.com
-    skip-cert-verify: true
-    reality-opts:
-      public-key: ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM
-      short-id: "2001"
-    uuid: 2a9ed01e-5455-44b4-a66a-76ee8165f0ac
-    client-fingerprint: chrome
-  - name: 其他 177 | vless
-    type: vless
-    server: 31.76.113.52
-    port: 443
-    client-fingerprint: edge
-    flow: xtls-rprx-vision
-    network: tcp
-    reality-opts:
-      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
-      short-id: 7a3f9e2b1c8d4f6a
-    servername: it.s3-cloud.xyz
-    skip-cert-verify: true
-    tls: true
-    udp: true
-    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-  - name: 其他 178 | vless
-    type: vless
-    server: 132.243.231.94
-    port: 443
-    uuid: f202c7ca-17b7-416d-b3a2-ac71d35afe9c
-    servername: se1.se-cdn.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
-      short-id: 2d6d073dc88f22a8
-    skip-cert-verify: true
-    udp: true
-  - name: 其他 179 | vless
-    type: vless
-    server: 45.198.87.148
     port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
-      short-id: 2715592069f36fe7
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-  - name: 其他 180 | vless
-    type: vless
-    server: 159.195.44.159
-    port: 443
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: RurLbpOTStqCjS3lhwB0d3MEZ3629j3atv_r1dT5zjM
-      short-id: 273940fba6ad8250
-    servername: 5.oncloudnineservicestreang.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 859a537b-09cf-4bce-8da4-ecbb72950e3a
-  - name: 其他 181 | hysteria2
-    password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
-    port: 8443
-    server: 45.154.206.72
-    skip-cert-verify: true
-    sni: russiapower.accesscam.org
-    type: hysteria2
-  - name: 其他 182 | vless
-    server: 31.77.170.97
-    port: 443
-    type: vless
-    uuid: efd400cd-98e1-4a9b-a98c-6f4a3b7cce7f
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: TC8D2edifNXaro0S31ZiC9izi8tAmXJyxdOHptwNUTw
-      short-id: 660c1badc77a422b
-    servername: edge-nl.mystatic-cdn.ru
-    client-fingerprint: firefox
-    network: tcp
-    udp: true
-  - name: 其他 183 | vless
-    type: vless
-    server: 45.198.87.236
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
-      short-id: 2715592069f36fe7
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-  - name: 其他 184 | vless
-    type: vless
-    server: 89.22.228.57
-    port: 443
-    client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      _spider-x: /
-      public-key: 9l18ryEYpf9E-qaQD2HkPfi1n5qfMRDkncpYLcZrdQc
-      short-id: b378
-    servername: stockholmresilience.org
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 1f4c983e-382c-d2fa-b2dc-7981f02b34de
-  - name: 其他 185 | vless
-    type: vless
-    server: 45.194.10.12
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
     reality-opts:
       public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
       short-id: 2cfb5a0ae8ab0cb0
+    server: 45.194.10.165
     servername: storage.yandex.net
-    skip-cert-verify: false
     tls: true
+    type: vless
     udp: true
     uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 186 | vless
+  - name: 其他 55 | vless
     type: vless
-    server: 45.198.87.147
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
-      short-id: 2715592069f36fe7
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-  - name: 其他 187 | hysteria2
-    type: hysteria2
-    server: 54.254.241.184
-    port: 443
-    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-    skip-cert-verify: true
-    sni: vpn-sg-001.fastervpn.world
-    tfo: false
-  - name: 其他 188 | hysteria2
-    password: belgium_hysteria2_fastlane_a118d9y0r
-    port: 443
-    server: 113.30.152.25
-    skip-cert-verify: true
-    sni: be1.h.fastlanehosting.ru
-    tls: false
-    type: hysteria2
-  - name: 其他 189 | vless
-    type: vless
-    server: 45.194.10.174
+    server: 45.194.10.3
     port: 8443
     client-fingerprint: firefox
     encryption: none
@@ -4712,38 +2804,24 @@ proxies:
     tls: true
     udp: true
     uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 190 | vless
+  - name: 其他 56 | vless
     type: vless
-    server: 51.158.206.86
-    port: 23576
+    server: 45.194.10.2
+    port: 8443
     client-fingerprint: chrome
     encryption: none
     flow: xtls-rprx-vision
     network: tcp
+    packet-encoding: xudp
     reality-opts:
-      public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-      short-id: "01"
-    servername: fuck.rkn
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
     skip-cert-verify: false
     tls: true
-    uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  - client-fingerprint: firefox
-    encryption: none
-    name: 其他 191 | vless
-    network: xhttp
-    packet-encoding: xudp
-    port: 443
-    server: 31.58.182.33
-    servername: deu683.lackerdeu.org
-    sub_tag: M003-260806
-    tls: true
-    type: vless
     udp: true
-    uuid: 2cca8201-c93e-40eb-bd8a-fea4170c169e
-    xhttp-opts:
-      path: /api/v1/
-    xudp: true
-  - name: 其他 192 | vless
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 57 | vless
     type: vless
     server: 45.194.10.131
     port: 8443
@@ -4760,108 +2838,26 @@ proxies:
     tls: true
     udp: true
     uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 193 | vless
+  - name: 其他 58 | vless
     type: vless
-    server: 31.77.170.109
+    server: 159.195.46.178
     port: 443
-    uuid: efd400cd-98e1-4a9b-a98c-6f4a3b7cce7f
-    servername: edge-nl.mystatic-cdn.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: qq
-    reality-opts:
-      public-key: TC8D2edifNXaro0S31ZiC9izi8tAmXJyxdOHptwNUTw
-      short-id: 660c1badc77a422b
-    skip-cert-verify: true
-    udp: true
-  - name: 其他 194 | vless
-    type: vless
-    server: 45.194.10.112
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 195 | vless
-    type: vless
-    server: 45.198.87.13
-    port: 8443
     client-fingerprint: firefox
     flow: xtls-rprx-vision
     network: tcp
     packet-encoding: xudp
     reality-opts:
-      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
-      short-id: 2715592069f36fe7
-    servername: storage.yandex.net
+      public-key: P5ceHLOW8Gmz45z-ozbm9T6xsdSsIGLB71-jMfSjCBQ
+      short-id: 04bc695105689674
+    servername: 4.oncloudnineservicestreang.com
     skip-cert-verify: false
     tls: true
     udp: true
-    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-  - name: 其他 196 | vless
+    uuid: 859a537b-09cf-4bce-8da4-ecbb72950e3a
+  - name: 其他 59 | vless
     type: vless
-    server: 88.216.70.131
-    port: 443
-    client-fingerprint: random
-    encryption: none
-    grpc-opts:
-      grpc-service-name: data-sync
-    network: grpc
-    packet-encoding: xudp
-    reality-opts:
-      public-key: kPBXTe2KCp55GrHS_qU_sF7ohUcT8Vu-e8i6Yd9MERI
-      short-id: d5c7f84e37e0c12d
-    servername: google.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 8658fe29-466b-41d9-b1f9-05c268054f87
-  - name: 其他 197 | vless
-    type: vless
-    server: 45.194.10.54
+    server: 94.156.232.72
     port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 198 | vless
-    type: vless
-    server: 45.194.10.144
-    port: 8443
-    client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 199 | vless
-    type: vless
-    server: 130.107.73.148
-    port: 41373
     client-fingerprint: chrome
     encryption: none
     flow: xtls-rprx-vision
@@ -4869,112 +2865,59 @@ proxies:
     packet-encoding: xudp
     reality-opts:
       _spider-x: /
-      public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
-      short-id: 0e
-    servername: google.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: a71c8954-66a8-4321-bedb-2336230d81ce
-  - name: 其他 200 | vless
-    type: vless
-    server: 45.194.10.86
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 201 | vless
-    type: vless
-    server: 45.194.10.216
-    port: 8443
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 202 | vless
-    type: vless
-    server: 45.207.35.175
-    port: 443
-    uuid: 3dfd4ca4-dd85-4ee0-96d7-fa2900d76f65
-    servername: navi.bankrate.com
-    tls: true
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
-      short-id: 2da72ce6
+      public-key: szNyp0kNUPRKF4gJmAHY1h42Kh5m2_55cTmPj7be-Wc
+      short-id: 34c2f5e6883680
+    servername: teamdocs.su
     skip-cert-verify: true
+    tls: true
     udp: true
-  - name: 其他 203 | vless
+    uuid: d604d0be-e942-46c8-82c2-0e49d506b0cf
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 60 | vless
+    port: 2027
+    reality-opts:
+      public-key: ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo
+      short-id: dc8109baf0f607ea
+    server: 78.159.247.253
+    servername: storage.yandex.net
+    skip-cert-verify: true
+    tls: true
     type: vless
-    server: 64.188.91.92
+    udp: true
+    uuid: 851ed0d8-a37b-452d-8ef2-5b6c2d28a060
+  - name: 其他 61 | vless
+    type: vless
+    server: 45.194.10.25
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 62 | vless
+    server: 141.98.6.213
     port: 443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: j97RCvxVfMu5XWcXuAc4s8TnBTdl8PQrNFrZDQpAkng
-      short-id: b415b8d7a6106ace
-    servername: fast.gazladder.work
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 2e146372-aafa-42e6-aaa6-b2a7185225ce
-  - name: 其他 204 | vless
     type: vless
-    server: 45.194.10.60
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
+    uuid: efd400cd-98e1-4a9b-a98c-6f4a3b7cce7f
     tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 205 | vless
-    type: vless
-    server: 45.194.10.63
-    port: 8443
-    client-fingerprint: chrome
-    encryption: none
     flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
     reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
+      public-key: TC8D2edifNXaro0S31ZiC9izi8tAmXJyxdOHptwNUTw
+      short-id: 660c1badc77a422b
+    servername: edge-nl.mystatic-cdn.ru
+    client-fingerprint: firefox
+    network: tcp
     udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 206 | vless
+  - name: 其他 63 | vless
     type: vless
     server: treng.loralden.com
     port: 443
@@ -4993,75 +2936,28 @@ proxies:
     tls: true
     udp: true
     uuid: 82d47c52-9738-4d40-93a4-220bab575c60
-  - name: 其他 207 | vless
+  - name: 其他 64 | vless
     type: vless
-    server: 45.194.10.0
-    port: 8443
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 208 | vless
-    type: vless
-    server: 45.194.10.128
-    port: 8443
+    server: 174.138.21.249
+    port: 443
     client-fingerprint: chrome
     encryption: none
     flow: xtls-rprx-vision
-    network: tcp
+    network: raw
     packet-encoding: xudp
     reality-opts:
-      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
-      short-id: 2cfb5a0ae8ab0cb0
-    servername: storage.yandex.net
+      public-key: uDC0dV4encJJZ84nnweP4g8ggzgaxGGphSYfhV2ATxw
+      short-id: 0963b9822ae8b87e
+    servername: www.adobe.com
     skip-cert-verify: false
     tls: true
     udp: true
-    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 其他 209 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: xbS4eVahN5UjRzCJSx9xWZD3J5cQRK1_33lzC9doS3I
-      short-id: "4627"
-    server: cdn7.cloud-vk.com
-    servername: m.vk.com
-    tls: true
+    uuid: 2864749a-b45d-52c3-0f36-e64224f5480f
+  - name: 其他 65 | vless
     type: vless
-    udp: true
-    uuid: 4c9b944f-6637-4cc2-a71c-5213806084ae
-  - name: 其他 210 | vless
-    type: vless
-    server: 67.159.56.57
-    port: 443
-    client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: j5qmR8E9er-0n5zZbK6s_SdvYm-tYlraXVYm49ArWS8
-      short-id: 60debb3ab744d8ce
-    servername: uk.bvps.cloud
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 52b71b75-4b77-4cec-990b-046ec1938e1f
-  - name: 其他 211 | vless
-    type: vless
-    server: 45.194.10.183
+    server: 45.194.10.38
     port: 8443
-    client-fingerprint: chrome
+    client-fingerprint: firefox
     encryption: none
     flow: xtls-rprx-vision
     network: tcp
@@ -5074,25 +2970,268 @@ proxies:
     tls: true
     udp: true
     uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 212 | vless
+  - client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    name: 其他 66 | vless
+    network: tcp
+    port: 8443
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    server: 45.194.10.81
+    servername: storage.yandex.net
+    tls: true
     type: vless
-    server: 45.206.0.44
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - client-fingerprint: ios
+    flow: xtls-rprx-vision
+    name: 其他 67 | vless
+    network: grpc
+    port: 56625
+    reality-opts:
+      public-key: sVtMU2ZA5W6TLnBCZdgfXqDnOwWePrGVjSNnueDlYmM
+      short-id: 2619d1af5cad99b0
+    server: 90dde47a7ab24d1e.mbcloudy.ir
+    servername: icloud.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: ddf34d13-d411-4e60-9a33-0b3b7d439705
+  - name: 其他 68 | hysteria2
+    password: b11841e3-2acc-45ff-afe0-a9ed9a823aaa
+    port: 443
+    server: rpc-2068.internet-booster.com
+    sni: rpc-2068.internet-booster.com
+    tls: false
+    type: hysteria2
+  - name: 其他 69 | vless
+    type: vless
+    server: 37.202.205.70
+    port: 443
+    uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
+    servername: it.savesafe.cc
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: UknJiwNyRmwBTaQCyY3mpq9blOPEgBFPV_NYJIgBKCs
+      short-id: 62b6d6e51d461d78
+    skip-cert-verify: true
+    udp: true
+  - name: 其他 70 | vless
+    type: vless
+    server: 31.76.113.110
+    port: 443
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
+      short-id: 7a3f9e2b1c8d4f6a
+    servername: it.s3-cloud.xyz
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
+  - name: 其他 71 | vless
+    type: vless
+    server: 45.206.0.21
     port: 8443
     client-fingerprint: firefox
     flow: xtls-rprx-vision
     network: tcp
-    packet-encoding: xudp
     reality-opts:
       public-key: dY9SNEllJMW63xo-JdXufhmjAxB_4uFw_QMjgufjiD8
       short-id: ea10cd5686751ec5
     servername: storage.yandex.net
-    skip-cert-verify: false
+    skip-cert-verify: true
     tls: true
     udp: true
     uuid: 52faee73-e0fe-4661-992d-67259257170f
-  - name: 其他 213 | vless
+  - name: 其他 72 | vless
     type: vless
-    server: meowfin.nethcloud.top
+    server: 51.158.206.80
+    port: 23576
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    reality-opts:
+      public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+      short-id: "01"
+    servername: fuck.rkn
+    skip-cert-verify: false
+    tls: true
+    uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  - name: 其他 73 | hysteria2
+    password: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+    port: 443
+    server: us54.mechvpn.online
+    sni: us54.mechvpn.online
+    tls: false
+    type: hysteria2
+  - name: 其他 74 | vless
+    type: vless
+    server: 154.222.9.157
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo
+      short-id: 8d3293f0066e129a
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: aa5b231c-4e18-4ae6-b83c-a293f51c0dfa
+  - name: 其他 75 | vless
+    type: vless
+    server: 31.76.113.14
+    port: 443
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+    network: tcp
+    reality-opts:
+      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
+      short-id: 7a3f9e2b1c8d4f6a
+    servername: it.s3-cloud.xyz
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
+  - name: 其他 76 | hysteria2
+    password: 95e8532b-cc69-42d4-9553-e3c23292b15b
+    port: 8443
+    server: iq5ny.pleiades.codes
+    sni: iq5ny.pleiades.codes
+    tls: false
+    type: hysteria2
+  - name: 其他 77 | vless
+    type: vless
+    server: 51.89.229.134
+    port: 443
+    client-fingerprint: firefox
+    encryption: none
+    network: tcp
+    reality-opts:
+      _spider-x: /
+      public-key: 4e4FI0siWxFtLCRCVDQurn1wLTuvKWhRY0zj1SaUcyw
+      short-id: a13a7cc5
+    servername: www.samsung.com
+    skip-cert-verify: false
+    tls: true
+    uuid: 53821f3c-5b03-456a-89f3-f8379f130752
+  - name: 其他 78 | vless
+    type: vless
+    server: 45.194.10.209
+    port: 8443
+    client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 79 | hysteria2
+    obfs: salamander
+    obfs-password: Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------
+    password: "@Telegram@Configvibes"
+    port: 8486
+    server: 45.92.219.237
+    skip-cert-verify: true
+    sni: ftp.debian.org
+    tls: false
+    type: hysteria2
+  - name: 其他 80 | vless
+    type: vless
+    server: 5.175.178.121
+    port: 443
+    client-fingerprint: random
+    encryption: none
+    network: xhttp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: B4NK8UZflXK2SI7P6wvCbfSw0wspQRO0ElZM30gc_1E
+    servername: pimg.mycdn.me
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 43948542-5c01-4fc3-bf42-e339e9ca3fbe
+    xhttp-opts:
+      host: pimg.mycdn.me
+      mode: auto
+      path: /
+      reuse-settings:
+        c-max-reuse-times: "0"
+        h-keep-alive-period: 0
+        h-max-request-times: 600-900
+        h-max-reusable-secs: 1800-3000
+        max-connections: "1"
+      sc-max-each-post-bytes: 1000000
+      sc-min-posts-interval-ms: 30
+      x-padding-bytes: 100-1000
+  - name: 其他 81 | vless
+    type: vless
+    server: 45.198.87.243
+    port: 8443
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+      short-id: 2715592069f36fe7
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+  - name: 其他 82 | vless
+    type: vless
+    server: 83.228.231.188
+    port: 22000
+    client-fingerprint: chrome
+    encryption: none
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      _spider-x: /
+      public-key: NbZ4uhJZ6zpvRLXODNcVDk9UgcKNahpN1h74CsV04Fs
+      short-id: "14"
+    servername: www.yahoo.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: e6a037ff-3908-4bf9-b3e7-b1138da601f9
+  - name: 其他 83 | vless
+    type: vless
+    server: 31.76.113.62
+    port: 443
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+    network: tcp
+    reality-opts:
+      public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
+      short-id: 7a3f9e2b1c8d4f6a
+    servername: it.s3-cloud.xyz
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
+  - name: 其他 84 | vless
+    type: vless
+    server: 93.114.194.131
     port: 443
     client-fingerprint: chrome
     encryption: none
@@ -5100,41 +3239,1028 @@ proxies:
     network: tcp
     packet-encoding: xudp
     reality-opts:
-      public-key: HKpd1sbrhBds8SJSL0d22MAq_QyTR6EP6y5b5DYol3U
-    servername: www.wikihow.com
+      public-key: 7ReQIe2kMtP4rCrptgH5glkOM-JGcSAPzHNxOED-Z0s
+      short-id: 247fd6dab1a34a48
+    servername: web.max.ru
     skip-cert-verify: false
     tls: true
     udp: true
-    uuid: a34b5e88-cf0d-4c01-8199-2d1002d3c787
+    uuid: 146eb6cf-a99c-4022-85ca-022cf81502dc
+  - name: 其他 85 | vless
+    type: vless
+    server: 132.243.231.97
+    port: 443
+    uuid: f202c7ca-17b7-416d-b3a2-ac71d35afe9c
+    servername: se1.se-cdn.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
+      short-id: 2d6d073dc88f22a8
+    skip-cert-verify: true
+    udp: true
+  - name: 其他 86 | vless
+    type: vless
+    server: 45.194.10.213
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 其他 214 | vless
-    network: grpc
-    port: 38733
+    name: 其他 87 | vless
+    port: 8443
     reality-opts:
-      public-key: CXOpQI3hwCqEp5ul2SKWfdAK-PBjjzUn-eRb7bAxDgU
-      short-id: 09e78c1d381f98ed
-    server: kcf.tarfiq.ir
-    servername: play.google.com
+      public-key: IdqrygjwHBEMCOamBl7a504TVk6uMAtTRj0xLWcFcxY
+      short-id: e3d38cee79d4f94c
+    server: 45.195.137.119
+    servername: storage.yandex.net
+    skip-cert-verify: true
     tls: true
     type: vless
     udp: true
-    uuid: 9b7388b9-8c8c-4a86-b518-da32df36e6c6
-  - client-fingerprint: firefox
+    uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
+  - name: 其他 88 | vless
+    type: vless
+    server: 45.194.10.108
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
     flow: xtls-rprx-vision
-    name: 其他 215 | vless
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 89 | vless
+    type: vless
+    server: 45.196.31.88
+    port: 8443
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    network: tcp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 90 | vless
+    type: vless
+    server: 45.194.10.7
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - client-fingerprint: ios
+    flow: xtls-rprx-vision
+    name: 其他 91 | vless
+    network: tcp
+    port: 46530
+    reality-opts:
+      public-key: HyqKpSHY4gS8aE65sGpvUkWNJj0JgGRBjsS4MFzVbhA
+      short-id: 6cdfb8b5878caf8d
+    server: apibgp.ianai.it.com
+    servername: iosapps.itunes.apple.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 92 | vless
     network: tcp
     port: 443
     reality-opts:
-      public-key: yocysajpuAGT059wla3OHEQZ8yNQt8heojZuYM2MkSY
-      short-id: 8ccda4d8bbe0b881
-    server: fin.themesh.site
-    servername: fin.themesh.site
+      public-key: TGlPtfVzGIVpMauPRMGJj2Uu6GUiCpu5ZizIIjw-wx4
+      short-id: f5
+    server: 13.125.212.222
+    servername: store.steampowered.com
     tls: true
     type: vless
     udp: true
-    uuid: 419bfbd4-3097-4cef-a6b3-aebd78506ed7
-  - name: 其他 216 | vless
+    uuid: 4c26ebc3-7784-46d8-b52a-7b0ccae6f4b4
+  - name: 其他 93 | vless
+    type: vless
+    server: 45.89.106.101
+    port: 40443
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: f6MOnGRTqdns7Lut75DSrnFZeiiZ4N04gnj5m-l7KnM
+      short-id: 54ce
+    servername: deepl.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 6ae44ad9-c2cb-4bdf-8e48-6c01fa646372
+  - name: 其他 94 | vless
+    type: vless
+    server: 45.194.10.146
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 95 | vless
+    port: 443
+    reality-opts:
+      public-key: EMS0wzISeSbEe4JABPD8EgDnyLXgDmrX4_lcfG6VVX4
+      short-id: dbbe8dca27a92c35
+    server: 154.193.55.183
+    servername: storage.yandex.net
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: 11e57eeb-ffdf-4983-a9fa-ad352dea7253
+  - name: 其他 96 | vless
+    type: vless
+    server: 45.194.10.212
+    port: 8443
+    client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 97 | vless
+    type: vless
+    server: 45.194.10.41
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 98 | vless
+    type: vless
+    server: 45.198.87.82
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+      short-id: 2715592069f36fe7
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+  - name: 其他 99 | hysteria2
+    type: hysteria2
+    server: 13.229.110.73
+    port: 443
+    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+    skip-cert-verify: true
+    sni: vpn-sg-001.fastervpn.world
+    tfo: false
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 100 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: 4e4FI0siWxFtLCRCVDQurn1wLTuvKWhRY0zj1SaUcyw
+      short-id: 1559b440
+    server: 89.23.113.159
+    servername: www.tradingview.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 218fd696-e3a2-4c33-b397-a5f13a82969e
+  - name: 其他 101 | vless
+    type: vless
+    server: 45.194.10.79
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 102 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg
+      short-id: 4e07408562be
+    server: 51.250.82.165
+    servername: api-maps.yandex.ru
+    tls: true
+    type: vless
+    udp: true
+    uuid: 15e0833c-08ad-47f3-bf80-60c2a47a6774
+  - name: 其他 103 | vless
+    type: vless
+    server: 45.194.10.100
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 104 | hysteria2
+    obfs: salamander
+    obfs-password: Telegram@vpnjey
+    password: Telegram@vpnjey
+    port: 36264
+    server: 77.110.96.201
+    skip-cert-verify: true
+    sni: se.vpnjey2.dpdns.org
+    tls: false
+    type: hysteria2
+  - name: 其他 105 | vless
+    type: vless
+    server: 89.124.90.250
+    port: 443
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: GF61aR_em1Xb3bNpwaO86PMEsAi4tuNfinnTDnrC4CE
+      short-id: 664d93f83ca49830
+    servername: rezerv20.yunus.guru
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: a5ea9247-79f3-4655-aece-3fb51e1e669e
+  - name: 其他 106 | vless
+    type: vless
+    server: 89.23.107.137
+    port: 443
+    client-fingerprint: chrome
+    encryption: none
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: GzOdZG9TCQSrZV7ivcmOq9tKWUf37QnoTxSHf32OfAs
+      short-id: "16"
+    servername: www.samsung.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 612c872d-1370-4109-8644-f0755f97e33f
+  - name: 其他 107 | vless
+    type: vless
+    server: 217.217.247.254
+    port: 443
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+      short-id: 6ba85179e30d4fc2
+    servername: enterprisekitten.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 8ca5cbd3-ec16-4728-bedc-2bc0d82f0922
+  - name: 其他 108 | vless
+    type: vless
+    server: 154.222.9.176
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo
+      short-id: 8d3293f0066e129a
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: aa5b231c-4e18-4ae6-b83c-a293f51c0dfa
+  - name: 其他 109 | vless
+    type: vless
+    server: 64.176.70.180
+    port: 443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: QbZBeFzqbP3XfrldMaIkdu-tr91zqBUIQ-WIkXM2p14
+      short-id: 96e03e0f184639ef
+    servername: peer.pan.baidu.com
+    tls: true
+    udp: true
+    uuid: 88888888-8888-8888-8888-888888888888
+    xudp: true
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 110 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: pPGE5Uacj1AGAB_WLOXB_UUnVBOmuJGH0vTSfmRBKzM
+      short-id: 2e40144ddc07e8e1
+    server: fr03.tunnely.ru
+    servername: fr03.tunnely.ru
+    tls: true
+    type: vless
+    udp: true
+    uuid: 31649657-6c78-4c2c-b25b-5cd574b082b5
+  - name: 其他 111 | hysteria2
+    password: C91FbOXGY9XRymrcEebtax9R1Nj62UizoT8S6kCb7xwey8IE
+    port: 443
+    server: fast.wwwinternetvideo.click
+    skip-cert-verify: true
+    sni: fast.wwwinternetvideo.click
+    tls: false
+    type: hysteria2
+  - name: 其他 112 | vless
+    type: vless
+    server: 45.194.10.44
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 113 | vless
+    port: 8443
+    reality-opts:
+      public-key: IdqrygjwHBEMCOamBl7a504TVk6uMAtTRj0xLWcFcxY
+      short-id: e3d38cee79d4f94c
+    server: 45.195.137.219
+    servername: storage.yandex.net
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
+  - client-fingerprint: ios
+    flow: xtls-rprx-vision
+    name: 其他 114 | vless
+    port: 443
+    reality-opts:
+      public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+      short-id: c39cc7310a
+    server: 169.40.42.229
+    servername: yahoo.com
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  - alpn:
+      - h3
+      - h2
+      - http/1.1
+    client-fingerprint: chrome
+    encryption: none
+    name: 其他 115 | vless
+    network: xhttp
+    packet-encoding: xudp
+    port: 2087
+    server: 104.16.6.70
+    servername: football.bexait.ir
+    sub_tag: B007-260618
+    tls: true
+    type: vless
+    udp: true
+    uuid: 5fe8b09a-1888-4ae2-a2bf-529dbe7636b8
+    xhttp-opts:
+      host: football.bexait.ir
+      mode: auto
+      path: /
+    xudp: true
+  - name: 其他 116 | vless
+    type: vless
+    server: 45.38.149.63
+    port: 50001
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: Ce2lAEqTi8rzssWrJshYik13BgBYrO1VUxmrbDWdtSY
+      short-id: fc4e3743
+    servername: s0.awsstatic.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
+  - client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    name: 其他 117 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: Lxs8Ruv2zHH0XW5EiQmuCaScfkGPCxWjW02YDWH8pyU
+      short-id: eb0cca7312345678
+    server: 193.233.126.104
+    servername: 00.img.avito.st
+    tls: true
+    type: vless
+    udp: true
+    uuid: b12eebc2-369c-4f3c-96a0-a8bd150ca8d5
+  - name: 其他 118 | vless
+    type: vless
+    server: 45.194.10.203
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 119 | vless
+    type: vless
+    server: 45.198.87.8
+    port: 8443
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+      short-id: 2715592069f36fe7
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+  - name: 其他 120 | vless
+    type: vless
+    server: 45.194.10.127
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 121 | vless
+    type: vless
+    server: 72.146.184.66
+    port: 443
+    client-fingerprint: safari
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: CVbYSDZe2130NfbcGVM7P15Xy1LifR1cf0hsJKV_4V0
+      short-id: eb4c4c6a
+    servername: www.cloudflare.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 9e23aaba-5bf2-4810-8369-c9bf2a9979f9
+  - name: 其他 122 | vless
+    type: vless
+    server: 45.194.10.62
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 123 | vless
+    network: tcp
+    port: 8443
+    reality-opts:
+      public-key: upDCW94g-pSYQrmXvOrTVYlwBUrSKhYFF9QwrqObdVo
+      short-id: 3ca620a7ed5f3196
+    server: 23.26.37.120
+    servername: google.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: dcba77d7-bb59-4802-b32c-37fd7011fca4
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 124 | vless
+    network: tcp
+    port: 43780
+    reality-opts:
+      public-key: xqkFi7Uvyxb7749s6mqs9OMd_-IWOvkDHRWOE-mgW1I
+      short-id: 006e47f4a13a08cc
+    server: us3.boboly.ir
+    servername: ourworldindata.org
+    tls: true
+    type: vless
+    udp: true
+    uuid: 64beb03f-886e-48be-9bdf-2fa68156fd74
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 125 | vless
+    network: tcp
+    port: 8443
+    reality-opts:
+      public-key: J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs
+      short-id: a20d3ed244c76426
+    server: 144.31.131.224
+    servername: mold.speedload.online
+    tls: true
+    type: vless
+    udp: true
+    uuid: 0ee2d410-3e64-4c41-a571-3e5d2b5b8982
+  - name: 其他 126 | vless
+    type: vless
+    server: 144.31.131.38
+    port: 8443
+    client-fingerprint: firefox
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: ivSYLLXu-f4slJOLrlZxhnq0nAAaCW-ct6ptzVUJxUs
+      short-id: db04ce8bdb8900f1
+    servername: prod.pl-node-02.security-sbrf.ru
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 4cc2379d-9a8c-4270-9723-39ff75b8f564
+  - name: 其他 127 | vless
+    type: vless
+    server: rezerv20.yunus.guru
+    port: 443
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: GF61aR_em1Xb3bNpwaO86PMEsAi4tuNfinnTDnrC4CE
+      short-id: 664d93f83ca49830
+    servername: rezerv20.yunus.guru
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: a5ea9247-79f3-4655-aece-3fb51e1e669e
+  - encryption: none
+    name: 其他 128 | vless
+    network: xhttp
+    packet-encoding: xudp
+    port: 443
+    server: nl-ydlod.doratbonn.fun
+    sub_tag: B007-260618
+    type: vless
+    udp: true
+    uuid: 7d92ab01-d719-40b0-b954-420edfb61582
+    xhttp-opts:
+      mode: auto
+      path: /
+    xudp: true
+  - client-fingerprint: ios
+    flow: xtls-rprx-vision
+    name: 其他 129 | vless
+    network: tcp
+    port: 35115
+    reality-opts:
+      public-key: CEI2EZLWT56cxGGEaLpJOp6769o_YrgYp6s2UGOw2ns
+      short-id: 32a89f7336ff0119
+    server: ipl2.lliinn.com
+    servername: www.lamer.com.hk
+    tls: true
+    type: vless
+    udp: true
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 130 | vless
+    port: 443
+    reality-opts:
+      public-key: tcBg_sBbiRt9z-JHFYbf_jITjuuiBULB3chmNBuFRh8
+    server: 82.38.65.76
+    servername: pypi.org
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: f1c496bf-d2ab-45be-bc13-051d60d227b7
+  - client-fingerprint: qq
+    flow: xtls-rprx-vision
+    name: 其他 131 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+    server: 78.159.250.214
+    servername: qq.utiltools.ru
+    tls: true
+    type: vless
+    udp: true
+    uuid: eb78e1f0-d921-4ca9-a889-261fcc5a0547
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 132 | vless
+    network: ws
+    port: 443
+    reality-opts:
+      public-key: enabled
+    server: 104.17.77.240
+    servername: panel2.tuyaye3024.workers.dev
+    tls: true
+    type: vless
+    udp: true
+    uuid: 4c48f965-5efc-c41b-2a1b-6cb04fba31b8
+    ws-opts:
+      path: /neperest
+  - name: 其他 133 | vless
+    type: vless
+    server: 45.144.48.223
+    port: 443
+    uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
+    servername: pl.chick-team.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: tPkLNwERe23qHETdRm0NN6TSF-bwvUeWKnmXR8CK3nc
+      short-id: 58d746158028c90d
+    skip-cert-verify: true
+    udp: true
+  - alpn:
+      - h3
+      - h2
+      - http/1.1
+    client-fingerprint: chrome
+    encryption: none
+    name: 其他 134 | vless
+    network: xhttp
+    packet-encoding: xudp
+    port: 2087
+    server: 91.193.58.201
+    servername: shop.xn--fjqyexxidv2znoe9rk1n8ada0532g6usa.com
+    sub_tag: B007-260618
+    tls: true
+    type: vless
+    udp: true
+    uuid: 5fe8b09a-1888-4ae2-a2bf-529dbe7636b8
+    xhttp-opts:
+      host: shop.xn--fjqyexxidv2znoe9rk1n8ada0532g6usa.com
+      mode: auto
+      path: /
+    xudp: true
+  - name: 其他 135 | vless
+    type: vless
+    server: rez5.royalro.shop
+    port: 9010
+    client-fingerprint: qq
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: KN1iC4QtWi2hKbQ1zJerNck6YRGbIpzdLMn1C2hhQjs
+      short-id: e8b1541e7387ffba
+    servername: play.google.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: f3d4f8e1-0a53-4f77-8386-6e1f53364fea
+  - name: 其他 136 | vless
+    type: vless
+    server: 45.67.139.162
+    port: 80
+    client-fingerprint: chrome
+    encryption: none
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      _spider-x: /IqRlL3ysYi8AGOM
+      public-key: mjkj2VuAfc9eoRfIVNaHgUV7fZR40XgnjeE31hVVR24
+      short-id: c1
+    servername: www.sony.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 2c212fbb-08f9-4be0-a128-b10892111d6d
+  - name: 其他 137 | hysteria2
+    password: umnDU7jgFYUjpVjVM2sW9HL0rRYLJNgzVwRu2HzWEhyZKkRx
+    port: 443
+    server: 5.83.129.11
+    skip-cert-verify: true
+    sni: germany1.h2corp.local
+    tls: false
+    type: hysteria2
+  - name: 其他 138 | vless
+    type: vless
+    server: 144.31.131.33
+    port: 443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: djH9iD2QV748ocK-wPH7HvDd03lu88zHhS4G-61w6Dc
+      short-id: a120
+    servername: cdn.cdnjst.org
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: ae852d97-85f5-45cf-82a4-254eba345480
+  - name: 其他 139 | vless
+    type: vless
+    server: 88.216.70.131
+    port: 443
+    client-fingerprint: random
+    encryption: none
+    grpc-opts:
+      grpc-service-name: data-sync
+    network: grpc
+    packet-encoding: xudp
+    reality-opts:
+      public-key: kPBXTe2KCp55GrHS_qU_sF7ohUcT8Vu-e8i6Yd9MERI
+      short-id: d5c7f84e37e0c12d
+    servername: google.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 8658fe29-466b-41d9-b1f9-05c268054f87
+  - type: hysteria2
+    name: 其他 140 | hysteria2
+    server: 2.27.59.11
+    port: 43327
+    password: Zg0z_Mdkhj_NNZBvZZ4TmwAyQgJlTUev
+    sni: gate-v1.not-a-projects.xyz
+    skip-cert-verify: false
+    tfo: false
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 141 | vless
+    network: tcp
+    port: 8443
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    server: 45.194.10.118
+    servername: storage.yandex.net
+    tls: true
+    type: vless
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 142 | vless
+    type: vless
+    server: 45.194.10.191
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 143 | vless
+    type: vless
+    server: 45.194.10.96
+    port: 8443
+    client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - client-fingerprint: random
+    flow: xtls-rprx-vision
+    name: 其他 144 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: fmgZqiXIsO-LWrQMCNsi8_o_EaShi4ubxajVI_m8TBA
+      short-id: d4e718a6ea7cdb2d
+    server: 45.158.127.50
+    servername: free.us2.laodavip.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 2f3a2a4d-ca46-4012-a472-b559d379ad0a
+  - name: 其他 145 | vless
+    type: vless
+    server: 203.10.96.138
+    port: 443
+    uuid: dc174401-1aed-4eef-9084-8dfddbe4f390
+    servername: cdn-dynmedia-1.microsoft.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    reality-opts:
+      public-key: VFG2L-3i30fQZg3wd0DF6dEGdaT27S-PKpuYu7Hp8xU
+      short-id: fd26d49a
+    skip-cert-verify: true
+    udp: true
+  - client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    name: 其他 146 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: 2cfC4N-V5UGaoDjrRXWb6TYJNfuXzhlITdKoCx9mLwM
+      short-id: 408763178ac4cb55
+    server: 31.76.39.24
+    servername: gb1.cyphervpn.pro
+    tls: true
+    type: vless
+    udp: true
+    uuid: 8bba3194-4856-46d1-8319-075817d87eb1
+  - client-fingerprint: random
+    flow: xtls-rprx-vision
+    name: 其他 147 | vless
+    network: tcp
+    port: 43780
+    reality-opts:
+      public-key: xqkFi7Uvyxb7749s6mqs9OMd_-IWOvkDHRWOE-mgW1I
+      short-id: 006e47f4a13a08cc
+    server: 89.34.230.77
+    servername: ourworldindata.org
+    tls: true
+    type: vless
+    udp: true
+    uuid: 64beb03f-886e-48be-9bdf-2fa68156fd74
+  - name: 其他 148 | vless
+    type: vless
+    server: 45.194.10.68
+    port: 8443
+    client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 149 | vless
+    port: 443
+    reality-opts:
+      public-key: GFKdmtxlB5JubXEfTy6PNIeuqN8ys53SPwV3zat3Fzg
+      short-id: 3c6a5f13df37ed6e
+    server: long-forest.ru
+    servername: winter-pine.long-forest.ru
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: cca617a2-ede0-4855-a2ef-cc7f218ba75d
+  - name: 其他 150 | vless
+    type: vless
+    server: 45.194.10.234
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 151 | vless
+    type: vless
+    server: 194.164.217.139
+    port: 448
+    client-fingerprint: chrome
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: fjPED4_A_EQrL8PAuBUi9ChoNbY2OC4mUl7r8zaLoxo
+      short-id: 05fdaa8a05be46a9
+    servername: www.samsung.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: d61b4e1b-4745-484f-8362-18537825a7af
+  - name: 其他 152 | vless
     type: vless
     server: 31.76.113.10
     port: 443
@@ -5150,14 +4276,470 @@ proxies:
     tls: true
     udp: true
     uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-  - name: 其他 217 | vless
+  - name: 其他 153 | vless
     type: vless
-    server: 31.76.113.116
+    server: 45.194.10.14
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 154 | vless
+    type: vless
+    server: 130.107.73.148
+    port: 41373
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      _spider-x: /
+      public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
+      short-id: 0e
+    servername: google.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: a71c8954-66a8-4321-bedb-2336230d81ce
+  - name: 其他 155 | vless
+    type: vless
+    server: 45.198.87.143
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+      short-id: 2715592069f36fe7
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 156 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: vCmEFMhXtECxxnRz6SsFHRWx5JJ6AMJdoKtC1HCATkA
+    server: 2.27.29.81
+    servername: developer.mozilla.org
+    tls: true
+    type: vless
+    udp: true
+    uuid: 3a8ba696-431f-41be-b66d-20680bd680c6
+  - client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    name: 其他 157 | vless
+    network: http
+    port: 443
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    server: 170.168.97.3
+    servername: download.nvidia.com
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+  - name: 其他 158 | vless
+    server: 31.77.170.105
+    port: 443
+    type: vless
+    uuid: efd400cd-98e1-4a9b-a98c-6f4a3b7cce7f
+    tls: true
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: TC8D2edifNXaro0S31ZiC9izi8tAmXJyxdOHptwNUTw
+      short-id: 660c1badc77a422b
+    servername: edge-nl.mystatic-cdn.ru
+    client-fingerprint: firefox
+    network: tcp
+    udp: true
+  - client-fingerprint: qq
+    flow: xtls-rprx-vision
+    name: 其他 159 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: OCLtjVdRxsou3429LRfjkDYgiAPs24TSgSeFZpChCEw
+      short-id: d67ec5a8fc40ebea
+    server: 78.17.103.9
+    servername: fl15.myxasecure.space
+    tls: true
+    type: vless
+    udp: true
+    uuid: c04bf2df-2b7f-44da-a893-3792d3910fd8
+  - name: 其他 160 | vless
+    type: vless
+    server: 45.194.10.147
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 161 | vless
+    type: vless
+    server: 213.176.16.179
+    port: 443
+    client-fingerprint: chrome
+    encryption: none
+    grpc-opts:
+      grpc-service-name: grpc
+    network: grpc
+    packet-encoding: xudp
+    reality-opts:
+      public-key: EUK_ePvEKUGcezQYHqgJ5P462XxLPXPm9CZWGLaL33k
+      short-id: ed72a429f0135a3f
+    servername: treng.loralden.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 82d47c52-9738-4d40-93a4-220bab575c60
+  - name: 其他 162 | vless
+    type: vless
+    server: 45.194.10.83
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 163 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: mDDDyruO33nuqcTS7pZOjd9oOpDHUf0aEv2TQ1DFGV4
+    server: 217.60.99.18
+    servername: google.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 4f51ca84-43ea-4087-b8a2-938e0ccbe27a
+  - name: 其他 164 | vless
+    type: vless
+    server: 138.124.254.68
+    port: 8443
+    uuid: 6fe06b02-74f7-431f-8ca4-c702fa3322bf
+    servername: de-two.quiet-rogue.site
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: QMJRGTqZRbpeLpIAdvn6dhftuzrpwbtwmVG2s5IuuU0
+      short-id: 00a02855ba568c29
+    skip-cert-verify: true
+    udp: true
+  - name: 其他 165 | vless
+    type: vless
+    server: 104.253.134.92
+    port: 57529
+    client-fingerprint: chrome
+    encryption: none
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      _spider-x: /MpLczuzE62ncEjY
+      public-key: TSjkruXYle6fxfmKLlab_B8LLmMxyrswjrrLML-GAkU
+      short-id: "8e45"
+    servername: www.amd.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 010a6106-960a-4a3c-94d3-410a50c1219d
+  - name: 其他 166 | vless
+    type: vless
+    server: all46.allenshop100.ir
+    port: 443
+    client-fingerprint: firefox
+    network: tcp
+    reality-opts:
+      public-key: YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M
+      short-id: 98fa0b00d09419f7
+    servername: play.google.com
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    uuid: 296a5736-bc8c-45dd-9971-8bf44b28ed4e
+  - name: 其他 167 | vless
+    type: vless
+    server: meowfin.nethcloud.top
+    port: 443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: HKpd1sbrhBds8SJSL0d22MAq_QyTR6EP6y5b5DYol3U
+    servername: www.wikihow.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: a34b5e88-cf0d-4c01-8199-2d1002d3c787
+  - client-fingerprint: ios
+    flow: xtls-rprx-vision
+    name: 其他 168 | vless
+    network: tcp
+    port: 56173
+    reality-opts:
+      public-key: 5R5DFBYrNQi2hqpxhDNztEn2eRMFiDcQBObuPO9U8BU
+      short-id: 0a3125cb9d94baf1
+    server: ipl2.lliinn.com
+    servername: iosapps.itunes.apple.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 169 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: AYQOZFxjvHN-RIzKYEibwFiFsp03cdlWGdCmyFfuNVc
+      short-id: 4fa44664f6a566d3
+    server: 5.255.110.147
+    servername: nll.scroogethebest.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: e2e1ddaa-1acf-4c4c-a211-92284f6440ed
+  - name: 其他 170 | hysteria2
+    type: hysteria2
+    server: 193.222.99.51
+    port: 443
+    password: 837e9ea2-cf0b-46a1-93a8-7e25c3a4066c
+    skip-cert-verify: false
+    sni: argg1.auragg.org
+    tfo: false
+  - name: 其他 171 | vless
+    type: vless
+    server: 45.198.87.156
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+      short-id: 2715592069f36fe7
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+  - name: 其他 172 | vless
+    type: vless
+    server: 62.60.155.0
+    port: 443
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      _spider-x: /
+      public-key: YD3G553bQP0uWuyYDY9ZvhLCmfF9tmKUo8MRuALEFUw
+      short-id: deee73
+    servername: telegraph.co.uk
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 1f4c983e-382c-d2fa-b2dc-7981f02b34de
+  - client-fingerprint: ios
+    flow: xtls-rprx-vision
+    name: 其他 173 | vless
+    port: 443
+    reality-opts:
+      public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+      short-id: c39cc7310a
+    server: 169.40.42.90
+    servername: yahoo.com
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  - name: 其他 174 | vless
+    port: 42557
+    server: 40.233.115.223
+    type: vless
+    network: tcp
+    udp: true
+    servername: www.yahoo.com
+    skip-cert-verify: true
+    reality-opts:
+      public-key: LiHpb4jWrgHBSpi1mjKH3I8m2ahpVNexeNDh-sMW3Xo
+      short-id: f430927d
+    uuid: 2429bee3-e0c1-47dd-b420-75e6512b184b
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+  - name: 其他 175 | vless
+    type: vless
+    server: 94.242.55.42
+    port: 443
+    client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+      short-id: 6ba85179e30d4fc2
+    servername: enterprisekitten.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 8ca5cbd3-ec16-4728-bedc-2bc0d82f0922
+  - name: 其他 176 | vless
+    type: vless
+    server: 45.198.87.123
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+      short-id: 2715592069f36fe7
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+  - name: 其他 177 | vless
+    type: vless
+    server: 177.3.213.91
+    port: 8443
+    uuid: 34ff7ad1-b9d6-42e3-b41d-ce4fefc6090c
+    servername: b2.cryptoofarm.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: K28I3JdleSg0t7keUUZrS1CgtyC37WA32ViMkSXywHw
+      short-id: 0c22c11e7224
+    skip-cert-verify: true
+    udp: true
+  - client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    name: 其他 178 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: p6rBxt_9BHHS3ODfWh3gE3nnzsbVqidNUisM5rRk-n0
+      short-id: c10b9c49979ca3ad
+    server: de-1-gsl.124515.xyz
+    servername: de-1-gsl.124515.xyz
+    tls: true
+    type: vless
+    udp: true
+    uuid: 56b812e4-2d96-4ce5-b365-6c801663a37a
+  - client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    name: 其他 179 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: -cfh-rBjSYKhBeAgGzYLrcDiEfZc9xRqCvMB0kpOokQ
+      short-id: 253105aeda9e37a7
+    server: 62.133.62.60
+    servername: fr3.cyphervpn.pro
+    tls: true
+    type: vless
+    udp: true
+    uuid: 8bba3194-4856-46d1-8319-075817d87eb1
+  - name: 其他 180 | vless
+    type: vless
+    server: 45.194.10.35
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 181 | vless
+    type: vless
+    server: 45.194.10.59
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 182 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: Ij3Iz1jqht6zLOy9uI0iusTy4n1oIr7gpgTwRTtA8kY
+      short-id: 42b395462da31c0e
+    server: 151.80.147.30
+    servername: speedtest.net
+    tls: true
+    type: vless
+    udp: true
+    uuid: a1750ade-801f-4e3e-a5d2-de825771205d
+  - name: 其他 183 | vless
+    type: vless
+    server: 31.76.113.111
     port: 443
     client-fingerprint: edge
     flow: xtls-rprx-vision
     network: tcp
-    packet-encoding: ""
     reality-opts:
       public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
       short-id: 7a3f9e2b1c8d4f6a
@@ -5166,7 +4748,179 @@ proxies:
     tls: true
     udp: true
     uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-  - name: 其他 218 | vless
+  - name: 其他 184 | vless
+    type: vless
+    server: 94.156.232.72
+    port: 2053
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      _spider-x: /
+      public-key: Bx_BGjf9VHtS97W9ueLS_pjNsyOhzBA-S42d9a7fKmY
+      short-id: a84d
+    servername: teamdocs.su
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    uuid: a37ff029-d240-40b4-8af4-7ae0e34b2567
+  - name: 其他 185 | vless
+    type: vless
+    server: 31.76.91.33
+    port: 443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: QVkd5uoSbUA7rHVLtIoJB4iRp4l0zuw0H9qzQBh3lHs
+      short-id: 7a3f9e2b1c8d4f6a
+    servername: jp.s3-cloud.org
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
+    xudp: true
+  - name: 其他 186 | vless
+    type: vless
+    server: rezerv21.yunus.guru
+    port: 443
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: Qsx1iAU8A1meJ2Pz8QbEcX1iGckyw4f6-mxZ3ZyJ8HI
+      short-id: e2b15b73af31a6a4
+    servername: rezerv21.yunus.guru
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: a5ea9247-79f3-4655-aece-3fb51e1e669e
+  - name: 其他 187 | vless
+    type: vless
+    server: 104.253.134.92
+    port: 55117
+    encryption: none
+    network: xhttp
+    packet-encoding: xudp
+    skip-cert-verify: false
+    tls: false
+    udp: true
+    uuid: 010a6106-960a-4a3c-94d3-410a50c1219d
+    xhttp-opts:
+      mode: auto
+      path: /
+      x-padding-bytes: 100-1000
+  - name: 其他 188 | vless
+    type: vless
+    server: 45.198.87.53
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+      short-id: 2715592069f36fe7
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+  - name: 其他 189 | vless
+    type: vless
+    server: 51.44.25.250
+    port: 44520
+    client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      _spider-x: /
+      public-key: MrLRcU_2S2CpUc7VT3ajIavX5NYUiQdP6J5QTDFNGFU
+      short-id: 8897c56a495b26cc
+    servername: yahoo.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: acd726d3-0128-44d8-a575-21013ff7740a
+    xudp: true
+  - name: 其他 190 | vless
+    type: vless
+    server: 45.194.10.175
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 191 | hysteria2
+    type: hysteria2
+    server: 198.105.112.118
+    port: 443
+    obfs: salamander
+    obfs-password: EsimObfs_9mK2x7
+    password: EsimHy2Game_7xK9mPq2
+    skip-cert-verify: false
+    sni: nl.esimpson.org
+    tfo: false
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 192 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: pak_xgMOqICE2oAimyRphnruNEP7HptVJVI5p1HjGmA
+      short-id: 0bad329e858e70da
+    server: s.avrilon.us
+    servername: blog.api.www.cloudflare.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: ac84eef7-80db-4928-9bba-0d428c6eac76
+  - client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    name: 其他 193 | vless
+    network: tcp
+    port: 8443
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    server: 45.194.10.76
+    servername: storage.yandex.net
+    tls: true
+    type: vless
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 194 | vless
+    type: vless
+    server: 132.243.231.93
+    port: 443
+    uuid: f202c7ca-17b7-416d-b3a2-ac71d35afe9c
+    servername: se1.se-cdn.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
+      short-id: 2d6d073dc88f22a8
+    skip-cert-verify: true
+    udp: true
+  - name: 其他 195 | vless
     type: vless
     server: 45.194.10.71
     port: 8443
@@ -5183,9 +4937,9 @@ proxies:
     tls: true
     udp: true
     uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  - name: 其他 219 | vless
+  - name: 其他 196 | vless
     type: vless
-    server: 45.194.10.4
+    server: 45.194.10.84
     port: 8443
     client-fingerprint: chrome
     encryption: none
@@ -5200,3 +4954,363 @@ proxies:
     tls: true
     udp: true
     uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    name: 其他 197 | vless
+    network: grpc
+    port: 49005
+    reality-opts:
+      public-key: geXwVgf-K3Ad-eg1Ge4TsUycerqXhJMG2_ZdKtG4SzQ
+      short-id: a1b2c3d4
+    server: 185.229.9.236
+    servername: ads.x5.ru
+    tls: true
+    type: vless
+    udp: true
+    uuid: 521bb11a-4262-4e8e-97f6-1bec8bf86de7
+  - name: 其他 198 | vless
+    type: vless
+    server: 45.194.10.237
+    port: 8443
+    client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    name: 其他 199 | vless
+    port: 13443
+    reality-opts:
+      public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
+      short-id: a7f3c91b2e6d84c0
+    server: 87.121.89.80
+    servername: auto.cendora.ru
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  - name: 其他 200 | vless
+    type: vless
+    server: 45.194.10.215
+    port: 8443
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 201 | vless
+    type: vless
+    server: 144.31.3.23
+    port: 443
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI
+      short-id: 15bcc0a77c3cacdf
+    servername: pl-root.sworkingvpn.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: baeb9020-8fcd-0018-b95d-f76507816e6d
+  - name: 其他 202 | vless
+    type: vless
+    server: 2.27.14.29
+    port: 443
+    client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: C1hW1bTA9WOacIK-fHHg-HLkDZ3FY7FhEhAyldMSUEA
+      short-id: a1b2c3d4e5f6
+    servername: cloudflare.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3ef170be-05d0-479c-9753-aa2f860964ea
+  - name: 其他 203 | vless
+    type: vless
+    server: 45.198.87.6
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+      short-id: 2715592069f36fe7
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+  - client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    name: 其他 204 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: USffNprEM08MHiuVy5bj6-kvxugxycuZcgQDFJyz2Wc
+      short-id: 8f9d033ad6d2cebf
+    server: 185.76.243.3
+    servername: nl3.cyphervpn.pro
+    tls: true
+    type: vless
+    udp: true
+    uuid: 8bba3194-4856-46d1-8319-075817d87eb1
+  - name: 其他 205 | vless
+    type: vless
+    server: 213.165.55.34
+    port: 2083
+    client-fingerprint: chrome
+    encryption: none
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      _spider-x: /b9OzJAZW8mS5jvr
+      public-key: gdF-IDuq4kWMmxwoYgzgpFpCPYOCchygPn22g5_OB3M
+      short-id: df2422d3
+    servername: www.amd.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 0a8ee840-04cb-443b-ba6a-fd5effb9e13b
+  - name: 其他 206 | vless
+    type: vless
+    server: 45.198.87.184
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
+      short-id: 2715592069f36fe7
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+  - name: 其他 207 | vless
+    type: vless
+    server: rez1.royalro.shop
+    port: 9010
+    client-fingerprint: qq
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: KN1iC4QtWi2hKbQ1zJerNck6YRGbIpzdLMn1C2hhQjs
+      short-id: e8b1541e7387ffba
+    servername: play.google.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: f3d4f8e1-0a53-4f77-8386-6e1f53364fea
+  - name: 其他 208 | vless
+    type: vless
+    server: 45.194.10.67
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 209 | vless
+    type: vless
+    server: 144.31.237.106
+    port: 443
+    uuid: efd400cd-98e1-4a9b-a98c-6f4a3b7cce7f
+    servername: edge-nl.mystatic-cdn.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: qq
+    reality-opts:
+      public-key: TC8D2edifNXaro0S31ZiC9izi8tAmXJyxdOHptwNUTw
+      short-id: 660c1badc77a422b
+    skip-cert-verify: true
+    udp: true
+  - client-fingerprint: ios
+    flow: xtls-rprx-vision
+    name: 其他 210 | vless
+    network: tcp
+    port: 59589
+    reality-opts:
+      public-key: tBvlo8F8hKRXSK-EHRAfzEH-x3e4uvheGloO-9bPKx4
+      short-id: 70ab6d813e
+    server: apibgp.ianai.it.com
+    servername: iosapps.itunes.apple.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  - name: 其他 211 | vless
+    type: vless
+    server: my2.miyazono-kaori.com
+    port: 443
+    uuid: df816a3d-8e27-461f-955d-2e523d3c73f7
+    servername: www.setel.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: R6q8qhMxgq3ynJPUgudaRkcDXj0qgoc_UU1N0SWGLwM
+      short-id: ed77ac35a310
+    skip-cert-verify: true
+    udp: true
+  - name: 其他 212 | hysteria2
+    password: Apt1923_N9x234gn_Nal5Nx3j_s
+    port: 8443
+    server: 222.167.212.24
+    skip-cert-verify: false
+    sni: grape-power-pl.ddnsguru.com
+    tls: false
+    type: hysteria2
+  - name: 其他 213 | vless
+    type: vless
+    server: 45.194.10.129
+    port: 8443
+    client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 214 | vless
+    server: 31.77.170.104
+    port: 443
+    type: vless
+    uuid: efd400cd-98e1-4a9b-a98c-6f4a3b7cce7f
+    tls: true
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: TC8D2edifNXaro0S31ZiC9izi8tAmXJyxdOHptwNUTw
+      short-id: 660c1badc77a422b
+    servername: edge-nl.mystatic-cdn.ru
+    client-fingerprint: firefox
+    network: tcp
+    udp: true
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 其他 215 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: quSgGKXdwtlVQYTJypimp3Er-PoMI4SP4EXPdOKLQwk
+    server: 193.41.4.20
+    servername: de-one.quiet-rogue.site
+    tls: true
+    type: vless
+    udp: true
+    uuid: 71cada65-d23e-418c-88e4-a06188d14689
+  - name: 其他 216 | vless
+    type: vless
+    server: 45.194.10.99
+    port: 8443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA
+      short-id: 2cfb5a0ae8ab0cb0
+    servername: storage.yandex.net
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  - name: 其他 217 | hysteria2
+    type: hysteria2
+    server: 3.66.236.81
+    port: 443
+    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+    skip-cert-verify: true
+    tfo: false
+  - name: 其他 218 | vless
+    type: vless
+    server: 45.130.125.18
+    port: 8443
+    alpn:
+      - http/1.1
+      - h2
+      - h3
+    client-fingerprint: chrome
+    encryption: none
+    network: xhttp
+    packet-encoding: xudp
+    servername: server.cppuser.ir
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: cc0bd047-c1dc-47be-8eb9-19d50b446ef8
+    xhttp-opts:
+      mode: packet-up
+      path: /
+  - name: 其他 219 | vless
+    type: vless
+    server: 136.244.93.228
+    port: 443
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    reality-opts:
+      public-key: Ic2uiGhkBgJUsY0CZUBqa1y22V_BO7F4S93Zgk_ir2c
+      short-id: a1b2c3d4e5f67890
+    servername: www.booking.com
+    skip-cert-verify: false
+    tls: true
+    uuid: 43488128-319e-f480-64ea-0acdc712e2a8
+  - name: 其他 220 | vless
+    type: vless
+    server: 15.204.97.219
+    port: 23576
+    client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    network: tcp
+    reality-opts:
+      public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+      short-id: "01"
+    servername: fuck.rkn
+    skip-cert-verify: false
+    tls: true
+    uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
