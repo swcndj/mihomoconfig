@@ -15,7 +15,6 @@ const SKIP_TYPES = new Set(["http","socks5","ss","ssr","snell","vmess","trojan",
 const SUBS = JSON.parse(fs.readFileSync("./subs.json", "utf8"));
 const OUTPUT_FILE = "nodes.yaml";
 const REQUEST_TIMEOUT = 15000; // 单个订阅超时时间（毫秒）
-const OTHER_SAMPLE_RATIO = 0.20; // 非匹配地区随机抽取比例
 // ========================================================
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
@@ -31,7 +30,7 @@ async function fetchWithTimeout(url) {
   }
 }
 
-// 数组随机抽样，不修改原数组，@param {Array} arr，@param {number} count 需要抽取数量
+// 数组随机抽样（保留以备将来使用，但本脚本未调用）
 function sampleRandom(arr, count) {
   const copy = [...arr];
   const result = [];
@@ -79,10 +78,10 @@ function sampleRandom(arr, count) {
   console.log(`总原始汇总节点数：${allRawProxies.length}`);
 
   // --------------------------
-  // ① 类型过滤 + encryption 异常检查（仅校验 encryption）
+  // ① 类型过滤 + encryption 异常检查
   // --------------------------
   const typeFiltered = allRawProxies.filter(rawP => {
-    // ===== encryption 异常校验 =====
+    // encryption 异常校验
     if (rawP.type && rawP.type.toLowerCase() === 'vless') {
       const enc = rawP.encryption;
       if (enc && typeof enc === 'string' && enc.length > 50) {
@@ -90,7 +89,6 @@ function sampleRandom(arr, count) {
       }
     }
 
-    // 直接使用 rawP，不再调用 cleanProxyObj
     const p = rawP;
     if (!p || !p.type) return false;
     const t = p.type.toLowerCase();
@@ -105,66 +103,52 @@ function sampleRandom(arr, count) {
   console.log(`✅【类型过滤后剩余】：${typeFiltered.length}`);
 
   // --------------------------
-  // ② 拆分为【匹配地区】、【其他候选池】两组
+  // ② 只保留匹配地区的节点，不再保留其他地区
   // --------------------------
   const matchRegionList = [];
-  const otherCandidateList = [];
-
   for (const p of typeFiltered) {
     if (!p.name || !p.server || !p.port) continue;
     const hit = REGION_RULES.find(r => r.reg.test(p.name));
-    if(hit){
+    if (hit) {
       matchRegionList.push({ p, hit });
-    }else{
-      // 类型合格，但地区不匹配，进入其他候选池
-      otherCandidateList.push({ p, hit: { flag:"", name:"其他" } });
     }
+    // 不匹配的地区直接忽略，不加入其他候选池
   }
   console.log(`✅【地区匹配节点】：${matchRegionList.length}`);
-  console.log(`✅【其他候选节点】：${otherCandidateList.length}`);
 
-  // 随机抽取
-  const sampleCount = Math.floor(otherCandidateList.length * OTHER_SAMPLE_RATIO);
-  const sampledOtherList = sampleRandom(otherCandidateList, sampleCount);
-  console.log(`✅【其他候选节点随机抽取数量 ${OTHER_SAMPLE_RATIO*100}%】：${sampledOtherList.length}`);
-
-  // 合并总池：匹配地区 + 抽样出来的其他节点
-  const totalPool = [...matchRegionList, ...sampledOtherList];
-  console.log(`✅【合并节点池】：${totalPool.length}`);
+  // 直接使用匹配地区的节点池，不再进行随机抽取
+  const totalPool = [...matchRegionList];
+  console.log(`✅【合并节点池（仅匹配地区）】：${totalPool.length}`);
 
   // --------------------------
-  // ③ 全局复合指纹去重（A组B组一起去重，跨组去重）
+  // ③ 全局复合指纹去重
   // --------------------------
   const seen = new Set();
   const dedupList = [];
-  for(const item of totalPool){
-    const {p} = item;
+  for (const item of totalPool) {
+    const { p } = item;
     let fp;
-    if(p.type.toLowerCase() === 'vless' && p['reality-opts']?.['public-key']){
+    if (p.type.toLowerCase() === 'vless' && p['reality-opts']?.['public-key']) {
       fp = `${p.type}|${p.server}|${p.uuid}|${p['reality-opts']['public-key']}`;
-    }else{
+    } else {
       fp = `${p.type}|${p.server}|${p.port}`;
     }
-    if(seen.has(fp)) continue;
+    if (seen.has(fp)) continue;
     seen.add(fp);
     dedupList.push(item);
   }
   console.log(`✅【节点池去重后剩余】：${dedupList.length}`);
 
   // --------------------------
-  // ④ 重命名：各地区独立编号，“其他”独立编号
+  // ④ 重命名：各地区独立编号
   // --------------------------
   const regionCounter = {};
   const finalProxies = [];
-  for(const item of dedupList){
-    const {p, hit} = item;
+  for (const item of dedupList) {
+    const { p, hit } = item;
     regionCounter[hit.name] = (regionCounter[hit.name] || 0) + 1;
     const seq = String(regionCounter[hit.name]).padStart(2, "0");
-    if(hit.name === "其他"){
-      p.name = `其他 ${seq} | ${p.type}`;
-    }else{
-      p.name = `${hit.flag} ${hit.name} ${seq} | ${p.type}`;
-    }
+    p.name = `${hit.flag} ${hit.name} ${seq} | ${p.type}`;
     finalProxies.push(p);
   }
 
