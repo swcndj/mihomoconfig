@@ -1879,23 +1879,11 @@ proxies:
     udp: true
     uuid: 43a13764-23dd-4e01-8b79-cde8a16e13ce
     servername: www.cloudflare.com
-  - down: ""
-    fingerprint: ""
-    name: 140 🇸🇬 新加坡 | hysteria2
-    obfs: ""
-    obfs-password: ""
-    password: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
-    port: 4466
-    server: 140.99.130.34
-    skip-cert-verify: true
-    sni: sg3.xiaoliyu.cyou
-    type: hysteria2
-    up: ""
-  - name: 141 🇸🇬 新加坡 | anytls
+  - name: 140 🇸🇬 新加坡 | anytls
     type: anytls
-    server: awsxjpqazwsxedcrfv.jiedddym.com
-    port: 55551
-    password: bfc4ae39-232a-437d-b6d2-3b611e40219f
+    server: a.mjanyt.com
+    port: 1662
+    password: 9c329fa0-f431-4524-bea6-a70b166a53a0
     udp: true
-    sni: awsxjpqazwsxedcrfv.jiedddym.com
+    sni: any.mjanyt.com
     skip-cert-verify: true
