@@ -71,11 +71,11 @@ tun:
   auto-detect-interface: true
 # ======================================== 代理集合 ========================================
 proxy-providers:
-  mergenodes:
+  nodes:
     type: http
     url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/nodes.yaml"
     interval: 7200
-    path: ./providers/mergenodes.yaml
+    path: ./providers/nodes.yaml
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
