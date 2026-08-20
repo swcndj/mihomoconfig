@@ -1130,20 +1130,34 @@ proxies:
     username: dongtaiwang.com
     multiplexing: MULTIPLEXING_LOW
     transport: TCP
-  - name: 92 🇸🇬 新加坡 | anytls
-    password: bfc4ae39-232a-437d-b6d2-3b611e40219f
-    port: 55551
-    server: awsxjpqazwsxedcrfv.jiedddym.com
+  - down: ""
+    fingerprint: ""
+    name: 92 🇺🇸 美国 | hysteria2
+    obfs: ""
+    obfs-password: ""
+    password: 57ec0f01-0c00-4a69-ad67-937b4735640b
+    port: "35193"
+    server: 40t2.wxgqlfx.vip
     skip-cert-verify: true
-    sni: awsxjpqazwsxedcrfv.jiedddym.com
-    type: anytls
-  - client-fingerprint: chrome
-    name: 93 🇸🇬 新加坡 | anytls
-    password: 18d2cd7a-ba92-40a2-abcd-d8ebe1ef0c1a
-    port: 8021
-    server: kkkhhh.xs-us.net
-    sni: sni.eos-suzhou-4.cmecloud.cn
-    type: anytls
+    sni: 40t2.wxgqlfx.vip
+    type: hysteria2
+    up: ""
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 93 🇭🇰 香港 | vless
+    network: tcp
+    port: "8443"
+    reality-opts:
+      public-key: psBgpjOLk-vmOts84wgm_T0qqqaZHd9Reekul4L3ugA
+      short-id: 42fe6ff20442d025
+    server: 186.246.19.131
+    servername: gem.cryptoofarm.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: ef18d810-719c-4bf1-83c6-615d01f217eb
+    xudp: true
   - name: 94 🇭🇰 香港 | hysteria2
     type: hysteria2
     server: 202.146.222.174
@@ -1894,39 +1908,97 @@ proxies:
     uuid: 43a13764-23dd-4e01-8b79-cde8a16e13ce
     servername: www.cloudflare.com
   - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 142 🇯🇵 日本 | vless
-    network: tcp
+    encryption: none
+    name: 142 🇺🇸 美国 | vless
+    network: xhttp
+    port: 13456
+    reality-opts:
+      public-key: krYEkISvZ1UdNetNSPXNen2mW5xEw980yFkrhYyTRWQ
+      short-id: 057b863d7bc5
+    server: roundhouse.proxy.rlwy.net
+    tls: true
+    type: vless
+    udp: true
+    uuid: 0376de39-4ba8-4533-aeda-472c4b479762
+    xhttp-opts:
+      mode: auto
+      path: /
+      x-padding-bytes: 100-1000
+    xudp: true
+    servername: is1-ssl.mzstatic.com
+  - alpn:
+      - h2
+      - http/1.1
+    client-fingerprint: chrome
+    encryption: none
+    name: 143 🇺🇸 美国 | vless
+    network: xhttp
     port: 443
+    server: 69.46.46.49
+    tls: true
+    type: vless
+    udp: true
+    uuid: 589fd36b-5e51-4db4-83a5-e1493af8f2d7
+    xhttp-opts:
+      mode: auto
+      path: /
+      x-padding-bytes: 100-1000
+    xudp: true
+    servername: 3x-ui-production-b654.up.railway.app
+  - name: 144 🇰🇷 韩国 | anytls
+    password: ae4085de-3130-47c6-9021-851feb27cb53
+    port: 40041
+    server: kr1.catzl.top
+    type: anytls
+    udp: true
+    sni: kr1.catzl.top
+  - name: 145 🇹🇼 台湾 | anytls
+    password: ae4085de-3130-47c6-9021-851feb27cb53
+    port: 40072
+    server: tw2.catzl.top
+    type: anytls
+    udp: true
+    sni: tw2.catzl.top
+  - name: 146 🇺🇸 美国 | anytls
+    password: ae4085de-3130-47c6-9021-851feb27cb53
+    port: 40022
+    server: us2.catzl.top
+    type: anytls
+    udp: true
+    sni: us2.catzl.top
+  - name: 147 🇹🇼 台湾 | anytls
+    password: ae4085de-3130-47c6-9021-851feb27cb53
+    port: 40073
+    server: tw3.catzl.top
+    type: anytls
+    udp: true
+    sni: tw3.catzl.top
+  - name: 148 🇰🇷 韩国 | anytls
+    password: ae4085de-3130-47c6-9021-851feb27cb53
+    port: 40042
+    server: kr2.catzl.top
+    type: anytls
+    udp: true
+    sni: kr2.catzl.top
+  - name: 149 🇹🇼 台湾 | anytls
+    password: ae4085de-3130-47c6-9021-851feb27cb53
+    port: 40071
+    server: tw1.catzl.top
+    type: anytls
+    udp: true
+    sni: tw1.catzl.top
+  - name: 150 🇯🇵 日本 | vless
+    type: vless
+    server: 103.100.158.63
+    port: 443
+    uuid: ea1c1e20-7263-4b08-a01b-690b29af66b3
+    udp: true
+    network: tcp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: www.apple.com
+    client-fingerprint: chrome
+    skip-cert-verify: true
     reality-opts:
       public-key: T587xqua0Nrs0YreQRWJAP9Wto94NcbbhKPK4DkSi0c
       short-id: 2223411c2ad9c55f
-    server: 103.100.158.63
-    skip-cert-verify: true
-    tfo: false
-    tls: true
-    type: vless
-    uuid: ea1c1e20-7263-4b08-a01b-690b29af66b3
-    servername: www.apple.com
-  - name: 143 🇺🇸 美国 | hysteria2
-    password: 1427eb10-7529-4d38-a6a2-01b337868b37
-    port: 4433
-    server: nl1.xiaoliyu.cyou
-    skip-cert-verify: true
-    type: hysteria2
-    sni: nl1.xiaoliyu.cyou
-  - auth: VB92_Ka9qwef143K_L23K1hz3_bF_Hz62uT_Bn1_sC
-    name: 144 🇺🇸 美国 | hysteria2
-    password: VB92_Ka9qwef143K_L23K1hz3_bF_Hz62uT_Bn1_sC
-    port: 8443
-    server: 82.39.214.83
-    skip-cert-verify: true
-    sni: hopp-us.yyuyy.com
-    type: hysteria2
-  - name: 145 🇺🇸 美国 | hysteria2
-    type: hysteria2
-    server: 40t2.wxgqlfx.vip
-    port: 35193
-    password: 57ec0f01-0c00-4a69-ad67-937b4735640b
-    sni: 40t2.wxgqlfx.vip
-    skip-cert-verify: true
