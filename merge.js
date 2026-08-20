@@ -15,13 +15,11 @@ const SKIP_TYPES = new Set(["http","socks5","ss","ssr","snell","vmess","trojan",
 const SUBS = JSON.parse(fs.readFileSync("./subs.json", "utf8"));
 const OUTPUT_FILE = "nodes.yaml";
 const REQUEST_TIMEOUT = 15000; // 单个订阅超时时间（毫秒）
+const OTHER_SAMPLE_RATIO = 0.10; // 非匹配地区随机抽取比例10%
 // ========================================================
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
-/**
- * 深度清洗对象：消除 yaml 内部特殊标记
- * reality协议删除无效 skip‑cert‑verify
- */
+// 深度清洗对象：消除 yaml 内部特殊标记，reality协议删除无效 skip-cert-verify
 function cleanProxyObj(obj) {
   const o = JSON.parse(JSON.stringify(obj));
   if(o.type?.toLowerCase() === "vless" && (o["reality-opts"] || o["xhttp-opts"])){
@@ -30,9 +28,7 @@ function cleanProxyObj(obj) {
   return o;
 }
 
-/**
- * 带超时的请求，兼容 node‑fetch v3
- */
+// 带超时的请求，兼容 node‑fetch v3
 async function fetchWithTimeout(url) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT);
@@ -42,6 +38,18 @@ async function fetchWithTimeout(url) {
   } finally {
     clearTimeout(timer);
   }
+}
+
+// 数组随机抽样，不修改原数组，@param {Array} arr，@param {number} count 需要抽取数量
+function sampleRandom(arr, count) {
+  const copy = [...arr];
+  const result = [];
+  const take = Math.min(count, copy.length);
+  for(let i = 0; i < take; i++){
+    const idx = Math.floor(Math.random() * copy.length);
+    result.push(copy.splice(idx,1)[0]);
+  }
+  return result;
 }
 
 (async function main() {
@@ -80,50 +88,57 @@ async function fetchWithTimeout(url) {
   console.log(`总原始汇总节点数：${allRawProxies.length}`);
 
   // --------------------------
-  // ① 类型过滤，先清洗对象，修复键名横杠问题
+  // ① 类型过滤，先清洗对象
   // --------------------------
-  let statVlessTotal = 0;
-  let statVlessDrop = 0;
   const typeFiltered = allRawProxies.filter(rawP => {
     const p = cleanProxyObj(rawP);
     if (!p || !p.type) return false;
     const t = p.type.toLowerCase();
-
-    if(t === 'vless') statVlessTotal++;
-
     if (SKIP_TYPES.has(t)) return false;
-
     if (t === "vless") {
       const hasReality = !!p["reality-opts"];
       const hasXhttp = !!p["xhttp-opts"];
-      if (!(hasReality || hasXhttp)) statVlessDrop++;
       return hasReality || hasXhttp;
     }
     return true;
   });
-  console.log(`ℹ️调试：vless总数量 ${statVlessTotal}，缺少reality/xhttp被过滤 ${statVlessDrop}`);
   console.log(`✅【类型过滤后剩余】：${typeFiltered.length}`);
 
   // --------------------------
-  // ② 地区过滤（typeFiltered已经全部clean完毕，不再重复清洗）
+  // ② 拆分为【匹配地区】、【其他候选池】两组
   // --------------------------
-  const regionFiltered = [];
+  const matchRegionList = [];
+  const otherCandidateList = [];
+
   for (const p of typeFiltered) {
     if (!p.name || !p.server || !p.port) continue;
     const hit = REGION_RULES.find(r => r.reg.test(p.name));
     if(hit){
-      regionFiltered.push({ p, hit });
+      matchRegionList.push({ p, hit });
+    }else{
+      // 类型合格，但地区不匹配，进入其他候选池
+      otherCandidateList.push({ p, hit: { flag:"", name:"其他" } });
     }
   }
-  console.log(`✅【地区匹配过滤后剩余】：${regionFiltered.length}`);
+  console.log(`✅【地区匹配节点】：${matchRegionList.length}`);
+  console.log(`✅【其他候选节点】：${otherCandidateList.length}`);
+
+  // 随机抽取10%
+  const sampleCount = Math.floor(otherCandidateList.length * OTHER_SAMPLE_RATIO);
+  const sampledOtherList = sampleRandom(otherCandidateList, sampleCount);
+  console.log(`✅【其他候选节点随机抽取数量 ${OTHER_SAMPLE_RATIO*100}%】：${sampledOtherList.length}`);
+
+  // 合并总池：匹配地区 + 抽样出来的其他节点
+  const totalPool = [...matchRegionList, ...sampledOtherList];
+  console.log(`✅【合并节点池】：${totalPool.length}`);
 
   // --------------------------
-  // ③ 全局复合指纹去重
+  // ③ 全局复合指纹去重（A组B组一起去重，跨组去重）
   // --------------------------
   const seen = new Set();
   const dedupList = [];
-  for(const item of regionFiltered){
-    const {p, hit} = item;
+  for(const item of totalPool){
+    const {p} = item;
     let fp;
     if(p.type.toLowerCase() === 'vless' && p['reality-opts']?.['public-key']){
       fp = `${p.type}|${p.server}|${p.uuid}|${p['reality-opts']['public-key']}`;
@@ -132,12 +147,12 @@ async function fetchWithTimeout(url) {
     }
     if(seen.has(fp)) continue;
     seen.add(fp);
-    dedupList.push({p, hit});
+    dedupList.push(item);
   }
-  console.log(`✅【全局去重后剩余】：${dedupList.length}`);
+  console.log(`✅【节点池去重后剩余】：${dedupList.length}`);
 
   // --------------------------
-  // ④ 全局统一编号重命名
+  // ④ 重命名：各地区独立编号，“其他”独立编号
   // --------------------------
   const regionCounter = {};
   const finalProxies = [];
@@ -145,7 +160,11 @@ async function fetchWithTimeout(url) {
     const {p, hit} = item;
     regionCounter[hit.name] = (regionCounter[hit.name] || 0) + 1;
     const seq = String(regionCounter[hit.name]).padStart(2, "0");
-    p.name = `${hit.flag} ${hit.name} ${seq} | ${p.type}`;
+    if(hit.name === "其他"){
+      p.name = `其他 ${seq} | ${p.type}`;
+    }else{
+      p.name = `${hit.flag} ${hit.name} ${seq} | ${p.type}`;
+    }
     finalProxies.push(p);
   }
 
