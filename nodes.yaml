@@ -98,329 +98,6 @@ proxies:
     sni: assets.gateway-stream.com
     tls: false
     type: hysteria2
-  - flow: xtls-rprx-vision
-    name: 🇺🇸 美国 09 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: 8BglmwULIVotYAbGXx3Vd1fXiGJbKSsWnZCGvm4Exl0
-      short-id: aebdb601b1371778
-    server: 38.244.4.1
-    servername: www.apple.com
-    skip-cert-verify: false
-    tls: true
-    type: vless
-    udp: true
-    uuid: 5905d91f-c3bc-4e80-bd66-4b17beb166cb
-  - flow: xtls-rprx-vision
-    name: 🇺🇸 美国 10 | vless
-    network: tcp
-    port: 11094
-    reality-opts:
-      public-key: 9dnXiXxP4xgvtTVRj9SBFdyO6mjGvVhWD8qVZZLCCCk
-      short-id: a356addf
-    server: 51.81.223.225
-    servername: www.yahoo.com
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: f1fa0ad9-b122-4b7c-da82-4bea9edc48dd
-  - client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    name: 🇺🇸 美国 11 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: zDeF_twyyT7a7zKiURF-Q8f6kkj95rx7zQ_jar09Hi4
-      short-id: e4f6a3446ac34a23
-    server: 89.117.123.243
-    servername: us.savesafe.cc
-    skip-cert-verify: false
-    tls: true
-    type: vless
-    udp: true
-    uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
-  - flow: xtls-rprx-vision
-    name: 🇺🇸 美国 12 | vless
-    network: tcp
-    port: 29893
-    reality-opts:
-      public-key: JrWOojSFwFA93YjsiQkDydTItQzNAsXsHU24HuWGWjA
-      short-id: bc8e3658db7d1323
-    server: 155.117.199.13
-    servername: cdnjs.cloudflare.com
-    skip-cert-verify: false
-    tls: true
-    type: vless
-    udp: true
-    uuid: f06c6039-a489-3d78-a676-ed43be6deca3
-  - client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    name: 🇺🇸 美国 13 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: g5UW6bf2soPSDNx7j0wanW_uLAtvTgQ8_lfztTJaP0k
-      short-id: 7025c954ff913b4c
-    server: 107.151.250.68
-    servername: www.bing.com
-    skip-cert-verify: false
-    tls: true
-    type: vless
-    udp: true
-    uuid: 055dce30-0ee3-44c3-b680-be1c95b8d6e7
-  - flow: xtls-rprx-vision
-    name: 🇺🇸 美国 14 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: E6Y9lNizCXo8tJ6EXwLYQIjyIwmxIs4foyRlY2MgkjA
-      short-id: 59ccabb0a1483c4b
-    server: wr28-6njjgu.linenheath.site
-    servername: www.cloudflare.com
-    skip-cert-verify: false
-    tls: true
-    type: vless
-    udp: true
-    uuid: 9638a83e-f1f7-4cc8-a602-924965d9534f
-  - flow: xtls-rprx-vision
-    name: 🇺🇸 美国 15 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: FL9zvOg48NhHk_YWJMcDXNOseisuzeBW7d8KitUaAQM
-      short-id: dc941fb0778384e2
-    server: nsuc-znkbig.avonex.top
-    servername: www.bing.com
-    skip-cert-verify: false
-    tls: true
-    type: vless
-    udp: true
-    uuid: ec31f6d7-c71a-413d-93aa-24296805a594
-  - name: 🇺🇸 美国 16 | vless
-    type: vless
-    server: 31.76.5.26
-    port: 443
-    uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-    servername: nordic.cendora.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: qq
-    reality-opts:
-      public-key: YQTixaXzPVImuRc4TUbrFAekjIiaYV-t5S-HTKlH0AU
-      short-id: 2186a755ed67b034
-    skip-cert-verify: true
-    udp: true
-  - name: 🇺🇸 美国 17 | vless
-    type: vless
-    server: 31.76.3.54
-    port: 443
-    uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-    servername: nordic.cendora.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: YQTixaXzPVImuRc4TUbrFAekjIiaYV-t5S-HTKlH0AU
-      short-id: 2186a755ed67b034
-    skip-cert-verify: true
-    udp: true
-  - name: 🇸🇬 新加坡 02 | vless
-    type: vless
-    server: 34.124.166.13
-    port: 20243
-    uuid: 16b3793b-3335-4832-b1fd-877b2c5e15d6
-    servername: www.spotify.com
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: fB0gzruxHdrID18WQclmC5QGVCrHTqOwnqFosxh2TnY
-      short-id: 214dd1031b8a
-    skip-cert-verify: true
-    udp: true
-  - name: 🇸🇬 新加坡 03 | vless
-    type: vless
-    server: 34.124.166.13
-    port: 20843
-    uuid: 16b3793b-3335-4832-b1fd-877b2c5e15d6
-    servername: www.spotify.com
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: 3gomAzFXNmwrb-llPQCDK_xkPFOyBmVKR52iy8U3yjg
-      short-id: aad7f0276f60244b
-    skip-cert-verify: true
-    udp: true
-  - name: 🇸🇬 新加坡 04 | vless
-    type: vless
-    server: 34.124.166.13
-    port: 21443
-    uuid: 16b3793b-3335-4832-b1fd-877b2c5e15d6
-    servername: djp01.ps5.update.playstation.net
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: jxmd60h22_LgUlequekara-UbjKGbvqq1f8CBCLBek8
-      short-id: 08db2d117d
-    skip-cert-verify: true
-    udp: true
-  - name: 🇺🇸 美国 18 | vless
-    type: vless
-    server: 144.31.242.1
-    port: 443
-    uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-    servername: eu-central.cendora.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: edge
-    reality-opts:
-      public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
-      short-id: 00bca5982f82d083
-    skip-cert-verify: true
-    udp: true
-  - name: 🇺🇸 美国 19 | vless
-    type: vless
-    server: 31.77.141.65
-    port: 13443
-    uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-    servername: auto.cendora.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: qq
-    reality-opts:
-      public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
-      short-id: a7f3c91b2e6d84c0
-    skip-cert-verify: true
-    udp: true
-  - client-fingerprint: ios
-    flow: xtls-rprx-vision
-    name: 🇺🇸 美国 20 | vless
-    port: 443
-    reality-opts:
-      public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-      short-id: c39cc7310a
-    server: 169.40.42.231
-    servername: yahoo.com
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  - client-fingerprint: ios
-    flow: xtls-rprx-vision
-    name: 🇺🇸 美国 21 | vless
-    port: 443
-    reality-opts:
-      public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-      short-id: c39cc7310a
-    server: 169.40.42.89
-    servername: yahoo.com
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 🇯🇵 日本 02 | vless
-    port: 443
-    reality-opts:
-      public-key: ZuN9nc78h4Ccb19eb9NpTCs0jZkhJB8L0i1ZoAhu0XU
-      short-id: b2f4518cf979889d
-    server: 43.165.177.82
-    servername: www.cloudflare.com
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 0b772594-d6b9-4f4f-849b-8a6f92f594fe
-  - client-fingerprint: ios
-    flow: xtls-rprx-vision
-    name: 🇺🇸 美国 22 | vless
-    port: 443
-    reality-opts:
-      public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-      short-id: c39cc7310a
-    server: 169.40.42.74
-    servername: yahoo.com
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  - client-fingerprint: chrome
-    name: 🇺🇸 美国 23 | vless
-    port: 443
-    reality-opts:
-      public-key: 6p0aVCkOgd-xaxqSMANYABL6O4Tdbftnxjiy5qcmISQ
-      short-id: 0b
-    server: 45.155.52.231
-    servername: ru2.skydrgn-online.online
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 219f9fec-8983-4f6f-af8c-31bd0c6dbf19
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 🇯🇵 日本 03 | vless
-    port: 443
-    reality-opts:
-      public-key: qBtxq4RZxDLCJT8i48iaGMhacv8MOI0yhIFiuwYJm08
-      short-id: 825d392c67e4
-    server: 2.27.27.64
-    servername: jp.musicwave.net
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 94d2d711-76e5-4d82-a3c9-4f06fd5558c8
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 🇺🇸 美国 24 | vless
-    port: 16565
-    reality-opts:
-      public-key: JqblL-dYqxHH3pAju89x3OkXlBQ8k5LzO2Yoadi8ylk
-      short-id: 373e14d458
-    server: 94.124.119.187
-    servername: yulife.com
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 8a3756ec-179b-48fe-b861-27c0287710ae
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 🇯🇵 日本 04 | vless
-    port: 443
-    reality-opts:
-      public-key: d1LjsQHtTCj7kHx2LHFisVDPc_xOtKnugy5YRFKXqUs
-      short-id: "39"
-    server: 64.176.62.54
-    servername: www.amazon.com
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 12e35bfe-1e79-4cf1-8a8e-22a242e97408
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 🇰🇷 韩国 03 | vless
-    port: 443
-    reality-opts:
-      public-key: fI-eoLmyyeYXgUHr2SWzHcwxkhxmDj2QBnivpUPYfVY
-      short-id: e3db542f549f5504
-    server: 52.141.0.244
-    servername: www.stanford.edu
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 5822b465-036b-4a3b-89d0-b3e52ae20815
   - name: 🇭🇰 香港 01 | hysteria2
     password: c2601f6c59ed832f9129533608eea8eb
     port: 50160
@@ -438,21 +115,7 @@ proxies:
     tls: true
     type: anytls
     udp: true
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 🇸🇬 新加坡 05 | vless
-    port: 13779
-    reality-opts:
-      public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
-      short-id: af1bdd293097b664
-    server: 111.119.235.145
-    servername: tesla.com
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
-  - name: 🇸🇬 新加坡 06 | anytls
+  - name: 🇸🇬 新加坡 02 | anytls
     password: c739bb1d-5fc7-4f45-acec-534267a1f1e7
     port: 20260
     server: 3696b38bsg.murphyweb.sbs
@@ -461,7 +124,7 @@ proxies:
     tls: true
     type: anytls
     udp: true
-  - name: 🇸🇬 新加坡 07 | anytls
+  - name: 🇸🇬 新加坡 03 | anytls
     password: 13f0acfa-38c1-4e82-a758-583aa31740df
     port: 60572
     server: sivp666.ipad1el.com
@@ -470,7 +133,7 @@ proxies:
     tls: true
     type: anytls
     udp: true
-  - name: 🇸🇬 新加坡 08 | anytls
+  - name: 🇸🇬 新加坡 04 | anytls
     password: c739bb1d-5fc7-4f45-acec-534267a1f1e7
     port: 23439
     server: 3696b38bsg.murphyweb.sbs
@@ -479,35 +142,7 @@ proxies:
     tls: true
     type: anytls
     udp: true
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 🇸🇬 新加坡 09 | vless
-    port: 42576
-    reality-opts:
-      public-key: z8A9zDSdi94sN7KskpYmCoVeuCJOGCA8EHPI8dBZWxE
-      short-id: dfcfcb51
-    server: 3696b38bsg.murphyweb.sbs
-    servername: www.yahoo.com
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: c739bb1d-5fc7-4f45-acec-534267a1f1e7
-  - client-fingerprint: safari
-    flow: xtls-rprx-vision
-    name: 🇭🇰 香港 03 | vless
-    port: 443
-    reality-opts:
-      public-key: EXIEsAJq-s30mA0r997iwrR8ijvGLZ7DOTkr_R39QCE
-      short-id: 54fc3827c8
-    server: 156.248.10.58
-    servername: nono.hhhkkhktt.xyz
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 9c71e3bf-d79c-41ad-ba08-1028aff0eaa5
-  - name: 🇰🇷 韩国 04 | anytls
+  - name: 🇰🇷 韩国 03 | anytls
     password: 13f0acfa-38c1-4e82-a758-583aa31740df
     port: 47901
     server: sivp555.ipad1el.com
@@ -516,7 +151,7 @@ proxies:
     tls: true
     type: anytls
     udp: true
-  - name: 🇰🇷 韩国 05 | anytls
+  - name: 🇰🇷 韩国 04 | anytls
     password: 13f0acfa-38c1-4e82-a758-583aa31740df
     port: 47053
     server: yazhouany02.twzq59.cc
@@ -525,35 +160,7 @@ proxies:
     tls: true
     type: anytls
     udp: true
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 🇸🇬 新加坡 10 | vless
-    port: 23699
-    reality-opts:
-      public-key: OdTELUjAUKO_qr-O-uihaAZJAhA8GyIWVI6CpozVCU4
-      short-id: 6c6c7c97
-    server: 3696b38bsg.murphyweb.sbs
-    servername: buylite.music.apple.com
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: c739bb1d-5fc7-4f45-acec-534267a1f1e7
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 🇸🇬 新加坡 11 | vless
-    port: 20266
-    reality-opts:
-      public-key: 1Up61_Ml2SGi89jSqF7NOe8q1t9-qRdkau0nRXhFm1o
-      short-id: 72593ecf
-    server: 3696b38bsg.murphyweb.sbs
-    servername: buylite.music.apple.com
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: c739bb1d-5fc7-4f45-acec-534267a1f1e7
-  - name: 🇺🇸 美国 25 | hysteria2
+  - name: 🇺🇸 美国 09 | hysteria2
     password: 3489a008067e4b789cd91f3f0d3ece47
     port: 50160
     server: 140-238-43-0.liao.kdns.fr
@@ -561,50 +168,7 @@ proxies:
     sni: 140-238-43-0.liao.kdns.fr
     type: hysteria2
     udp: true
-  - client-fingerprint: safari
-    flow: xtls-rprx-vision
-    name: 🇺🇸 美国 26 | vless
-    port: 8443
-    reality-opts:
-      public-key: Y0zCjvOLHuHWgv4HUyqb9O0lSMnTrl26XO8qwnWoQXw
-      short-id: b85875a13da4
-    server: 172.96.141.210
-    servername: room.rootvana.top
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 9c71e3bf-d79c-41ad-ba08-1028aff0eaa5
-  - client-fingerprint: qq
-    flow: xtls-rprx-vision
-    name: 🇺🇸 美国 27 | vless
-    port: 443
-    reality-opts:
-      public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
-      short-id: 00bca5982f82d083
-    server: 31.76.69.40
-    servername: eu-central.cendora.ru
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-  - encryption: mlkem768x25519plus.native.0rtt.RXd0cP3r7QmDJbZm-Kc99dqLlP_uj9NAG-wyZTy1Ujk
-    name: 🇺🇸 美国 28 | vless
-    network: xhttp
-    packet-encoding: xudp
-    port: 53994
-    server: sakura.proxy.rlwy.net
-    sub_tag: B007-260618
-    type: vless
-    udp: true
-    uuid: 9934e311-783e-4ae6-91e4-81247b2c3774
-    xhttp-opts:
-      mode: auto
-      path: /assets
-      x-padding-bytes: 5-70
-    xudp: true
-  - name: 🇰🇷 韩国 06 | anytls
+  - name: 🇰🇷 韩国 05 | anytls
     password: 13f0acfa-38c1-4e82-a758-583aa31740df
     port: 60005
     server: svip.skycon808.com
@@ -613,7 +177,7 @@ proxies:
     tls: true
     type: anytls
     udp: true
-  - name: 🇸🇬 新加坡 12 | anytls
+  - name: 🇸🇬 新加坡 05 | anytls
     password: 13f0acfa-38c1-4e82-a758-583aa31740df
     port: 20694
     server: yzany01.jdoanst2026.com
@@ -622,7 +186,7 @@ proxies:
     tls: true
     type: anytls
     udp: true
-  - name: 🇺🇸 美国 29 | hysteria2
+  - name: 🇺🇸 美国 10 | hysteria2
     password: 6f65680b8d4de72e9f7c030e92e27a32
     port: 50160
     server: 166-0-16-52.liao.kdns.fr
@@ -630,56 +194,7 @@ proxies:
     sni: 166-0-16-52.liao.kdns.fr
     type: hysteria2
     udp: true
-  - alpn:
-      - h2
-      - http/1.1
-    client-fingerprint: chrome
-    encryption: none
-    name: 🇺🇸 美国 30 | vless
-    network: xhttp
-    packet-encoding: xudp
-    port: 443
-    server: rvg-production-4b16.up.railway.app
-    servername: rvg-production-4b16.up.railway.app
-    sub_tag: B007-260618
-    tls: true
-    type: vless
-    udp: true
-    uuid: 766b03ff-d7f4-b35e-2715-fd5029df106f
-    xhttp-opts:
-      host: rvg-production-4b16.up.railway.app
-      mode: stream-up
-      path: /xhttp-siz10/stream-up/766b03ff-d7f4-b35e-2715-fd5029df106f
-    xudp: true
-  - client-fingerprint: qq
-    flow: xtls-rprx-vision
-    name: 🇭🇰 香港 04 | vless
-    port: 13443
-    reality-opts:
-      public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
-      short-id: a7f3c91b2e6d84c0
-    server: 114.29.238.251
-    servername: auto.cendora.ru
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-  - client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    name: 🇸🇬 新加坡 13 | vless
-    port: 443
-    reality-opts:
-      public-key: eaRNeC8fccrx0nBNvBpAXZgK4m4FxfnQ-t0W7NOM7mU
-      short-id: e53048e82bb20077
-    server: 154.196.139.50
-    servername: asia.cendora.ru
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-  - name: 🇺🇸 美国 31 | hysteria2
+  - name: 🇺🇸 美国 11 | hysteria2
     password: b41ad7f941ffce755cb8601bfd0f02ca
     port: 50160
     server: 35-209-199-239.liao.kdns.fr
@@ -687,7 +202,7 @@ proxies:
     sni: 35-209-199-239.liao.kdns.fr
     type: hysteria2
     udp: true
-  - name: 🇸🇬 新加坡 14 | hysteria2
+  - name: 🇸🇬 新加坡 06 | hysteria2
     password: ce24c43947331f36746c1f692c3812e0
     port: 50160
     server: 129-150-54-169.liao.kdns.fr
@@ -695,47 +210,6 @@ proxies:
     sni: 129-150-54-169.liao.kdns.fr
     type: hysteria2
     udp: true
-  - client-fingerprint: hellochrome_120
-    flow: xtls-rprx-vision
-    name: 🇺🇸 美国 32 | vless
-    port: 443
-    reality-opts:
-      public-key: vEXgvoW9iQo6iiKT71cNt1CC3cAB4IWswAn-cScDz1A
-      short-id: bd8a588cebc3395a
-    server: ltu-01.node.lumixnet.com
-    servername: ltu-01.node.lumixnet.com
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 56ae4ec4-6705-43d0-bf3a-bc36ab3b3545
-  - client-fingerprint: hellochrome_120
-    flow: xtls-rprx-vision
-    name: 🇺🇸 美国 33 | vless
-    port: 443
-    reality-opts:
-      public-key: vEXgvoW9iQo6iiKT71cNt1CC3cAB4IWswAn-cScDz1A
-      short-id: bd8a588cebc3395a
-    server: ltu-02.node.lumixnet.com
-    servername: ltu-02.node.lumixnet.com
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 8645697d-51c1-4e90-aca5-ba63a0392f11
-  - client-fingerprint: chrome
-    name: 🇺🇸 美国 34 | vless
-    port: 13779
-    reality-opts:
-      public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
-      short-id: af1bdd293097b664
-    server: 104.223.73.149
-    servername: tesla.com
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
   - name: 🇹🇼 台湾 01 | hysteria2
     password: a56619e2bed91121eabb97d20be207c3
     port: 50160
@@ -744,7 +218,7 @@ proxies:
     sni: 85-237-207-49.liao.kdns.fr
     type: hysteria2
     udp: true
-  - name: 🇭🇰 香港 05 | hysteria2
+  - name: 🇭🇰 香港 03 | hysteria2
     password: 216d5cc4cf42e8c49fbe5ba962f94442
     port: 50160
     server: 20-2-34-124.liao.kdns.fr
@@ -752,138 +226,14 @@ proxies:
     sni: 20-2-34-124.liao.kdns.fr
     type: hysteria2
     udp: true
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 🇺🇸 美国 35 | vless
-    port: 10006
-    reality-opts:
-      public-key: XUVBEFyxevBwoGwVlo31vXMR_wQ0h0UnhzC4jCeakkc
-      short-id: 590bdc3b6dad
-    server: hk.tfree.top
-    servername: www.cloudflare.com
-    tls: true
-    type: vless
-    uuid: 48b36b6a-eaa6-4843-9231-0bb8b38b5da5
-  - client-fingerprint: chrome
-    name: 🇺🇸 美国 36 | vless
-    port: 443
-    reality-opts:
-      public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-    server: 47.80.12.87
-    servername: api.company-target.com
-    tls: true
-    type: vless
-    uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-  - name: 🇭🇰 香港 06 | anytls
+  - name: 🇭🇰 香港 04 | anytls
     server: 23d89b4a-tk59c0-tl2lpx-1ofy2.hk2.hyhuawei.com
     port: 443
     type: anytls
     password: 39275498-a48c-11ee-b03a-f23c913c8d2b
     udp: true
     skip-cert-verify: true
-  - name: 🇯🇵 日本 05 | vless
-    server: uh-jp01.ziyoufly.xyz
-    port: 55555
-    type: vless
-    uuid: 5fce1c98-0192-4d03-a8b4-9ba8a8eef474
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: 1XQ60qYOfBZJpcilNV9Fu7OSpuO5_6-zrNZIYhB_YU4
-      short-id: af317506
-    servername: download-porter.hoyoverse.com
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: 🇺🇸 美国 37 | vless
-    server: 176.109.108.196
-    port: 9892
-    type: vless
-    uuid: fd94a343-cb11-45e6-9882-72352d0a2b8f
-    tls: true
-    reality-opts:
-      public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-      short-id: aabb
-    servername: dl.google.com
-    client-fingerprint: firefox
-    network: grpc
-    grpc-opts:
-      grpc-mode: gun
-      grpc-service-name: grpc-tunnel
-    udp: true
-  - name: 🇺🇸 美国 38 | vless
-    server: 176.109.108.196
-    port: 9892
-    type: vless
-    uuid: 2a650f3b-d95b-4bd6-aadf-16ccc0717155
-    tls: true
-    reality-opts:
-      public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-      short-id: aabbccdd
-    servername: dl.google.com
-    client-fingerprint: chrome
-    network: grpc
-    grpc-opts:
-      grpc-mode: gun
-      grpc-service-name: grpc-tunnel
-    udp: true
-  - name: 🇺🇸 美国 39 | vless
-    server: 104.18.32.47
-    port: 443
-    type: vless
-    uuid: a5a544bf-e4b3-4651-9ff4-de3461910d87
-    tls: true
-    alpn:
-      - h3
-    servername: rus.aba-hum.store
-    client-fingerprint: chrome
-    network: xhttp
-    xhttp-opts:
-      path: /
-      mode: auto
-    udp: true
-  - name: 🇺🇸 美国 40 | vless
-    server: 109.196.99.30
-    port: 8443
-    type: vless
-    uuid: e653ba00-cea8-488f-957e-9fa24a260a68
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: 0ZJDfr9ZghDx3u0pPFvEQ888ViXE_kHVoALrN8j8xnI
-      short-id: ed5a52acd4b78bde
-    servername: www.rumedia-cdn.com
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: 🇸🇬 新加坡 15 | vless
-    server: yebm-1936hwy.revora.top
-    port: 443
-    type: vless
-    uuid: be154d71-04ca-4389-8a89-d14219b25cd7
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: kwZBG2HBA1WN4eZW1GK0D9OVC4TPEs5J-ZeeBA2bVBw
-      short-id: 08f1620e7ad50ca8
-    servername: www.bing.com
-    client-fingerprint: chrome
-    network: tcp
-  - name: 🇹🇼 台湾 02 | vless
-    server: 207.56.137.51
-    port: 443
-    type: vless
-    uuid: 01ada9fb-fa2f-45da-a0d0-bce80cdf433b
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: WNifT0qNHWrUsvC6cuvej0rzZe6qPijopbmJyRADOF0
-      short-id: f713561d
-    servername: www.cloudflare.com
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: 🇺🇸 美国 41 | mieru
+  - name: 🇺🇸 美国 12 | mieru
     server: 157.254.223.44
     port: 34567
     type: mieru
@@ -891,36 +241,7 @@ proxies:
     username: dongtaiwang.com
     multiplexing: MULTIPLEXING_LOW
     transport: TCP
-  - name: 🇺🇸 美国 42 | vless
-    server: 31.76.70.31
-    port: 443
-    type: vless
-    uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: t_qv0VOfWhKZJV_giGC55-ipgHYWo44Yfvik_B8T8ik
-      short-id: 4a46213c935e2ee4
-    servername: baltic.cendora.ru
-    client-fingerprint: edge
-    network: tcp
-    udp: true
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 🇺🇸 美国 43 | vless
-    network: tcp
-    port: "443"
-    reality-opts:
-      public-key: tOWJAWnCPaJZvqorglX2JAuT5mDrSSA9VPCd90DSZRY
-      short-id: 241c2a5b9073f934
-    server: 38.125.120.76
-    servername: www.apple.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: 085c75ad-c00b-43fb-8fea-fa0caefa0a60
-    xudp: true
-  - name: 🇭🇰 香港 07 | hysteria2
+  - name: 🇭🇰 香港 05 | hysteria2
     type: hysteria2
     server: 202.146.222.174
     port: 443
@@ -928,238 +249,7 @@ proxies:
     skip-cert-verify: true
     sni: https://t.me/WangCai2🇨🇳
     tfo: false
-  - name: 🇭🇰 香港 08 | vless
-    type: vless
-    server: 64.49.45.57
-    port: 15540
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      _spider-x: /
-      public-key: Yg0SBHkbrgAxsRKnsNXn4SStVURNYMiPor2oMSRTblA
-      short-id: 3a81ee2c998d0e
-    servername: www.intel.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: f8e32ccb-7e0b-4966-837a-2a9503bc3d82
-  - name: 🇭🇰 香港 09 | vless
-    type: vless
-    server: 64.49.46.222
-    port: 51008
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      _spider-x: /
-      public-key: Uky5TgbjFFB6vRNwV2h0MtFnXAeNuF2PnnjNwm0V3mc
-      short-id: 01e2f1822d288f0a
-    servername: www.amd.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: a7e9b227-57bb-44b3-ac47-58367a40adf8
-  - name: 🇭🇰 香港 10 | vless
-    type: vless
-    server: vip.bcjdvip.com
-    port: 14008
-    client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: WQP0QFc9RlOg7TDAI2i_VNQEtFwB_5kE5AKykeIipm0
-      short-id: 8e5d94464f
-    servername: apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 🇭🇰 香港 11 | vless
-    type: vless
-    server: vip.bcjdvip.com
-    port: 14001
-    client-fingerprint: safari
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: Iy9qptuQLY7JphySdvf09hOBj6Ym76Sxj1rIwS4Qmnk
-      short-id: "16"
-    servername: apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 🇭🇰 香港 12 | vless
-    type: vless
-    server: vip.bcjdvip.com
-    port: 14007
-    client-fingerprint: safari
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: wybFjQzLnkKIaaTEhwp_N9UXU8miqds9U__P971YHlU
-      short-id: 1d89ebb78c
-    servername: apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 🇭🇰 香港 13 | vless
-    type: vless
-    server: vip.bcjdvip.com
-    port: 14006
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: XPLe-686APp5RHaiFHZDTJsf1kMo-aMZuKjKeHmdyEM
-      short-id: ff5ebee2264c
-    servername: apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 🇭🇰 香港 14 | vless
-    type: vless
-    server: vip.bcjdvip.com
-    port: 14009
-    client-fingerprint: safari
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: CAFHM6x5kO2ofkpEDelcOJlZ4i6Kw4ZlDNIfdV6ptUw
-      short-id: 6a1a47
-    servername: apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 🇭🇰 香港 15 | vless
-    type: vless
-    server: vip.bcjdvip.com
-    port: 14010
-    client-fingerprint: edge
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: PT1gw9B5majPBH2_qST-vymli9f6RlTmvGS2gPtdhF8
-      short-id: 1ebaa8ea57a71ffc
-    servername: apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 🇭🇰 香港 16 | vless
-    type: vless
-    server: 64.49.46.182
-    port: 31435
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      _spider-x: /
-      public-key: a6ngMY9lSih2eDM81a6I0wXWxXYJly_gxQ1hpFhZOT8
-      short-id: 001dc5d28eae7554
-    servername: www.apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: b66d5953-8fed-4374-bf27-26dc07382b08
-  - name: 🇭🇰 香港 17 | vless
-    type: vless
-    server: vip.bcjdvip.com
-    port: 14003
-    client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    network: tcp
-    reality-opts:
-      public-key: bHHdXJs2NGgY4tDUBwmoLBaKM7y_5sd49geQcdbihz0
-      short-id: "80963776"
-    servername: apple.com
-    skip-cert-verify: true
-    tfo: false
-    tls: true
-    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 🇭🇰 香港 18 | vless
-    type: vless
-    server: vip.bcjdvip.com
-    port: 14002
-    client-fingerprint: safari
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: D4eZTpgaPV_2YQa7cbiDMGnZs6NBEU2JkfUroHpvoWs
-      short-id: 7cabb05b68f63b
-    servername: apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 🇭🇰 香港 19 | vless
-    type: vless
-    server: vip.bcjdvip.com
-    port: 14005
-    client-fingerprint: safari
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: sKWozGVep6wrIm63253QviGBtMLVrGB_W1JJHLEHi0s
-      short-id: 97a01dfaef
-    servername: apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 🇭🇰 香港 20 | vless
-    type: vless
-    server: 31.77.146.252
-    port: 443
-    client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      _spider-x: /Z09qrMWlOgA66mB
-      public-key: jtxkrvhIrWCfupN-Lm0F_4fjTkJkM-uA0WE2FbrGqlY
-      short-id: f3e8720225ef541e
-    servername: sub.titandarkness.mooo.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 52590634-cfce-4db7-abcc-d075175a3088
-  - name: 🇹🇼 台湾 03 | vless
-    type: vless
-    server: 45.206.0.68
-    port: 8443
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: dY9SNEllJMW63xo-JdXufhmjAxB_4uFw_QMjgufjiD8
-      short-id: ea10cd5686751ec5
-    servername: storage.yandex.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 52faee73-e0fe-4661-992d-67259257170f
-  - name: 🇯🇵 日本 06 | hysteria2
+  - name: 🇯🇵 日本 02 | hysteria2
     type: hysteria2
     server: 13.231.108.76
     port: 443
@@ -1167,96 +257,7 @@ proxies:
     skip-cert-verify: true
     sni: https://t.me/WangCai2🇨🇳
     tfo: false
-  - name: 🇯🇵 日本 07 | vless
-    type: vless
-    server: 13.231.185.74
-    port: 47381
-    client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      _spider-x: /
-      public-key: kiMGo34R7wN3bHFbY_6MqIHePd7rlnOkxGCt-Ek1Ej0
-      short-id: "67e2075367998314"
-    servername: www.yahoo.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: c6508e59-dd68-4dc0-b14f-3192e84ef843
-  - name: 🇯🇵 日本 08 | vless
-    type: vless
-    server: 8.209.229.10
-    port: 15542
-    client-fingerprint: chrome
-    encryption: none
-    network: xhttp
-    packet-encoding: xudp
-    reality-opts:
-      _spider-x: /dkhVfJJ30EjJp7k
-      public-key: ZMTOMQv9xA5vBSC3B8k44u2p2l9O0Qg02E1WF4jHTxg
-      short-id: 69eaa190d1c30ee7
-    servername: aws.amazon.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 8aefc70f-df0d-46ff-bd17-e58ac2fe9f0e
-    xhttp-opts:
-      mode: auto
-      path: /them
-      x-padding-bytes: 100-1000
-  - name: 🇯🇵 日本 09 | vless
-    type: vless
-    server: 172.207.210.238
-    port: 443
-    client-fingerprint: safari
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: Oua7ls5NZ2sxxFSyccAHZCMrCjW34WPEsHbaIpWmxX8
-      short-id: ac78f53d
-    servername: www.cloudflare.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 39d1c043-7bc5-4876-9d07-58574c023850
-  - name: 🇯🇵 日本 10 | vless
-    type: vless
-    server: 103.100.158.180
-    port: 443
-    client-fingerprint: safari
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: A7k8uGiZd_41py6TIrzhLVrzEuEsB4-_qO-ecyJ0Flk
-      short-id: a95ca3bfecbab35f
-    servername: www.apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 51336138-2480-485a-8723-b6a688b69b14
-  - name: 🇰🇷 韩国 07 | vless
-    type: vless
-    server: 43.108.48.169
-    port: 40701
-    client-fingerprint: chrome
-    encryption: none
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: TWuVILeiSXfCSMZPsqNHtRquNALPRaW5Z51I63zdLEA
-      short-id: 7ef3a8ab2886
-    servername: amazon.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: cdb7d825-9892-4d6f-80b8-7add83159dac
-  - name: 🇺🇸 美国 44 | hysteria2
+  - name: 🇺🇸 美国 13 | hysteria2
     type: hysteria2
     server: hy2.123266.xyz
     port: 33333
@@ -1264,7 +265,7 @@ proxies:
     skip-cert-verify: true
     sni: hy2.123266.xyz
     tfo: false
-  - name: 🇺🇸 美国 45 | hysteria2
+  - name: 🇺🇸 美国 14 | hysteria2
     type: hysteria2
     server: 185.106.96.231
     port: 443
@@ -1272,7 +273,7 @@ proxies:
     skip-cert-verify: false
     sni: s559.ccgfw.top
     tfo: false
-  - name: 🇺🇸 美国 46 | hysteria2
+  - name: 🇺🇸 美国 15 | hysteria2
     type: hysteria2
     server: wuhantravel.duckdns.org
     port: 8443
@@ -1281,7 +282,7 @@ proxies:
     password: MySecurePassword123
     sni: wuhantravel.duckdns.org
     udp: true
-  - name: 🇺🇸 美国 47 | hysteria2
+  - name: 🇺🇸 美国 16 | hysteria2
     type: hysteria2
     server: hy2-new.aspidnet.xyz
     port: 443
@@ -1291,7 +292,7 @@ proxies:
     skip-cert-verify: true
     sni: hy2-new.aspidnet.xyz
     tfo: false
-  - name: 🇺🇸 美国 48 | hysteria2
+  - name: 🇺🇸 美国 17 | hysteria2
     type: hysteria2
     server: 161.104.88.46
     port: 443
@@ -1299,379 +300,9 @@ proxies:
     skip-cert-verify: true
     sni: k71530.w-mebel.pro
     tfo: false
-  - name: 🇺🇸 美国 49 | vless
-    type: vless
-    server: 64.23.143.23
-    port: 34045
-    client-fingerprint: chrome
-    encryption: none
-    network: raw
-    reality-opts:
-      public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
-      short-id: e8ab71d0
-    servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
-    skip-cert-verify: false
-    tls: true
-    uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
-  - name: 🇺🇸 美国 50 | vless
-    type: vless
-    server: 112.121.184.10
-    port: 26057
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: ipkmPcrX6VD4_cB3kS4DigWSP9FcU6TPXpkWM5m-jEw
-      short-id: e4fb5619
-    servername: videos.apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 970ffe5a-2c53-4b94-af3f-c95ddd417c1c
-  - name: 🇺🇸 美国 51 | vless
-    type: vless
-    server: 38.244.20.153
-    port: 443
-    client-fingerprint: safari
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: VdJvwLhX6OFD5kHttSk-3E0q4Xpy0Emmx84OG1swYVw
-      short-id: 9390800327ae880a
-    servername: www.apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 8f59f1a9-9a0b-41c0-8532-ca56699bcaa1
-  - name: 🇺🇸 美国 52 | vless
-    type: vless
-    server: 38.244.20.47
-    port: 443
-    client-fingerprint: safari
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: HCa-dCIFGG7LF3wPOBlrRzk_T1m-YIkhmupepQy0bzI
-      short-id: 616ead1cdc4486ca
-    servername: www.apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: a54fec73-26a1-4c05-b948-6a01c157927e
-  - name: 🇺🇸 美国 53 | vless
-    type: vless
-    server: 38.244.20.69
-    port: 443
-    client-fingerprint: safari
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: JlcNtRODuC4k8GhBFuXwjps9cRe3asq453_RLd3o9E8
-      short-id: e9e3098b62530266
-    servername: www.apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 057f3c26-0fe7-4315-aabc-90c79d413d70
-  - name: 🇺🇸 美国 54 | vless
-    type: vless
-    server: 38.244.21.243
-    port: 443
-    client-fingerprint: safari
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: JIUTuPxR-dU56Q0YnCGOmcLb8He7e6va7dYrhjIVhj4
-      short-id: 94611db621421d61
-    servername: www.apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: e490adc9-f324-46fb-b311-9f3f95b0a0dd
-  - name: 🇺🇸 美国 55 | vless
-    type: vless
-    server: 15.204.97.197
-    port: 23576
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    reality-opts:
-      public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-      short-id: "01"
-    servername: fuck.rkn
-    skip-cert-verify: false
-    tls: true
-    uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  - name: 🇺🇸 美国 56 | vless
-    type: vless
-    server: 15.204.97.216
-    port: 23576
-    client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    network: tcp
-    reality-opts:
-      public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-      short-id: "01"
-    servername: fuck.rkn
-    skip-cert-verify: false
-    tls: true
-    uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  - name: 🇺🇸 美国 57 | vless
-    type: vless
-    server: us2-r.link-t7.com
-    port: 10239
-    client-fingerprint: chrome
-    encryption: none
-    fp: chrome
-    grpc-opts:
-      grpc-service-name: movie
-    mode: gun
-    network: grpc
-    pbk: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    reality-opts:
-      public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-      server-name: s0.awsstatic.com
-      short-id: 686c0ef0
-    security: reality
-    servername: s0.awsstatic.com
-    serviceName: movie
-    sid: 686c0ef0
-    tls: true
-    uuid: 418DA912-0248-4762-8D21-5CB38467CA4D
-  - name: 🇺🇸 美国 58 | vless
-    type: vless
-    server: 108.62.60.24
-    port: 443
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: yK54RqOvWlWIXOyrvqs9OhT4LQvBU3u9Fh_CPvGCT2I
-      short-id: 2d41a02da93feb08
-    servername: www.amd.com
-    skip-cert-verify: true
-    tls: true
-    udp: true
-    uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-  - name: 🇺🇸 美国 59 | vless
-    type: vless
-    server: 40.160.227.243
-    port: 443
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: pBSQBcKkv36ml6eJX2yukl9i5e2d0zL_4BWBd6U_yVw
-      short-id: 457990eed2a1c9a6
-    servername: speedtest.net
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 88cb5a9f-f464-4e3b-8ca0-a74edf911205
-  - name: 🇺🇸 美国 60 | vless
-    type: vless
-    server: us3-r.link-t7.com
-    port: 10240
-    client-fingerprint: chrome
-    encryption: none
-    fp: chrome
-    grpc-opts:
-      grpc-service-name: movie
-    mode: gun
-    network: grpc
-    pbk: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    reality-opts:
-      public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-      server-name: s0.awsstatic.com
-      short-id: 686c0ef0
-    security: reality
-    servername: s0.awsstatic.com
-    serviceName: movie
-    sid: 686c0ef0
-    tls: true
-    uuid: 418DA912-0248-4762-8D21-5CB38467CA4D
-  - name: 🇺🇸 美国 61 | vless
-    type: vless
-    server: 162.218.95.14
-    port: 443
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    network: tcp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: UiZNJMasujuoM7dXc5NLSW1f4VssDlF3DBVg5rl82VM
-      short-id: a7c8f0630da31f6a
-    servername: www.booking.com
-    skip-cert-verify: true
-    tls: true
-    udp: true
-    uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-  - name: 🇺🇸 美国 62 | vless
-    type: vless
-    server: 163.123.141.45
-    port: 443
-    alpn:
-      - h2
-      - http/1.1
-    client-fingerprint: firefox
-    encryption: none
-    network: xhttp
-    packet-encoding: xudp
-    servername: u691611us4117.wagahaha.xyz
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 9794d18f-9280-3553-a7a5-a23da75aca76
-    xhttp-opts:
-      headers:
-        Xhttp-Verify: 3769e495-72dc-42ea-95eb-093cb0e4a6f8
-      host: s4117.wagahaha.xyz
-      path: /632f3ba5cd0889698a3e4b43d19aa601
-  - name: 🇺🇸 美国 63 | vless
-    type: vless
-    server: s4120.wagahaha.xyz
-    port: 443
-    alpn:
-      - h2
-      - http/1.1
-    client-fingerprint: firefox
-    encryption: none
-    network: xhttp
-    packet-encoding: xudp
-    servername: u691611us4117.wagahaha.xyz
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 9794d18f-9280-3553-a7a5-a23da75aca76
-    xhttp-opts:
-      headers:
-        Xhttp-Verify: 3769e495-72dc-42ea-95eb-093cb0e4a6f8
-      host: s4117.wagahaha.xyz
-      path: /632f3ba5cd0889698a3e4b43d19aa601
-  - name: 🇺🇸 美国 64 | vless
-    type: vless
-    server: s4119.wagahaha.xyz
-    port: 443
-    alpn:
-      - h2
-      - http/1.1
-    client-fingerprint: firefox
-    encryption: none
-    network: xhttp
-    packet-encoding: xudp
-    servername: u691611us4117.wagahaha.xyz
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 9794d18f-9280-3553-a7a5-a23da75aca76
-    xhttp-opts:
-      headers:
-        Xhttp-Verify: 3769e495-72dc-42ea-95eb-093cb0e4a6f8
-      host: s4117.wagahaha.xyz
-      path: /632f3ba5cd0889698a3e4b43d19aa601
-  - name: 🇺🇸 美国 65 | vless
-    type: vless
-    server: 89.144.35.230
-    port: 54582
-    client-fingerprint: chrome
-    encryption: mlkem768x25519plus.native.0rtt.0Rs8kQdBBMcc2SywqxkhzNVVzyIt_OZaYDNplvTPJKOwxAumLyogdAmy-lLJdlpIerxoMMZs2dlOCoI2H_igvKVg-1lc8Pge2EY-eki2tMPCzEhec7hFnVoDRydhygEXaAaebBpipjMntKVHqLJzwKomw5d-O0kAGaiF5nYPi-SU3NEBAXUPEWi9nMZeOEYPzzthXAcIVWw7yDlrGrOJQSVRyNmcUppT9hAwoNMPe2O5z0IN3rOdd7c3soKJ8oU6gwY38ynGbMEXGQqIBRWeYPYaptddWUZP28tus9xTwKQkIfeWWjsGOZcqGJMRRPevlIxRbfcAAJuCeTiz4yErDFsoMBYdzQl3BzIIcimWDEQIXZJCR6yyLSyJj8Fva7AgcAeg5BZs6_ZQdQFZfZpwjrwmp1kbdakCf-AzR9zBrOtR35IElzgBsgavbgZVY4B1THZ7DvFQVAq3hupm6_gaAaxg42qsleKyzPEs00VY-8DLRjauukNzTigjhfqom8liJnp8aALEnXhu7rdPIWuM91WEz4uTmbxBvARzuUAe7LceQtqiaHmebrp8N0mOKsSyh2PDVAmbWtjHCXJeDhhCMPUYXuiwUVICeUZV1TZxjmZ_xFFL8JZ8vAtewzs9AkiLXJaHNdIBbQRW5qx5BQfMM5vKjYhiXCxJugxu0zq57ksRxsF68oSW0jWbHXaF9EY91ABSZystAjitddC6QcGOUtqn6giKSVs2RXwEeNqZEsEELahYcPtM_PmTlXG-3pFfXalmcpC6bcVl14JLgkykbEtDy3qhBNaUa4osqDu4g8EgRVVuJlCFEcOW-qsQZedzkuhXa2UrUSgNBfVMYXCq16iiD6WKyVVww8CKj_WsPlyNrKIdu8RKENo_HZHN5gPEkgIGWvdpUVyJVbMHlGQ8wVKFDMgn3TyCmCx2_dXM0_eQDqjI3mXAonbAoFttwDhfbpcK4FjPWSkHZrMfAQU1QeodFxqBvBe8MMw1bLSu_mE8beORjEpmtWFr08O0zeUqBkKdOBwahQnB7mBx17JnjYSH0KZT2KF29SiBudHKz7mbThIxhglQH1hSfmSWs0k_d1uCR9Qvylsns9a3j4uwcvUFtZam7iVk2HxG-vMOihIYYomSALwNU0IN01Z3qddbW5uDdtIE0yA2fVVOxjMKVMeYybtarviaCdfNmvyJ4MrJUzoS82cp6TuOYgMZ8hosGMOH1xTMCZIMc9mf4UCRJqA3cRMH0PFj_ugQ62ohDld1dyZADdQx2igtUoYnjLKcIHVdTOp36TqaofugLKwF_aJSUmhi_Kheaju28kZskBaebUqT9VPBqcqYozdvXeeG8hUT6eiMAKSML4jHIJeYOpjOHhYNUEm9b4ATJOwstyQgQmE-P3teIQeYYRcimLpjCTczISEQJcUg68e3CgA8GCoLIaZVsmYKDMxbPJu7bWygU5bBH0Gc6sqf7uNy3kI0nEtAGNAUs6y9TFROQ2BgNeSMucRVNXZ1ePpJs8mx_xRn2ODAn0hImPlLiuOHniCPE_zni6TSyL8Typ11OvyVBIrIrAxWZwREOPs5lXV17t8
-    flow: xtls-rprx-vision
-    network: xhttp
-    packet-encoding: xudp
-    reality-opts:
-      public-key: kfw5DgkyKiovC3dzb-o2PUYnZPnbYvbx2IwERUv9czY
-      short-id: 225e2cc8
-    servername: apple.com
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    uuid: 5cfc52bc-e701-4160-89df-930a0c040576
-    xhttp-opts:
-      path: /5cfc52bc-e701-4160-89df-930a0c040576-xh
-    xudp: true
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 🇭🇰 香港 21 | vless
-    network: tcp
-    port: 59750
-    reality-opts:
-      public-key: W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg
-      short-id: ""
-    server: 47.83.153.19
-    tls: true
-    type: vless
-    udp: true
-    uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
-    servername: www.amd.com
-  - client-fingerprint: chrome
-    name: 🇺🇸 美国 66 | vless
-    network: tcp
-    port: 40056
-    reality-opts:
-      public-key: EYLZTm0VpViSmTLfehDg0DE57ZEp0P0hab5ME3pXrgs
-      short-id: 9ccdca9f
-    server: 166.1.89.85
-    tls: true
-    type: vless
-    udp: true
-    uuid: 090122da-ad6b-42a1-92d7-bab2630e2511
-    servername: www.cloudflare.com
-  - client-fingerprint: chrome
-    name: 🇰🇷 韩国 08 | vless
-    network: tcp
-    port: 8686
-    reality-opts:
-      public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
-      short-id: 628b3c90c98ead4f
-    server: 3.37.55.114
-    tls: true
-    type: vless
-    udp: true
-    uuid: f0b9ae63-91a7-4673-924e-498e0e0828c0
-    servername: www.apple.com
-  - client-fingerprint: qq
-    flow: xtls-rprx-vision
-    name: 🇯🇵 日本 11 | vless
-    network: tcp
-    port: 20725
-    reality-opts:
-      public-key: hceZHd9X9FSbWGXGgm3OWN-4Au26rrsriTcyHw5M3VU
-      short-id: 0102ac4e
-    server: rm-jp-01.409648.xyz
-    tls: true
-    type: vless
-    udp: true
-    uuid: 6dcb725e-947e-4bbe-bb35-903374d57179
-    servername: buylite.tv.apple.com
-  - client-fingerprint: chrome
-    name: 🇺🇸 美国 67 | vless
-    network: tcp
-    port: 30906
-    reality-opts:
-      public-key: HnQ_s7eu3XUu6upzLoe0jj5ZgsYvM7KXuMG41IwN4R0
-      short-id: 17a94dc584e3
-    server: 204.48.20.223
-    tls: true
-    type: vless
-    udp: true
-    uuid: 43a13764-23dd-4e01-8b79-cde8a16e13ce
-    servername: www.cloudflare.com
   - down: ""
     fingerprint: ""
-    name: 🇸🇬 新加坡 16 | hysteria2
+    name: 🇸🇬 新加坡 07 | hysteria2
     obfs: ""
     obfs-password: ""
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
@@ -1683,7 +314,7 @@ proxies:
     up: ""
   - down: ""
     fingerprint: ""
-    name: 🇸🇬 新加坡 17 | hysteria2
+    name: 🇸🇬 新加坡 08 | hysteria2
     obfs: ""
     obfs-password: ""
     password: P6qkAwznuC076mbIR2cGPg==
@@ -1693,21 +324,21 @@ proxies:
     sni: bing.com
     type: hysteria2
     up: ""
-  - name: 🇹🇼 台湾 04 | anytls
+  - name: 🇹🇼 台湾 02 | anytls
     password: 7a35ef19-adc8-4142-b7da-d0c8a7d97249
     port: 40072
     server: tw2.catzl.top
     type: anytls
     udp: true
     sni: tw2.catzl.top
-  - name: 🇺🇸 美国 68 | anytls
+  - name: 🇺🇸 美国 18 | anytls
     password: 7a35ef19-adc8-4142-b7da-d0c8a7d97249
     port: 40022
     server: us2.catzl.top
     type: anytls
     udp: true
     sni: us2.catzl.top
-  - name: 🇹🇼 台湾 05 | anytls
+  - name: 🇹🇼 台湾 03 | anytls
     password: 7a35ef19-adc8-4142-b7da-d0c8a7d97249
     port: 40071
     server: tw1.catzl.top
@@ -1716,7 +347,7 @@ proxies:
     sni: tw1.catzl.top
   - auth: fa66f1e6-b12e-4f21-8597-1ad4dd7654b1
     down: 100 Mbps
-    name: 🇺🇸 美国 69 | hysteria2
+    name: 🇺🇸 美国 19 | hysteria2
     password: fa66f1e6-b12e-4f21-8597-1ad4dd7654b1
     port: 32926
     server: tissues-halls.tun.ply.gg
@@ -1725,7 +356,7 @@ proxies:
     type: hysteria2
     udp: true
     up: 100 Mbps
-  - name: 🇰🇷 韩国 09 | anytls
+  - name: 🇰🇷 韩国 06 | anytls
     password: 7a35ef19-adc8-4142-b7da-d0c8a7d97249
     port: 40041
     server: kr1.catzl.top
@@ -1736,7 +367,7 @@ proxies:
       - h3
     congestion-controller: cubic
     disable-sni: false
-    name: 🇺🇸 美国 70 | tuic
+    name: 🇺🇸 美国 20 | tuic
     password: ce91dfcc-c596-4b5a-b738-25344bd610e6
     port: 32910
     reduce-rtt: true
@@ -1748,7 +379,7 @@ proxies:
     udp-relay-mode: native
     uuid: ce91dfcc-c596-4b5a-b738-25344bd610e6
     version: 5
-  - name: 🇰🇷 韩国 10 | anytls
+  - name: 🇰🇷 韩国 07 | anytls
     password: 7a35ef19-adc8-4142-b7da-d0c8a7d97249
     port: 40042
     server: kr2.catzl.top
