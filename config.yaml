@@ -307,7 +307,7 @@ rules:
   - RULE-SET,apple,DIRECT
   - RULE-SET,tracker,DIRECT
   # 国内域名直连
-  - DOMAIN-SUFFIX,dpdns.org,DIRECT
+  - DOMAIN-SUFFIX,loz.dpdns.org,DIRECT
   - DOMAIN-SUFFIX,gamer520.com,DIRECT
   - RULE-SET,cn,DIRECT
   # 国外域名兜底代理
