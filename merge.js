@@ -15,7 +15,7 @@ const SKIP_TYPES = new Set(["http","socks5","ss","ssr","snell","vmess","trojan",
 const SUBS = JSON.parse(fs.readFileSync("./subs.json", "utf8"));
 const OUTPUT_FILE = "nodes.yaml";
 const REQUEST_TIMEOUT = 15000; // 单个订阅超时时间（毫秒）
-const OTHER_SAMPLE_RATIO = 0.10; // 非匹配地区随机抽取比例10%
+const OTHER_SAMPLE_RATIO = 0.20; // 非匹配地区随机抽取比例
 // ========================================================
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
