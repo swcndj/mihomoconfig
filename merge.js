@@ -78,8 +78,7 @@ function isValidNode(node) {
     if (type === 'vless') {
       const hasReality = !!p['reality-opts'];
       const hasXhttp = !!p['xhttp-opts'];
-      const hasWs = !!p['ws-opts'];
-      if (!hasReality && !hasXhttp && !hasWs) continue;
+      if (!hasReality && !hasXhttp) continue;
       const enc = p.encryption;
       if (enc && typeof enc === 'string' && enc.length > 50) continue;
     }
