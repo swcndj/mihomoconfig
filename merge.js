@@ -1,8 +1,14 @@
+// -------------------------------------------------- 配置区 --------------------------------------------------
 const fs = require('fs');
 const yaml = require('yaml');
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+const SUBS = JSON.parse(fs.readFileSync("./subs.json", "utf8"));
+const OUTPUT_FILE = "nodes.yaml";
+const REQUEST_TIMEOUT = 15000; 
 
-// -------------------------------------------------- 配置区 --------------------------------------------------
+// 黑名单协议
+const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "snell", "vmess","trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
+
 // 需要匹配的地区
 const REGION_RULES = [
   { reg: /香港|HK|HKG|hk|🇭🇰/, flag: "🇭🇰", name: "香港" },
@@ -12,13 +18,6 @@ const REGION_RULES = [
   { reg: /新加坡|SG|SGP|sg|🇸🇬/, flag: "🇸🇬", name: "新加坡" },
   { reg: /美国|US|USA|us|🇺🇸/, flag: "🇺🇸", name: "美国" },
 ];
-
-// 黑名单协议（直接丢弃）
-const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "snell", "vmess","trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
-
-const SUBS = JSON.parse(fs.readFileSync("./subs.json", "utf8"));
-const OUTPUT_FILE = "nodes.yaml";
-const REQUEST_TIMEOUT = 15000; 
 // -------------------------------------------------- 配置区 --------------------------------------------------
 
 // -------------------------------------------------- 工具函数 --------------------------------------------------
@@ -77,21 +76,17 @@ function isValidNode(node) {
     if (!isValidNode(p)) continue;
     const type = p.type.toLowerCase();
     if (SKIP_TYPES.has(type)) continue;
-
     if (type === 'vless') {
       const hasReality = !!p['reality-opts'];
       const hasXhttp = !!p['xhttp-opts'];
       if (!hasReality && !hasXhttp) continue;
-
       const enc = p.encryption;
       if (enc && typeof enc === 'string' && enc.length > 50) {
         continue;
       }
     }
-
     const hit = REGION_RULES.find(r => r.reg.test(p.name || ''));
     if (!hit) continue;
-
     matchedNodes.push({ p, hit });
   }
 
