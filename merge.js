@@ -62,7 +62,7 @@ function isValidNode(node) {
         console.log(`  ⚠️ 无 proxies 数组`);
         continue;
       }
-      console.log(`  📥 原始节点：${proxies.length}`);
+      console.log(`  🌐 原始节点：${proxies.length}`);
       allRawProxies.push(...proxies);
     } catch (e) {
       console.log(`  ❌ 失败：${e.message}`);
@@ -95,7 +95,7 @@ function isValidNode(node) {
     matchedNodes.push({ p, hit });
   }
 
-  console.log(`✅ 类型过滤 + 地区匹配节点数：${matchedNodes.length}`);
+  console.log(`  🔍 类型过滤 + 地区匹配节点数：${matchedNodes.length}`);
 
   // 3. 去重（复合指纹）
   const seen = new Set();
@@ -113,7 +113,7 @@ function isValidNode(node) {
     dedupList.push({ p, hit });
   }
 
-  console.log(`✅ 去重后节点数：${dedupList.length}`);
+  console.log(`  🔍 去重后节点数：${dedupList.length}`);
 
   // 4. 重命名：全局顺序编号（不区分地区）
   let globalSeq = 0;
@@ -130,7 +130,7 @@ function isValidNode(node) {
   for (const { hit } of dedupList) {
     countMap[hit.name] = (countMap[hit.name] || 0) + 1;
   }
-  console.log(`✅ 最终输出节点总数：${finalProxies.length}`);
+  console.log(`  ✅ 输出节点总数：${finalProxies.length}`);
   console.log('各地区数量：');
   for (const [name, count] of Object.entries(countMap)) {
     console.log(`  ${name}：${count}`);
