@@ -11,4 +11,6 @@
   "https://raw.githubusercontent.com/ovmvo/FreeSub/main/sub/permanent/mihomo.yaml",
   "https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/mihomo.yaml",
   "https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/clash_config.yaml",
+  "https://nodes.udptoos.com/subscriptions/clash.yaml",
+  "https://api.wcc.best/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2FPawdroid%2FFree-servers%2Fmain%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&new_name=true"
 ]
