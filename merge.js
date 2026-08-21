@@ -78,7 +78,13 @@ function isValidNode(node) {
     const type = p.type.toLowerCase();
     if (SKIP_TYPES.has(type)) continue;
 
+    // ========== encryption 校验 ==========
     if (type === 'vless') {
+      const enc = p.encryption;
+      if (enc && typeof enc === 'string' && enc.length > 50) {
+        continue;
+      }
+
       const hasReality = !!p['reality-opts'];
       const hasXhttp = !!p['xhttp-opts'];
       if (!hasReality && !hasXhttp) continue;
