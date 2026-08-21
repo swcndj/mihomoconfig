@@ -67,35 +67,41 @@ function isValidNode(node) {
       console.log(`  ❌ 失败：${e.message}`);
     }
   }
-
   console.log(`\n总原始节点数：${allRawProxies.length}`);
 
-  // 2. 类型过滤 + 地区匹配
-  const matchedNodes = [];
+  // 2. 类型过滤
+  const typeFiltered = [];
   for (const p of allRawProxies) {
     if (!isValidNode(p)) continue;
     const type = p.type.toLowerCase();
     if (SKIP_TYPES.has(type)) continue;
+  
     if (type === 'vless') {
       const hasReality = !!p['reality-opts'];
       const hasXhttp = !!p['xhttp-opts'];
       if (!hasReality && !hasXhttp) continue;
+  
       const enc = p.encryption;
-      if (enc && typeof enc === 'string' && enc.length > 50) {
-        continue;
-      }
+      if (enc && typeof enc === 'string' && enc.length > 50) continue;
     }
+  
+    typeFiltered.push(p);
+  }
+  console.log(`类型过滤后节点数：${typeFiltered.length}`);
+
+  // 3. 地区匹配
+  const regionFiltered = [];
+  for (const p of typeFiltered) {
     const hit = REGION_RULES.find(r => r.reg.test(p.name || ''));
     if (!hit) continue;
-    matchedNodes.push({ p, hit });
+    regionFiltered.push({ p, hit });
   }
+  console.log(`地区匹配后节点数：${regionFiltered.length}`);
 
-  console.log(`类型过滤 + 地区匹配节点数：${matchedNodes.length}`);
-
-  // 3. 去重（复合指纹）
+  // 4. 去重（复合指纹）
   const seen = new Set();
   const dedupList = [];
-  for (const { p, hit } of matchedNodes) {
+  for (const { p, hit } of regionFiltered) {
     const type = p.type.toLowerCase();
     let fp;
     if (type === 'vless' && p['reality-opts']?.public_key) {
@@ -107,10 +113,9 @@ function isValidNode(node) {
     seen.add(fp);
     dedupList.push({ p, hit });
   }
-
   console.log(`去重后节点数：${dedupList.length}`);
 
-  // 4. 重命名：全局顺序编号（不区分地区）
+  // 5. 重命名：全局顺序编号（不区分地区）
   let globalSeq = 0;
   const finalProxies = [];
   for (const { p, hit } of dedupList) {
@@ -120,7 +125,7 @@ function isValidNode(node) {
     finalProxies.push(p);
   }
 
-  // 5. 输出统计（各地区数量）
+  // 6. 输出统计（各地区数量）
   const countMap = {};
   for (const { hit } of dedupList) {
     countMap[hit.name] = (countMap[hit.name] || 0) + 1;
@@ -132,7 +137,7 @@ function isValidNode(node) {
     console.log(`  ${rule.name}: ${count}`);
   }
   
-  // 6. 写入 YAML
+  // 7. 写入 YAML
   const doc = new yaml.Document();
   doc.set('proxies', finalProxies);
   fs.writeFileSync(OUTPUT_FILE, doc.toString({ indent: 2, lineWidth: 0 }));
