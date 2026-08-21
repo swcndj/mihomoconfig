@@ -1751,47 +1751,49 @@ proxies:
     sni: assets.gateway-stream.com
     tls: false
     type: hysteria2
-  - name: 130 🇯🇵 日本 | anytls
-    password: 3b32eb1c-150e-4eb4-8323-370844489508
-    port: 64088
-    server: sivp555.ascwt179.com
+  - name: 130 🇭🇰 香港 | anytls
+    password: 4654939b-06de-49b7-9be8-768ede6bd97d
+    port: 45993
+    server: umoso-eo669-zhse.clodom.com
     skip-cert-verify: true
-    sni: yz13.jdddyy01.cc
+    sni: hk3.clodom.top
+    type: anytls
+    udp: true
+  - name: 131 🇭🇰 香港 | anytls
+    password: 4654939b-06de-49b7-9be8-768ede6bd97d
+    port: 23091
+    server: umoso-eo669-zhse.clodom.com
+    skip-cert-verify: true
+    sni: hk1.clodom.top
+    type: anytls
+    udp: true
+  - name: 132 🇯🇵 日本 | anytls
+    password: 4654939b-06de-49b7-9be8-768ede6bd97d
+    port: 40987
+    server: umoso-eo669-zhse.clodom.com
+    skip-cert-verify: true
+    sni: jp1.clodom.top
+    type: anytls
+    udp: true
+  - name: 133 🇯🇵 日本 | anytls
+    password: 3b32eb1c-150e-4eb4-8323-370844489508
+    port: 443
+    server: jd-jp01jg.y1static-content-distribution.shop
+    skip-cert-verify: true
+    sni: jd-jp01jg.y1static-content-distribution.shop
+    type: anytls
+    udp: true
+  - name: 134 🇺🇸 美国 | anytls
+    password: ea6cb13b-f556-4512-9f02-fb0a598766f4
+    port: 40991
+    server: umoso-eo669-zhse.clodom.com
+    skip-cert-verify: true
+    sni: us1.clodom.top
     type: anytls
     udp: true
   - client-fingerprint: chrome
-    encryption: none
-    name: 131 🇰🇷 韩国 | vless
-    network: tcp
-    port: "8686"
-    reality-opts:
-      public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
-      short-id: 628b3c90c98ead4f
-    server: 15.164.166.147
-    servername: www.apple.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
-    xudp: true
-  - client-fingerprint: chrome
-    encryption: none
-    name: 132 🇸🇬 新加坡 | vless
-    network: tcp
-    port: "8686"
-    reality-opts:
-      public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
-      short-id: 628b3c90c98ead4f
-    server: 47.129.166.156
-    servername: www.apple.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
-    xudp: true
-  - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 133 🇺🇸 美国 | vless
+    name: 135 🇺🇸 美国 | vless
     network: tcp
     port: 443
     reality-opts:
@@ -1806,7 +1808,7 @@ proxies:
     uuid: 5905d91f-c3bc-4e80-bd66-4b17beb166cb
   - client-fingerprint: firefox
     flow: xtls-rprx-vision
-    name: 134 🇺🇸 美国 | vless
+    name: 136 🇺🇸 美国 | vless
     network: tcp
     port: 443
     reality-opts:
@@ -1821,7 +1823,7 @@ proxies:
     uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
   - client-fingerprint: firefox
     flow: xtls-rprx-vision
-    name: 135 🇺🇸 美国 | vless
+    name: 137 🇺🇸 美国 | vless
     network: tcp
     port: 443
     reality-opts:
@@ -1836,7 +1838,7 @@ proxies:
     uuid: 055dce30-0ee3-44c3-b680-be1c95b8d6e7
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 136 🇺🇸 美国 | vless
+    name: 138 🇺🇸 美国 | vless
     network: tcp
     port: 443
     reality-opts:
@@ -1851,7 +1853,7 @@ proxies:
     uuid: 9638a83e-f1f7-4cc8-a602-924965d9534f
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 137 🇺🇸 美国 | vless
+    name: 139 🇺🇸 美国 | vless
     network: tcp
     port: 39211
     reality-opts:
@@ -1866,7 +1868,7 @@ proxies:
     uuid: f06c6039-a489-3d78-a676-ed43be6deca3
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 138 🇺🇸 美国 | vless
+    name: 140 🇺🇸 美国 | vless
     network: tcp
     port: 443
     reality-opts:
@@ -1882,7 +1884,7 @@ proxies:
   - client-fingerprint: chrome
     grpc-opts:
       grpc-service-name: TunService
-    name: 139 🇺🇸 美国 | vless
+    name: 141 🇺🇸 美国 | vless
     network: grpc
     port: 8443
     reality-opts:
@@ -1894,29 +1896,13 @@ proxies:
     type: vless
     udp: true
     uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
-  - name: 140 🇭🇰 香港 | anytls
+  - name: 142 🇭🇰 香港 | anytls
     server: umoso-eo669-zhse.clodom.com
     port: 16833
     type: anytls
     password: ea6cb13b-f556-4512-9f02-fb0a598766f4
     udp: true
     sni: hk5.clodom.top
-    skip-cert-verify: true
-  - name: 141 🇭🇰 香港 | anytls
-    server: umoso-eo669-zhse.clodom.com
-    port: 23091
-    type: anytls
-    password: 4654939b-06de-49b7-9be8-768ede6bd97d
-    udp: true
-    sni: hk1.clodom.top
-    skip-cert-verify: true
-  - name: 142 🇭🇰 香港 | anytls
-    server: umoso-eo669-zhse.clodom.com
-    port: 45993
-    type: anytls
-    password: 4654939b-06de-49b7-9be8-768ede6bd97d
-    udp: true
-    sni: hk3.clodom.top
     skip-cert-verify: true
   - name: 143 🇭🇰 香港 | tuic
     server: 1fd0c4d5-tk7400-tlbcwm-1rfon.pccw3.hyhuawei.com
@@ -2113,7 +2099,15 @@ proxies:
     udp: true
     sni: de02.swiftrelay.cc
     skip-cert-verify: true
-  - name: 167 🇸🇬 新加坡 | anytls
+  - name: 167 🇰🇷 韩国 | anytls
+    server: sivp555.ascwt179.com
+    port: 64088
+    type: anytls
+    password: 3b32eb1c-150e-4eb4-8323-370844489508
+    udp: true
+    sni: yz13.jdddyy01.cc
+    skip-cert-verify: true
+  - name: 168 🇸🇬 新加坡 | anytls
     server: jd-us62.y1static-content-distribution.shop
     port: 443
     type: anytls
@@ -2121,7 +2115,7 @@ proxies:
     udp: true
     sni: jd-us62.y1static-content-distribution.shop
     skip-cert-verify: true
-  - name: 168 🇸🇬 新加坡 | anytls
+  - name: 169 🇸🇬 新加坡 | anytls
     server: sivp666.ascwt179.com
     port: 14855
     type: anytls
@@ -2129,7 +2123,7 @@ proxies:
     udp: true
     sni: yz238.y1static-content-distribution.shop
     skip-cert-verify: true
-  - name: 169 🇸🇬 新加坡 | anytls
+  - name: 170 🇸🇬 新加坡 | anytls
     server: umoso-eo669-zhse.clodom.com
     port: 40982
     type: anytls
@@ -2137,7 +2131,7 @@ proxies:
     udp: true
     sni: sg2.clodom.top
     skip-cert-verify: true
-  - name: 170 🇸🇬 新加坡 | anytls
+  - name: 171 🇸🇬 新加坡 | anytls
     server: sivp666.ascwt179.com
     port: 47096
     type: anytls
@@ -2145,7 +2139,7 @@ proxies:
     udp: true
     sni: xjp33.pulsarcore.site
     skip-cert-verify: true
-  - name: 171 🇹🇼 台湾 | anytls
+  - name: 172 🇹🇼 台湾 | anytls
     server: tw73.cybergalaxy.me
     port: 443
     type: anytls
@@ -2153,7 +2147,7 @@ proxies:
     udp: true
     sni: tw73.cybergalaxy.me
     skip-cert-verify: true
-  - name: 172 🇺🇸 美国 | vless
+  - name: 173 🇺🇸 美国 | vless
     server: 23.94.227.94
     port: 15884
     type: vless
@@ -2166,7 +2160,7 @@ proxies:
     client-fingerprint: chrome
     network: tcp
     udp: true
-  - name: 173 🇺🇸 美国 | anytls
+  - name: 174 🇺🇸 美国 | anytls
     server: umoso-eo669-zhse.clodom.com
     port: 40989
     type: anytls
@@ -2174,30 +2168,33 @@ proxies:
     udp: true
     sni: us2.clodom.top
     skip-cert-verify: true
-  - name: 174 🇺🇸 美国 | anytls
-    server: umoso-eo669-zhse.clodom.com
-    port: 40991
-    type: anytls
-    password: 4654939b-06de-49b7-9be8-768ede6bd97d
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 175 🇯🇵 日本 | vless
+    network: tcp
+    port: "443"
+    reality-opts:
+      public-key: Me7Ii42ZwYdhuQUAGUimaTeOUQVSAaoxRat8KnZFDTk
+      short-id: ee8f9024bee24cac
+    server: 103.76.85.213
+    servername: www.apple.com
+    tls: true
+    type: vless
     udp: true
-    sni: us1.clodom.top
-    skip-cert-verify: true
-  - name: 175 🇯🇵 日本 | anytls
-    password: 4654939b-06de-49b7-9be8-768ede6bd97d
-    port: 40987
-    server: umoso-eo669-zhse.clodom.com
-    skip-cert-verify: true
-    sni: jp1.clodom.top
-    type: anytls
-    udp: true
-  - name: 176 🇯🇵 日本 | anytls
-    password: 3b32eb1c-150e-4eb4-8323-370844489508
-    port: 443
-    server: jd-jp01jg.y1static-content-distribution.shop
-    skip-cert-verify: true
-    sni: jd-jp01jg.y1static-content-distribution.shop
-    type: anytls
-    udp: true
+    uuid: 1fb60770-fc92-480f-801f-4e4e05af88b3
+    xudp: true
+  - down: ""
+    fingerprint: ""
+    name: 176 🇸🇬 新加坡 | hysteria2
+    obfs: ""
+    obfs-password: ""
+    password: 4hkCvE2nz6svLLqv
+    port: "36001"
+    server: 52.221.223.227
+    skip-cert-verify: false
+    sni: sg-ls-z-5.lihmxssuqleitqcxpssa.uk
+    type: hysteria2
+    up: ""
   - name: 177 🇰🇷 韩国 | anytls
     password: 07e5d961-4668-43fa-854b-44adb1c25d9e
     port: 40042
@@ -2319,19 +2316,10 @@ proxies:
     udp: true
     uuid: 43a13764-23dd-4e01-8b79-cde8a16e13ce
     servername: www.cloudflare.com
-  - name: 189 🇯🇵 日本 | anytls
+  - name: 189 🇰🇷 韩国 | anytls
     type: anytls
-    server: jp01.duotg.top
-    port: 50033
-    password: 02cd3bac-2a78-4dbb-82b9-6b64084ddd8e
+    server: yazhouany02.downapptwo.cc
+    port: 31289
+    password: 3b32eb1c-150e-4eb4-8323-370844489508
     udp: true
-    sni: jp01.duotg.top
-    skip-cert-verify: true
-  - name: 190 🇭🇰 香港 | anytls
-    type: anytls
-    server: api.meituan88.com
-    port: 7008
-    password: GWgpVE
-    udp: true
-    sni: globalnetworktraffic.com
-    skip-cert-verify: true
+    sni: kr01.lunartrace.io
