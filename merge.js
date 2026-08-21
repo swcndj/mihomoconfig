@@ -75,16 +75,14 @@ function isValidNode(node) {
     if (!isValidNode(p)) continue;
     const type = p.type.toLowerCase();
     if (SKIP_TYPES.has(type)) continue;
-  
     if (type === 'vless') {
       const hasReality = !!p['reality-opts'];
       const hasXhttp = !!p['xhttp-opts'];
-      if (!hasReality && !hasXhttp) continue;
-  
+      const hasWs = !!p['ws-opts'];
+      if (!hasReality && !hasXhttp && !hasWs) continue;
       const enc = p.encryption;
       if (enc && typeof enc === 'string' && enc.length > 50) continue;
     }
-  
     typeFiltered.push(p);
   }
   console.log(`类型过滤后节点数：${typeFiltered.length}`);
