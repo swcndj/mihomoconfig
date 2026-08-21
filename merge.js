@@ -134,7 +134,7 @@ function isValidNode(node) {
   console.log('各地区数量：');
   for (const rule of REGION_RULES) {
     const count = countMap[rule.name] || 0;
-    console.log(`  ${rule.flag} ${rule.name}: ${count}`);
+    console.log(`  ${rule.name}: ${count}`);
   }
   
   // 6. 写入 YAML
