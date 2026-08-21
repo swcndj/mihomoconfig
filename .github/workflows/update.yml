@@ -11,14 +11,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+      
       - name: Install Node
         uses: actions/setup-node@v5
         with:
           node-version: 24
+          
       - name: Install deps
         run: npm install yaml node-fetch
+        
+      - name: Update subscription URL
+        run: |
+          TODAY=$(date +'%Y%m%d')
+          sed -i "s|https://raw.githubusercontent.com/free-nodes/clashfree/main/sub.yml|https://raw.githubusercontent.com/free-nodes/clashfree/main/clash${TODAY}.yml|g" subs.json
+        
       - name: Run merge script
         run: node merge.js
+        
       - name: Commit & Push
         run: |
           git config --global user.name "github-actions[bot]"
