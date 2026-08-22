@@ -2183,49 +2183,67 @@ proxies:
     udp: true
     sni: us2.clodom.top
     skip-cert-verify: true
-  - name: 178 🇺🇸 美国 | anytls
+  - client-fingerprint: chrome
+    encryption: none
+    name: 178 🇸🇬 新加坡 | vless
+    network: tcp
+    port: "8686"
+    reality-opts:
+      public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+      short-id: 628b3c90c98ead4f
+    server: 13.212.243.132
+    servername: www.apple.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+    xudp: true
+  - client-fingerprint: chrome
+    encryption: none
+    name: 179 🇰🇷 韩国 | vless
+    network: tcp
+    port: "8686"
+    reality-opts:
+      public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+      short-id: 628b3c90c98ead4f
+    server: 15.164.212.137
+    servername: www.apple.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+    xudp: true
+  - name: 180 🇹🇼 台湾 | anytls
+    password: 302c7e2f-417f-4259-bd0e-1d360c76e470
+    port: 40072
+    server: tw2.catzl.top
+    type: anytls
+    udp: true
+    sni: tw2.catzl.top
+  - name: 181 🇹🇼 台湾 | anytls
+    password: 71a97090-28ad-4bcf-a7a0-ee793878d794
+    port: 40071
+    server: tw1.catzl.top
+    type: anytls
+    udp: true
+    sni: tw1.catzl.top
+  - name: 182 🇺🇸 美国 | anytls
     password: 302c7e2f-417f-4259-bd0e-1d360c76e470
     port: 40022
     server: us2.catzl.top
     type: anytls
     udp: true
     sni: us2.catzl.top
-  - name: 179 🇰🇷 韩国 | anytls
-    password: 71a97090-28ad-4bcf-a7a0-ee793878d794
-    port: 40042
-    server: kr2.catzl.top
+  - name: 183 🇹🇼 台湾 | anytls
+    password: e2e23a7f-d76b-4ce3-a549-7b0c2c5eabf7
+    port: 40073
+    server: tw3.catzl.top
     type: anytls
     udp: true
-    sni: kr2.catzl.top
-  - name: 180 🇰🇷 韩国 | anytls
-    password: 7afe798f-8630-47dd-a310-75dbb53134b2
-    port: 40041
-    server: kr1.catzl.top
-    type: anytls
-    udp: true
-    sni: kr1.catzl.top
-  - name: 181 🇹🇼 台湾 | anytls
-    password: 302c7e2f-417f-4259-bd0e-1d360c76e470
-    port: 40071
-    server: tw1.catzl.top
-    type: anytls
-    udp: true
-    sni: tw1.catzl.top
-  - down: ""
-    fingerprint: ""
-    name: 182 🇯🇵 日本 | hysteria2
-    obfs: ""
-    obfs-password: ""
-    password: 1e3a5c5fde1da9dd1358b4adeb0c4ca1
-    port: 443
-    server: 45.32.252.144
-    skip-cert-verify: false
-    sni: vps.vpsv.cc
-    type: hysteria2
-    up: ""
+    sni: tw3.catzl.top
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 183 🇭🇰 香港 | vless
+    name: 184 🇭🇰 香港 | vless
     network: tcp
     port: 59750
     reality-opts:
@@ -2238,7 +2256,7 @@ proxies:
     uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
     servername: www.amd.com
   - client-fingerprint: chrome
-    name: 184 🇺🇸 美国 | vless
+    name: 185 🇺🇸 美国 | vless
     network: tcp
     port: 40056
     reality-opts:
@@ -2251,7 +2269,7 @@ proxies:
     uuid: 090122da-ad6b-42a1-92d7-bab2630e2511
     servername: www.cloudflare.com
   - client-fingerprint: chrome
-    name: 185 🇰🇷 韩国 | vless
+    name: 186 🇰🇷 韩国 | vless
     network: tcp
     port: 8686
     reality-opts:
@@ -2265,7 +2283,7 @@ proxies:
     servername: www.apple.com
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 186 🇯🇵 日本 | vless
+    name: 187 🇯🇵 日本 | vless
     network: tcp
     port: 20725
     reality-opts:
@@ -2278,7 +2296,7 @@ proxies:
     uuid: 6dcb725e-947e-4bbe-bb35-903374d57179
     servername: buylite.tv.apple.com
   - client-fingerprint: chrome
-    name: 187 🇺🇸 美国 | vless
+    name: 188 🇺🇸 美国 | vless
     network: tcp
     port: 30906
     reality-opts:
@@ -2290,17 +2308,44 @@ proxies:
     udp: true
     uuid: 43a13764-23dd-4e01-8b79-cde8a16e13ce
     servername: www.cloudflare.com
-  - name: 188 🇭🇰 香港 | hysteria2
-    type: hysteria2
-    server: 82.47.32.31
-    port: 52299
-    password: 24b1bde2-1609-486a-abad-b87f0d2e3da7
-    sni: iosapps.itunes.apple.com
+  - name: 189 🇭🇰 香港 | anytls
+    type: anytls
+    server: api.meituan88.com
+    port: 7008
+    password: GWgpVE
+    udp: true
+    sni: globalnetworktraffic.com
     skip-cert-verify: true
-  - name: 189 🇰🇷 韩国 | vless
+  - name: 190 🇺🇸 美国 | hysteria2
+    type: hysteria2
+    server: 108.181.5.106
+    port: 52256
+    password: 24b1bde2-1609-486a-abad-b87f0d2e3da7
+    sni: www.bing.com
+    skip-cert-verify: true
+  - name: 191 🇺🇸 美国 | vless
     type: vless
-    server: guzljsefoasducuxk77.gxiwoxwecuowerfns.com
-    port: 28177
+    server: f0937aa2-8d0d-48e1-a1bd-d89483ba7d18.2ecde35d-10dc-4e67-a9bc-0bf4a0c859f2.com
+    port: 22319
+    uuid: dbccbb54-fe4e-40c4-bf19-88792c6a8ded
+    flow: xtls-rprx-vision
+    tls: true
+    servername: www.lilith.com
+    client-fingerprint: safari
+    reality-opts:
+      public-key: kjfwyYnvXMqeF3yJB6kyInsEsaA1ZmZMqtM_djwjPyI
+      short-id: 83946b7f
+  - name: 192 🇺🇸 美国 | hysteria2
+    type: hysteria2
+    server: 147.90.235.159
+    port: 51043
+    password: 24b1bde2-1609-486a-abad-b87f0d2e3da7
+    sni: www.bing.com
+    skip-cert-verify: true
+  - name: 193 🇺🇸 美国 | vless
+    type: vless
+    server: guzljsefoasducuxk80.gxiwoxwecuowerfns.com
+    port: 28180
     uuid: 7ed513cf-3fc8-4f25-91e0-e1c6e0a922cb
     flow: xtls-rprx-vision
     tls: true
@@ -2309,15 +2354,3 @@ proxies:
     reality-opts:
       public-key: HBeH_uPYOMp9D7Mq1KxBzduX07OZ9C8rT4zSHNjiO3g
       short-id: c1cd56a8
-  - name: 190 🇰🇷 韩国 | vless
-    type: vless
-    server: gndybirds.sparrowvl08.gjtxyszcicaly.com
-    port: 28108
-    uuid: 7ed513cf-3fc8-4f25-91e0-e1c6e0a922cb
-    flow: xtls-rprx-vision
-    tls: true
-    servername: www.cloudflare.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: V7aQPeJYEgNHcw1A35n3uLby2sOASOAyz7vtjajBfwM
-      short-id: 2f7be5d0
