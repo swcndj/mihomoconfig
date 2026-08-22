@@ -2004,7 +2004,15 @@ proxies:
     type: vless
     udp: true
     uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
-  - name: 160 🇺🇸 美国 | vless
+  - name: 160 🇺🇸 美国 | hysteria2
+    password: 22d891f5-ad85-4824-b0b8-e30cf3d37eb5
+    port: 2056
+    server: mg2.mangshe.xyz
+    skip-cert-verify: true
+    sni: mg2.mangshe.xyz
+    tls: false
+    type: hysteria2
+  - name: 161 🇺🇸 美国 | vless
     server: family.bucket.8.kfc-520.com
     port: 10026
     type: vless
@@ -2018,7 +2026,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 161 🇭🇰 香港 | anytls
+  - name: 162 🇭🇰 香港 | anytls
     server: test01.y1static-content-distribution.shop
     port: 56726
     type: anytls
@@ -2026,7 +2034,7 @@ proxies:
     udp: true
     sni: hk11.pulsarcore.site
     skip-cert-verify: true
-  - name: 162 🇭🇰 香港 | anytls
+  - name: 163 🇭🇰 香港 | anytls
     server: yzany01.downapptwo.cc
     port: 33782
     type: anytls
@@ -2034,7 +2042,7 @@ proxies:
     udp: true
     sni: hk06.pulsarcore.site
     skip-cert-verify: true
-  - name: 163 🇭🇰 香港 | vless
+  - name: 164 🇭🇰 香港 | vless
     server: family.bucket.8.kfc-520.com
     port: 10023
     type: vless
@@ -2048,7 +2056,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 164 🇭🇰 香港 | vless
+  - name: 165 🇭🇰 香港 | vless
     server: family.bucket.8.kfc-520.com
     port: 10025
     type: vless
@@ -2062,7 +2070,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 165 🇭🇰 香港 | anytls
+  - name: 166 🇭🇰 香港 | anytls
     server: yzany01.downapptwo.cc
     port: 27631
     type: anytls
@@ -2070,7 +2078,7 @@ proxies:
     udp: true
     sni: hk03.jdddyy01.cc
     skip-cert-verify: true
-  - name: 166 🇯🇵 日本 | anytls
+  - name: 167 🇯🇵 日本 | anytls
     server: yzany01.downapptwo.cc
     port: 31735
     type: anytls
@@ -2078,7 +2086,7 @@ proxies:
     udp: true
     sni: jp31.lunartrace.io
     skip-cert-verify: true
-  - name: 167 🇯🇵 日本 | anytls
+  - name: 168 🇯🇵 日本 | anytls
     server: yazhouany02.downapptwo.cc
     port: 24077
     type: anytls
@@ -2086,7 +2094,7 @@ proxies:
     udp: true
     sni: jp21.pulsarcore.site
     skip-cert-verify: true
-  - name: 168 🇯🇵 日本 | vless
+  - name: 169 🇯🇵 日本 | vless
     server: family.bucket.7.kfc-520.com
     port: 10015
     type: vless
@@ -2100,7 +2108,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 169 🇰🇷 韩国 | vless
+  - name: 170 🇰🇷 韩国 | vless
     server: family.bucket.8.kfc-520.com
     port: 10038
     type: vless
@@ -2114,7 +2122,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 170 🇰🇷 韩国 | hysteria2
+  - name: 171 🇰🇷 韩国 | hysteria2
     server: 150-230-252-217.liao.kdns.fr
     port: 50160
     type: hysteria2
@@ -2122,7 +2130,7 @@ proxies:
     auth: 9cfc9458e48c028ec03ff86ebc71c744
     sni: 150-230-252-217.liao.kdns.fr
     skip-cert-verify: true
-  - name: 171 🇰🇷 韩国 | anytls
+  - name: 172 🇰🇷 韩国 | anytls
     server: yzany01.downapptwo.cc
     port: 62375
     type: anytls
@@ -2130,7 +2138,7 @@ proxies:
     udp: true
     sni: kr09.lunartrace.io
     skip-cert-verify: true
-  - name: 172 🇰🇷 韩国 | anytls
+  - name: 173 🇰🇷 韩国 | anytls
     server: test01.y1static-content-distribution.shop
     port: 15503
     type: anytls
@@ -2138,7 +2146,7 @@ proxies:
     udp: true
     sni: kr08.lunartrace.io
     skip-cert-verify: true
-  - name: 173 🇸🇬 新加坡 | anytls
+  - name: 174 🇸🇬 新加坡 | anytls
     server: test01.y1static-content-distribution.shop
     port: 50602
     type: anytls
@@ -2146,7 +2154,7 @@ proxies:
     udp: true
     sni: hk08.webflarex.top
     skip-cert-verify: true
-  - name: 174 🇸🇬 新加坡 | anytls
+  - name: 175 🇸🇬 新加坡 | anytls
     server: sivp555.ascwt179.com
     port: 42765
     type: anytls
@@ -2154,7 +2162,7 @@ proxies:
     udp: true
     sni: jd-xjp237.y1static-content-distribution.shop
     skip-cert-verify: true
-  - name: 175 🇸🇬 新加坡 | vless
+  - name: 176 🇸🇬 新加坡 | vless
     server: family.bucket.6.kfc-520.com
     port: 10016
     type: vless
@@ -2168,7 +2176,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 176 🇸🇬 新加坡 | vless
+  - name: 177 🇸🇬 新加坡 | vless
     server: family.bucket.6.kfc-520.com
     port: 10018
     type: vless
@@ -2182,7 +2190,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 177 🇸🇬 新加坡 | anytls
+  - name: 178 🇸🇬 新加坡 | anytls
     server: xjp200.cybergalaxy.me
     port: 443
     type: anytls
@@ -2190,7 +2198,7 @@ proxies:
     udp: true
     sni: xjp200.cybergalaxy.me
     skip-cert-verify: true
-  - name: 178 🇸🇬 新加坡 | anytls
+  - name: 179 🇸🇬 新加坡 | anytls
     server: yzany01.downapptwo.cc
     port: 10778
     type: anytls
@@ -2198,7 +2206,7 @@ proxies:
     udp: true
     sni: xjp20.jdddyy01.cc
     skip-cert-verify: true
-  - name: 179 🇸🇬 新加坡 | anytls
+  - name: 180 🇸🇬 新加坡 | anytls
     server: test01.y1static-content-distribution.shop
     port: 47096
     type: anytls
@@ -2206,7 +2214,7 @@ proxies:
     udp: true
     sni: xjp33.pulsarcore.site
     skip-cert-verify: true
-  - name: 180 🇹🇼 台湾 | anytls
+  - name: 181 🇹🇼 台湾 | anytls
     server: tw77.cybergalaxy.me
     port: 443
     type: anytls
@@ -2214,7 +2222,7 @@ proxies:
     udp: true
     sni: tw77.cybergalaxy.me
     skip-cert-verify: true
-  - name: 181 🇹🇼 台湾 | anytls
+  - name: 182 🇹🇼 台湾 | anytls
     server: yzany01.downapptwo.cc
     port: 41572
     type: anytls
@@ -2222,7 +2230,7 @@ proxies:
     udp: true
     sni: tw88.webflarex.top
     skip-cert-verify: true
-  - name: 182 🇹🇼 台湾 | anytls
+  - name: 183 🇹🇼 台湾 | anytls
     server: yazhouany02.downapptwo.cc
     port: 37236
     type: anytls
@@ -2230,7 +2238,7 @@ proxies:
     udp: true
     sni: tw16.swiftrelay.cc
     skip-cert-verify: true
-  - name: 183 🇹🇼 台湾 | anytls
+  - name: 184 🇹🇼 台湾 | anytls
     server: tw78.cybergalaxy.me
     port: 443
     type: anytls
@@ -2238,7 +2246,7 @@ proxies:
     udp: true
     sni: tw78.cybergalaxy.me
     skip-cert-verify: true
-  - name: 184 🇹🇼 台湾 | anytls
+  - name: 185 🇹🇼 台湾 | anytls
     server: tw76.cybergalaxy.me
     port: 443
     type: anytls
@@ -2246,7 +2254,7 @@ proxies:
     udp: true
     sni: tw76.cybergalaxy.me
     skip-cert-verify: true
-  - name: 185 🇹🇼 台湾 | anytls
+  - name: 186 🇹🇼 台湾 | anytls
     server: tw58.cybergalaxy.me
     port: 443
     type: anytls
@@ -2254,7 +2262,7 @@ proxies:
     udp: true
     sni: tw58.cybergalaxy.me
     skip-cert-verify: true
-  - name: 186 🇹🇼 台湾 | anytls
+  - name: 187 🇹🇼 台湾 | anytls
     server: tw75.cybergalaxy.me
     port: 443
     type: anytls
@@ -2262,7 +2270,7 @@ proxies:
     udp: true
     sni: tw75.cybergalaxy.me
     skip-cert-verify: true
-  - name: 187 🇹🇼 台湾 | anytls
+  - name: 188 🇹🇼 台湾 | anytls
     server: tw73.cybergalaxy.me
     port: 443
     type: anytls
@@ -2270,7 +2278,7 @@ proxies:
     udp: true
     sni: tw73.cybergalaxy.me
     skip-cert-verify: true
-  - name: 188 🇹🇼 台湾 | anytls
+  - name: 189 🇹🇼 台湾 | anytls
     server: tw35.cybergalaxy.me
     port: 443
     type: anytls
@@ -2278,7 +2286,7 @@ proxies:
     udp: true
     sni: tw35.cybergalaxy.me
     skip-cert-verify: true
-  - name: 189 🇺🇸 美国 | anytls
+  - name: 190 🇺🇸 美国 | anytls
     server: yzany01.downapptwo.cc
     port: 27932
     type: anytls
@@ -2286,7 +2294,7 @@ proxies:
     udp: true
     sni: us20.pulsarcore.site
     skip-cert-verify: true
-  - name: 190 🇺🇸 美国 | anytls
+  - name: 191 🇺🇸 美国 | anytls
     server: test01.y1static-content-distribution.shop
     port: 22054
     type: anytls
@@ -2294,7 +2302,7 @@ proxies:
     udp: true
     sni: us31.lunartrace.io
     skip-cert-verify: true
-  - name: 191 🇺🇸 美国 | anytls
+  - name: 192 🇺🇸 美国 | anytls
     server: yzany01.downapptwo.cc
     port: 10635
     type: anytls
@@ -2302,7 +2310,7 @@ proxies:
     udp: true
     sni: us09.pulsarcore.site
     skip-cert-verify: true
-  - name: 192 🇺🇸 美国 | anytls
+  - name: 193 🇺🇸 美国 | anytls
     server: test01.y1static-content-distribution.shop
     port: 32055
     type: anytls
@@ -2310,7 +2318,7 @@ proxies:
     udp: true
     sni: us37.lunartrace.io
     skip-cert-verify: true
-  - name: 193 🇺🇸 美国 | anytls
+  - name: 194 🇺🇸 美国 | anytls
     server: yzany01.downapptwo.cc
     port: 52870
     type: anytls
@@ -2318,7 +2326,7 @@ proxies:
     udp: true
     sni: us03.swiftrelay.cc
     skip-cert-verify: true
-  - name: 194 🇺🇸 美国 | anytls
+  - name: 195 🇺🇸 美国 | anytls
     server: yzany01.downapptwo.cc
     port: 38400
     type: anytls
@@ -2326,7 +2334,7 @@ proxies:
     udp: true
     sni: us16.pulsarcore.site
     skip-cert-verify: true
-  - name: 195 🇺🇸 美国 | vless
+  - name: 196 🇺🇸 美国 | vless
     server: family.bucket.4.kfc-520.com
     port: 10005
     type: vless
@@ -2340,7 +2348,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 196 🇺🇸 美国 | anytls
+  - name: 197 🇺🇸 美国 | anytls
     server: sivp555.ascwt179.com
     port: 29023
     type: anytls
@@ -2348,7 +2356,7 @@ proxies:
     udp: true
     sni: us01.lunartrace.io
     skip-cert-verify: true
-  - name: 197 🇺🇸 美国 | anytls
+  - name: 198 🇺🇸 美国 | anytls
     server: test01.y1static-content-distribution.shop
     port: 39024
     type: anytls
@@ -2356,7 +2364,7 @@ proxies:
     udp: true
     sni: us89.pulsarcore.site
     skip-cert-verify: true
-  - name: 198 🇺🇸 美国 | vless
+  - name: 199 🇺🇸 美国 | vless
     server: family.bucket.2.kfc-520.com
     port: 10003
     type: vless
@@ -2370,7 +2378,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 199 🇺🇸 美国 | anytls
+  - name: 200 🇺🇸 美国 | anytls
     server: yzany01.downapptwo.cc
     port: 38302
     type: anytls
@@ -2378,7 +2386,7 @@ proxies:
     udp: true
     sni: us71.pulsarcore.site
     skip-cert-verify: true
-  - name: 200 🇺🇸 美国 | anytls
+  - name: 201 🇺🇸 美国 | anytls
     server: yzany01.downapptwo.cc
     port: 19620
     type: anytls
@@ -2386,7 +2394,7 @@ proxies:
     udp: true
     sni: us32.pulsarcore.site
     skip-cert-verify: true
-  - name: 201 🇺🇸 美国 | anytls
+  - name: 202 🇺🇸 美国 | anytls
     server: yzany01.downapptwo.cc
     port: 21578
     type: anytls
@@ -2394,7 +2402,7 @@ proxies:
     udp: true
     sni: us38.lunartrace.io
     skip-cert-verify: true
-  - name: 202 🇺🇸 美国 | vless
+  - name: 203 🇺🇸 美国 | vless
     server: family.bucket.5.kfc-520.com
     port: 10007
     type: vless
@@ -2410,7 +2418,7 @@ proxies:
     udp: true
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 203 🇭🇰 香港 | vless
+    name: 204 🇭🇰 香港 | vless
     network: tcp
     port: 59750
     reality-opts:
@@ -2423,7 +2431,7 @@ proxies:
     uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
     servername: www.amd.com
   - client-fingerprint: chrome
-    name: 204 🇺🇸 美国 | vless
+    name: 205 🇺🇸 美国 | vless
     network: tcp
     port: 40056
     reality-opts:
@@ -2436,7 +2444,7 @@ proxies:
     uuid: 090122da-ad6b-42a1-92d7-bab2630e2511
     servername: www.cloudflare.com
   - client-fingerprint: chrome
-    name: 205 🇰🇷 韩国 | vless
+    name: 206 🇰🇷 韩国 | vless
     network: tcp
     port: 8686
     reality-opts:
@@ -2450,7 +2458,7 @@ proxies:
     servername: www.apple.com
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 206 🇯🇵 日本 | vless
+    name: 207 🇯🇵 日本 | vless
     network: tcp
     port: 20725
     reality-opts:
@@ -2463,7 +2471,7 @@ proxies:
     uuid: 6dcb725e-947e-4bbe-bb35-903374d57179
     servername: buylite.tv.apple.com
   - client-fingerprint: chrome
-    name: 207 🇺🇸 美国 | vless
+    name: 208 🇺🇸 美国 | vless
     network: tcp
     port: 30906
     reality-opts:
@@ -2475,45 +2483,19 @@ proxies:
     udp: true
     uuid: 43a13764-23dd-4e01-8b79-cde8a16e13ce
     servername: www.cloudflare.com
-  - name: 208 🇺🇸 美国 | vless
-    type: vless
-    server: 216.36.104.12
-    port: 13779
-    uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
-    tls: true
-    servername: tesla.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
-      short-id: af1bdd293097b664
-  - name: 209 🇺🇸 美国 | vless
-    type: vless
-    server: 88.218.92.164
-    port: 13443
-    uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-    flow: xtls-rprx-vision
-    tls: true
-    servername: auto.cendora.ru
-    client-fingerprint: ios
-    reality-opts:
-      public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
-      short-id: a7f3c91b2e6d84c0
-  - name: 210 🇭🇰 香港 | anytls
+  - name: 209 🇯🇵 日本 | anytls
     type: anytls
-    server: yzany01.downapptwo.cc
-    port: 35853
-    password: 3b32eb1c-150e-4eb4-8323-370844489508
+    server: jp01.duotg.top
+    port: 24935
+    password: 02cd3bac-2a78-4dbb-82b9-6b64084ddd8e
     udp: true
-    sni: hk01.pulsarcore.site
+    sni: jp01.duotg.top
     skip-cert-verify: true
-  - name: 211 🇸🇬 新加坡 | vless
-    type: vless
-    server: 166.108.235.162
-    port: 13779
-    uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
-    tls: true
-    servername: tesla.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
-      short-id: af1bdd293097b664
+  - name: 210 🇯🇵 日本 | anytls
+    type: anytls
+    server: jp01.duotg.top
+    port: 40124
+    password: 02cd3bac-2a78-4dbb-82b9-6b64084ddd8e
+    udp: true
+    sni: jp01.duotg.top
+    skip-cert-verify: true
