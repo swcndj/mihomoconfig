@@ -2969,8 +2969,66 @@ proxies:
     network: tcp
     udp: true
   - client-fingerprint: chrome
+    encryption: none
+    name: 234 🇰🇷 韩国 | vless
+    network: tcp
+    port: "8686"
+    reality-opts:
+      public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+      short-id: 628b3c90c98ead4f
+    server: 3.39.24.2
+    servername: www.apple.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+    xudp: true
+  - client-fingerprint: chrome
+    encryption: none
     flow: xtls-rprx-vision
-    name: 234 🇭🇰 香港 | vless
+    name: 235 🇺🇸 美国 | vless
+    network: raw
+    port: "443"
+    reality-opts:
+      public-key: wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c
+      short-id: ""
+    server: 143.246.196.157
+    servername: www.blocket.se
+    tls: true
+    type: vless
+    udp: true
+    uuid: 45c595fa-988f-11f1-8024-54db13ea7d40
+    xudp: true
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 236 🇺🇸 美国 | vless
+    network: tcp
+    port: "443"
+    reality-opts:
+      public-key: Hm6KQquLcmDmYue0NuAmNJ7_3SfoFOezG0-HnMOttVc
+      short-id: 2017ab5272b58635
+    server: 154.40.137.138
+    servername: www.apple.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 68644cac-5a44-4de7-ab56-d86b6f902088
+    xudp: true
+  - down: ""
+    fingerprint: ""
+    name: 237 🇸🇬 新加坡 | hysteria2
+    obfs: ""
+    obfs-password: ""
+    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+    port: 443
+    server: 13.229.82.184
+    skip-cert-verify: true
+    sni: vpn-sg-001.fastervpn.world
+    type: hysteria2
+    up: ""
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 238 🇭🇰 香港 | vless
     network: tcp
     port: 59750
     reality-opts:
@@ -2983,7 +3041,7 @@ proxies:
     uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
     servername: www.amd.com
   - client-fingerprint: chrome
-    name: 235 🇺🇸 美国 | vless
+    name: 239 🇺🇸 美国 | vless
     network: tcp
     port: 40056
     reality-opts:
@@ -2996,7 +3054,7 @@ proxies:
     uuid: 090122da-ad6b-42a1-92d7-bab2630e2511
     servername: www.cloudflare.com
   - client-fingerprint: chrome
-    name: 236 🇰🇷 韩国 | vless
+    name: 240 🇰🇷 韩国 | vless
     network: tcp
     port: 8686
     reality-opts:
@@ -3010,7 +3068,7 @@ proxies:
     servername: www.apple.com
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 237 🇯🇵 日本 | vless
+    name: 241 🇯🇵 日本 | vless
     network: tcp
     port: 20725
     reality-opts:
@@ -3023,7 +3081,7 @@ proxies:
     uuid: 6dcb725e-947e-4bbe-bb35-903374d57179
     servername: buylite.tv.apple.com
   - client-fingerprint: chrome
-    name: 238 🇺🇸 美国 | vless
+    name: 242 🇺🇸 美国 | vless
     network: tcp
     port: 30906
     reality-opts:
@@ -3035,39 +3093,17 @@ proxies:
     udp: true
     uuid: 43a13764-23dd-4e01-8b79-cde8a16e13ce
     servername: www.cloudflare.com
-  - name: 239 🇯🇵 日本 | hysteria2
+  - name: 243 🇭🇰 香港 | hysteria2
     type: hysteria2
-    server: 140.83.85.233
+    server: 154.3.35.200
     port: 50160
-    password: 3e8790e4fb6629aa819217d9655eafa3
+    password: a7255862658f113e8d651df9bd75af28
     sni: www.bing.com
     skip-cert-verify: true
-  - name: 240 🇺🇸 美国 | anytls
-    type: anytls
-    server: jjz.jjznodenode.top
-    port: 17963
-    password: 752a9aac-91a7-4284-9d6e-234efae318b6
-    udp: true
-    sni: jjz.jjznodenode.top
-  - name: 241 🇺🇸 美国 | hysteria2
+  - name: 244 🇭🇰 香港 | hysteria2
     type: hysteria2
-    server: 166.0.16.52
+    server: 31.57.248.176
     port: 50160
-    password: 569354367bdf7f34d31bbf33760bf314
+    password: b0917015b656b3dd2286b5633af0c5c1
     sni: www.bing.com
     skip-cert-verify: true
-  - name: 242 🇺🇸 美国 | vless
-    type: vless
-    server: 2.27.57.154
-    port: 995
-    uuid: 0a11d3b4-682c-4bfb-afb0-820b8285cb4b
-    udp: true
-    network: tcp
-    flow: xtls-rprx-vision
-    tls: true
-    servername: ubuntu.com
-    client-fingerprint: firefox
-    skip-cert-verify: true
-    reality-opts:
-      public-key: 6LSBBaOUWujvSovACjcP7m-DI9u9R584qdJxNYnu-24
-      short-id: 93e1b426caffbf75
