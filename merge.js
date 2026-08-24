@@ -20,7 +20,7 @@ const REGION_RULES = [
   { reg: /马来西亚|Malaysia|MY|my|🇲🇾/, flag: "🇲🇾", name: "马来西亚" },
   { reg: /越南|Vietnam|VN|vn|🇻🇳/, flag: "🇻🇳", name: "越南" },
   { reg: /菲律宾|Philippines|PH|ph|🇵🇭/, flag: "🇵🇭", name: "菲律宾" },
-  { reg: /美国|US|USA|us|🇺🇸/, flag: "🇺🇸", name: "美国" },
+  { reg: /美国|United States|US|us|🇺🇸/, flag: "🇺🇸", name: "美国" },
 ];
 // -------------------------------------------------- 配置区 --------------------------------------------------
 
