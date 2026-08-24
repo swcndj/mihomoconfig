@@ -2065,16 +2065,7 @@ proxies:
     sni: rmgyvpn.rest
     tls: false
     type: hysteria2
-  - name: 167 🇺🇸 美国 | hysteria2
-    obfs: salamander
-    obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
-    password: cd74c0a406664a5bc0bac098220a2468
-    port: 443
-    server: node1.sferavpn.pro
-    sni: node1.sferavpn.pro
-    tls: false
-    type: hysteria2
-  - name: 168 🇯🇵 日本 | hysteria2
+  - name: 167 🇯🇵 日本 | hysteria2
     password: ef18d810-719c-4bf1-83c6-615d01f217eb
     port: 443
     server: jp.cryptoofarm.com
@@ -2082,7 +2073,7 @@ proxies:
     sni: jp.cryptoofarm.com
     tls: false
     type: hysteria2
-  - name: 169 🇺🇸 美国 | hysteria2
+  - name: 168 🇺🇸 美国 | hysteria2
     password: fe475179-d8a8-420d-a4ac-3e415ed8dc72
     port: 11683
     server: uswx4.wxgqlfx.vip
@@ -2090,7 +2081,7 @@ proxies:
     sni: 144.225.187.153
     tls: false
     type: hysteria2
-  - name: 170 🇸🇬 新加坡 | hysteria2
+  - name: 169 🇸🇬 新加坡 | hysteria2
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 13.229.82.184
@@ -2098,7 +2089,7 @@ proxies:
     sni: vpn-sg-001.fastervpn.world
     tls: false
     type: hysteria2
-  - name: 171 🇸🇬 新加坡 | hysteria2
+  - name: 170 🇸🇬 新加坡 | hysteria2
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 47.129.155.42
@@ -2106,7 +2097,7 @@ proxies:
     sni: vpn-sg-001.fastervpn.world
     tls: false
     type: hysteria2
-  - name: 172 🇺🇸 美国 | hysteria2
+  - name: 171 🇺🇸 美国 | hysteria2
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 54.213.89.22
@@ -2114,12 +2105,20 @@ proxies:
     sni: vk.com
     tls: false
     type: hysteria2
-  - name: 173 🇸🇬 新加坡 | hysteria2
+  - name: 172 🇸🇬 新加坡 | hysteria2
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 54.254.190.23
     skip-cert-verify: true
     sni: vpn-sg-001.fastervpn.world
+    tls: false
+    type: hysteria2
+  - name: 173 🇺🇸 美国 | hysteria2
+    password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
+    port: 443
+    server: faq.wwwinternetvideo.click
+    skip-cert-verify: true
+    sni: cabinet.wwwinternetvideo.click
     tls: false
     type: hysteria2
   - alpn:
@@ -2134,22 +2133,30 @@ proxies:
     sni: assets.gateway-stream.com
     tls: false
     type: hysteria2
-  - name: 175 🇺🇸 美国 | anytls
-    password: 29204996-a723-4291-8c70-30843b592d40
+  - auth: ac7fb60f-0b7a-465d-a002-05160ec04ed6
+    name: 175 🇺🇸 美国 | hysteria2
+    password: ac7fb60f-0b7a-465d-a002-05160ec04ed6
     port: 443
-    server: jpzz01.cybergalaxy.me
+    server: dora1.api3-max.ru
     skip-cert-verify: true
-    sni: jpzz01.cybergalaxy.me
-    type: anytls
+    sni: dora1.api3-max.ru
+    type: hysteria2
+  - client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 176 🇹🇼 台湾 | vless
+    network: tcp
+    port: "32178"
+    reality-opts:
+      public-key: MrBX-OPkFMp19rzgSbungdUFdoUSXAg7phFfeowkvxo
+      short-id: 9c01c7e98b93e683
+    server: wwhgbmxaycrqwzxhfa.cfooov.xyz
+    servername: www.apple.com
+    tls: true
+    type: vless
     udp: true
-  - name: 176 🇺🇸 美国 | anytls
-    password: 29204996-a723-4291-8c70-30843b592d40
-    port: 11996
-    server: yazhouany02.downapptwo.cc
-    skip-cert-verify: true
-    sni: us67.pulsarcore.site
-    type: anytls
-    udp: true
+    uuid: 8d05cda5-c9ba-43cf-846e-b9521b872c71
+    xudp: true
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
     name: 177 🇺🇸 美国 | vless
@@ -2357,13 +2364,21 @@ proxies:
     skip-cert-verify: true
   - name: 194 🇰🇷 韩国 | anytls
     server: yazhouany02.downapptwo.cc
+    port: 11996
+    type: anytls
+    password: 29204996-a723-4291-8c70-30843b592d40
+    udp: true
+    sni: us67.pulsarcore.site
+    skip-cert-verify: true
+  - name: 195 🇰🇷 韩国 | anytls
+    server: yazhouany02.downapptwo.cc
     port: 31289
     type: anytls
     password: 29204996-a723-4291-8c70-30843b592d40
     udp: true
     sni: kr01.lunartrace.io
     skip-cert-verify: true
-  - name: 195 🇲🇾 马来西亚 | anytls
+  - name: 196 🇲🇾 马来西亚 | anytls
     server: yzany01.downapptwo.cc
     port: 20694
     type: anytls
@@ -2371,7 +2386,7 @@ proxies:
     udp: true
     sni: malxy.pulsarcore.site
     skip-cert-verify: true
-  - name: 196 🇺🇸 美国 | anytls
+  - name: 197 🇺🇸 美国 | anytls
     server: yzany01.downapptwo.cc
     port: 45959
     type: anytls
@@ -2379,7 +2394,7 @@ proxies:
     udp: true
     sni: eluosi01.pulsarcore.site
     skip-cert-verify: true
-  - name: 197 🇸🇬 新加坡 | anytls
+  - name: 198 🇸🇬 新加坡 | anytls
     server: yazhouany02.downapptwo.cc
     port: 47053
     type: anytls
@@ -2387,7 +2402,7 @@ proxies:
     udp: true
     sni: xjp202.pulsarcore.site
     skip-cert-verify: true
-  - name: 198 🇸🇬 新加坡 | anytls
+  - name: 199 🇸🇬 新加坡 | anytls
     server: test01.y1static-content-distribution.shop
     port: 47096
     type: anytls
@@ -2395,7 +2410,7 @@ proxies:
     udp: true
     sni: xjp33.pulsarcore.site
     skip-cert-verify: true
-  - name: 199 🇸🇬 新加坡 | anytls
+  - name: 200 🇸🇬 新加坡 | anytls
     server: test01.y1static-content-distribution.shop
     port: 16406
     type: anytls
@@ -2403,7 +2418,7 @@ proxies:
     udp: true
     sni: yz203.y1static-content-distribution.shop
     skip-cert-verify: true
-  - name: 200 🇸🇬 新加坡 | anytls
+  - name: 201 🇸🇬 新加坡 | anytls
     server: test01.y1static-content-distribution.shop
     port: 14855
     type: anytls
@@ -2411,7 +2426,7 @@ proxies:
     udp: true
     sni: yz238.y1static-content-distribution.shop
     skip-cert-verify: true
-  - name: 201 🇸🇬 新加坡 | anytls
+  - name: 202 🇸🇬 新加坡 | anytls
     server: yzany01.downapptwo.cc
     port: 56277
     type: anytls
@@ -2419,7 +2434,7 @@ proxies:
     udp: true
     sni: xjp03.pulsarcore.site
     skip-cert-verify: true
-  - name: 202 🇸🇬 新加坡 | anytls
+  - name: 203 🇸🇬 新加坡 | anytls
     server: yazhouany02.downapptwo.cc
     port: 41453
     type: anytls
@@ -2427,7 +2442,7 @@ proxies:
     udp: true
     sni: yz236.y1static-content-distribution.shop
     skip-cert-verify: true
-  - name: 203 🇹🇼 台湾 | anytls
+  - name: 204 🇹🇼 台湾 | anytls
     server: yazhouany02.downapptwo.cc
     port: 33368
     type: anytls
@@ -2435,7 +2450,7 @@ proxies:
     udp: true
     sni: tw01.swiftrelay.cc
     skip-cert-verify: true
-  - name: 204 🇹🇼 台湾 | anytls
+  - name: 205 🇹🇼 台湾 | anytls
     server: yazhouany02.downapptwo.cc
     port: 37236
     type: anytls
@@ -2443,7 +2458,7 @@ proxies:
     udp: true
     sni: tw16.swiftrelay.cc
     skip-cert-verify: true
-  - name: 205 🇹🇼 台湾 | anytls
+  - name: 206 🇹🇼 台湾 | anytls
     server: tw77.cybergalaxy.me
     port: 443
     type: anytls
@@ -2451,7 +2466,7 @@ proxies:
     udp: true
     sni: tw77.cybergalaxy.me
     skip-cert-verify: true
-  - name: 206 🇺🇸 美国 | anytls
+  - name: 207 🇺🇸 美国 | anytls
     server: yazhouany02.downapptwo.cc
     port: 11447
     type: anytls
@@ -2459,7 +2474,7 @@ proxies:
     udp: true
     sni: us25.y1static-content-distribution.shop
     skip-cert-verify: true
-  - name: 207 🇺🇸 美国 | anytls
+  - name: 208 🇺🇸 美国 | anytls
     server: test01.y1static-content-distribution.shop
     port: 24099
     type: anytls
@@ -2467,7 +2482,7 @@ proxies:
     udp: true
     sni: us56.pulsarcore.site
     skip-cert-verify: true
-  - name: 208 🇺🇸 美国 | anytls
+  - name: 209 🇺🇸 美国 | anytls
     server: test01.y1static-content-distribution.shop
     port: 22054
     type: anytls
@@ -2475,7 +2490,7 @@ proxies:
     udp: true
     sni: us31.lunartrace.io
     skip-cert-verify: true
-  - name: 209 🇺🇸 美国 | anytls
+  - name: 210 🇺🇸 美国 | anytls
     server: yazhouany02.downapptwo.cc
     port: 19070
     type: anytls
@@ -2483,7 +2498,7 @@ proxies:
     udp: true
     sni: us30.lunartrace.io
     skip-cert-verify: true
-  - name: 210 🇺🇸 美国 | anytls
+  - name: 211 🇺🇸 美国 | anytls
     server: yazhouany02.downapptwo.cc
     port: 59585
     type: anytls
@@ -2491,7 +2506,7 @@ proxies:
     udp: true
     sni: us26.pulsarcore.site
     skip-cert-verify: true
-  - name: 211 🇺🇸 美国 | anytls
+  - name: 212 🇺🇸 美国 | anytls
     server: test01.y1static-content-distribution.shop
     port: 30370
     type: anytls
@@ -2499,7 +2514,7 @@ proxies:
     udp: true
     sni: jd-yz122g.y1static-content-distribution.shop
     skip-cert-verify: true
-  - name: 212 🇺🇸 美国 | anytls
+  - name: 213 🇺🇸 美国 | anytls
     server: yzany01.downapptwo.cc
     port: 38400
     type: anytls
@@ -2507,7 +2522,7 @@ proxies:
     udp: true
     sni: us16.pulsarcore.site
     skip-cert-verify: true
-  - name: 213 🇺🇸 美国 | anytls
+  - name: 214 🇺🇸 美国 | anytls
     server: yzany01.downapptwo.cc
     port: 25504
     type: anytls
@@ -2515,80 +2530,9 @@ proxies:
     udp: true
     sni: us02.swiftrelay.cc
     skip-cert-verify: true
-  - auth: ac7fb60f-0b7a-465d-a002-05160ec04ed6
-    name: 214 🇺🇸 美国 | hysteria2
-    password: ac7fb60f-0b7a-465d-a002-05160ec04ed6
-    port: 443
-    server: dora1.api3-max.ru
-    skip-cert-verify: true
-    sni: dora1.api3-max.ru
-    type: hysteria2
-  - client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    name: 215 🇹🇼 台湾 | vless
-    network: tcp
-    port: "32178"
-    reality-opts:
-      public-key: MrBX-OPkFMp19rzgSbungdUFdoUSXAg7phFfeowkvxo
-      short-id: 9c01c7e98b93e683
-    server: wwhgbmxaycrqwzxhfa.cfooov.xyz
-    servername: www.apple.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: 8d05cda5-c9ba-43cf-846e-b9521b872c71
-    xudp: true
-  - down: ""
-    fingerprint: ""
-    name: 216 🇸🇬 新加坡 | hysteria2
-    obfs: ""
-    obfs-password: ""
-    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-    port: 443
-    server: 13.228.168.117
-    skip-cert-verify: true
-    sni: vpn-sg-001.fastervpn.world
-    type: hysteria2
-    up: ""
-  - name: 217 🇻🇳 越南 | anytls
-    password: c38c4c71-345e-4cac-a4c5-989b309451c5
-    port: 11682
-    server: vn2.nbjc.top
-    type: anytls
-    udp: true
-    sni: vn2.nbjc.top
-  - name: 218 🇻🇳 越南 | anytls
-    password: c38c4c71-345e-4cac-a4c5-989b309451c5
-    port: 11681
-    server: vn1.nbjc.top
-    type: anytls
-    udp: true
-    sni: vn1.nbjc.top
-  - name: 219 🇺🇸 美国 | anytls
-    password: 13d3e0c5-711e-4d9e-9323-9ba28f8fc70d
-    port: 40022
-    server: us2.catzl.top
-    type: anytls
-    udp: true
-    sni: us2.catzl.top
-  - name: 220 🇹🇭 泰国 | anytls
-    password: c38c4c71-345e-4cac-a4c5-989b309451c5
-    port: 40011
-    server: hk1.catzl.top
-    type: anytls
-    udp: true
-    sni: hk1.catzl.top
-  - name: 221 🇻🇳 越南 | anytls
-    password: 13d3e0c5-711e-4d9e-9323-9ba28f8fc70d
-    port: 11683
-    server: vn3.nbjc.top
-    type: anytls
-    udp: true
-    sni: vn3.nbjc.top
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 222 🇭🇰 香港 | vless
+    name: 215 🇭🇰 香港 | vless
     network: tcp
     port: 59750
     reality-opts:
@@ -2601,7 +2545,7 @@ proxies:
     uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
     servername: www.amd.com
   - client-fingerprint: chrome
-    name: 223 🇺🇸 美国 | vless
+    name: 216 🇺🇸 美国 | vless
     network: tcp
     port: 40056
     reality-opts:
@@ -2614,7 +2558,7 @@ proxies:
     uuid: 090122da-ad6b-42a1-92d7-bab2630e2511
     servername: www.cloudflare.com
   - client-fingerprint: chrome
-    name: 224 🇰🇷 韩国 | vless
+    name: 217 🇰🇷 韩国 | vless
     network: tcp
     port: 8686
     reality-opts:
@@ -2628,7 +2572,7 @@ proxies:
     servername: www.apple.com
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 225 🇯🇵 日本 | vless
+    name: 218 🇯🇵 日本 | vless
     network: tcp
     port: 20725
     reality-opts:
@@ -2641,7 +2585,7 @@ proxies:
     uuid: 6dcb725e-947e-4bbe-bb35-903374d57179
     servername: buylite.tv.apple.com
   - client-fingerprint: chrome
-    name: 226 🇺🇸 美国 | vless
+    name: 219 🇺🇸 美国 | vless
     network: tcp
     port: 30906
     reality-opts:
@@ -2653,18 +2597,10 @@ proxies:
     udp: true
     uuid: 43a13764-23dd-4e01-8b79-cde8a16e13ce
     servername: www.cloudflare.com
-  - name: 227 🇹🇼 台湾 | hysteria2
+  - name: 220 🇭🇰 香港 | hysteria2
     type: hysteria2
-    server: 34.80.120.225
+    server: 31.57.248.176
     port: 50160
-    password: f4ae05bcb9528779a8469ee5d352a817
+    password: b0917015b656b3dd2286b5633af0c5c1
     sni: www.bing.com
-    skip-cert-verify: true
-  - name: 228 🇰🇷 韩国 | anytls
-    type: anytls
-    server: akr1.jueduibupao.top
-    port: 7000
-    password: 5b2012ba-d040-4281-b92c-4f005badd179
-    udp: true
-    sni: www.microsoft.com
     skip-cert-verify: true
