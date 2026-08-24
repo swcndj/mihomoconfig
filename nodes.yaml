@@ -2522,21 +2522,35 @@ proxies:
     udp: true
     sni: us02.swiftrelay.cc
     skip-cert-verify: true
-  - name: 214 🇹🇼 台湾 | anytls
+  - name: 214 🇰🇷 韩国 | anytls
     password: 2cf02a4a-f030-4165-a55d-2940d623b80d
-    port: 40072
-    server: tw2.catzl.top
+    port: 40041
+    server: kr1.catzl.top
     type: anytls
     udp: true
-    sni: tw2.catzl.top
-  - name: 215 🇺🇸 美国 | anytls
+    sni: kr1.catzl.top
+  - name: 215 🇹🇼 台湾 | anytls
+    password: 2cf02a4a-f030-4165-a55d-2940d623b80d
+    port: 40073
+    server: tw3.catzl.top
+    type: anytls
+    udp: true
+    sni: tw3.catzl.top
+  - name: 216 🇻🇳 越南 | anytls
+    password: 2cf02a4a-f030-4165-a55d-2940d623b80d
+    port: 11682
+    server: vn2.nbjc.top
+    type: anytls
+    udp: true
+    sni: vn2.nbjc.top
+  - name: 217 🇺🇸 美国 | anytls
     password: 2cf02a4a-f030-4165-a55d-2940d623b80d
     port: 40022
     server: us2.catzl.top
     type: anytls
     udp: true
     sni: us2.catzl.top
-  - name: 216 🇻🇳 越南 | anytls
+  - name: 218 🇻🇳 越南 | anytls
     password: 2cf02a4a-f030-4165-a55d-2940d623b80d
     port: 11681
     server: vn1.nbjc.top
@@ -2545,7 +2559,7 @@ proxies:
     sni: vn1.nbjc.top
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 217 🇭🇰 香港 | vless
+    name: 219 🇭🇰 香港 | vless
     network: tcp
     port: 59750
     reality-opts:
@@ -2558,7 +2572,7 @@ proxies:
     uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
     servername: www.amd.com
   - client-fingerprint: chrome
-    name: 218 🇺🇸 美国 | vless
+    name: 220 🇺🇸 美国 | vless
     network: tcp
     port: 40056
     reality-opts:
@@ -2571,7 +2585,7 @@ proxies:
     uuid: 090122da-ad6b-42a1-92d7-bab2630e2511
     servername: www.cloudflare.com
   - client-fingerprint: chrome
-    name: 219 🇰🇷 韩国 | vless
+    name: 221 🇰🇷 韩国 | vless
     network: tcp
     port: 8686
     reality-opts:
@@ -2585,7 +2599,7 @@ proxies:
     servername: www.apple.com
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 220 🇯🇵 日本 | vless
+    name: 222 🇯🇵 日本 | vless
     network: tcp
     port: 20725
     reality-opts:
@@ -2598,7 +2612,7 @@ proxies:
     uuid: 6dcb725e-947e-4bbe-bb35-903374d57179
     servername: buylite.tv.apple.com
   - client-fingerprint: chrome
-    name: 221 🇺🇸 美国 | vless
+    name: 223 🇺🇸 美国 | vless
     network: tcp
     port: 30906
     reality-opts:
@@ -2610,3 +2624,10 @@ proxies:
     udp: true
     uuid: 43a13764-23dd-4e01-8b79-cde8a16e13ce
     servername: www.cloudflare.com
+  - name: 224 🇭🇰 香港 | hysteria2
+    type: hysteria2
+    server: 31.57.248.176
+    port: 50160
+    password: b0917015b656b3dd2286b5633af0c5c1
+    sni: www.bing.com
+    skip-cert-verify: true
