@@ -7,7 +7,7 @@ const OUTPUT_FILE = "nodes.yaml";
 const REQUEST_TIMEOUT = 15000; 
 
 // 黑名单协议
-const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "snell", "vmess","trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
+const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
 
 // 需要匹配的地区
 const REGION_RULES = [
