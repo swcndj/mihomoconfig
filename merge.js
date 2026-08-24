@@ -18,8 +18,11 @@ const REGION_RULES = [
   { reg: /韩国|Korea|KR|kr|🇰🇷/, flag: "🇰🇷", name: "韩国" },
   { reg: /新加坡|Singapore|SG|sg|🇸🇬/, flag: "🇸🇬", name: "新加坡" },
   { reg: /马来西亚|Malaysia|MY|my|🇲🇾/, flag: "🇲🇾", name: "马来西亚" },
+  { reg: /泰国|Thailand|TH|th|🇹🇭/, flag: "🇹🇭", name: "泰国" },
   { reg: /越南|Vietnam|VN|vn|🇻🇳/, flag: "🇻🇳", name: "越南" },
   { reg: /菲律宾|Philippines|PH|ph|🇵🇭/, flag: "🇵🇭", name: "菲律宾" },
+  { reg: /印尼|Indonesia|ID|id|🇮🇩/, flag: "🇮🇩", name: "印尼" },
+  { reg: /澳大利亚|Australia|AU|au|🇦🇺/, flag: "🇦🇺", name: "澳大利亚" },
   { reg: /美国|United States|US|us|🇺🇸/, flag: "🇺🇸", name: "美国" },
 ];
 // -------------------------------------------------- 配置区 --------------------------------------------------
