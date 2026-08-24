@@ -11,11 +11,15 @@ const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "trojan", "h
 
 // 需要匹配的地区
 const REGION_RULES = [
-  { reg: /香港|HK|HKG|hk|🇭🇰/, flag: "🇭🇰", name: "香港" },
-  { reg: /台湾|TW|tw|🇹🇼/, flag: "🇹🇼", name: "台湾" },
-  { reg: /日本|JP|JPN|jp|🇯🇵/, flag: "🇯🇵", name: "日本" },
-  { reg: /韩国|KR|KOR|kr|🇰🇷/, flag: "🇰🇷", name: "韩国" },
-  { reg: /新加坡|SG|SGP|sg|🇸🇬/, flag: "🇸🇬", name: "新加坡" },
+  { reg: /香港|Hong Kong|HK|hk|🇭🇰/, flag: "🇭🇰", name: "香港" },
+  { reg: /澳门|Macau|MO|mo|🇲🇴/, flag: "🇲🇴", name: "澳门" },
+  { reg: /台湾|Taiwan|TW|tw|🇹🇼/, flag: "🇹🇼", name: "台湾" },
+  { reg: /日本|Japan|JP|jp|🇯🇵/, flag: "🇯🇵", name: "日本" },
+  { reg: /韩国|Korea|KR|kr|🇰🇷/, flag: "🇰🇷", name: "韩国" },
+  { reg: /新加坡|Singapore|SG|sg|🇸🇬/, flag: "🇸🇬", name: "新加坡" },
+  { reg: /马来西亚|Malaysia|MY|my|🇲🇾/, flag: "🇲🇾", name: "马来西亚" },
+  { reg: /越南|Vietnam|VN|vn|🇻🇳/, flag: "🇻🇳", name: "越南" },
+  { reg: /菲律宾|Philippines|PH|ph|🇵🇭/, flag: "🇵🇭", name: "菲律宾" },
   { reg: /美国|US|USA|us|🇺🇸/, flag: "🇺🇸", name: "美国" },
 ];
 // -------------------------------------------------- 配置区 --------------------------------------------------
