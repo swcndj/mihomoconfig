@@ -87,13 +87,13 @@ proxy-groups:
     tolerance: 50
     disable-udp: false
     use:
-    - bestnodes
+    - nodes
   - name: "负载均衡"
     type: load-balance
     strategy: consistent-hashing
     disable-udp: false
     use:
-    - bestnodes
+    - nodes
 # ======================================== 规则订阅 ========================================
 rule-providers:
   AWAvenue-Ads:
