@@ -2646,11 +2646,19 @@ proxies:
     sni: assets.gateway-stream.com
     tls: false
     type: hysteria2
+  - name: 216 🇸🇬 新加坡 | anytls
+    password: 29204996-a723-4291-8c70-30843b592d40
+    port: 47053
+    server: yazhouany02.downapptwo.cc
+    skip-cert-verify: true
+    sni: xjp202.pulsarcore.site
+    type: anytls
+    udp: true
   - client-fingerprint: chrome
     encryption: none
     grpc-opts:
       grpc-service-name: update
-    name: 216 🇯🇵 日本 | vless
+    name: 217 🇯🇵 日本 | vless
     network: grpc
     port: "10034"
     reality-opts:
@@ -2663,26 +2671,21 @@ proxies:
     udp: true
     uuid: D8ED7FFD-7AA8-4EEB-9020-18A1A38AE6CC
     xudp: true
-  - client-fingerprint: chrome
-    encryption: none
-    grpc-opts:
-      grpc-service-name: update
-    name: 217 🇸🇬 新加坡 | vless
-    network: grpc
-    port: "10038"
-    reality-opts:
-      public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-      short-id: 686c0ef0
-    server: sg3-r.link-t7.com
-    servername: d1.awsstatic.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: D8ED7FFD-7AA8-4EEB-9020-18A1A38AE6CC
-    xudp: true
+  - down: ""
+    fingerprint: ""
+    name: 218 🇸🇬 新加坡 | hysteria2
+    obfs: ""
+    obfs-password: ""
+    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+    port: "443"
+    server: 47.129.189.148
+    skip-cert-verify: true
+    sni: vpn-sg-001.fastervpn.world
+    type: hysteria2
+    up: ""
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 218 🇺🇸 美国 | vless
+    name: 219 🇺🇸 美国 | vless
     network: tcp
     port: 443
     reality-opts:
@@ -2697,7 +2700,7 @@ proxies:
     uuid: 5905d91f-c3bc-4e80-bd66-4b17beb166cb
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 219 🇺🇸 美国 | vless
+    name: 220 🇺🇸 美国 | vless
     network: tcp
     port: 11094
     reality-opts:
@@ -2712,7 +2715,7 @@ proxies:
     uuid: f1fa0ad9-b122-4b7c-da82-4bea9edc48dd
   - client-fingerprint: firefox
     flow: xtls-rprx-vision
-    name: 220 🇺🇸 美国 | vless
+    name: 221 🇺🇸 美国 | vless
     network: tcp
     port: 443
     reality-opts:
@@ -2727,7 +2730,7 @@ proxies:
     uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 221 🇺🇸 美国 | vless
+    name: 222 🇺🇸 美国 | vless
     network: tcp
     port: 29893
     reality-opts:
@@ -2742,7 +2745,7 @@ proxies:
     uuid: f06c6039-a489-3d78-a676-ed43be6deca3
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 222 🇺🇸 美国 | vless
+    name: 223 🇺🇸 美国 | vless
     network: tcp
     port: 39399
     reality-opts:
@@ -2757,7 +2760,7 @@ proxies:
     uuid: f06c6039-a489-3d78-a676-ed43be6deca3
   - client-fingerprint: firefox
     flow: xtls-rprx-vision
-    name: 223 🇺🇸 美国 | vless
+    name: 224 🇺🇸 美国 | vless
     network: tcp
     port: 443
     reality-opts:
@@ -2772,7 +2775,7 @@ proxies:
     uuid: 055dce30-0ee3-44c3-b680-be1c95b8d6e7
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 224 🇺🇸 美国 | vless
+    name: 225 🇺🇸 美国 | vless
     network: tcp
     port: 443
     reality-opts:
@@ -2787,7 +2790,7 @@ proxies:
     uuid: 9638a83e-f1f7-4cc8-a602-924965d9534f
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 225 🇺🇸 美国 | vless
+    name: 226 🇺🇸 美国 | vless
     network: tcp
     port: 39211
     reality-opts:
@@ -2802,7 +2805,7 @@ proxies:
     uuid: f06c6039-a489-3d78-a676-ed43be6deca3
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 226 🇺🇸 美国 | vless
+    name: 227 🇺🇸 美国 | vless
     network: tcp
     port: 443
     reality-opts:
@@ -2818,7 +2821,7 @@ proxies:
   - client-fingerprint: chrome
     grpc-opts:
       grpc-service-name: TunService
-    name: 227 🇺🇸 美国 | vless
+    name: 228 🇺🇸 美国 | vless
     network: grpc
     port: 8443
     reality-opts:
@@ -2830,7 +2833,7 @@ proxies:
     type: vless
     udp: true
     uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
-  - name: 228 🇭🇰 香港 | anytls
+  - name: 229 🇭🇰 香港 | anytls
     server: yzany01.downapptwo.cc
     port: 51178
     type: anytls
@@ -2838,21 +2841,13 @@ proxies:
     udp: true
     sni: hk09.alytest.cc
     skip-cert-verify: true
-  - name: 229 🇺🇸 美国 | anytls
+  - name: 230 🇺🇸 美国 | anytls
     server: yzany01.downapptwo.cc
     port: 45959
     type: anytls
     password: 29204996-a723-4291-8c70-30843b592d40
     udp: true
     sni: eluosi01.pulsarcore.site
-    skip-cert-verify: true
-  - name: 230 🇸🇬 新加坡 | anytls
-    server: yazhouany02.downapptwo.cc
-    port: 47053
-    type: anytls
-    password: 29204996-a723-4291-8c70-30843b592d40
-    udp: true
-    sni: xjp202.pulsarcore.site
     skip-cert-verify: true
   - name: 231 🇹🇼 台湾 | anytls
     server: yazhouany02.downapptwo.cc
@@ -2909,84 +2904,73 @@ proxies:
     client-fingerprint: ios
     network: tcp
     udp: true
-  - down: ""
-    fingerprint: ""
-    name: 236 🇸🇬 新加坡 | hysteria2
-    obfs: ""
-    obfs-password: ""
-    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-    port: "443"
-    server: 47.129.189.148
-    skip-cert-verify: true
-    sni: vpn-sg-001.fastervpn.world
-    type: hysteria2
-    up: ""
-  - client-fingerprint: chrome
+  - client-fingerprint: firefox
     encryption: none
-    flow: xtls-rprx-vision
-    name: 237 🇰🇷 韩国 | vless
-    network: tcp
-    port: 443
+    grpc-opts:
+      grpc-service-name: grpc-tunnel
+    name: 236 🇺🇸 美国 | vless
+    network: grpc
+    port: "9881"
     reality-opts:
-      public-key: 989gq45ogQSZLDoUTcLNSYW5v_3ER7W_6Oi_8swZzXo
-      short-id: cb55f541
-    server: 178.83.31.93
+      public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+      short-id: aabb
+    server: 212.41.9.137
+    servername: dl.google.com
     tls: true
     type: vless
     udp: true
-    uuid: 4a97788b-5d8a-410c-875c-ba36930e185e
+    uuid: 064a967e-0862-4cea-bdbd-9458cb7b6070
     xudp: true
-    servername: www.cloudflare.com
-  - down: ""
-    fingerprint: ""
-    name: 238 🇺🇸 美国 | hysteria2
-    obfs: ""
-    obfs-password: ""
-    password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  - client-fingerprint: chrome
+    encryption: none
+    name: 237 🇰🇷 韩国 | vless
+    network: tcp
+    port: "443"
+    reality-opts:
+      public-key: pR7MPTAA4cZsW9AO-twMzuogiWGMKPiheTg70fcWWWs
+      short-id: 0a427bc3
+    server: 119.28.161.143
+    servername: apple.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 1ebb0858-218a-4dee-8746-36a67bc64462
+    xudp: true
+  - client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 238 🇺🇸 美国 | vless
+    network: tcp
+    port: 2083
+    reality-opts:
+      public-key: a3_DLO6p_ZfPf7I0JFTVlAI2pPAPtC-ji2diyPcHcQA
+      short-id: b4
+    server: sw.volnalink.uk
+    tls: true
+    type: vless
+    udp: true
+    uuid: 4f8efa61-96db-1391-b134-9ce844e31228
+    xudp: true
+    servername: www.booking.com
+  - client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 239 🇺🇸 美国 | vless
+    network: tcp
     port: 443
-    server: vpn-us-003.fastervpn.world
-    skip-cert-verify: true
-    sni: 127.0.0.1
-    type: hysteria2
-    up: ""
-  - name: 239 🇹🇼 台湾 | anytls
-    password: 48dcf7ad-eb9a-40d5-be60-e5c674cfe182
-    port: 40071
-    server: tw1.catzl.top
-    type: anytls
+    reality-opts:
+      public-key: nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0
+      short-id: 4477382ff6d3d41c
+    server: 51.81.203.63
+    tls: true
+    type: vless
     udp: true
-    sni: tw1.catzl.top
-  - name: 240 🇰🇷 韩国 | anytls
-    password: 01a86e4a-7a5f-4a3d-ba80-566d0f4c93e7
-    port: 40041
-    server: kr1.catzl.top
-    type: anytls
-    udp: true
-    sni: kr1.catzl.top
-  - name: 241 🇰🇷 韩国 | anytls
-    password: 48dcf7ad-eb9a-40d5-be60-e5c674cfe182
-    port: 40042
-    server: kr2.catzl.top
-    type: anytls
-    udp: true
-    sni: kr2.catzl.top
-  - name: 242 🇺🇸 美国 | anytls
-    password: 48dcf7ad-eb9a-40d5-be60-e5c674cfe182
-    port: 40022
-    server: us2.catzl.top
-    type: anytls
-    udp: true
-    sni: us2.catzl.top
-  - name: 243 🇹🇼 台湾 | anytls
-    password: 01a86e4a-7a5f-4a3d-ba80-566d0f4c93e7
-    port: 40072
-    server: tw2.catzl.top
-    type: anytls
-    udp: true
-    sni: tw2.catzl.top
+    uuid: cb2dbb6a-a1ea-4023-9ace-6466cee57241
+    xudp: true
+    servername: www.icloud.com
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 244 🇭🇰 香港 | vless
+    name: 240 🇭🇰 香港 | vless
     network: tcp
     port: 59750
     reality-opts:
@@ -2999,7 +2983,7 @@ proxies:
     uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
     servername: www.amd.com
   - client-fingerprint: chrome
-    name: 245 🇺🇸 美国 | vless
+    name: 241 🇺🇸 美国 | vless
     network: tcp
     port: 40056
     reality-opts:
@@ -3012,7 +2996,7 @@ proxies:
     uuid: 090122da-ad6b-42a1-92d7-bab2630e2511
     servername: www.cloudflare.com
   - client-fingerprint: chrome
-    name: 246 🇰🇷 韩国 | vless
+    name: 242 🇰🇷 韩国 | vless
     network: tcp
     port: 8686
     reality-opts:
@@ -3026,7 +3010,7 @@ proxies:
     servername: www.apple.com
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 247 🇯🇵 日本 | vless
+    name: 243 🇯🇵 日本 | vless
     network: tcp
     port: 20725
     reality-opts:
@@ -3039,7 +3023,7 @@ proxies:
     uuid: 6dcb725e-947e-4bbe-bb35-903374d57179
     servername: buylite.tv.apple.com
   - client-fingerprint: chrome
-    name: 248 🇺🇸 美国 | vless
+    name: 244 🇺🇸 美国 | vless
     network: tcp
     port: 30906
     reality-opts:
@@ -3051,10 +3035,10 @@ proxies:
     udp: true
     uuid: 43a13764-23dd-4e01-8b79-cde8a16e13ce
     servername: www.cloudflare.com
-  - name: 249 🇹🇼 台湾 | anytls
+  - name: 245 🇸🇬 新加坡 | anytls
     type: anytls
-    server: dafeizhu.xxxyun.top
-    port: 55005
-    password: 5b2012ba-d040-4281-b92c-4f005badd179
+    server: yzany01.downapptwo.cc
+    port: 56277
+    password: 29204996-a723-4291-8c70-30843b592d40
     udp: true
-    sni: tw2.jueduibupao.top
+    sni: xjp03.pulsarcore.site
