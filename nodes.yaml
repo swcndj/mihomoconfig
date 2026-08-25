@@ -2912,51 +2912,69 @@ proxies:
   - client-fingerprint: chrome
     encryption: none
     flow: xtls-rprx-vision
-    name: 236 🇺🇸 美国 | vless
+    name: 236 🇰🇷 韩国 | vless
     network: tcp
     port: 443
     reality-opts:
-      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-      short-id: ""
-    server: 46.20.105.32
+      public-key: 989gq45ogQSZLDoUTcLNSYW5v_3ER7W_6Oi_8swZzXo
+      short-id: cb55f541
+    server: 178.83.31.93
     tls: true
     type: vless
     udp: true
-    uuid: 8ff82100-8aad-4281-bf41-f318519d7182
+    uuid: 4a97788b-5d8a-410c-875c-ba36930e185e
     xudp: true
-    servername: ai.jobinvest.ru
-  - name: 237 🇹🇼 台湾 | anytls
-    password: 942ff15e-26a4-419e-814c-b8cb7f216827
-    port: 40073
-    server: tw3.catzl.top
+    servername: www.cloudflare.com
+  - down: ""
+    fingerprint: ""
+    name: 237 🇺🇸 美国 | hysteria2
+    obfs: ""
+    obfs-password: ""
+    password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+    port: 443
+    server: vpn-us-003.fastervpn.world
+    skip-cert-verify: true
+    sni: 127.0.0.1
+    type: hysteria2
+    up: ""
+  - name: 238 🇹🇼 台湾 | anytls
+    password: 48dcf7ad-eb9a-40d5-be60-e5c674cfe182
+    port: 40071
+    server: tw1.catzl.top
     type: anytls
     udp: true
-    sni: tw3.catzl.top
-  - name: 238 🇺🇸 美国 | anytls
-    password: 942ff15e-26a4-419e-814c-b8cb7f216827
+    sni: tw1.catzl.top
+  - name: 239 🇰🇷 韩国 | anytls
+    password: 01a86e4a-7a5f-4a3d-ba80-566d0f4c93e7
+    port: 40041
+    server: kr1.catzl.top
+    type: anytls
+    udp: true
+    sni: kr1.catzl.top
+  - name: 240 🇰🇷 韩国 | anytls
+    password: 48dcf7ad-eb9a-40d5-be60-e5c674cfe182
+    port: 40042
+    server: kr2.catzl.top
+    type: anytls
+    udp: true
+    sni: kr2.catzl.top
+  - name: 241 🇺🇸 美国 | anytls
+    password: 48dcf7ad-eb9a-40d5-be60-e5c674cfe182
     port: 40022
     server: us2.catzl.top
     type: anytls
     udp: true
     sni: us2.catzl.top
-  - client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    name: 239 🇺🇸 美国 | vless
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-      short-id: ""
-    server: 46.20.105.30
-    tls: true
-    type: vless
+  - name: 242 🇹🇼 台湾 | anytls
+    password: 01a86e4a-7a5f-4a3d-ba80-566d0f4c93e7
+    port: 40072
+    server: tw2.catzl.top
+    type: anytls
     udp: true
-    uuid: 8ff82100-8aad-4281-bf41-f318519d7182
-    xudp: true
-    servername: ai.jobinvest.ru
+    sni: tw2.catzl.top
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 240 🇭🇰 香港 | vless
+    name: 243 🇭🇰 香港 | vless
     network: tcp
     port: 59750
     reality-opts:
@@ -2969,7 +2987,7 @@ proxies:
     uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
     servername: www.amd.com
   - client-fingerprint: chrome
-    name: 241 🇺🇸 美国 | vless
+    name: 244 🇺🇸 美国 | vless
     network: tcp
     port: 40056
     reality-opts:
@@ -2982,7 +3000,7 @@ proxies:
     uuid: 090122da-ad6b-42a1-92d7-bab2630e2511
     servername: www.cloudflare.com
   - client-fingerprint: chrome
-    name: 242 🇰🇷 韩国 | vless
+    name: 245 🇰🇷 韩国 | vless
     network: tcp
     port: 8686
     reality-opts:
@@ -2996,7 +3014,7 @@ proxies:
     servername: www.apple.com
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 243 🇯🇵 日本 | vless
+    name: 246 🇯🇵 日本 | vless
     network: tcp
     port: 20725
     reality-opts:
@@ -3009,7 +3027,7 @@ proxies:
     uuid: 6dcb725e-947e-4bbe-bb35-903374d57179
     servername: buylite.tv.apple.com
   - client-fingerprint: chrome
-    name: 244 🇺🇸 美国 | vless
+    name: 247 🇺🇸 美国 | vless
     network: tcp
     port: 30906
     reality-opts:
@@ -3021,3 +3039,17 @@ proxies:
     udp: true
     uuid: 43a13764-23dd-4e01-8b79-cde8a16e13ce
     servername: www.cloudflare.com
+  - name: 248 🇭🇰 香港 | vless
+    type: vless
+    server: hk2-r.link-t7.com
+    port: 10127
+    uuid: 0A459559-55EA-4017-BB57-91A287FDF26C
+    tls: true
+    servername: s0.awsstatic.com
+    client-fingerprint: chrome
+    network: grpc
+    grpc-opts:
+      grpc-service-name: update
+    reality-opts:
+      public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+      short-id: 686c0ef0
