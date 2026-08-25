@@ -3130,7 +3130,35 @@ proxies:
     skip-cert-verify: true
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 259 🇭🇰 香港 | vless
+    name: 259 🇹🇭 泰国 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: J7UWzNxuI6XRzTWTIU1h8Gw-ReNKqTXcXVOhJNsEji8
+      short-id: 67c8cb79
+    server: f-hk-th.mtnode.top
+    tls: true
+    type: vless
+    udp: true
+    uuid: 851b65f2-e032-4eff-aca9-ce7eecfb7019
+    servername: www.cloudflare.com
+  - client-fingerprint: chrome
+    name: 260 🇹🇭 泰国 | vless
+    port: 22216
+    reality-opts:
+      public-key: sTE0YXI6Pv6OQUNbM-hNpNOhzon0_m2YUd7B1_g-JAU
+      short-id: 0f4412d42129f080
+    server: frannoad.whooisthebest.ir
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: 5c5619e4-0577-48d4-8d0c-6ad9c5cc0ecf
+    network: tcp
+    servername: amp-api-edge.apps.apple.com
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 261 🇭🇰 香港 | vless
     network: tcp
     port: 59750
     reality-opts:
@@ -3143,7 +3171,7 @@ proxies:
     uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
     servername: www.amd.com
   - client-fingerprint: chrome
-    name: 260 🇺🇸 美国 | vless
+    name: 262 🇺🇸 美国 | vless
     network: tcp
     port: 40056
     reality-opts:
@@ -3156,7 +3184,7 @@ proxies:
     uuid: 090122da-ad6b-42a1-92d7-bab2630e2511
     servername: www.cloudflare.com
   - client-fingerprint: chrome
-    name: 261 🇰🇷 韩国 | vless
+    name: 263 🇰🇷 韩国 | vless
     network: tcp
     port: 8686
     reality-opts:
@@ -3170,7 +3198,7 @@ proxies:
     servername: www.apple.com
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 262 🇯🇵 日本 | vless
+    name: 264 🇯🇵 日本 | vless
     network: tcp
     port: 20725
     reality-opts:
@@ -3183,7 +3211,7 @@ proxies:
     uuid: 6dcb725e-947e-4bbe-bb35-903374d57179
     servername: buylite.tv.apple.com
   - client-fingerprint: chrome
-    name: 263 🇺🇸 美国 | vless
+    name: 265 🇺🇸 美国 | vless
     network: tcp
     port: 30906
     reality-opts:
