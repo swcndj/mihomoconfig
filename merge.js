@@ -1,11 +1,10 @@
 // -------------------------------------------------- 配置区 --------------------------------------------------
 const fs = require('fs');
-const path = require('path');
 const yaml = require('yaml');
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
-const SUBS = JSON.parse(fs.readFileSync(path.join(__dirname, "./subs.json"), "utf8"));
-const OUTPUT_FILE = path.join(__dirname, "nodes.yaml");
+const SUBS = JSON.parse(fs.readFileSync("./subs.json", "utf8"));
+const OUTPUT_FILE = "nodes.yaml";
 const REQUEST_TIMEOUT = 15000;
 
 const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
