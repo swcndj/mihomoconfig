@@ -115,6 +115,7 @@ async function getLocation(ip) {
     if (ALLOWED_REGIONS.length > 0 && !ALLOWED_REGIONS.includes(region)) {
       continue;
     }
+    
     finalSeq++;
     const seq = String(finalSeq).padStart(2, '0');
     p.name = `${seq} ${region} ${p.type}`;
