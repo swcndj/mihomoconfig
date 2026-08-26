@@ -6,6 +6,6 @@
   "dependencies": {
     "yaml": "*",
     "node-fetch": "*",
-    "sota-fast-geoip": "*"
+    "geoip-lite": "*"
   }
 }
