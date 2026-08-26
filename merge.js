@@ -9,7 +9,7 @@ const OUTPUT_FILE = "nodes.yaml";
 const REQUEST_TIMEOUT = 15000;
 
 const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
-const ALLOWED_REGIONS = ["HK", "MO", "TW", "JP", "KR", "SG", "TH", "AU", "US"]; // 留空保留所有地区节点
+const ALLOWED_REGIONS = ["HK", "MO", "TW", "JP", "KR", "SG", "AU", "US"]; // 留空保留所有地区节点
 // -------------------------------------------------- 配置区 --------------------------------------------------
 
 // -------------------------------------------------- 工具函数 --------------------------------------------------
