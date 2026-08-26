@@ -9,7 +9,7 @@ const OUTPUT_FILE = "nodes.yaml";
 const REQUEST_TIMEOUT = 15000;
 
 const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
-const ALLOWED_REGIONS = []; // 例如 ["Hong Kong", "Taiwan"]，留空保留所有
+const ALLOWED_REGIONS = ["Hong Kong", "Macau", "Taiwan", "Japan", "Korea", "Singapore", "Thailand", "Australia", "United States"]; // 留空保留所有地区节点
 // -------------------------------------------------- 配置区 --------------------------------------------------
 
 // -------------------------------------------------- 工具函数 --------------------------------------------------
@@ -33,15 +33,10 @@ async function getLocation(ip) {
   try {
     const data = await geoip.lookup(ip);
     if (data && data.country) {
-      let region = data.country;
-      if (data.region && data.region !== data.country) {
-        region += ` ${data.region}`;
-      }
-      return region;
+      return data.country;
     }
     return '未知地区';
   } catch (e) {
-    console.warn(`  ⚠️ IP 查询失败 (${ip}): ${e.message}`);
     return '未知地区';
   }
 }
