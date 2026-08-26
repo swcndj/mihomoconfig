@@ -9,7 +9,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 const SUBS = JSON.parse(fs.readFileSync(path.join(__dirname, "./subs.json"), "utf8"));
 const OUTPUT_FILE = path.join(__dirname, "nodes.yaml");
 // MMDB 数据库文件路径，默认和脚本同目录（仓库根目录放这里也可以，路径对应就行）
-const MMDB_PATH = path.join(__dirname, "country-lite.mmdb");
+const MMDB_PATH = path.join(__dirname, "country.mmdb");
 const REQUEST_TIMEOUT = 15000;
 
 const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
