@@ -2,30 +2,17 @@
 const fs = require('fs');
 const yaml = require('yaml');
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+const geoip = require('sota-fast-geoip');
+
 const SUBS = JSON.parse(fs.readFileSync("./subs.json", "utf8"));
 const OUTPUT_FILE = "nodes.yaml";
-const REQUEST_TIMEOUT = 15000; 
+const REQUEST_TIMEOUT = 15000;
 
-// 黑名单协议
 const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
-
-// 需要匹配的地区
-const REGION_RULES = [
-  { reg: /香港|Hong Kong|HK|hk|🇭🇰/, flag: "🇭🇰", name: "香港" },
-  { reg: /澳门|Macau|MO|mo|🇲🇴/, flag: "🇲🇴", name: "澳门" },
-  { reg: /台湾|Taiwan|TW|tw|🇹🇼/, flag: "🇹🇼", name: "台湾" },
-  { reg: /日本|Japan|JP|jp|🇯🇵/, flag: "🇯🇵", name: "日本" },
-  { reg: /韩国|Korea|KR|kr|🇰🇷/, flag: "🇰🇷", name: "韩国" },
-  { reg: /新加坡|Singapore|SG|sg|🇸🇬/, flag: "🇸🇬", name: "新加坡" },
-  { reg: /马来西亚|Malaysia|MY|my|🇲🇾/, flag: "🇲🇾", name: "马来西亚" },
-  { reg: /泰国|Thailand|TH|th|🇹🇭/, flag: "🇹🇭", name: "泰国" },
-  { reg: /澳大利亚|Australia|AU|au|🇦🇺/, flag: "🇦🇺", name: "澳大利亚" },
-  { reg: /美国|United States|US|us|🇺🇸/, flag: "🇺🇸", name: "美国" },
-];
+const ALLOWED_REGIONS = []; // 例如 ["Hong Kong", "Taiwan"]，留空保留所有
 // -------------------------------------------------- 配置区 --------------------------------------------------
 
 // -------------------------------------------------- 工具函数 --------------------------------------------------
-// 带超时的请求
 async function fetchWithTimeout(url) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT);
@@ -37,9 +24,26 @@ async function fetchWithTimeout(url) {
   }
 }
 
-// 基础有效性检查
 function isValidNode(node) {
   return !!(node && node.type);
+}
+
+// IP 查询
+async function getLocation(ip) {
+  try {
+    const data = await geoip.lookup(ip);
+    if (data && data.country) {
+      let region = data.country;
+      if (data.region && data.region !== data.country) {
+        region += ` ${data.region}`;
+      }
+      return region;
+    }
+    return '未知地区';
+  } catch (e) {
+    console.warn(`  ⚠️ IP 查询失败 (${ip}): ${e.message}`);
+    return '未知地区';
+  }
 }
 // -------------------------------------------------- 工具函数 --------------------------------------------------
 
@@ -47,7 +51,6 @@ function isValidNode(node) {
 (async function main() {
   console.log(`===== 开始处理，共 ${SUBS.length} 个订阅 =====\n`);
 
-  // 1. 抓取所有原始订阅节点
   const allRawProxies = [];
   for (let i = 0; i < SUBS.length; i++) {
     const subUrl = SUBS[i];
@@ -73,7 +76,7 @@ function isValidNode(node) {
   }
   console.log(`\n总原始节点数：${allRawProxies.length}`);
 
-  // 2. 类型过滤
+  // 节点类型过滤
   const typeFiltered = [];
   for (const p of allRawProxies) {
     if (!isValidNode(p)) continue;
@@ -90,19 +93,10 @@ function isValidNode(node) {
   }
   console.log(`类型过滤后节点数：${typeFiltered.length}`);
 
-  // 3. 地区匹配
-  const regionFiltered = [];
-  for (const p of typeFiltered) {
-    const hit = REGION_RULES.find(r => r.reg.test(p.name || ''));
-    if (!hit) continue;
-    regionFiltered.push({ p, hit });
-  }
-  console.log(`地区匹配后节点数：${regionFiltered.length}`);
-
-  // 4. 去重（复合指纹）
+  // 去重
   const seen = new Set();
   const dedupList = [];
-  for (const { p, hit } of regionFiltered) {
+  for (const p of typeFiltered) {
     const type = p.type.toLowerCase();
     let fp;
     if (type === 'vless' && p['reality-opts']?.public_key) {
@@ -112,33 +106,38 @@ function isValidNode(node) {
     }
     if (seen.has(fp)) continue;
     seen.add(fp);
-    dedupList.push({ p, hit });
+    dedupList.push(p);
   }
   console.log(`去重后节点数：${dedupList.length}`);
 
-  // 5. 重命名：全局顺序编号（不区分地区）
-  let globalSeq = 0;
+  // 查询地区、过滤、重命名
   const finalProxies = [];
-  for (const { p, hit } of dedupList) {
-    globalSeq++;
-    const seq = String(globalSeq).padStart(2, '0');
-    p.name = `${seq} ${hit.flag} ${hit.name} | ${p.type}`;
+  const regionCount = {};
+  let finalSeq = 0;
+
+  for (const p of dedupList) {
+    const region = await getLocation(p.server);
+    if (ALLOWED_REGIONS.length > 0 && !ALLOWED_REGIONS.includes(region)) {
+      continue;
+    }
+    finalSeq++;
+    const seq = String(finalSeq).padStart(2, '0');
+    p.name = `${seq} ${region} ${p.type}`;
     finalProxies.push(p);
+    regionCount[region] = (regionCount[region] || 0) + 1;
   }
 
-  // 6. 输出统计（各地区数量）
-  const countMap = {};
-  for (const { hit } of dedupList) {
-    countMap[hit.name] = (countMap[hit.name] || 0) + 1;
-  }
   console.log(`✅ 输出节点总数：${finalProxies.length}`);
-  console.log('各地区数量：');
-  for (const rule of REGION_RULES) {
-    const count = countMap[rule.name] || 0;
-    console.log(`  ${rule.name}: ${count}`);
+  if (ALLOWED_REGIONS.length > 0) {
+    console.log(`已过滤地区，保留${ALLOWED_REGIONS.join(', ')}节点`);
+  } else {
+    console.log('未过滤地区，保留所有节点');
   }
-  
-  // 7. 写入 YAML
+  console.log('各地区数量：');
+  for (const [region, count] of Object.entries(regionCount)) {
+    console.log(`  ${region}: ${count}`);
+  }
+
   const doc = new yaml.Document();
   doc.set('proxies', finalProxies);
   fs.writeFileSync(OUTPUT_FILE, doc.toString({ indent: 2, lineWidth: 0 }));
