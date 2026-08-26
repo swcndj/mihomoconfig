@@ -19995,22 +19995,6 @@ proxies:
     type: vless
     udp: true
     uuid: 2a650f3b-d95b-4bd6-aadf-16ccc0717155
-  - name: 9|26@oneclickvpnkeys
-    password: 2vwMMy8t5Sjl5lfK9dNF1OrU9d0K25V2RNWLbTKwJ6o
-    port: 443
-    server: 89.125.156.80
-    skip-cert-verify: true
-    sni: pixelcast.wwwinternetvideo.click
-    tls: false
-    type: hysteria2
-  - name: 9|🏓32@oneclickvpnkeys
-    password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-    port: 8443
-    server: 46.229.243.132
-    skip-cert-verify: true
-    sni: grape-turbo-fr.roxa.org
-    tls: false
-    type: hysteria2
   - name: 🇨🇦 加拿大 | CAN 3
     server: 147.182.156.111
     port: 8039
@@ -20493,51 +20477,48 @@ proxies:
     network: tcp
     udp: true
   - client-fingerprint: chrome
-    encryption: none
     flow: xtls-rprx-vision
-    name: 🇺🇸US_4|860KB/s
+    name: 🇯🇵JP_2|5.3MB/s
     network: tcp
     port: 443
     reality-opts:
-      public-key: fyfX-egDrRvXNW1Gt2P_8rH4jdupAcmhFLOCZCzCowo
-      short-id: fc36b4a584871aa5
-    server: 167.104.223.167
+      public-key: 5qkRIcB3SAxOr6m76YHUHNFdhsaK7HXWPipELhPD8j4
+      short-id: 64299c2e
+    server: xaxaxa.kdns.fr
     tls: true
     type: vless
     udp: true
-    uuid: c6cff605-90cf-4953-bf97-0a44e43f229d
-    xudp: true
-    servername: gb3.murhost.network
-  - client-fingerprint: chrome
-    encryption: none
-    name: 🇩🇪DE_2|2.4MB/s
-    network: tcp
-    port: 34156
-    reality-opts:
-      public-key: BsCp88E9PdpEDjC5bxLMP2tiJYK6afCPQT_CoxCVgAI
-      short-id: d6cdfdd9a21f8d23
-    server: de.propollcenter.site
-    tls: true
-    type: vless
-    udp: true
-    uuid: 16c50a3f-b9bd-45f5-9bcd-76bf878876f6
-    xudp: true
-    servername: yahoo.com
+    uuid: 5c958497-4461-499a-881b-b5e5bfeade62
+    servername: www.oracle.com
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 🇯🇵JP_3|837KB/s
+    name: 🇺🇸US_2|2.4MB/s
     network: tcp
-    port: 55555
+    port: 40444
     reality-opts:
-      public-key: 1XQ60qYOfBZJpcilNV9Fu7OSpuO5_6-zrNZIYhB_YU4
-      short-id: af317506
-    server: uh-jp01.ziyoufly.xyz
+      public-key: ZZK_Oo5-iDDgoWzxIURTLWoKPbC8NFto3Mk7OvAZgRU
+      short-id: b3f2a1c9
+    server: 5.253.38.67
     tls: true
     type: vless
     udp: true
-    uuid: c2a08e4d-da8f-435e-90e8-65600ee185be
+    uuid: 16e747d6-b7c2-49a0-a9c7-90bb622db36f
+    servername: www.lovelive-anime.jp
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 🇹🇼TW_2|4.0MB/s
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: F4AYPvAh1ULZaiUHQjm0dE6DMmJlapXxIAjR9Ux91lw
+      short-id: c253cfff
+    server: tw7.china-206xswl.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: ce551b1c-95f5-4ea2-b6fc-5e9ef472fae1
     xudp: true
-    servername: pypi.org
+    servername: blzddist1-a.akamaihd.net
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
     name: 🇭🇰 001  | ⬇️ 66KB/s
@@ -20839,27 +20820,26 @@ proxies:
       public-key: HAuFt4Q6WDEwNYO1BOTpekM2HXwTaZxXYVReYyP3NVI
     network: tcp
     servername: fastsync.xyz
-  - name: US - zhuhai.uk 11
+  - name: US - zhuhai.uk 05
     type: hysteria2
     server: 104.129.54.249
     port: 50160
     password: a7c561fe673c05f2ad2fe6f7f1aee41c
     sni: www.bing.com
     skip-cert-verify: true
-  - name: AE - zhuhai.uk 01
+  - name: DE - zhuhai.uk 02
     type: vless
-    server: 151.242.160.49
-    port: 443
-    uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+    server: de.propollcenter.site
+    port: 34156
+    uuid: 16c50a3f-b9bd-45f5-9bcd-76bf878876f6
     udp: true
     network: tcp
-    flow: xtls-rprx-vision
     tls: true
-    servername: eu-central.cendora.ru
+    servername: yahoo.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
-      short-id: 00bca5982f82d083
+      public-key: BsCp88E9PdpEDjC5bxLMP2tiJYK6afCPQT_CoxCVgAI
+      short-id: d6cdfdd9a21f8d23
   - name: nl|7363|puddincat07@Telegram
     password: gf1:gfhysteria2024
     port: 443
