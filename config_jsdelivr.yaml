@@ -98,189 +98,231 @@ proxy-groups:
 rule-providers:
   AWAvenue-Ads:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.mrs"
+    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.mrs"
     path: ./rules/AWAvenue-Ads.mrs
     interval: 86400
     behavior: domain
     format: mrs
   apple:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.mrs"
     path: ./rules/apple.mrs
     interval: 86400
     behavior: domain
     format: mrs
   category-ads-all:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ads-all.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs"
     path: ./rules/category-ads-all.mrs
     interval: 86400
     behavior: domain
     format: mrs
   category-ai-!cn:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ai-!cn.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs"
     path: ./rules/category-ai-!cn.mrs
     interval: 86400
     behavior: domain
     format: mrs
   category-games@cn:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games@cn.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-games@cn.mrs"
     path: ./rules/category-games@cn.mrs
     interval: 86400
     behavior: domain
     format: mrs
   category-game-platforms-download@cn:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-game-platforms-download@cn.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-game-platforms-download@cn.mrs"
     path: ./rules/category-game-platforms-download@cn.mrs
     interval: 86400
     behavior: domain
     format: mrs
   cloudflare:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cloudflare.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cloudflare.mrs"
     path: ./rules/cloudflare.mrs
     interval: 86400
     behavior: domain
     format: mrs
   cn:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"
     path: ./rules/cn.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  disney:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/disney.mrs"
+    path: ./rules/disney.mrs
     interval: 86400
     behavior: domain
     format: mrs
   geolocation-!cn:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-!cn.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"
     path: ./rules/geolocation-!cn.mrs
     interval: 86400
     behavior: domain
     format: mrs
   github:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"
     path: ./rules/github.mrs
     interval: 86400
     behavior: domain
     format: mrs
   google:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"
     path: ./rules/google.mrs
     interval: 86400
     behavior: domain
     format: mrs
-  microsoft@cn:
+  hbo:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft@cn.mrs"
-    path: ./rules/microsoft@cn.mrs
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/hbo.mrs"
+    path: ./rules/hbo.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  meta:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/meta.mrs"
+    path: ./rules/meta.mrs
     interval: 86400
     behavior: domain
     format: mrs
   microsoft:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"
     path: ./rules/microsoft.mrs
     interval: 86400
     behavior: domain
     format: mrs
   netflix:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/netflix.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"
     path: ./rules/netflix.mrs
     interval: 86400
     behavior: domain
     format: mrs
   onedrive:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/onedrive.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/onedrive.mrs"
     path: ./rules/onedrive.mrs
     interval: 86400
     behavior: domain
     format: mrs
   private:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"
     path: ./rules/private.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  spotify:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.mrs"
+    path: ./rules/spotify.mrs
     interval: 86400
     behavior: domain
     format: mrs
   telegram:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"
     path: ./rules/telegram.mrs
     interval: 86400
     behavior: domain
     format: mrs
   tracker:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tracker.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tracker.mrs"
     path: ./rules/tracker.mrs
     interval: 86400
     behavior: domain
     format: mrs
   twitter:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/twitter.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.mrs"
     path: ./rules/twitter.mrs
     interval: 86400
     behavior: domain
     format: mrs
   youtube:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"
     path: ./rules/youtube.mrs
     interval: 86400
     behavior: domain
     format: mrs
   ip_cloudflare:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cloudflare.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cloudflare.mrs"
     path: ./rules/ip_cloudflare.mrs
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+  ip_cloudfront:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cloudfront.mrs"
+    path: ./rules/ip_cloudfront.mrs
     interval: 86400
     behavior: ipcidr
     format: mrs
   ip_cn:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cn.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"
     path: ./rules/ip_cn.mrs
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+  ip_facebook:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/facebook.mrs"
+    path: ./rules/ip_facebook.mrs
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+  ip_fastly:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/fastly.mrs"
+    path: ./rules/ip_fastly.mrs
     interval: 86400
     behavior: ipcidr
     format: mrs
   ip_google:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/google.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"
     path: ./rules/ip_google.mrs
     interval: 86400
     behavior: ipcidr
     format: mrs
   ip_netflix:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/netflix.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs"
     path: ./rules/ip_netflix.mrs
     interval: 86400
     behavior: ipcidr
     format: mrs
   ip_private:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/private.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs"
     path: ./rules/ip_private.mrs
     interval: 86400
     behavior: ipcidr
     format: mrs
   ip_telegram:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"
     path: ./rules/ip_telegram.mrs
     interval: 86400
     behavior: ipcidr
     format: mrs
   ip_twitter:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/twitter.mrs"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/twitter.mrs"
     path: ./rules/ip_twitter.mrs
     interval: 86400
     behavior: ipcidr
@@ -290,36 +332,40 @@ rules:
   # 私有域名、IP、自定义直连
   - RULE-SET,private,DIRECT
   - RULE-SET,ip_private,DIRECT,no-resolve
-  - PROCESS-NAME,subs-check,DIRECT
-  - PROCESS-NAME,subs-check.exe,DIRECT
   - DOMAIN-SUFFIX,loz.dpdns.org,DIRECT
-  - DOMAIN-SUFFIX,gamer520.com,DIRECT
   # 广告拒绝
   - RULE-SET,AWAvenue-Ads,REJECT
   - RULE-SET,category-ads-all,REJECT
-  # 域名分流，国外精确域名代理→国内直连→国外地理定位代理
-  - RULE-SET,cloudflare,自动选择
-  - RULE-SET,github,自动选择
-  - RULE-SET,youtube,自动选择
-  - RULE-SET,google,自动选择
-  - RULE-SET,netflix,自动选择
-  - RULE-SET,telegram,自动选择
-  - RULE-SET,twitter,自动选择
-  - RULE-SET,category-ai-!cn,自动选择
-  - RULE-SET,category-games@cn,DIRECT
-  - RULE-SET,category-game-platforms-download@cn,DIRECT
-  - RULE-SET,apple,DIRECT
-  - RULE-SET,onedrive,DIRECT
-  - RULE-SET,microsoft,DIRECT
-  - RULE-SET,tracker,DIRECT
-  - RULE-SET,cn,DIRECT
-  - RULE-SET,geolocation-!cn,自动选择
   # IP分流，国外代理→国内直连
   - RULE-SET,ip_cloudflare,自动选择,no-resolve
+  - RULE-SET,ip_cloudfront,自动选择,no-resolve
+  - RULE-SET,ip_facebook,自动选择,no-resolve
+  - RULE-SET,ip_fastly,自动选择,no-resolve
   - RULE-SET,ip_google,自动选择,no-resolve
   - RULE-SET,ip_netflix,自动选择,no-resolve
   - RULE-SET,ip_telegram,自动选择,no-resolve
   - RULE-SET,ip_twitter,自动选择,no-resolve
   - RULE-SET,ip_cn,DIRECT,no-resolve
+  # 域名分流，国外精确域名代理→国内直连→国外地理定位代理
+  - RULE-SET,category-ai-!cn,自动选择
+  - RULE-SET,cloudflare,自动选择
+  - RULE-SET,github,自动选择
+  - RULE-SET,youtube,自动选择
+  - RULE-SET,google,自动选择
+  - RULE-SET,meta,自动选择
+  - RULE-SET,telegram,自动选择
+  - RULE-SET,twitter,自动选择
+  - RULE-SET,disney,自动选择
+  - RULE-SET,hbo,自动选择
+  - RULE-SET,netflix,自动选择
+  - RULE-SET,spotify,自动选择
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,onedrive,DIRECT
+  - RULE-SET,microsoft,DIRECT
+  - RULE-SET,tracker,DIRECT
+  - RULE-SET,category-games@cn,DIRECT
+  - RULE-SET,category-game-platforms-download@cn,DIRECT
+  - RULE-SET,cn,DIRECT
+  # - RULE-SET,geolocation-!cn,自动选择
   # 全局兜底
   - MATCH,自动选择
