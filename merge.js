@@ -106,7 +106,6 @@ function isValidNode(node) {
   // 4. 地区筛选（基于节点名称）
   const regionFiltered = [];
   if (REGION_FILTERS && REGION_FILTERS.length > 0) {
-    console.log(`\n开始地区筛选，规则数：${REGION_FILTERS.length}`);
     for (const p of dedupList) {
       const name = p.name || '';
       let matchedRegion = null;
@@ -135,11 +134,10 @@ function isValidNode(node) {
 
   // 5. 输出结果
   // 5a. 输出全部去重节点（nodes.yaml）
-  console.log(`\n✅ 最终输出节点总数（全部）：${dedupList.length}`);
   const docAll = new yaml.Document();
   docAll.set('proxies', dedupList);
   fs.writeFileSync(OUTPUT_FILE, docAll.toString({ indent: 2, lineWidth: 0 }));
-  console.log(`✅ 已保存全部节点至 ${OUTPUT_FILE}`);
+  console.log(`✅ 已保存去重后节点至 ${OUTPUT_FILE}`);
 
   // 5b. 输出地区筛选后的节点（nodes_regionfiltered.yaml）
   if (regionFiltered.length > 0) {
