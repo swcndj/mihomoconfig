@@ -2,14 +2,14 @@
 const fs = require('fs');
 const yaml = require('yaml');
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
-const geoip = require('sota-fast-geoip');
+const geoip = require('geoip-lite');
 
 const SUBS = JSON.parse(fs.readFileSync("./subs.json", "utf8"));
 const OUTPUT_FILE = "nodes.yaml";
 const REQUEST_TIMEOUT = 15000;
 
 const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
-const ALLOWED_REGIONS = ["HK", "MO", "TW", "JP", "KR", "SG", "AU", "US"]; // 留空保留所有地区节点
+const ALLOWED_REGIONS = ["HK", "MO", "TW", "JP", "KR", "SG", "TH", "AU", "US"]; // 留空保留所有地区节点
 // -------------------------------------------------- 配置区 --------------------------------------------------
 
 // -------------------------------------------------- 工具函数 --------------------------------------------------
@@ -31,12 +31,13 @@ function isValidNode(node) {
 // IP 查询
 async function getLocation(ip) {
   try {
-    const data = await geoip.lookup(ip);
-    if (data && data.country) {
-      return data.country;
+    const data = geoip.lookup(ip);
+    if (data) {
+      return data.country; 
     }
     return '未知地区';
   } catch (e) {
+    console.warn(`  ⚠️ IP 查询失败 (${ip}): ${e.message}`);
     return '未知地区';
   }
 }
