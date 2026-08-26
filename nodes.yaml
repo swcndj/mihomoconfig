@@ -20473,7 +20473,7 @@ proxies:
   - client-fingerprint: chrome
     encryption: none
     flow: xtls-rprx-vision
-    name: 🇦🇪AE_1|1.6MB/s
+    name: 🇦🇪AE_1|1.0MB/s
     network: tcp
     port: 443
     reality-opts:
