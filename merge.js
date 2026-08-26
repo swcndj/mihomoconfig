@@ -1,14 +1,25 @@
 // -------------------------------------------------- 配置区 --------------------------------------------------
 const fs = require('fs');
+const path = require('path');
 const yaml = require('yaml');
 const dns = require('dns').promises;
+const { Reader } = require('@maxmind/geoip2-node');
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
-const geoip = require('geoip-lite');
-const SUBS = JSON.parse(fs.readFileSync("./subs.json", "utf8"));
-const OUTPUT_FILE = "nodes.yaml";
+
+const SUBS = JSON.parse(fs.readFileSync(path.join(__dirname, "./subs.json"), "utf8"));
+const OUTPUT_FILE = path.join(__dirname, "nodes.yaml");
+// MMDB 数据库文件路径，默认和脚本同目录（仓库根目录放这里也可以，路径对应就行）
+const MMDB_PATH = path.join(__dirname, "country-lite.mmdb");
 const REQUEST_TIMEOUT = 15000;
+
 const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
 const ALLOWED_REGIONS = ["HK", "MO", "TW", "JP", "KR", "SG", "TH", "AU", "US"]; // 留空保留所有地区节点
+
+// 全局缓存：域名/IP → 地区代码，避免重复解析查询
+const locationCache = new Map();
+// 加载 MMDB 数据库到内存，只执行一次
+const mmdbBuffer = fs.readFileSync(MMDB_PATH);
+const ipReader = Reader.openBuffer(mmdbBuffer);
 // -------------------------------------------------- 配置区 --------------------------------------------------
 
 // -------------------------------------------------- 工具函数 --------------------------------------------------
@@ -27,38 +38,45 @@ function isValidNode(node) {
   return !!(node && node.type);
 }
 
-// IP 查询 - 修复版：支持域名解析、IPv6 方括号处理、字段合法性校验
+// IP/域名 → 国家地区代码（本地 MMDB 查询 + DNS 域名解析）
 async function getLocation(server) {
-  // 前置校验：空值或非字符串直接返回未知地区，避免异常
+  // 前置空值校验
   if (!server || typeof server !== 'string') {
     return '未知地区';
   }
-  
+
+  const raw = server.trim();
+  // 命中缓存直接返回
+  if (locationCache.has(raw)) {
+    return locationCache.get(raw);
+  }
+
   try {
-    let target = server.trim();
-    // 移除 IPv6 地址前后的方括号，兼容标准 URI 格式
+    let target = raw;
+    // 移除 IPv6 地址前后的方括号
     if (target.startsWith('[') && target.endsWith(']')) {
       target = target.slice(1, -1);
     }
 
-    // 简易正则判断是否为 IP 格式（IPv4 / IPv6）
+    // 判断是否为 IP 格式，非 IP 则先通过 DNS 解析
     const ipRegex = /^(?:\d{1,3}\.){3}\d{1,3}$|^[0-9a-fA-F:]+$/;
-    // 非 IP 格式则通过 DNS 解析为 IPv4 地址后再查询
     if (!ipRegex.test(target)) {
       const resolved = await dns.resolve4(target).catch(() => []);
       if (resolved.length === 0) {
+        locationCache.set(raw, '未知地区');
         return '未知地区';
       }
       target = resolved[0];
     }
 
-    const data = geoip.lookup(target);
-    if (data) {
-      return data.country; 
-    }
-    return '未知地区';
+    // 本地 MMDB 查询国家代码
+    const result = ipReader.country(target);
+    const region = result.country.isoCode;
+    locationCache.set(raw, region);
+    return region;
   } catch (e) {
     console.warn(`  ⚠️ IP 查询失败 (${server}): ${e.message}`);
+    locationCache.set(raw, '未知地区');
     return '未知地区';
   }
 }
@@ -68,6 +86,8 @@ async function getLocation(server) {
 (async function main() {
   console.log(`===== 开始处理，共 ${SUBS.length} 个订阅 =====\n`);
   const allRawProxies = [];
+
+  // 1. 拉取所有订阅
   for (let i = 0; i < SUBS.length; i++) {
     const subUrl = SUBS[i];
     console.log(`--- [${i + 1}/${SUBS.length}] ${subUrl}`);
@@ -90,10 +110,9 @@ async function getLocation(server) {
       console.log(`  ❌ 失败：${e.message}`);
     }
   }
-
   console.log(`\n总原始节点数：${allRawProxies.length}`);
 
-  // 节点类型过滤
+  // 2. 节点类型过滤
   const typeFiltered = [];
   for (const p of allRawProxies) {
     if (!isValidNode(p)) continue;
@@ -110,7 +129,7 @@ async function getLocation(server) {
   }
   console.log(`类型过滤后节点数：${typeFiltered.length}`);
 
-  // 去重
+  // 3. 节点去重
   const seen = new Set();
   const dedupList = [];
   for (const p of typeFiltered) {
@@ -127,11 +146,11 @@ async function getLocation(server) {
   }
   console.log(`去重后节点数：${dedupList.length}`);
 
-  // 查询地区、过滤、重命名 - 修复版：动态序号位数、不修改原对象、增加端口区分
+  // 4. 地区查询、过滤、重命名
   const finalProxies = [];
   const regionCount = {};
   let finalSeq = 0;
-  // 根据去重后节点总数动态计算序号位数，保证字典序与实际顺序一致
+  // 根据节点总数动态计算序号位数，保证字典序正确
   const seqWidth = String(dedupList.length).length;
 
   for (const p of dedupList) {
@@ -142,7 +161,7 @@ async function getLocation(server) {
     
     finalSeq++;
     const seq = String(finalSeq).padStart(seqWidth, '0');
-    // 创建新节点对象，不修改原始节点数据，消除副作用
+    // 创建新对象，不修改原始节点数据
     const node = {
       ...p,
       name: `${seq} ${region} ${p.type} ${p.port}`
@@ -151,6 +170,7 @@ async function getLocation(server) {
     regionCount[region] = (regionCount[region] || 0) + 1;
   }
 
+  // 5. 输出结果
   console.log(`✅ 输出节点总数：${finalProxies.length}`);
   if (ALLOWED_REGIONS.length > 0) {
     console.log(`已过滤地区，保留${ALLOWED_REGIONS.join(', ')}节点`);
