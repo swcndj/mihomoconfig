@@ -5,7 +5,6 @@
   "main": "merge.js",
   "dependencies": {
     "yaml": "*",
-    "node-fetch": "*",
-    "@maxmind/geoip2-node": "*"
+    "node-fetch": "*"
   }
 }
