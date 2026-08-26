@@ -2715,91 +2715,9 @@ proxies:
     udp: true
     sni: us31.lunartrace.io
     skip-cert-verify: true
-  - name: 222 🇹🇼 台湾 | anytls
-    password: 0846f9b3-e9ab-4a0d-81f2-817d9dc9b9bd
-    port: 40071
-    server: tw1.catzl.top
-    type: anytls
-    udp: true
-    sni: tw1.catzl.top
-  - name: 223 🇹🇼 台湾 | anytls
-    password: 0846f9b3-e9ab-4a0d-81f2-817d9dc9b9bd
-    port: 40073
-    server: tw3.catzl.top
-    type: anytls
-    udp: true
-    sni: tw3.catzl.top
-  - name: 224 🇺🇸 美国 | anytls
-    password: 0e3cea8c-62d6-46c2-a93f-b99f48fd8373
-    port: 40022
-    server: us2.catzl.top
-    type: anytls
-    udp: true
-    sni: us2.catzl.top
-  - name: 225 🇭🇰 香港 | anytls
-    password: 0e3cea8c-62d6-46c2-a93f-b99f48fd8373
-    port: 40012
-    server: hk2.catzl.top
-    type: anytls
-    udp: true
-    sni: hk2.catzl.top
-  - name: 226 🇰🇷 韩国 | anytls
-    password: 0e3cea8c-62d6-46c2-a93f-b99f48fd8373
-    port: 40041
-    server: kr1.catzl.top
-    type: anytls
-    udp: true
-    sni: kr1.catzl.top
-  - name: 227 🇰🇷 韩国 | anytls
-    password: 0e3cea8c-62d6-46c2-a93f-b99f48fd8373
-    port: 40042
-    server: kr2.catzl.top
-    type: anytls
-    udp: true
-    sni: kr2.catzl.top
-  - name: 228 🇹🇼 台湾 | anytls
-    password: 0e3cea8c-62d6-46c2-a93f-b99f48fd8373
-    port: 40072
-    server: tw2.catzl.top
-    type: anytls
-    udp: true
-    sni: tw2.catzl.top
-  - client-fingerprint: chrome
-    encryption: none
-    grpc-opts:
-      grpc-service-name: update
-    name: 229 🇸🇬 新加坡 | vless
-    network: grpc
-    port: 10038
-    reality-opts:
-      public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-      short-id: 686c0ef0
-    server: sg3-r.link-t7.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: D8ED7FFD-7AA8-4EEB-9020-18A1A38AE6CC
-    xudp: true
-    servername: d1.awsstatic.com
-  - client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    name: 230 🇺🇸 美国 | vless
-    network: tcp
-    port: 2083
-    reality-opts:
-      public-key: a3_DLO6p_ZfPf7I0JFTVlAI2pPAPtC-ji2diyPcHcQA
-      short-id: b4
-    server: sw.volnalink.uk
-    tls: true
-    type: vless
-    udp: true
-    uuid: 4f8efa61-96db-1391-b134-9ce844e31228
-    xudp: true
-    servername: www.booking.com
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 231 🇭🇰 香港 | vless
+    name: 222 🇭🇰 香港 | vless
     network: tcp
     port: 59750
     reality-opts:
@@ -2812,7 +2730,7 @@ proxies:
     uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
     servername: www.amd.com
   - client-fingerprint: chrome
-    name: 232 🇺🇸 美国 | vless
+    name: 223 🇺🇸 美国 | vless
     network: tcp
     port: 40056
     reality-opts:
@@ -2825,7 +2743,7 @@ proxies:
     uuid: 090122da-ad6b-42a1-92d7-bab2630e2511
     servername: www.cloudflare.com
   - client-fingerprint: chrome
-    name: 233 🇰🇷 韩国 | vless
+    name: 224 🇰🇷 韩国 | vless
     network: tcp
     port: 8686
     reality-opts:
@@ -2839,7 +2757,7 @@ proxies:
     servername: www.apple.com
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 234 🇯🇵 日本 | vless
+    name: 225 🇯🇵 日本 | vless
     network: tcp
     port: 20725
     reality-opts:
@@ -2852,7 +2770,7 @@ proxies:
     uuid: 6dcb725e-947e-4bbe-bb35-903374d57179
     servername: buylite.tv.apple.com
   - client-fingerprint: chrome
-    name: 235 🇺🇸 美国 | vless
+    name: 226 🇺🇸 美国 | vless
     network: tcp
     port: 30906
     reality-opts:
@@ -2864,38 +2782,17 @@ proxies:
     udp: true
     uuid: 43a13764-23dd-4e01-8b79-cde8a16e13ce
     servername: www.cloudflare.com
-  - name: 236 🇯🇵 日本 | vless
+  - name: 227 🇺🇸 美国 | vless
     type: vless
-    server: 154.31.114.248
-    port: 50159
-    uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
+    server: sw.volnalink.uk
+    port: 2083
+    uuid: 4f8efa61-96db-1391-b134-9ce844e31228
+    udp: true
+    network: tcp
     flow: xtls-rprx-vision
     tls: true
-    servername: www.cloudflare.com
+    servername: www.booking.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
-      short-id: 091e1c5db8451757
-  - name: 237 🇺🇸 美国 | vless
-    type: vless
-    server: 179.255.124.81
-    port: 50159
-    uuid: e08ff179-2c35-4a95-a8f8-6b2f7bd315ef
-    flow: xtls-rprx-vision
-    tls: true
-    servername: www.cloudflare.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: NBbof3yc52opWMuUywEOj6A5fSCPav3ZzTMhQYwxKXs
-      short-id: 55b7664bb39e6886
-  - name: 238 🇭🇰 香港 | vless
-    type: vless
-    server: 69.33.212.77
-    port: 39215
-    uuid: 0125dbce-8605-4868-9cef-a531a99e6228
-    flow: xtls-rprx-vision
-    tls: true
-    servername: www.iij.ad.jp
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: Ab2RAQoGfVpiwFJionUkQfzW_PSsKoRoPjDWBXP71WI
+      public-key: a3_DLO6p_ZfPf7I0JFTVlAI2pPAPtC-ji2diyPcHcQA
+      short-id: b4
