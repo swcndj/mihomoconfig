@@ -6,6 +6,6 @@
   "dependencies": {
     "yaml": "*",
     "node-fetch": "*",
-    "geoip-lite": "*"
+    "@maxmind/geoip2-node": "*"
   }
 }
