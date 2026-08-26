@@ -102,7 +102,7 @@ function isValidNode(node) {
   // 4. 去重（复合指纹）
   const seen = new Set();
   const dedupList = [];
-  for (const { p, hit } of regionFiltered) {
+  for (const { p, hit } of typeFiltered) {
     const type = p.type.toLowerCase();
     let fp;
     if (type === 'vless' && p['reality-opts']?.public_key) {
