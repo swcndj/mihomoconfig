@@ -1,0 +1,11 @@
+{
+  "name": "node-merge",
+  "version": "1.0.0",
+  "description": "Merge and filter proxy nodes",
+  "main": "merge.js",
+  "dependencies": {
+    "yaml": "*",
+    "node-fetch": "*",
+    "sota-fast-geoip": "*"
+  }
+}
