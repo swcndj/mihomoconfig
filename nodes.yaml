@@ -19488,26 +19488,6 @@ proxies:
     sni: giftcard.gateway-stream.com
     tls: false
     type: hysteria2
-  - name: "@v2ray313 کانالمون 🇧🇬"
-    obfs: salamander
-    obfs-password: kf1lypzqidy6pimt
-    password: m3bqxk03mg221yi2
-    port: 52009
-    server: assets.gateway-stream.com
-    skip-cert-verify: false
-    sni: assets.gateway-stream.com
-    tls: false
-    type: hysteria2
-  - name: "@v2ray313 کانالمون 🇹🇷"
-    obfs: salamander
-    obfs-password: txwr28j1lntoy0sj
-    password: m3bqxk03mg221yi2
-    port: 52067
-    server: assets.gateway-stream.com
-    skip-cert-verify: false
-    sni: assets.gateway-stream.com
-    tls: false
-    type: hysteria2
   - name: 🍑14@oneclickvpnkeys
     password: oCYFcbOo8s
     port: 443
@@ -19562,6 +19542,16 @@ proxies:
     password: t8t2qojzsykqazfu
     port: 52008
     server: assets.gateway-stream.com
+    sni: assets.gateway-stream.com
+    tls: false
+    type: hysteria2
+  - name: "@v2ray313 کانالمون ❤️"
+    obfs: salamander
+    obfs-password: kf1lypzqidy6pimt
+    password: t8t2qojzsykqazfu
+    port: 52009
+    server: assets.gateway-stream.com
+    skip-cert-verify: false
     sni: assets.gateway-stream.com
     tls: false
     type: hysteria2
@@ -20470,22 +20460,69 @@ proxies:
     client-fingerprint: chrome
     network: tcp
     udp: true
+  - down: ""
+    fingerprint: ""
+    name: 🇸🇬SG_2|5.1MB/s
+    obfs: ""
+    obfs-password: ""
+    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+    port: 443
+    server: 18.143.170.35
+    skip-cert-verify: true
+    sni: vpn-sg-001.fastervpn.world
+    type: hysteria2
+    up: ""
+  - down: ""
+    fingerprint: ""
+    name: 🇦🇺AU_1|3.1MB/s
+    obfs: ""
+    obfs-password: ""
+    password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+    port: 443
+    server: vpn-au-002.fastervpn.world
+    skip-cert-verify: true
+    sni: vpn-au-002.fastervpn.world
+    type: hysteria2
+    up: ""
+  - down: ""
+    fingerprint: ""
+    name: 🇳🇱NL_1|3.5MB/s
+    obfs: ""
+    obfs-password: ""
+    password: wrSuBorIlf
+    port: 443
+    server: hys9.wba-pn.ru
+    skip-cert-verify: true
+    sni: hys9.wba-pn.ru
+    type: hysteria2
+    up: ""
+  - down: ""
+    fingerprint: ""
+    name: 🇳🇱NL_2|1.1MB/s
+    obfs: ""
+    obfs-password: ""
+    password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+    port: 8443
+    server: 46.229.243.136
+    skip-cert-verify: false
+    sni: grape-turbo-fr.roxa.org
+    type: hysteria2
+    up: ""
   - client-fingerprint: chrome
     encryption: none
-    flow: xtls-rprx-vision
-    name: 🇦🇪AE_1|1.0MB/s
+    name: 🇺🇸US_2|668KB/s
     network: tcp
-    port: 443
+    port: 12000
     reality-opts:
-      public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
-      short-id: 00bca5982f82d083
-    server: 151.242.160.49
+      public-key: bOX8VehpirA-tUYgoE1cg2_sHtwcoVun3QTmR209XDY
+      short-id: 8763bbe17535ea3f
+    server: vttsoqbr6b7c.dxdx3.com
     tls: true
     type: vless
     udp: true
-    uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+    uuid: 43b392cd-72d7-410b-b1c0-cff6c29127b7
     xudp: true
-    servername: eu-central.cendora.ru
+    servername: amp-api-edge.apps.apple.com
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
     name: 🇭🇰 001  | ⬇️ 66KB/s
@@ -20794,6 +20831,44 @@ proxies:
     password: b504c8ce7f607a6c910ec5209e526b7e
     sni: 177.2.185.222
     skip-cert-verify: true
+  - name: KR - zhuhai.uk
+    type: vless
+    server: kr2.miyazono-kaori.com
+    port: 443
+    uuid: 44817aed-4e54-4704-8ca1-9f22243ed1a5
+    flow: xtls-rprx-vision
+    tls: true
+    servername: www.coway.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 6pZxjabeHoyJlsc2cP3Q5YK7G0bIOQwzWFyiarbUQXc
+      short-id: c8af1462debbc1
+  - name: SG - zhuhai.uk
+    type: vless
+    server: sg3.miyazono-kaori.com
+    port: 443
+    uuid: 44817aed-4e54-4704-8ca1-9f22243ed1a5
+    flow: xtls-rprx-vision
+    tls: true
+    servername: www.changiairport.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: jpn2pLj_p5lxGwycLht80v2qNeP7jHwh1Gv-nTU8zXY
+      short-id: ddcd71ec09e5893a
+  - name: AE - zhuhai.uk 01
+    type: vless
+    server: 151.242.160.49
+    port: 443
+    uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+    udp: true
+    network: tcp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: eu-central.cendora.ru
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
+      short-id: 00bca5982f82d083
   - name: nl|7363|puddincat07@Telegram
     password: gf1:gfhysteria2024
     port: 443
