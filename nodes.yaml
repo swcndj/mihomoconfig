@@ -2716,8 +2716,41 @@ proxies:
     sni: us31.lunartrace.io
     skip-cert-verify: true
   - client-fingerprint: chrome
+    encryption: none
+    grpc-opts:
+      grpc-service-name: update
+    name: 222 🇸🇬 新加坡 | vless
+    network: grpc
+    port: "10038"
+    reality-opts:
+      public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+      short-id: 686c0ef0
+    server: sg3-r.link-t7.com
+    servername: d1.awsstatic.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: D8ED7FFD-7AA8-4EEB-9020-18A1A38AE6CC
+    xudp: true
+  - client-fingerprint: chrome
+    encryption: none
     flow: xtls-rprx-vision
-    name: 222 🇭🇰 香港 | vless
+    name: 223 🇺🇸 美国 | vless
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: 6z3YcVP0f2pK3iANKIkBUZOgNeErDjxY83mHZG5jrnI
+      short-id: f63805c3ecc7a483
+    server: 162.35.231.140
+    tls: true
+    type: vless
+    udp: true
+    uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
+    xudp: true
+    servername: savesafe.co
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 224 🇭🇰 香港 | vless
     network: tcp
     port: 59750
     reality-opts:
@@ -2730,7 +2763,7 @@ proxies:
     uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
     servername: www.amd.com
   - client-fingerprint: chrome
-    name: 223 🇺🇸 美国 | vless
+    name: 225 🇺🇸 美国 | vless
     network: tcp
     port: 40056
     reality-opts:
@@ -2743,7 +2776,7 @@ proxies:
     uuid: 090122da-ad6b-42a1-92d7-bab2630e2511
     servername: www.cloudflare.com
   - client-fingerprint: chrome
-    name: 224 🇰🇷 韩国 | vless
+    name: 226 🇰🇷 韩国 | vless
     network: tcp
     port: 8686
     reality-opts:
@@ -2757,7 +2790,7 @@ proxies:
     servername: www.apple.com
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 225 🇯🇵 日本 | vless
+    name: 227 🇯🇵 日本 | vless
     network: tcp
     port: 20725
     reality-opts:
@@ -2770,7 +2803,7 @@ proxies:
     uuid: 6dcb725e-947e-4bbe-bb35-903374d57179
     servername: buylite.tv.apple.com
   - client-fingerprint: chrome
-    name: 226 🇺🇸 美国 | vless
+    name: 228 🇺🇸 美国 | vless
     network: tcp
     port: 30906
     reality-opts:
@@ -2782,17 +2815,14 @@ proxies:
     udp: true
     uuid: 43a13764-23dd-4e01-8b79-cde8a16e13ce
     servername: www.cloudflare.com
-  - name: 227 🇺🇸 美国 | vless
+  - name: 229 🇭🇰 香港 | vless
     type: vless
-    server: sw.volnalink.uk
-    port: 2083
-    uuid: 4f8efa61-96db-1391-b134-9ce844e31228
-    udp: true
-    network: tcp
+    server: 69.33.212.77
+    port: 39215
+    uuid: 0125dbce-8605-4868-9cef-a531a99e6228
     flow: xtls-rprx-vision
     tls: true
-    servername: www.booking.com
-    client-fingerprint: chrome
+    servername: www.iij.ad.jp
+    client-fingerprint: firefox
     reality-opts:
-      public-key: a3_DLO6p_ZfPf7I0JFTVlAI2pPAPtC-ji2diyPcHcQA
-      short-id: b4
+      public-key: Ab2RAQoGfVpiwFJionUkQfzW_PSsKoRoPjDWBXP71WI
