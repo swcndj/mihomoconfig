@@ -39,7 +39,7 @@ dns:
     - https://doh.pub/dns-query
   nameserver-policy:
     'rule-set:AWAvenue-Ads,category-ads-all': rcode://success
-    'rule-set:cloudflare,github,youtube,google,netflix,telegram,twitter,category-ai-!cn,geolocation-!cn':
+    'rule-set:category-ai-!cn,cloudflare,github,youtube,google,meta,telegram,twitter,disney,hbo,netflix,spotify,geolocation-!cn':
     - https://cloudflare-dns.com/dns-query#disable-ipv6=true
     - https://dns.google/dns-query#disable-ipv6=true
   nameserver:
@@ -71,11 +71,11 @@ tun:
   auto-detect-interface: true
 # ======================================== 代理集合 ========================================
 proxy-providers:
-  nodes:
+  nodes_regionfiltered:
     type: http
-    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/nodes.yaml"
+    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/nodes_regionfiltered.yaml"
     interval: 7200
-    path: ./providers/nodes.yaml
+    path: ./providers/nodes_regionfiltered.yaml
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
@@ -87,13 +87,7 @@ proxy-groups:
     tolerance: 50
     disable-udp: false
     use:
-    - nodes
-  - name: "负载均衡"
-    type: load-balance
-    strategy: consistent-hashing
-    disable-udp: false
-    use:
-    - nodes
+    - nodes_regionfiltered
 # ======================================== 规则订阅 ========================================
 rule-providers:
   AWAvenue-Ads:
@@ -366,6 +360,6 @@ rules:
   - RULE-SET,category-games@cn,DIRECT
   - RULE-SET,category-game-platforms-download@cn,DIRECT
   - RULE-SET,cn,DIRECT
-  # - RULE-SET,geolocation-!cn,自动选择
+  - RULE-SET,geolocation-!cn,自动选择
   # 全局兜底
   - MATCH,自动选择
