@@ -340,7 +340,7 @@ rules:
   - RULE-SET,ip_telegram,自动选择,no-resolve
   - RULE-SET,ip_twitter,自动选择,no-resolve
   - RULE-SET,ip_cn,DIRECT,no-resolve
-  # 域名分流，国外精确域名代理→国内直连→国外地理定位代理
+  # 域名分流，国外代理→国内直连
   - RULE-SET,category-ai-!cn,自动选择
   - RULE-SET,cloudflare,自动选择
   - RULE-SET,github,自动选择
