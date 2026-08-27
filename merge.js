@@ -147,9 +147,9 @@ async function getIpCountryCode(ipOrDomain) {
         countryCode: cc,
         displayName: TARGET_COUNTRY_MAP[cc]
       });
-      console.log(`    ✅ 命中地区 ${cc} ${TARGET_COUNTRY_MAP[cc]}`);
+      console.log(`    ✅ 命中地区 ${cc}`);
     } else {
-      console.log(`    ❌ 丢弃，countryCode: ${cc || "查询失败或不在目标列表"}`);
+      console.log(`    ❌ 丢弃，countryCode: ${cc || "查询失败"}`);
     }
     await delay(IP_QUERY_INTERVAL);
   }
