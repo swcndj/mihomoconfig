@@ -360,6 +360,6 @@ rules:
   - RULE-SET,category-games@cn,DIRECT
   - RULE-SET,category-game-platforms-download@cn,DIRECT
   - RULE-SET,cn,DIRECT
-  - RULE-SET,geolocation-!cn,自动选择
+  # - RULE-SET,geolocation-!cn,自动选择
   # 全局兜底
   - MATCH,自动选择
