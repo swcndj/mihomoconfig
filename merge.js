@@ -2,22 +2,27 @@
 const fs = require('fs');
 const yaml = require('yaml');
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
-
 const SUBS = JSON.parse(fs.readFileSync("./subs.json", "utf8"));
 const OUTPUT_FILE = "nodes.yaml";
 const REGION_OUTPUT_FILE = "nodes_regionfiltered.yaml";
 const REQUEST_TIMEOUT = 15000;
-
 const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
 
-const REGION_FILTERS = [
-  { regex: /香港|Hong Kong|HK/i, name: "🇭🇰 HK" },
-  { regex: /台湾|Taiwan|TW/i, name: "🇹🇼 TW" },
-  { regex: /日本|Japen|JP/i, name: "🇯🇵JP" },
-  { regex: /韩国|Korea|KR/i, name: "🇰🇷 KR" },
-  { regex: /新加坡|Singapore|SG/i, name: "🇸🇬 SG" },
-  { regex: /美国|United States|US/i, name: "🇺🇸 US" },
-];
+// 名称初筛正则：只要节点名称命中任意一条，就进入API校验候选池（仅用来减少API调用）
+const PRE_FILTER_REGEX = /香港|Hong Kong|HK|台湾|Taiwan|TW|日本|Japen|JP|韩国|Korea|KR|新加坡|Singapore|SG|美国|United States|US/i;
+
+// 目标地区：countryCode为key，对应显示名称
+const TARGET_COUNTRY_MAP = {
+  'HK': "🇭🇰 HK",
+  'TW': "🇹🇼 TW",
+  'JP': "🇯🇵 JP",
+  'KR': "🇰🇷 KR",
+  'SG': "🇸🇬 SG",
+  'US': "🇺🇸 US",
+};
+
+// IP‑API免费限制：45次/分钟，间隔1500ms防429限流
+const IP_QUERY_INTERVAL = 1500;
 // -------------------------------------------------- 配置区 --------------------------------------------------
 
 // -------------------------------------------------- 工具函数 --------------------------------------------------
@@ -34,6 +39,22 @@ async function fetchWithTimeout(url) {
 
 function isValidNode(node) {
   return !!(node && node.type);
+}
+
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// 查询ip‑api，返回大写countryCode，失败返回null
+async function getIpCountryCode(ipOrDomain) {
+  try {
+    const res = await fetchWithTimeout(`http://ip-api.com/json/${encodeURIComponent(ipOrDomain)}`);
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data.status === 'success' ? String(data.countryCode).toUpperCase() : null;
+  } catch (e) {
+    return null;
+  }
 }
 // -------------------------------------------------- 工具函数 --------------------------------------------------
 
@@ -101,39 +122,50 @@ function isValidNode(node) {
   }
   console.log(`去重后节点数：${dedupList.length}`);
 
-  // 4. 地区筛选（基于节点名称）
-  const regionFiltered = []; // 存储 { node, region }
-  if (REGION_FILTERS && REGION_FILTERS.length > 0) {
-    for (const p of dedupList) {
-      const name = p.name || '';
-      let matchedRegion = null;
-      for (const filter of REGION_FILTERS) {
-        if (filter.regex.test(name)) {
-          matchedRegion = filter.name;
-          break;
-        }
-      }
-      if (matchedRegion) {
-        const newNode = { ...p };
-        regionFiltered.push({ node: newNode, region: matchedRegion });
-      }
+  // 4. 地区筛选逻辑：名称初筛进入候选池 → 调用ip‑api拿到countryCode，只要在TARGET_COUNTRY_MAP就保留
+  const regionFiltered = [];
+  // 4.1 名称初筛，仅用来减少API请求，不做最终判定
+  const preFiltered = dedupList.filter(p => PRE_FILTER_REGEX.test(p.name || ''));
+  console.log(`名称初筛候选节点数：${preFiltered.length}`);
+
+  console.log(`\n开始IP地理校验，共 ${preFiltered.length} 个节点...`);
+  for (let i = 0; i < preFiltered.length; i++) {
+    const node = preFiltered[i];
+    const server = node.server;
+    if (!server) {
+      console.log(`  [${i + 1}/${preFiltered.length}] ⚠️ 无server字段，跳过`);
+      continue;
     }
-    regionFiltered.forEach((item, idx) => {
-      item.node.name = `${idx + 1} ${item.region}`;
-    });
-    console.log(`地区筛选后节点数：${regionFiltered.length}`);
-  } else {
-    console.log(`⚠️ 未配置地区筛选规则，跳过地区筛选`);
+
+    console.log(`  [${i + 1}/${preFiltered.length}] 查询 ${server} ...`);
+    const cc = await getIpCountryCode(server);
+
+    // 只要返回的countryCode在目标映射表里就保留，不再和原节点名称地区做比对
+    if (cc && TARGET_COUNTRY_MAP[cc]) {
+      regionFiltered.push({
+        node: { ...node },
+        countryCode: cc,
+        displayName: TARGET_COUNTRY_MAP[cc]
+      });
+      console.log(`    ✅ 命中地区 ${cc} ${TARGET_COUNTRY_MAP[cc]}`);
+    } else {
+      console.log(`    ❌ 丢弃，countryCode: ${cc || "查询失败或不在目标列表"}`);
+    }
+    await delay(IP_QUERY_INTERVAL);
   }
 
+  // 4.2 根据接口返回的countryCode重命名节点，格式：序号 地区标识
+  regionFiltered.forEach((item, idx) => {
+    item.node.name = `${idx + 1} ${item.displayName}`;
+  });
+  console.log(`\n地区最终筛选后节点数：${regionFiltered.length}`);
+
   // 5. 输出结果
-  // 5a. 全部节点
   const docAll = new yaml.Document();
   docAll.set('proxies', dedupList);
   fs.writeFileSync(OUTPUT_FILE, docAll.toString({ indent: 2, lineWidth: 0 }));
   console.log(`✅ 已保存去重后节点至 ${OUTPUT_FILE}`);
 
-  // 5b. 地区筛选节点
   if (regionFiltered.length > 0) {
     const nodesForRegion = regionFiltered.map(item => item.node);
     const docRegion = new yaml.Document();
