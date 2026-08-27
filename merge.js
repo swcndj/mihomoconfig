@@ -165,7 +165,8 @@ async function getIpCountryCode(ipOrDomain) {
     if (type === 'vless') {
       const hasReality = !!p['reality-opts'];
       const hasXhttp = !!p['xhttp-opts'];
-      if (!hasReality && !hasXhttp) continue;
+      const hasWs = !!p['ws-opts'];
+      if (!hasReality && !hasXhttp && !hasWs) continue;
       const enc = p.encryption;
       if (enc && typeof enc === 'string' && enc.length > 50) continue;
     }
@@ -195,7 +196,7 @@ async function getIpCountryCode(ipOrDomain) {
   if (Object.keys(TARGET_COUNTRY_MAP).length > 0) {
     // 4.1 名称初筛
     const preFiltered = dedupList.filter(p => PRE_FILTER_REGEX.test(p.name || ''));
-    console.log(`名称初筛候选节点数：${preFiltered.length}`);
+    console.log(`\n名称初筛候选节点数：${preFiltered.length}`);
 
     if (preFiltered.length > 0) {
       // 4.2 拆分IP节点和域名节点
@@ -210,7 +211,7 @@ async function getIpCountryCode(ipOrDomain) {
           domainNodes.push(node);
         }
       }
-      console.log(`\n📊 节点拆分：IP节点 ${ipNodes.length} 个，域名节点 ${domainNodes.length} 个`);
+      console.log(`节点拆分：IP节点 ${ipNodes.length} 个，域名节点 ${domainNodes.length} 个`);
 
       const allResultMap = new Map();
 
@@ -218,7 +219,7 @@ async function getIpCountryCode(ipOrDomain) {
       if (ipNodes.length > 0) {
         const total = ipNodes.length;
         const batchCount = Math.ceil(total / BATCH_SIZE);
-        console.log(`\n--- 开始IP批量查询，共 ${total} 个，分 ${batchCount} 批 ---`);
+        console.log(`--- 开始IP批量查询，共 ${total} 个，分 ${batchCount} 批 ---`);
 
         for (let i = 0; i < batchCount; i++) {
           const start = i * BATCH_SIZE;
@@ -242,7 +243,7 @@ async function getIpCountryCode(ipOrDomain) {
 
       // 4.4 域名节点：串行单查
       if (domainNodes.length > 0) {
-        console.log(`\n--- 开始域名单查，共 ${domainNodes.length} 个 ---`);
+        console.log(`--- 开始域名单查，共 ${domainNodes.length} 个 ---`);
         for (let i = 0; i < domainNodes.length; i++) {
           const node = domainNodes[i];
           const server = node.server;
@@ -291,10 +292,10 @@ async function getIpCountryCode(ipOrDomain) {
         }
       }
 
-      console.log(`\n📊 地区校验总统计：`);
+      console.log(`地区校验统计：`);
       console.log(`  候选节点：${preFiltered.length}`);
       console.log(`  查询失败/无结果：${noResultCount}`);
-      console.log(`  命中目标地区：${matchCount}`);
+      console.log(`  目标地区节点：${matchCount}`);
 
       // 4.6 按序号+地区重命名节点
       regionFiltered.forEach((item, idx) => {
@@ -302,7 +303,7 @@ async function getIpCountryCode(ipOrDomain) {
       });
     }
 
-    console.log(`\n地区最终筛选后节点数：${regionFiltered.length}`);
+    console.log(`地区最终筛选后节点数：${regionFiltered.length}`);
   } else {
     console.log(`⚠️ 未配置目标地区，跳过地区筛选`);
   }
@@ -311,7 +312,7 @@ async function getIpCountryCode(ipOrDomain) {
   const docAll = new yaml.Document();
   docAll.set('proxies', dedupList);
   fs.writeFileSync(OUTPUT_FILE, docAll.toString({ indent: 2, lineWidth: 0 }));
-  console.log(`✅ 已保存去重后节点至 ${OUTPUT_FILE}`);
+  console.log(`\n✅ 已保存去重后节点至 ${OUTPUT_FILE}`);
 
   if (regionFiltered.length > 0) {
     const nodesForRegion = regionFiltered.map(item => item.node);
