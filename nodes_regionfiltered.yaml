@@ -216,9 +216,25 @@ proxies:
     type: vless
     udp: true
     uuid: ee511cf0-41c6-408e-9358-23a793c3f2be
+  - name: 17 🇹🇼 TW
+    password: 29204996-a723-4291-8c70-30843b592d40
+    port: 443
+    server: tw72.cybergalaxy.me
+    skip-cert-verify: true
+    tls: true
+    type: anytls
+    udp: true
+  - name: 18 🇹🇼 TW
+    password: 29204996-a723-4291-8c70-30843b592d40
+    port: 443
+    server: tw71.cybergalaxy.me
+    skip-cert-verify: true
+    tls: true
+    type: anytls
+    udp: true
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 17 🇺🇸 US
+    name: 19 🇺🇸 US
     port: 10001
     reality-opts:
       public-key: 4jNz4Bw-FZlaX-WtfAdwK0hegY28W_k8AttGd-7hZn4
@@ -228,7 +244,7 @@ proxies:
     tls: true
     type: vless
     uuid: 9c79aceb-4649-44ea-9698-b5e9ecf6d6da
-  - name: 18 🇭🇰 HK
+  - name: 20 🇭🇰 HK
     type: hysteria2
     server: 202.146.222.174
     port: 443
@@ -236,7 +252,7 @@ proxies:
     skip-cert-verify: true
     sni: https://t.me/WangCai2🇨🇳
     tfo: false
-  - name: 19 🇭🇰 HK
+  - name: 21 🇭🇰 HK
     type: vless
     server: 64.49.45.57
     port: 15540
@@ -254,7 +270,7 @@ proxies:
     tls: true
     udp: true
     uuid: f8e32ccb-7e0b-4966-837a-2a9503bc3d82
-  - name: 20 🇭🇰 HK
+  - name: 22 🇭🇰 HK
     type: vless
     server: 64.49.46.222
     port: 51008
@@ -272,7 +288,103 @@ proxies:
     tls: true
     udp: true
     uuid: a7e9b227-57bb-44b3-ac47-58367a40adf8
-  - name: 21 🇭🇰 HK
+  - name: 23 🇭🇰 HK
+    type: vless
+    server: vip.bcjdvip.com
+    port: 14008
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: WQP0QFc9RlOg7TDAI2i_VNQEtFwB_5kE5AKykeIipm0
+      short-id: 8e5d94464f
+    servername: apple.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
+  - name: 24 🇭🇰 HK
+    type: vless
+    server: vip.bcjdvip.com
+    port: 14001
+    client-fingerprint: safari
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: Iy9qptuQLY7JphySdvf09hOBj6Ym76Sxj1rIwS4Qmnk
+      short-id: "16"
+    servername: apple.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
+  - name: 25 🇭🇰 HK
+    type: vless
+    server: vip.bcjdvip.com
+    port: 14007
+    client-fingerprint: safari
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: wybFjQzLnkKIaaTEhwp_N9UXU8miqds9U__P971YHlU
+      short-id: 1d89ebb78c
+    servername: apple.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
+  - name: 26 🇭🇰 HK
+    type: vless
+    server: vip.bcjdvip.com
+    port: 14006
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: XPLe-686APp5RHaiFHZDTJsf1kMo-aMZuKjKeHmdyEM
+      short-id: ff5ebee2264c
+    servername: apple.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
+  - name: 27 🇭🇰 HK
+    type: vless
+    server: vip.bcjdvip.com
+    port: 14009
+    client-fingerprint: safari
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: CAFHM6x5kO2ofkpEDelcOJlZ4i6Kw4ZlDNIfdV6ptUw
+      short-id: 6a1a47
+    servername: apple.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
+  - name: 28 🇭🇰 HK
+    type: vless
+    server: vip.bcjdvip.com
+    port: 14010
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: PT1gw9B5majPBH2_qST-vymli9f6RlTmvGS2gPtdhF8
+      short-id: 1ebaa8ea57a71ffc
+    servername: apple.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
+  - name: 29 🇭🇰 HK
     type: vless
     server: 64.49.46.182
     port: 31435
@@ -290,7 +402,54 @@ proxies:
     tls: true
     udp: true
     uuid: b66d5953-8fed-4374-bf27-26dc07382b08
-  - name: 22 🇯🇵 JP
+  - name: 30 🇭🇰 HK
+    type: vless
+    server: vip.bcjdvip.com
+    port: 14003
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    network: tcp
+    reality-opts:
+      public-key: bHHdXJs2NGgY4tDUBwmoLBaKM7y_5sd49geQcdbihz0
+      short-id: "80963776"
+    servername: apple.com
+    skip-cert-verify: true
+    tfo: false
+    tls: true
+    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
+  - name: 31 🇭🇰 HK
+    type: vless
+    server: vip.bcjdvip.com
+    port: 14002
+    client-fingerprint: safari
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: D4eZTpgaPV_2YQa7cbiDMGnZs6NBEU2JkfUroHpvoWs
+      short-id: 7cabb05b68f63b
+    servername: apple.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
+  - name: 32 🇭🇰 HK
+    type: vless
+    server: vip.bcjdvip.com
+    port: 14005
+    client-fingerprint: safari
+    flow: xtls-rprx-vision
+    network: tcp
+    packet-encoding: xudp
+    reality-opts:
+      public-key: sKWozGVep6wrIm63253QviGBtMLVrGB_W1JJHLEHi0s
+      short-id: 97a01dfaef
+    servername: apple.com
+    skip-cert-verify: false
+    tls: true
+    udp: true
+    uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
+  - name: 33 🇯🇵 JP
     type: hysteria2
     server: 13.231.108.76
     port: 443
@@ -298,7 +457,7 @@ proxies:
     skip-cert-verify: true
     sni: https://t.me/WangCai2🇨🇳
     tfo: false
-  - name: 23 🇯🇵 JP
+  - name: 34 🇯🇵 JP
     type: vless
     server: 13.231.185.74
     port: 47381
@@ -316,7 +475,7 @@ proxies:
     tls: true
     udp: true
     uuid: c6508e59-dd68-4dc0-b14f-3192e84ef843
-  - name: 24 🇯🇵 JP
+  - name: 35 🇯🇵 JP
     type: vless
     server: 8.209.229.10
     port: 15542
@@ -337,7 +496,7 @@ proxies:
       mode: auto
       path: /them
       x-padding-bytes: 100-1000
-  - name: 25 🇯🇵 JP
+  - name: 36 🇯🇵 JP
     type: vless
     server: 172.207.210.238
     port: 443
@@ -354,7 +513,7 @@ proxies:
     tls: true
     udp: true
     uuid: 39d1c043-7bc5-4876-9d07-58574c023850
-  - name: 26 🇯🇵 JP
+  - name: 37 🇯🇵 JP
     type: vless
     server: 103.100.158.180
     port: 443
@@ -371,7 +530,7 @@ proxies:
     tls: true
     udp: true
     uuid: 51336138-2480-485a-8723-b6a688b69b14
-  - name: 27 🇰🇷 KR
+  - name: 38 🇰🇷 KR
     type: vless
     server: 43.108.48.169
     port: 40701
@@ -387,7 +546,15 @@ proxies:
     tls: true
     udp: true
     uuid: cdb7d825-9892-4d6f-80b8-7add83159dac
-  - name: 28 🇺🇸 US
+  - name: 39 🇺🇸 US
+    type: hysteria2
+    server: hy2.123266.xyz
+    port: 33333
+    password: bce6c821-200d-421f-bf3d-7159e5246ea0
+    skip-cert-verify: true
+    sni: hy2.123266.xyz
+    tfo: false
+  - name: 40 🇺🇸 US
     type: hysteria2
     server: 185.106.96.231
     port: 443
@@ -395,7 +562,16 @@ proxies:
     skip-cert-verify: false
     sni: s559.ccgfw.top
     tfo: false
-  - name: 29 🇺🇸 US
+  - name: 41 🇺🇸 US
+    type: hysteria2
+    server: wuhantravel.duckdns.org
+    port: 8443
+    alpn:
+      - h3
+    password: MySecurePassword123
+    sni: wuhantravel.duckdns.org
+    udp: true
+  - name: 42 🇺🇸 US
     type: mieru
     server: 157.254.223.44
     port: 34567
@@ -403,7 +579,7 @@ proxies:
     password: dongtaiwang.com
     transport: TCP
     username: dongtaiwang.com
-  - name: 30 🇺🇸 US
+  - name: 43 🇺🇸 US
     type: vless
     server: 64.23.143.23
     port: 34045
@@ -417,7 +593,7 @@ proxies:
     skip-cert-verify: false
     tls: true
     uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
-  - name: 31 🇺🇸 US
+  - name: 44 🇺🇸 US
     type: vless
     server: 112.121.184.10
     port: 26057
@@ -434,7 +610,7 @@ proxies:
     tls: true
     udp: true
     uuid: 970ffe5a-2c53-4b94-af3f-c95ddd417c1c
-  - name: 32 🇺🇸 US
+  - name: 45 🇺🇸 US
     type: vless
     server: 38.244.20.153
     port: 443
@@ -451,7 +627,7 @@ proxies:
     tls: true
     udp: true
     uuid: 8f59f1a9-9a0b-41c0-8532-ca56699bcaa1
-  - name: 33 🇺🇸 US
+  - name: 46 🇺🇸 US
     type: vless
     server: 38.244.20.47
     port: 443
@@ -468,7 +644,7 @@ proxies:
     tls: true
     udp: true
     uuid: a54fec73-26a1-4c05-b948-6a01c157927e
-  - name: 34 🇺🇸 US
+  - name: 47 🇺🇸 US
     type: vless
     server: 38.244.20.69
     port: 443
@@ -484,7 +660,7 @@ proxies:
     tls: true
     udp: true
     uuid: 057f3c26-0fe7-4315-aabc-90c79d413d70
-  - name: 35 🇺🇸 US
+  - name: 48 🇺🇸 US
     type: vless
     server: 38.244.21.243
     port: 443
@@ -501,7 +677,7 @@ proxies:
     tls: true
     udp: true
     uuid: e490adc9-f324-46fb-b311-9f3f95b0a0dd
-  - name: 36 🇺🇸 US
+  - name: 49 🇺🇸 US
     type: vless
     server: 15.204.97.197
     port: 23576
@@ -516,7 +692,7 @@ proxies:
     skip-cert-verify: false
     tls: true
     uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  - name: 37 🇺🇸 US
+  - name: 50 🇺🇸 US
     type: vless
     server: 15.204.97.216
     port: 23576
@@ -531,7 +707,29 @@ proxies:
     skip-cert-verify: false
     tls: true
     uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  - name: 38 🇺🇸 US
+  - name: 51 🇺🇸 US
+    type: vless
+    server: us2-r.link-t7.com
+    port: 10239
+    client-fingerprint: chrome
+    encryption: none
+    fp: chrome
+    grpc-opts:
+      grpc-service-name: movie
+    mode: gun
+    network: grpc
+    pbk: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+    reality-opts:
+      public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+      server-name: s0.awsstatic.com
+      short-id: 686c0ef0
+    security: reality
+    servername: s0.awsstatic.com
+    serviceName: movie
+    sid: 686c0ef0
+    tls: true
+    uuid: 418DA912-0248-4762-8D21-5CB38467CA4D
+  - name: 52 🇺🇸 US
     type: vless
     server: 108.62.60.24
     port: 443
@@ -547,7 +745,7 @@ proxies:
     tls: true
     udp: true
     uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-  - name: 39 🇺🇸 US
+  - name: 53 🇺🇸 US
     type: vless
     server: 40.160.227.243
     port: 443
@@ -563,7 +761,29 @@ proxies:
     tls: true
     udp: true
     uuid: 88cb5a9f-f464-4e3b-8ca0-a74edf911205
-  - name: 40 🇺🇸 US
+  - name: 54 🇺🇸 US
+    type: vless
+    server: us3-r.link-t7.com
+    port: 10240
+    client-fingerprint: chrome
+    encryption: none
+    fp: chrome
+    grpc-opts:
+      grpc-service-name: movie
+    mode: gun
+    network: grpc
+    pbk: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+    reality-opts:
+      public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+      server-name: s0.awsstatic.com
+      short-id: 686c0ef0
+    security: reality
+    servername: s0.awsstatic.com
+    serviceName: movie
+    sid: 686c0ef0
+    tls: true
+    uuid: 418DA912-0248-4762-8D21-5CB38467CA4D
+  - name: 55 🇺🇸 US
     type: vless
     server: 162.218.95.14
     port: 443
@@ -579,7 +799,7 @@ proxies:
     tls: true
     udp: true
     uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-  - name: 41 🇺🇸 US
+  - name: 56 🇺🇸 US
     type: vless
     server: 163.123.141.45
     port: 443
@@ -600,7 +820,7 @@ proxies:
         Xhttp-Verify: 3769e495-72dc-42ea-95eb-093cb0e4a6f8
       host: s4117.wagahaha.xyz
       path: /632f3ba5cd0889698a3e4b43d19aa601
-  - name: 42 🇺🇸 US
+  - name: 57 🇺🇸 US
     type: vless
     server: 2.24.124.64
     port: 443
@@ -614,14 +834,30 @@ proxies:
       short-id: 9f1fc5a631ef3126
     skip-cert-verify: true
     udp: true
-  - name: 43 🇭🇰 HK
+  - name: 58 🇭🇰 HK
+    password: 1427eb10-7529-4d38-a6a2-01b337868b37
+    port: 4433
+    server: hk2.xiaoliyu.cyou
+    skip-cert-verify: true
+    sni: hk2.xiaoliyu.cyou
+    tls: false
+    type: hysteria2
+  - name: 59 🇺🇸 US
+    password: 17aVvwmiSU
+    port: 10929
+    server: do.aigh.store
+    skip-cert-verify: true
+    sni: do.aigh.store
+    tls: false
+    type: hysteria2
+  - name: 60 🇭🇰 HK
     password: 9q3Mb0IzSVbnwaqK
     port: 16001
     server: 18.162.42.61
     sni: hk-ls-r-1.czzhkractqqakfzdmrgd.cc
     tls: false
     type: hysteria2
-  - name: 44 🇯🇵 JP
+  - name: 61 🇯🇵 JP
     password: Foc_Mcxi45rM9v3ve_N92fdrK_10_Ssc5
     port: 8443
     server: 185.39.31.117
@@ -629,14 +865,14 @@ proxies:
     sni: grape-beer.yyuyy.com
     tls: false
     type: hysteria2
-  - name: 45 🇺🇸 US
+  - name: 62 🇺🇸 US
     password: VB92_Ka9qwef143K_L23K1hz3_bF_Hz62uT_Bn1_sC
     port: 8080
     server: 82.39.214.98
     sni: hopp-us.yyuyy.com
     tls: false
     type: hysteria2
-  - name: 46 🇸🇬 SG
+  - name: 63 🇸🇬 SG
     obfs: salamander
     obfs-password: MBd0Kzj3ZcY3
     password: VL0N0IPJ5Tqj672H7FsxYw==
@@ -645,7 +881,38 @@ proxies:
     sni: c.hbapp.xyz
     tls: false
     type: hysteria2
-  - name: 47 🇸🇬 SG
+  - name: 64 🇸🇬 SG
+    password: ZYTopBPE6fGijECIcT3KxqFEpjQJ44ND
+    port: 55793
+    server: vip-sg-2.hkd4fwmg.vip
+    skip-cert-verify: true
+    sni: vip-sg-2.hkd4fwmg.vip
+    tls: false
+    type: hysteria2
+  - name: 65 🇯🇵 JP
+    password: ef18d810-719c-4bf1-83c6-615d01f217eb
+    port: 443
+    server: jp.cryptoofarm.com
+    skip-cert-verify: true
+    sni: jp.cryptoofarm.com
+    tls: false
+    type: hysteria2
+  - name: 66 🇭🇰 HK
+    password: f4927789e58bcd24b6f6
+    port: 10444
+    server: h.zz2233.cyou
+    sni: h.zz2233.cyou
+    tls: false
+    type: hysteria2
+  - name: 67 🇺🇸 US
+    password: fe475179-d8a8-420d-a4ac-3e415ed8dc72
+    port: 11683
+    server: uswx4.wxgqlfx.vip
+    skip-cert-verify: true
+    sni: 144.225.187.153
+    tls: false
+    type: hysteria2
+  - name: 68 🇸🇬 SG
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 13.229.82.184
@@ -653,7 +920,7 @@ proxies:
     sni: vpn-sg-001.fastervpn.world
     tls: false
     type: hysteria2
-  - name: 48 🇸🇬 SG
+  - name: 69 🇸🇬 SG
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 47.129.155.42
@@ -661,7 +928,7 @@ proxies:
     sni: vpn-sg-001.fastervpn.world
     tls: false
     type: hysteria2
-  - name: 49 🇸🇬 SG
+  - name: 70 🇸🇬 SG
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 54.254.190.23
@@ -669,9 +936,34 @@ proxies:
     sni: vpn-sg-001.fastervpn.world
     tls: false
     type: hysteria2
+  - name: 71 🇺🇸 US
+    password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
+    port: 443
+    server: faq.wwwinternetvideo.click
+    skip-cert-verify: true
+    sni: cabinet.wwwinternetvideo.click
+    tls: false
+    type: hysteria2
+  - client-fingerprint: chrome
+    encryption: none
+    grpc-opts:
+      grpc-service-name: update
+    name: 72 🇸🇬 SG
+    network: grpc
+    port: "10038"
+    reality-opts:
+      public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+      short-id: 686c0ef0
+    server: sg3-r.link-t7.com
+    servername: d1.awsstatic.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: D8ED7FFD-7AA8-4EEB-9020-18A1A38AE6CC
+    xudp: true
   - down: ""
     fingerprint: ""
-    name: 50 🇸🇬 SG
+    name: 73 🇸🇬 SG
     obfs: ""
     obfs-password: ""
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
@@ -683,7 +975,7 @@ proxies:
     up: ""
   - down: ""
     fingerprint: ""
-    name: 51 🇸🇬 SG
+    name: 74 🇸🇬 SG
     obfs: ""
     obfs-password: ""
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
@@ -695,7 +987,7 @@ proxies:
     up: ""
   - client-fingerprint: safari
     flow: xtls-rprx-vision
-    name: 52 🇺🇸 US
+    name: 75 🇺🇸 US
     network: raw
     port: "8443"
     reality-opts:
@@ -710,7 +1002,7 @@ proxies:
     xudp: true
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 53 🇺🇸 US
+    name: 76 🇺🇸 US
     network: tcp
     port: 443
     reality-opts:
@@ -725,7 +1017,7 @@ proxies:
     uuid: 5905d91f-c3bc-4e80-bd66-4b17beb166cb
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 54 🇺🇸 US
+    name: 77 🇺🇸 US
     network: tcp
     port: 11094
     reality-opts:
@@ -740,7 +1032,7 @@ proxies:
     uuid: f1fa0ad9-b122-4b7c-da82-4bea9edc48dd
   - client-fingerprint: firefox
     flow: xtls-rprx-vision
-    name: 55 🇺🇸 US
+    name: 78 🇺🇸 US
     network: tcp
     port: 443
     reality-opts:
@@ -755,7 +1047,7 @@ proxies:
     uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 56 🇺🇸 US
+    name: 79 🇺🇸 US
     network: tcp
     port: 29893
     reality-opts:
@@ -770,7 +1062,7 @@ proxies:
     uuid: f06c6039-a489-3d78-a676-ed43be6deca3
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 57 🇺🇸 US
+    name: 80 🇺🇸 US
     network: tcp
     port: 39399
     reality-opts:
@@ -785,7 +1077,7 @@ proxies:
     uuid: f06c6039-a489-3d78-a676-ed43be6deca3
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 58 🇺🇸 US
+    name: 81 🇺🇸 US
     network: tcp
     port: 39211
     reality-opts:
@@ -798,7 +1090,23 @@ proxies:
     type: vless
     udp: true
     uuid: f06c6039-a489-3d78-a676-ed43be6deca3
-  - name: 59 🇯🇵 JP
+  - name: 82 🇹🇼 TW
+    server: umoso-eo669-zhse.clodom.com
+    port: 26299
+    type: anytls
+    password: 24b56539-27f3-42d8-be18-fe31720bc005
+    udp: true
+    sni: hk2.clodom.top
+    skip-cert-verify: true
+  - name: 83 🇹🇼 TW
+    server: umoso-eo669-zhse.clodom.com
+    port: 45993
+    type: anytls
+    password: 24b56539-27f3-42d8-be18-fe31720bc005
+    udp: true
+    sni: hk3.clodom.top
+    skip-cert-verify: true
+  - name: 84 🇯🇵 JP
     server: 140.238.43.0
     port: 50160
     type: hysteria2
@@ -806,7 +1114,31 @@ proxies:
     auth: 9c5be37406b6584005b8de0ee3734dd9
     sni: www.bing.com
     skip-cert-verify: true
-  - name: 60 🇰🇷 KR
+  - name: 85 🇹🇼 TW
+    server: umoso-eo669-zhse.clodom.com
+    port: 40983
+    type: anytls
+    password: 24b56539-27f3-42d8-be18-fe31720bc005
+    udp: true
+    sni: jp2.clodom.top
+    skip-cert-verify: true
+  - name: 86 🇯🇵 JP
+    server: jpglobal-identity-federation-auth.younai-ytl.shop
+    port: 28219
+    type: anytls
+    password: 29204996-a723-4291-8c70-30843b592d40
+    udp: true
+    sni: us05.pulsarcore.site
+    skip-cert-verify: true
+  - name: 87 🇯🇵 JP
+    server: jpglobal-identity-federation-auth.younai-ytl.shop
+    port: 12791
+    type: anytls
+    password: 29204996-a723-4291-8c70-30843b592d40
+    udp: true
+    sni: jp10.pulsarcore.site
+    skip-cert-verify: true
+  - name: 88 🇰🇷 KR
     server: 132.226.226.189
     port: 50160
     type: hysteria2
@@ -814,7 +1146,61 @@ proxies:
     auth: 1671a252e2a97dc2bda4e515475931da
     sni: www.bing.com
     skip-cert-verify: true
-  - name: 61 🇺🇸 US
+  - name: 89 🇸🇬 SG
+    server: yazhouany02.downapptwo.cc
+    port: 37236
+    type: anytls
+    password: 29204996-a723-4291-8c70-30843b592d40
+    udp: true
+    sni: tw16.swiftrelay.cc
+    skip-cert-verify: true
+  - name: 90 🇸🇬 SG
+    server: uh-sg01.ziyoufly.xyz
+    port: 55555
+    type: vless
+    uuid: 5fce1c98-0192-4d03-a8b4-9ba8a8eef474
+    tls: true
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: 1XQ60qYOfBZJpcilNV9Fu7OSpuO5_6-zrNZIYhB_YU4
+      short-id: af317506
+    servername: www.nparks.gov.sg
+    client-fingerprint: chrome
+    network: tcp
+    udp: true
+  - name: 91 🇹🇼 TW
+    server: umoso-eo669-zhse.clodom.com
+    port: 40982
+    type: anytls
+    password: 24b56539-27f3-42d8-be18-fe31720bc005
+    udp: true
+    sni: sg2.clodom.top
+    skip-cert-verify: true
+  - name: 92 🇹🇼 TW
+    server: umoso-eo669-zhse.clodom.com
+    port: 34754
+    type: anytls
+    password: 24b56539-27f3-42d8-be18-fe31720bc005
+    udp: true
+    sni: sg1.clodom.top
+    skip-cert-verify: true
+  - name: 93 🇸🇬 SG
+    server: test01.y1static-content-distribution.shop
+    port: 29023
+    type: anytls
+    password: 29204996-a723-4291-8c70-30843b592d40
+    udp: true
+    sni: us01.lunartrace.io
+    skip-cert-verify: true
+  - name: 94 🇸🇬 SG
+    server: test01.y1static-content-distribution.shop
+    port: 30370
+    type: anytls
+    password: 29204996-a723-4291-8c70-30843b592d40
+    udp: true
+    sni: jd-yz122g.y1static-content-distribution.shop
+    skip-cert-verify: true
+  - name: 95 🇺🇸 US
     server: 104.129.54.249
     port: 50160
     type: hysteria2
@@ -822,14 +1208,60 @@ proxies:
     auth: a7c561fe673c05f2ad2fe6f7f1aee41c
     sni: www.bing.com
     skip-cert-verify: true
-  - name: 62 🇯🇵 JP
+  - name: 96 🇸🇬 SG
+    server: yazhouany02.downapptwo.cc
+    port: 59585
+    type: anytls
+    password: 29204996-a723-4291-8c70-30843b592d40
+    udp: true
+    sni: us26.pulsarcore.site
+    skip-cert-verify: true
+  - name: 97 🇹🇼 TW
+    server: umoso-eo669-zhse.clodom.com
+    port: 40991
+    type: anytls
+    password: 24b56539-27f3-42d8-be18-fe31720bc005
+    udp: true
+    sni: us1.clodom.top
+    skip-cert-verify: true
+  - name: 98 🇸🇬 SG
+    server: test01.y1static-content-distribution.shop
+    port: 24099
+    type: anytls
+    password: 29204996-a723-4291-8c70-30843b592d40
+    udp: true
+    sni: us56.pulsarcore.site
+    skip-cert-verify: true
+  - name: 99 🇸🇬 SG
+    server: test01.y1static-content-distribution.shop
+    port: 22054
+    type: anytls
+    password: 29204996-a723-4291-8c70-30843b592d40
+    udp: true
+    sni: us31.lunartrace.io
+    skip-cert-verify: true
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 100 🇯🇵 JP
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: 5qkRIcB3SAxOr6m76YHUHNFdhsaK7HXWPipELhPD8j4
+      short-id: 64299c2e
+    server: xaxaxa.kdns.fr
+    tls: true
+    type: vless
+    udp: true
+    uuid: 5c958497-4461-499a-881b-b5e5bfeade62
+    servername: www.oracle.com
+  - name: 101 🇯🇵 JP
     type: hysteria2
     server: 177.2.185.222
     port: 38888
     password: b504c8ce7f607a6c910ec5209e526b7e
     sni: 177.2.185.222
     skip-cert-verify: true
-  - name: 63 🇭🇰 HK
+  - name: 102 🇭🇰 HK
     type: vless
     server: 82.38.46.66
     port: 15006
@@ -841,7 +1273,7 @@ proxies:
     reality-opts:
       public-key: g9KZONtwSL8mL772rps2nXVAuQpsgHY33K_pHpI89Rg
       short-id: 029a6cc4
-  - name: 64 🇰🇷 KR
+  - name: 103 🇰🇷 KR
     type: vless
     server: 151.245.106.49
     port: 2053
