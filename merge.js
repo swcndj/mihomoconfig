@@ -8,10 +8,10 @@ const REGION_OUTPUT_FILE = "nodes_regionfiltered.yaml";
 const REQUEST_TIMEOUT = 15000;
 const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
 
-// 名称初筛正则：只要节点名称命中任意一条，就进入API校验候选池（仅用来减少API调用）
+// 名称初筛正则：仅用于减少批量查询量，不做最终判定
 const PRE_FILTER_REGEX = /香港|Hong Kong|HK|台湾|Taiwan|TW|日本|Japen|JP|韩国|Korea|KR|新加坡|Singapore|SG|美国|United States|US/i;
 
-// 目标地区：countryCode为key，对应显示名称
+// 目标地区映射：countryCode -> 显示名称
 const TARGET_COUNTRY_MAP = {
   'HK': "🇭🇰 HK",
   'TW': "🇹🇼 TW",
@@ -21,16 +21,22 @@ const TARGET_COUNTRY_MAP = {
   'US': "🇺🇸 US",
 };
 
-// IP‑API免费限制：45次/分钟，间隔1500ms防429限流
-const IP_QUERY_INTERVAL = 1500;
+// 批量IP查询配置
+const BATCH_ENDPOINT = 'http://ip-api.com/batch'; // 免费批量接口
+const BATCH_SIZE = 50;          // 每批50个节点（官方上限100，留余量更稳定）
+const BATCH_INTERVAL = 4500;    // 批间间隔4.5秒，约13批/分钟，低于官方15次/分钟限流
+const BATCH_FIELDS = 'status,countryCode'; // 只保留必需字段，减少带宽
 // -------------------------------------------------- 配置区 --------------------------------------------------
 
 // -------------------------------------------------- 工具函数 --------------------------------------------------
-async function fetchWithTimeout(url) {
+async function fetchWithTimeout(url, options = {}) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT);
   try {
-    const res = await fetch(url, { signal: controller.signal });
+    const res = await fetch(url, {
+      ...options,
+      signal: controller.signal
+    });
     return res;
   } finally {
     clearTimeout(timer);
@@ -45,14 +51,30 @@ function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// 查询ip‑api，返回大写countryCode，失败返回null
-async function getIpCountryCode(ipOrDomain) {
+// 批量查询IP/域名的国家代码
+async function batchQueryIpCountry(ipList) {
   try {
-    const res = await fetchWithTimeout(`http://ip-api.com/json/${encodeURIComponent(ipOrDomain)}`);
-    if (!res.ok) return null;
+    const url = `${BATCH_ENDPOINT}?fields=${encodeURIComponent(BATCH_FIELDS)}`;
+    const res = await fetchWithTimeout(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(ipList)
+    });
+
+    if (!res.ok) {
+      console.log(`    ❌ 批量请求失败 HTTP ${res.status}`);
+      return null;
+    }
+
     const data = await res.json();
-    return data.status === 'success' ? String(data.countryCode).toUpperCase() : null;
+    const resultMap = new Map();
+    data.forEach((item, index) => {
+      const ip = ipList[index];
+      resultMap.set(ip, item?.status === 'success' ? String(item.countryCode).toUpperCase() : null);
+    });
+    return resultMap;
   } catch (e) {
+    console.log(`    ❌ 批量请求异常：${e.message}`);
     return null;
   }
 }
@@ -122,43 +144,64 @@ async function getIpCountryCode(ipOrDomain) {
   }
   console.log(`去重后节点数：${dedupList.length}`);
 
-  // 4. 地区筛选逻辑：名称初筛进入候选池 → 调用ip‑api拿到countryCode，只要在TARGET_COUNTRY_MAP就保留
+  // 4. 地区筛选：名称初筛 → 批量IP地理校验 → 按countryCode最终保留
   const regionFiltered = [];
-  // 4.1 名称初筛，仅用来减少API请求，不做最终判定
-  const preFiltered = dedupList.filter(p => PRE_FILTER_REGEX.test(p.name || ''));
-  console.log(`名称初筛候选节点数：${preFiltered.length}`);
+  if (Object.keys(TARGET_COUNTRY_MAP).length > 0) {
+    // 4.1 名称初筛，减少批量查询量
+    const preFiltered = dedupList.filter(p => PRE_FILTER_REGEX.test(p.name || ''));
+    console.log(`名称初筛候选节点数：${preFiltered.length}`);
 
-  console.log(`\n开始IP地理校验，共 ${preFiltered.length} 个节点...`);
-  for (let i = 0; i < preFiltered.length; i++) {
-    const node = preFiltered[i];
-    const server = node.server;
-    if (!server) {
-      console.log(`  [${i + 1}/${preFiltered.length}] ⚠️ 无server字段，跳过`);
-      continue;
-    }
+    if (preFiltered.length > 0) {
+      const total = preFiltered.length;
+      const batchCount = Math.ceil(total / BATCH_SIZE);
+      console.log(`\n开始批量IP地理校验，共 ${total} 个节点，分 ${batchCount} 批`);
 
-    console.log(`  [${i + 1}/${preFiltered.length}] 查询 ${server} ...`);
-    const cc = await getIpCountryCode(server);
+      const allResultMap = new Map();
 
-    // 只要返回的countryCode在目标映射表里就保留，不再和原节点名称地区做比对
-    if (cc && TARGET_COUNTRY_MAP[cc]) {
-      regionFiltered.push({
-        node: { ...node },
-        countryCode: cc,
-        displayName: TARGET_COUNTRY_MAP[cc]
+      // 4.2 分批查询
+      for (let i = 0; i < batchCount; i++) {
+        const start = i * BATCH_SIZE;
+        const batchNodes = preFiltered.slice(start, start + BATCH_SIZE);
+        const batchIps = batchNodes.map(p => p.server).filter(Boolean);
+
+        console.log(`  [${i + 1}/${batchCount}] 处理第 ${i + 1} 批`);
+        const batchResult = await batchQueryIpCountry(batchIps);
+        
+        if (batchResult) {
+          for (const [ip, cc] of batchResult.entries()) {
+            allResultMap.set(ip, cc);
+          }
+        }
+
+        // 最后一批无需等待
+        if (i < batchCount - 1) {
+          await delay(BATCH_INTERVAL);
+        }
+      }
+
+      // 4.3 匹配目标地区，生成最终列表
+      for (const node of preFiltered) {
+        const server = node.server;
+        if (!server) continue;
+        const cc = allResultMap.get(server);
+        if (cc && TARGET_COUNTRY_MAP[cc]) {
+          regionFiltered.push({
+            node: { ...node },
+            displayName: TARGET_COUNTRY_MAP[cc]
+          });
+        }
+      }
+
+      // 4.4 按序号+地区重命名节点
+      regionFiltered.forEach((item, idx) => {
+        item.node.name = `${idx + 1} ${item.displayName}`;
       });
-      console.log(`    ✅ 命中地区 ${cc}`);
-    } else {
-      console.log(`    ❌ 丢弃，countryCode: ${cc || "查询失败"}`);
     }
-    await delay(IP_QUERY_INTERVAL);
-  }
 
-  // 4.2 根据接口返回的countryCode重命名节点，格式：序号 地区标识
-  regionFiltered.forEach((item, idx) => {
-    item.node.name = `${idx + 1} ${item.displayName}`;
-  });
-  console.log(`\n地区最终筛选后节点数：${regionFiltered.length}`);
+    console.log(`\n地区最终筛选后节点数：${regionFiltered.length}`);
+  } else {
+    console.log(`⚠️ 未配置目标地区，跳过地区筛选`);
+  }
 
   // 5. 输出结果
   const docAll = new yaml.Document();
