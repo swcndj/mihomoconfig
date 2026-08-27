@@ -1,5 +1,5 @@
 proxies:
-  - name: 1 美国
+  - name: 1 🇺🇸 US
     server: c1c0f9ffc2317.fuhuovps.xyz
     port: 443
     type: vless
@@ -16,7 +16,7 @@ proxies:
     xhttp-opts:
       path: d84bda447a8add50e9e67d4d0382096e
       host: 42775ddfs2316.fuhuovps.xyz
-  - name: 2 美国
+  - name: 2 🇺🇸 US
     server: 81f0c835c2318.fuhuovps.xyz
     port: 443
     type: vless
@@ -33,7 +33,7 @@ proxies:
     xhttp-opts:
       path: d84bda447a8add50e9e67d4d0382096e
       host: 42775ddfs2316.fuhuovps.xyz
-  - name: 3 美国
+  - name: 3 🇺🇸 US
     server: af5fd2efc2316.fuhuovps.xyz
     port: 443
     type: vless
@@ -52,7 +52,7 @@ proxies:
       host: 42775ddfs2316.fuhuovps.xyz
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 4 日本
+    name: 4 🇯🇵JP
     port: 443
     reality-opts:
       public-key: qBtxq4RZxDLCJT8i48iaGMhacv8MOI0yhIFiuwYJm08
@@ -66,7 +66,7 @@ proxies:
     uuid: 94d2d711-76e5-4d82-a3c9-4f06fd5558c8
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 5 日本
+    name: 5 🇯🇵JP
     port: 443
     reality-opts:
       public-key: d1LjsQHtTCj7kHx2LHFisVDPc_xOtKnugy5YRFKXqUs
@@ -80,7 +80,7 @@ proxies:
     uuid: 12e35bfe-1e79-4cf1-8a8e-22a242e97408
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 6 韩国
+    name: 6 🇰🇷 KR
     port: 443
     reality-opts:
       public-key: fI-eoLmyyeYXgUHr2SWzHcwxkhxmDj2QBnivpUPYfVY
@@ -94,7 +94,7 @@ proxies:
     uuid: 5822b465-036b-4a3b-89d0-b3e52ae20815
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 7 香港
+    name: 7 🇭🇰 HK
     port: 13443
     reality-opts:
       public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
@@ -108,7 +108,7 @@ proxies:
     uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
   - client-fingerprint: firefox
     flow: xtls-rprx-vision
-    name: 8 新加坡
+    name: 8 🇸🇬 SG
     port: 443
     reality-opts:
       public-key: eaRNeC8fccrx0nBNvBpAXZgK4m4FxfnQ-t0W7NOM7mU
@@ -124,7 +124,7 @@ proxies:
     http-opts:
       path:
         - /
-    name: 9 美国
+    name: 9 🇺🇸 US
     network: http
     port: 443
     reality-opts:
@@ -141,7 +141,7 @@ proxies:
     http-opts:
       path:
         - /
-    name: 10 美国
+    name: 10 🇺🇸 US
     network: http
     port: 443
     reality-opts:
@@ -158,7 +158,7 @@ proxies:
     http-opts:
       path:
         - /
-    name: 11 美国
+    name: 11 🇺🇸 US
     network: http
     port: 443
     reality-opts:
@@ -171,7 +171,7 @@ proxies:
     type: vless
     udp: true
     uuid: fbd1bcab-3480-4344-b3da-ae42d728ef51
-  - name: 12 新加坡
+  - name: 12 🇸🇬 SG
     password: 4hkCvE2nz6svLLqv
     port: 36001
     server: 52.221.223.227
@@ -181,7 +181,7 @@ proxies:
     udp: true
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 13 美国
+    name: 13 🇺🇸 US
     port: 13779
     reality-opts:
       public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
@@ -195,7 +195,7 @@ proxies:
     uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 14 美国
+    name: 14 🇺🇸 US
     port: 443
     reality-opts:
       public-key: YQTixaXzPVImuRc4TUbrFAekjIiaYV-t5S-HTKlH0AU
@@ -209,7 +209,7 @@ proxies:
     uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 15 美国
+    name: 15 🇺🇸 US
     port: 443
     reality-opts:
       public-key: YQTixaXzPVImuRc4TUbrFAekjIiaYV-t5S-HTKlH0AU
@@ -224,7 +224,7 @@ proxies:
   - client-fingerprint: firefox
     grpc-opts:
       grpc-service-name: grpc
-    name: 16 美国
+    name: 16 🇺🇸 US
     network: grpc
     port: 2087
     reality-opts:
@@ -239,7 +239,7 @@ proxies:
     uuid: d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 17 美国
+    name: 17 🇺🇸 US
     port: 443
     reality-opts:
       public-key: t_qv0VOfWhKZJV_giGC55-ipgHYWo44Yfvik_B8T8ik
@@ -251,7 +251,7 @@ proxies:
     type: vless
     udp: true
     uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-  - name: 18 美国
+  - name: 18 🇺🇸 US
     password: VB92_Ka9qwef143K_L23K1hz3_bF_Hz62uT_Bn1_sC
     port: 8443
     server: 82.39.214.95
@@ -261,7 +261,7 @@ proxies:
     udp: true
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 19 台湾
+    name: 19 🇹🇼 TW
     port: 55309
     reality-opts:
       public-key: 7BS-JUFgYVaWrwwyDSiVq_YDoG36w8cRd4U8HvEg-F0
@@ -274,7 +274,7 @@ proxies:
     uuid: 9c5d1bf0-d58b-4001-9e7c-0c1fa314068c
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 20 日本
+    name: 20 🇯🇵JP
     port: 55305
     reality-opts:
       public-key: 7BS-JUFgYVaWrwwyDSiVq_YDoG36w8cRd4U8HvEg-F0
@@ -287,7 +287,7 @@ proxies:
     uuid: 9c5d1bf0-d58b-4001-9e7c-0c1fa314068c
   - client-fingerprint: safari
     flow: xtls-rprx-vision
-    name: 21 日本
+    name: 21 🇯🇵JP
     port: 55313
     reality-opts:
       public-key: 7BS-JUFgYVaWrwwyDSiVq_YDoG36w8cRd4U8HvEg-F0
@@ -300,7 +300,7 @@ proxies:
     uuid: 9c5d1bf0-d58b-4001-9e7c-0c1fa314068c
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 22 美国
+    name: 22 🇺🇸 US
     port: 13443
     reality-opts:
       public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
@@ -313,7 +313,7 @@ proxies:
     udp: true
     uuid: b80b392c-0cf4-42f9-ae54-9f862e3ba276
   - client-fingerprint: chrome
-    name: 23 香港
+    name: 23 🇭🇰 HK
     port: 8443
     reality-opts:
       public-key: rRRBbLyYSuC10iG_J7obkZktq52w4nRsGbvaMQ99ziQ
@@ -327,7 +327,7 @@ proxies:
     uuid: ee511cf0-41c6-408e-9358-23a793c3f2be
   - client-fingerprint: firefox
     flow: xtls-rprx-vision
-    name: 24 美国
+    name: 24 🇺🇸 US
     port: 443
     reality-opts:
       public-key: lG0cFS6B-psGN0Qre9LArEvTsOyqQjVba9iQ2d3K5BY
@@ -339,7 +339,7 @@ proxies:
     type: vless
     udp: true
     uuid: 00506574-3b10-4f7d-9b2f-8afdc5919b93
-  - name: 25 台湾
+  - name: 25 🇹🇼 TW
     password: 29204996-a723-4291-8c70-30843b592d40
     port: 443
     server: tw72.cybergalaxy.me
@@ -347,7 +347,7 @@ proxies:
     tls: true
     type: anytls
     udp: true
-  - name: 26 台湾
+  - name: 26 🇹🇼 TW
     password: 29204996-a723-4291-8c70-30843b592d40
     port: 443
     server: tw71.cybergalaxy.me
@@ -356,7 +356,7 @@ proxies:
     type: anytls
     udp: true
   - auth: oU4tGn37oQ9JGmqnlTGkU3knrfAbclsq
-    name: 27 香港
+    name: 27 🇭🇰 HK
     password: oU4tGn37oQ9JGmqnlTGkU3knrfAbclsq
     port: 32135
     server: vip-jp-4.hkd4fwmg.vip
@@ -364,7 +364,7 @@ proxies:
     sni: vip-jp-4.hkd4fwmg.vip
     type: hysteria2
   - auth: V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8
-    name: 28 美国
+    name: 28 🇺🇸 US
     password: V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8
     port: 443
     server: player.wwwinternetvideo.click
@@ -373,7 +373,7 @@ proxies:
     type: hysteria2
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 29 美国
+    name: 29 🇺🇸 US
     network: tcp
     port: 443
     reality-opts:
@@ -388,7 +388,7 @@ proxies:
     uuid: b8794f67-80d9-4124-8fc5-2d2ce5516573
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 30 美国
+    name: 30 🇺🇸 US
     port: 10001
     reality-opts:
       public-key: 4jNz4Bw-FZlaX-WtfAdwK0hegY28W_k8AttGd-7hZn4
@@ -398,7 +398,7 @@ proxies:
     tls: true
     type: vless
     uuid: 9c79aceb-4649-44ea-9698-b5e9ecf6d6da
-  - name: 31 香港
+  - name: 31 🇭🇰 HK
     type: hysteria2
     server: 202.146.222.174
     port: 443
@@ -406,7 +406,7 @@ proxies:
     skip-cert-verify: true
     sni: https://t.me/WangCai2🇨🇳
     tfo: false
-  - name: 32 香港
+  - name: 32 🇭🇰 HK
     type: vless
     server: 64.49.45.57
     port: 15540
@@ -424,7 +424,7 @@ proxies:
     tls: true
     udp: true
     uuid: f8e32ccb-7e0b-4966-837a-2a9503bc3d82
-  - name: 33 香港
+  - name: 33 🇭🇰 HK
     type: vless
     server: 64.49.46.222
     port: 51008
@@ -442,7 +442,7 @@ proxies:
     tls: true
     udp: true
     uuid: a7e9b227-57bb-44b3-ac47-58367a40adf8
-  - name: 34 香港
+  - name: 34 🇭🇰 HK
     type: vless
     server: vip.bcjdvip.com
     port: 14008
@@ -458,7 +458,7 @@ proxies:
     tls: true
     udp: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 35 香港
+  - name: 35 🇭🇰 HK
     type: vless
     server: vip.bcjdvip.com
     port: 14001
@@ -474,7 +474,7 @@ proxies:
     tls: true
     udp: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 36 香港
+  - name: 36 🇭🇰 HK
     type: vless
     server: vip.bcjdvip.com
     port: 14007
@@ -490,7 +490,7 @@ proxies:
     tls: true
     udp: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 37 香港
+  - name: 37 🇭🇰 HK
     type: vless
     server: vip.bcjdvip.com
     port: 14006
@@ -506,7 +506,7 @@ proxies:
     tls: true
     udp: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 38 香港
+  - name: 38 🇭🇰 HK
     type: vless
     server: vip.bcjdvip.com
     port: 14009
@@ -522,7 +522,7 @@ proxies:
     tls: true
     udp: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 39 香港
+  - name: 39 🇭🇰 HK
     type: vless
     server: vip.bcjdvip.com
     port: 14010
@@ -538,7 +538,7 @@ proxies:
     tls: true
     udp: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 40 香港
+  - name: 40 🇭🇰 HK
     type: vless
     server: 64.49.46.182
     port: 31435
@@ -556,7 +556,7 @@ proxies:
     tls: true
     udp: true
     uuid: b66d5953-8fed-4374-bf27-26dc07382b08
-  - name: 41 香港
+  - name: 41 🇭🇰 HK
     type: vless
     server: vip.bcjdvip.com
     port: 14003
@@ -571,7 +571,7 @@ proxies:
     tfo: false
     tls: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 42 香港
+  - name: 42 🇭🇰 HK
     type: vless
     server: vip.bcjdvip.com
     port: 14002
@@ -587,7 +587,7 @@ proxies:
     tls: true
     udp: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 43 香港
+  - name: 43 🇭🇰 HK
     type: vless
     server: vip.bcjdvip.com
     port: 14005
@@ -603,7 +603,7 @@ proxies:
     tls: true
     udp: true
     uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  - name: 44 香港
+  - name: 44 🇭🇰 HK
     type: vless
     server: 31.77.146.252
     port: 443
@@ -620,7 +620,7 @@ proxies:
     tls: true
     udp: true
     uuid: 52590634-cfce-4db7-abcc-d075175a3088
-  - name: 45 台湾
+  - name: 45 🇹🇼 TW
     type: vless
     server: 45.206.0.68
     port: 8443
@@ -637,7 +637,7 @@ proxies:
     tls: true
     udp: true
     uuid: 52faee73-e0fe-4661-992d-67259257170f
-  - name: 46 日本
+  - name: 46 🇯🇵JP
     type: hysteria2
     server: 13.231.108.76
     port: 443
@@ -645,7 +645,7 @@ proxies:
     skip-cert-verify: true
     sni: https://t.me/WangCai2🇨🇳
     tfo: false
-  - name: 47 日本
+  - name: 47 🇯🇵JP
     type: vless
     server: 13.231.185.74
     port: 47381
@@ -663,7 +663,7 @@ proxies:
     tls: true
     udp: true
     uuid: c6508e59-dd68-4dc0-b14f-3192e84ef843
-  - name: 48 日本
+  - name: 48 🇯🇵JP
     type: vless
     server: 8.209.229.10
     port: 15542
@@ -684,7 +684,7 @@ proxies:
       mode: auto
       path: /them
       x-padding-bytes: 100-1000
-  - name: 49 日本
+  - name: 49 🇯🇵JP
     type: vless
     server: 172.207.210.238
     port: 443
@@ -701,7 +701,7 @@ proxies:
     tls: true
     udp: true
     uuid: 39d1c043-7bc5-4876-9d07-58574c023850
-  - name: 50 日本
+  - name: 50 🇯🇵JP
     type: vless
     server: 103.100.158.180
     port: 443
@@ -718,7 +718,7 @@ proxies:
     tls: true
     udp: true
     uuid: 51336138-2480-485a-8723-b6a688b69b14
-  - name: 51 韩国
+  - name: 51 🇰🇷 KR
     type: vless
     server: 43.108.48.169
     port: 40701
@@ -734,7 +734,7 @@ proxies:
     tls: true
     udp: true
     uuid: cdb7d825-9892-4d6f-80b8-7add83159dac
-  - name: 52 美国
+  - name: 52 🇺🇸 US
     type: hysteria2
     server: hy2.123266.xyz
     port: 33333
@@ -742,7 +742,7 @@ proxies:
     skip-cert-verify: true
     sni: hy2.123266.xyz
     tfo: false
-  - name: 53 美国
+  - name: 53 🇺🇸 US
     type: hysteria2
     server: 185.106.96.231
     port: 443
@@ -750,7 +750,7 @@ proxies:
     skip-cert-verify: false
     sni: s559.ccgfw.top
     tfo: false
-  - name: 54 美国
+  - name: 54 🇺🇸 US
     type: hysteria2
     server: wuhantravel.duckdns.org
     port: 8443
@@ -759,7 +759,7 @@ proxies:
     password: MySecurePassword123
     sni: wuhantravel.duckdns.org
     udp: true
-  - name: 55 美国
+  - name: 55 🇺🇸 US
     type: hysteria2
     server: hy2-new.aspidnet.xyz
     port: 443
@@ -769,7 +769,7 @@ proxies:
     skip-cert-verify: true
     sni: hy2-new.aspidnet.xyz
     tfo: false
-  - name: 56 美国
+  - name: 56 🇺🇸 US
     type: hysteria2
     server: 161.104.88.46
     port: 443
@@ -777,7 +777,7 @@ proxies:
     skip-cert-verify: true
     sni: k71530.w-mebel.pro
     tfo: false
-  - name: 57 美国
+  - name: 57 🇺🇸 US
     type: mieru
     server: 157.254.223.44
     port: 34567
@@ -785,7 +785,7 @@ proxies:
     password: dongtaiwang.com
     transport: TCP
     username: dongtaiwang.com
-  - name: 58 美国
+  - name: 58 🇺🇸 US
     type: vless
     server: 64.23.143.23
     port: 34045
@@ -799,7 +799,7 @@ proxies:
     skip-cert-verify: false
     tls: true
     uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
-  - name: 59 美国
+  - name: 59 🇺🇸 US
     type: vless
     server: 112.121.184.10
     port: 26057
@@ -816,7 +816,7 @@ proxies:
     tls: true
     udp: true
     uuid: 970ffe5a-2c53-4b94-af3f-c95ddd417c1c
-  - name: 60 美国
+  - name: 60 🇺🇸 US
     type: vless
     server: 38.244.20.153
     port: 443
@@ -833,7 +833,7 @@ proxies:
     tls: true
     udp: true
     uuid: 8f59f1a9-9a0b-41c0-8532-ca56699bcaa1
-  - name: 61 美国
+  - name: 61 🇺🇸 US
     type: vless
     server: 38.244.20.47
     port: 443
@@ -850,7 +850,7 @@ proxies:
     tls: true
     udp: true
     uuid: a54fec73-26a1-4c05-b948-6a01c157927e
-  - name: 62 美国
+  - name: 62 🇺🇸 US
     type: vless
     server: 38.244.20.69
     port: 443
@@ -866,7 +866,7 @@ proxies:
     tls: true
     udp: true
     uuid: 057f3c26-0fe7-4315-aabc-90c79d413d70
-  - name: 63 美国
+  - name: 63 🇺🇸 US
     type: vless
     server: 38.244.21.243
     port: 443
@@ -883,7 +883,7 @@ proxies:
     tls: true
     udp: true
     uuid: e490adc9-f324-46fb-b311-9f3f95b0a0dd
-  - name: 64 美国
+  - name: 64 🇺🇸 US
     type: vless
     server: 15.204.97.197
     port: 23576
@@ -898,7 +898,7 @@ proxies:
     skip-cert-verify: false
     tls: true
     uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  - name: 65 美国
+  - name: 65 🇺🇸 US
     type: vless
     server: 15.204.97.216
     port: 23576
@@ -913,7 +913,7 @@ proxies:
     skip-cert-verify: false
     tls: true
     uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  - name: 66 美国
+  - name: 66 🇺🇸 US
     type: vless
     server: us2-r.link-t7.com
     port: 10239
@@ -935,7 +935,7 @@ proxies:
     sid: 686c0ef0
     tls: true
     uuid: 418DA912-0248-4762-8D21-5CB38467CA4D
-  - name: 67 美国
+  - name: 67 🇺🇸 US
     type: vless
     server: 108.62.60.24
     port: 443
@@ -951,7 +951,7 @@ proxies:
     tls: true
     udp: true
     uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-  - name: 68 美国
+  - name: 68 🇺🇸 US
     type: vless
     server: 40.160.227.243
     port: 443
@@ -967,7 +967,7 @@ proxies:
     tls: true
     udp: true
     uuid: 88cb5a9f-f464-4e3b-8ca0-a74edf911205
-  - name: 69 美国
+  - name: 69 🇺🇸 US
     type: vless
     server: us3-r.link-t7.com
     port: 10240
@@ -989,7 +989,7 @@ proxies:
     sid: 686c0ef0
     tls: true
     uuid: 418DA912-0248-4762-8D21-5CB38467CA4D
-  - name: 70 美国
+  - name: 70 🇺🇸 US
     type: vless
     server: 162.218.95.14
     port: 443
@@ -1005,7 +1005,7 @@ proxies:
     tls: true
     udp: true
     uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-  - name: 71 美国
+  - name: 71 🇺🇸 US
     type: vless
     server: 163.123.141.45
     port: 443
@@ -1026,7 +1026,7 @@ proxies:
         Xhttp-Verify: 3769e495-72dc-42ea-95eb-093cb0e4a6f8
       host: s4117.wagahaha.xyz
       path: /632f3ba5cd0889698a3e4b43d19aa601
-  - name: 72 美国
+  - name: 72 🇺🇸 US
     type: vless
     server: s4120.wagahaha.xyz
     port: 443
@@ -1047,7 +1047,7 @@ proxies:
         Xhttp-Verify: 3769e495-72dc-42ea-95eb-093cb0e4a6f8
       host: s4117.wagahaha.xyz
       path: /632f3ba5cd0889698a3e4b43d19aa601
-  - name: 73 美国
+  - name: 73 🇺🇸 US
     type: vless
     server: s4119.wagahaha.xyz
     port: 443
@@ -1068,7 +1068,7 @@ proxies:
         Xhttp-Verify: 3769e495-72dc-42ea-95eb-093cb0e4a6f8
       host: s4117.wagahaha.xyz
       path: /632f3ba5cd0889698a3e4b43d19aa601
-  - name: 74 美国
+  - name: 74 🇺🇸 US
     type: vless
     server: 2.27.244.96
     port: 443
@@ -1082,7 +1082,7 @@ proxies:
       short-id: 00bca5982f82d083
     skip-cert-verify: true
     udp: true
-  - name: 75 新加坡
+  - name: 75 🇸🇬 SG
     type: vless
     server: 18.138.232.191
     port: 8686
@@ -1095,7 +1095,7 @@ proxies:
       short-id: 628b3c90c98ead4f
     skip-cert-verify: true
     udp: true
-  - name: 76 香港
+  - name: 76 🇭🇰 HK
     type: vless
     server: 162.141.137.231
     port: 55371
@@ -1108,7 +1108,7 @@ proxies:
       public-key: synxygq0ozctiW0jNF1mmvAI9PainW0rBfqe11LkeAM
     skip-cert-verify: true
     udp: true
-  - name: 77 香港
+  - name: 77 🇭🇰 HK
     password: 1427eb10-7529-4d38-a6a2-01b337868b37
     port: 4433
     server: hk2.xiaoliyu.cyou
@@ -1116,7 +1116,7 @@ proxies:
     sni: hk2.xiaoliyu.cyou
     tls: false
     type: hysteria2
-  - name: 78 美国
+  - name: 78 🇺🇸 US
     password: 17aVvwmiSU
     port: 10929
     server: do.aigh.store
@@ -1124,22 +1124,14 @@ proxies:
     sni: do.aigh.store
     tls: false
     type: hysteria2
-  - name: 79 新加坡
-    password: 41f0d6d3-4a45-4635-8225-2abd2284189b
-    port: 2056
-    server: xjp1.mangshe.xyz
-    skip-cert-verify: true
-    sni: xjp1.mangshe.xyz
-    tls: false
-    type: hysteria2
-  - name: 80 香港
+  - name: 79 🇭🇰 HK
     password: 9q3Mb0IzSVbnwaqK
     port: 16001
     server: 18.162.42.61
     sni: hk-ls-r-1.czzhkractqqakfzdmrgd.cc
     tls: false
     type: hysteria2
-  - name: 81 日本
+  - name: 80 🇯🇵JP
     password: Foc_Mcxi45rM9v3ve_N92fdrK_10_Ssc5
     port: 8443
     server: 185.39.31.117
@@ -1147,7 +1139,7 @@ proxies:
     sni: grape-beer.yyuyy.com
     tls: false
     type: hysteria2
-  - name: 82 韩国
+  - name: 81 🇰🇷 KR
     password: GSPOBvG-ZwYcBFMr0ekFGO_Zga3wK6v_
     port: 8443
     server: hy2-germany.unlimited-access.ru
@@ -1155,14 +1147,14 @@ proxies:
     sni: hy2-germany.unlimited-access.ru
     tls: false
     type: hysteria2
-  - name: 83 美国
+  - name: 82 🇺🇸 US
     password: VB92_Ka9qwef143K_L23K1hz3_bF_Hz62uT_Bn1_sC
     port: 8080
     server: 82.39.214.98
     sni: hopp-us.yyuyy.com
     tls: false
     type: hysteria2
-  - name: 84 新加坡
+  - name: 83 🇸🇬 SG
     obfs: salamander
     obfs-password: MBd0Kzj3ZcY3
     password: VL0N0IPJ5Tqj672H7FsxYw==
@@ -1171,7 +1163,7 @@ proxies:
     sni: c.hbapp.xyz
     tls: false
     type: hysteria2
-  - name: 85 新加坡
+  - name: 84 🇸🇬 SG
     password: ZYTopBPE6fGijECIcT3KxqFEpjQJ44ND
     port: 55793
     server: vip-sg-2.hkd4fwmg.vip
@@ -1179,7 +1171,7 @@ proxies:
     sni: vip-sg-2.hkd4fwmg.vip
     tls: false
     type: hysteria2
-  - name: 86 美国
+  - name: 85 🇺🇸 US
     obfs: salamander
     obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
     password: cd74c0a406664a5bc0bac098220a2468
@@ -1189,7 +1181,7 @@ proxies:
     sni: nl1.sferavpn.pro
     tls: false
     type: hysteria2
-  - name: 87 日本
+  - name: 86 🇯🇵JP
     password: ef18d810-719c-4bf1-83c6-615d01f217eb
     port: 443
     server: jp.cryptoofarm.com
@@ -1197,7 +1189,14 @@ proxies:
     sni: jp.cryptoofarm.com
     tls: false
     type: hysteria2
-  - name: 88 美国
+  - name: 87 🇭🇰 HK
+    password: f4927789e58bcd24b6f6
+    port: 10444
+    server: h.zz2233.cyou
+    sni: h.zz2233.cyou
+    tls: false
+    type: hysteria2
+  - name: 88 🇺🇸 US
     password: fe475179-d8a8-420d-a4ac-3e415ed8dc72
     port: 11683
     server: uswx4.wxgqlfx.vip
@@ -1205,7 +1204,7 @@ proxies:
     sni: 144.225.187.153
     tls: false
     type: hysteria2
-  - name: 89 新加坡
+  - name: 89 🇸🇬 SG
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 13.229.82.184
@@ -1213,7 +1212,7 @@ proxies:
     sni: vpn-sg-001.fastervpn.world
     tls: false
     type: hysteria2
-  - name: 90 新加坡
+  - name: 90 🇸🇬 SG
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 47.129.155.42
@@ -1221,7 +1220,7 @@ proxies:
     sni: vpn-sg-001.fastervpn.world
     tls: false
     type: hysteria2
-  - name: 91 新加坡
+  - name: 91 🇸🇬 SG
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 54.254.190.23
@@ -1229,7 +1228,7 @@ proxies:
     sni: vpn-sg-001.fastervpn.world
     tls: false
     type: hysteria2
-  - name: 92 美国
+  - name: 92 🇺🇸 US
     password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
     port: 443
     server: faq.wwwinternetvideo.click
@@ -1240,7 +1239,7 @@ proxies:
   - alpn:
       - h3
     client-fingerprint: chrome
-    name: 93 美国
+    name: 93 🇺🇸 US
     obfs: salamander
     obfs-password: 93lc6r07zfx4crct
     password: t8t2qojzsykqazfu
@@ -1252,7 +1251,7 @@ proxies:
   - client-fingerprint: chrome
     encryption: none
     flow: xtls-rprx-vision
-    name: 94 美国
+    name: 94 🇺🇸 US
     network: tcp
     port: "443"
     reality-opts:
@@ -1269,7 +1268,7 @@ proxies:
     encryption: none
     grpc-opts:
       grpc-service-name: update
-    name: 95 新加坡
+    name: 95 🇸🇬 SG
     network: grpc
     port: "10038"
     reality-opts:
@@ -1284,7 +1283,7 @@ proxies:
     xudp: true
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 96 美国
+    name: 96 🇺🇸 US
     network: tcp
     port: "443"
     reality-opts:
@@ -1299,7 +1298,7 @@ proxies:
     xudp: true
   - client-fingerprint: firefox
     flow: xtls-rprx-vision
-    name: 97 美国
+    name: 97 🇺🇸 US
     network: tcp
     port: "443"
     reality-opts:
@@ -1314,7 +1313,7 @@ proxies:
     xudp: true
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 98 美国
+    name: 98 🇺🇸 US
     network: tcp
     port: "443"
     reality-opts:
@@ -1327,9 +1326,33 @@ proxies:
     udp: true
     uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
     xudp: true
+  - down: ""
+    fingerprint: ""
+    name: 99 🇸🇬 SG
+    obfs: ""
+    obfs-password: ""
+    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+    port: "443"
+    server: 13.212.191.206
+    skip-cert-verify: true
+    sni: vpn-sg-001.fastervpn.world
+    type: hysteria2
+    up: ""
+  - down: ""
+    fingerprint: ""
+    name: 100 🇸🇬 SG
+    obfs: ""
+    obfs-password: ""
+    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+    port: "443"
+    server: 13.212.74.81
+    skip-cert-verify: true
+    sni: vpn-sg-001.fastervpn.world
+    type: hysteria2
+    up: ""
   - client-fingerprint: safari
     flow: xtls-rprx-vision
-    name: 99 美国
+    name: 101 🇺🇸 US
     network: raw
     port: "8443"
     reality-opts:
@@ -1342,24 +1365,9 @@ proxies:
     udp: true
     uuid: c2cc86b4-4481-4807-ac9e-24e2d7041248
     xudp: true
-  - client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    name: 100 美国
-    network: tcp
-    port: "443"
-    reality-opts:
-      public-key: XOcyZvF63CHDPnh3UCL-u-X8HYeNGiRtrwDVRLBC1DI
-      short-id: f41bc0b00ca1a978
-    server: nl4.murhost.network
-    servername: nl4.murhost.network
-    tls: true
-    type: vless
-    udp: true
-    uuid: c6cff605-90cf-4953-bf97-0a44e43f229d
-    xudp: true
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 101 美国
+    name: 102 🇺🇸 US
     network: tcp
     port: 443
     reality-opts:
@@ -1374,7 +1382,7 @@ proxies:
     uuid: 5905d91f-c3bc-4e80-bd66-4b17beb166cb
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 102 美国
+    name: 103 🇺🇸 US
     network: tcp
     port: 11094
     reality-opts:
@@ -1389,7 +1397,7 @@ proxies:
     uuid: f1fa0ad9-b122-4b7c-da82-4bea9edc48dd
   - client-fingerprint: firefox
     flow: xtls-rprx-vision
-    name: 103 美国
+    name: 104 🇺🇸 US
     network: tcp
     port: 443
     reality-opts:
@@ -1404,7 +1412,7 @@ proxies:
     uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 104 美国
+    name: 105 🇺🇸 US
     network: tcp
     port: 29893
     reality-opts:
@@ -1419,7 +1427,7 @@ proxies:
     uuid: f06c6039-a489-3d78-a676-ed43be6deca3
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 105 美国
+    name: 106 🇺🇸 US
     network: tcp
     port: 39399
     reality-opts:
@@ -1434,7 +1442,7 @@ proxies:
     uuid: f06c6039-a489-3d78-a676-ed43be6deca3
   - client-fingerprint: firefox
     flow: xtls-rprx-vision
-    name: 106 美国
+    name: 107 🇺🇸 US
     network: tcp
     port: 443
     reality-opts:
@@ -1449,7 +1457,7 @@ proxies:
     uuid: 055dce30-0ee3-44c3-b680-be1c95b8d6e7
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 107 美国
+    name: 108 🇺🇸 US
     network: tcp
     port: 443
     reality-opts:
@@ -1464,7 +1472,7 @@ proxies:
     uuid: 9638a83e-f1f7-4cc8-a602-924965d9534f
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 108 美国
+    name: 109 🇺🇸 US
     network: tcp
     port: 39211
     reality-opts:
@@ -1479,7 +1487,7 @@ proxies:
     uuid: f06c6039-a489-3d78-a676-ed43be6deca3
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 109 美国
+    name: 110 🇺🇸 US
     network: tcp
     port: 443
     reality-opts:
@@ -1495,7 +1503,7 @@ proxies:
   - client-fingerprint: chrome
     grpc-opts:
       grpc-service-name: grpc-tunnel
-    name: 110 美国
+    name: 111 🇺🇸 US
     network: grpc
     port: 9873
     reality-opts:
@@ -1507,149 +1515,15 @@ proxies:
     type: vless
     udp: true
     uuid: 2a650f3b-d95b-4bd6-aadf-16ccc0717155
-  - name: 111 香港
-    server: 7a42b5b4-tki800-tlx75w-1gxvd.hk2.hyhuawei.com
-    port: 443
-    type: vless
-    uuid: 398e0d38-8649-11ef-959c-f23c9164ca5d
-    tls: true
-    reality-opts:
-      public-key: c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo
-    servername: download.windowsupdate.com
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: 112 香港
-    server: nian.001.url111.kcloud02.top
-    port: 15003
-    type: vless
-    uuid: 399c4c9b-27e1-37f1-9dce-22ccc2727a86
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: R_3usai5pYqcc0aIzXPfaoe-VE_7JOe60fUNMicwfQ8
-      short-id: 4c517b9e
-    servername: www.cloudflare.com
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: 113 香港
-    server: 46b61821-tki800-tlwmty-1gevg.pccw3.hyhuawei.com
-    port: 443
-    type: tuic
-    password: f02ee2b4-d760-11ec-bd7c-f23c913c8d2b
-    uuid: f02ee2b4-d760-11ec-bd7c-f23c913c8d2b
+  - name: 112 🇭🇰 HK
+    server: 31.57.248.176
+    port: 50160
+    type: hysteria2
+    password: b0917015b656b3dd2286b5633af0c5c1
+    auth: b0917015b656b3dd2286b5633af0c5c1
+    sni: www.bing.com
     skip-cert-verify: true
-    disable-sni: false
-    reduce-rtt: false
-    request-timeout: 0
-    congestion-controller: bbr
-  - name: 114 香港
-    server: 0e05f970-tki800-traezq-1t5n1.hk2.hyhuawei.com
-    port: 443
-    type: vless
-    uuid: ea800f9e-ca6c-11ef-8e74-f23c913c8d2b
-    tls: true
-    reality-opts:
-      public-key: c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo
-    servername: download.windowsupdate.com
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: 115 香港
-    server: 7dec470f-tki800-tlx75w-1gxvd.pccw6.hyhuawei.com
-    port: 443
-    type: tuic
-    password: 398e0d38-8649-11ef-959c-f23c9164ca5d
-    uuid: 398e0d38-8649-11ef-959c-f23c9164ca5d
-    skip-cert-verify: true
-    disable-sni: false
-    reduce-rtt: false
-    request-timeout: 0
-    congestion-controller: bbr
-  - name: 116 香港
-    server: a7f29337-tki800-tlx75w-1gxvd.pccw3.hyhuawei.com
-    port: 443
-    type: tuic
-    password: 398e0d38-8649-11ef-959c-f23c9164ca5d
-    uuid: 398e0d38-8649-11ef-959c-f23c9164ca5d
-    skip-cert-verify: true
-    disable-sni: false
-    reduce-rtt: false
-    request-timeout: 0
-    congestion-controller: bbr
-  - name: 117 香港
-    server: 23a1b5da-tki800-traezq-1t5n1.pccw3.hyhuawei.com
-    port: 443
-    type: tuic
-    password: ea800f9e-ca6c-11ef-8e74-f23c913c8d2b
-    uuid: ea800f9e-ca6c-11ef-8e74-f23c913c8d2b
-    skip-cert-verify: true
-    disable-sni: false
-    reduce-rtt: false
-    request-timeout: 0
-    congestion-controller: bbr
-  - name: 118 香港
-    server: bce253e1-tki800-tlx75w-1gxvd.nw4.hyhuawei.com
-    port: 443
-    type: vless
-    uuid: 398e0d38-8649-11ef-959c-f23c9164ca5d
-    tls: true
-    reality-opts:
-      public-key: QxrH0lkKZn4KpMMbHHQ1fcgs9PxDSUMUJn7vHan_7C0
-    servername: dl.delivery.mp.microsoft.com
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: 119 香港
-    server: e6341f37-tki800-tlwmty-1gevg.pccw6.hyhuawei.com
-    port: 443
-    type: tuic
-    password: f02ee2b4-d760-11ec-bd7c-f23c913c8d2b
-    uuid: f02ee2b4-d760-11ec-bd7c-f23c913c8d2b
-    skip-cert-verify: true
-    disable-sni: false
-    reduce-rtt: false
-    request-timeout: 0
-    congestion-controller: bbr
-  - name: 120 香港
-    server: df132ade-tki800-traezq-1t5n1.nw4.hyhuawei.com
-    port: 443
-    type: vless
-    uuid: ea800f9e-ca6c-11ef-8e74-f23c913c8d2b
-    tls: true
-    reality-opts:
-      public-key: QxrH0lkKZn4KpMMbHHQ1fcgs9PxDSUMUJn7vHan_7C0
-    servername: dl.delivery.mp.microsoft.com
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: 121 日本
-    server: e9cf66eb-tki800-tlx75w-1gxvd.jp5.hyhuawei.com
-    port: 443
-    type: tuic
-    password: 398e0d38-8649-11ef-959c-f23c9164ca5d
-    uuid: 398e0d38-8649-11ef-959c-f23c9164ca5d
-    skip-cert-verify: true
-    disable-sni: false
-    reduce-rtt: false
-    request-timeout: 0
-    congestion-controller: bbr
-  - name: 122 日本
-    server: nian.001.url111.kcloud02.top
-    port: 15007
-    type: vless
-    uuid: 399c4c9b-27e1-37f1-9dce-22ccc2727a86
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: qVNutDFjEp3v2wjeUl_Yy6l9TXawXfSjAsFj3iktmRA
-      short-id: 2c4d005b
-    servername: www.bing.com
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: 123 日本
+  - name: 113 🇯🇵JP
     server: jpglobal-identity-federation-auth.younai-ytl.shop
     port: 28219
     type: anytls
@@ -1657,47 +1531,31 @@ proxies:
     udp: true
     sni: us05.pulsarcore.site
     skip-cert-verify: true
-  - name: 124 韩国
-    server: 139.28.168.58
-    port: 8080
-    type: hysteria2
-    password: 0wdsa_nJXEWRj9jz9J9xMgtx_n7gzfK_m8
-    auth: 0wdsa_nJXEWRj9jz9J9xMgtx_n7gzfK_m8
-    sni: grape-honk.yyuyy.com
-    skip-cert-verify: true
-  - name: 125 韩国
-    server: yzany01.downapptwo.cc
-    port: 45959
+  - name: 114 🇯🇵JP
+    server: jd-us78.y1static-content-distribution.shop
+    port: 443
     type: anytls
     password: 29204996-a723-4291-8c70-30843b592d40
     udp: true
-    sni: eluosi01.pulsarcore.site
+    sni: jd-us78.y1static-content-distribution.shop
     skip-cert-verify: true
-  - name: 126 韩国
-    server: yzany01.downapptwo.cc
-    port: 30019
+  - name: 115 🇯🇵JP
+    server: jpglobal-identity-federation-auth.younai-ytl.shop
+    port: 12791
     type: anytls
     password: 29204996-a723-4291-8c70-30843b592d40
     udp: true
-    sni: yiselie01.swiftrelay.cc
+    sni: jp10.pulsarcore.site
     skip-cert-verify: true
-  - name: 127 韩国
-    server: yzany01.downapptwo.cc
-    port: 51178
+  - name: 116 🇯🇵JP
+    server: jd-jp06jg.y1static-content-distribution.shop
+    port: 443
     type: anytls
     password: 29204996-a723-4291-8c70-30843b592d40
     udp: true
-    sni: hk09.alytest.cc
+    sni: jd-jp06jg.y1static-content-distribution.shop
     skip-cert-verify: true
-  - name: 128 韩国
-    server: yzany01.downapptwo.cc
-    port: 17930
-    type: anytls
-    password: 29204996-a723-4291-8c70-30843b592d40
-    udp: true
-    sni: flv02.swiftrelay.cc
-    skip-cert-verify: true
-  - name: 129 韩国
+  - name: 117 🇰🇷 KR
     server: yzany01.downapptwo.cc
     port: 20694
     type: anytls
@@ -1705,15 +1563,23 @@ proxies:
     udp: true
     sni: malxy.pulsarcore.site
     skip-cert-verify: true
-  - name: 130 韩国
+  - name: 118 🇰🇷 KR
     server: yzany01.downapptwo.cc
-    port: 25504
+    port: 27631
     type: anytls
     password: 29204996-a723-4291-8c70-30843b592d40
     udp: true
-    sni: us02.swiftrelay.cc
+    sni: hk03.jdddyy01.cc
     skip-cert-verify: true
-  - name: 131 韩国
+  - name: 119 🇰🇷 KR
+    server: 139.28.168.58
+    port: 8080
+    type: hysteria2
+    password: 0wdsa_nJXEWRj9jz9J9xMgtx_n7gzfK_m8
+    auth: 0wdsa_nJXEWRj9jz9J9xMgtx_n7gzfK_m8
+    sni: grape-honk.yyuyy.com
+    skip-cert-verify: true
+  - name: 120 🇰🇷 KR
     server: yzany01.downapptwo.cc
     port: 35853
     type: anytls
@@ -1721,45 +1587,23 @@ proxies:
     udp: true
     sni: hk01.pulsarcore.site
     skip-cert-verify: true
-  - name: 132 新加坡
-    server: test01.y1static-content-distribution.shop
-    port: 30659
+  - name: 121 🇰🇷 KR
+    server: yzany01.downapptwo.cc
+    port: 45959
     type: anytls
     password: 29204996-a723-4291-8c70-30843b592d40
     udp: true
-    sni: uk05.lunartrace.io
+    sni: eluosi01.pulsarcore.site
     skip-cert-verify: true
-  - name: 133 新加坡
-    server: nian.001.url111.kcloud02.top
-    port: 15006
-    type: vless
-    uuid: 399c4c9b-27e1-37f1-9dce-22ccc2727a86
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: g9KZONtwSL8mL772rps2nXVAuQpsgHY33K_pHpI89Rg
-      short-id: 029a6cc4
-    servername: www.adobe.com
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: 134 新加坡
-    server: 52.221.225.195
-    port: 443
-    type: hysteria2
-    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-    auth: qQe1z5kU8kN6SlKnDt9Ru3Qp
-    sni: vpn-sg-001.fastervpn.world
-    skip-cert-verify: true
-  - name: 135 新加坡
+  - name: 122 🇸🇬 SG
     server: test01.y1static-content-distribution.shop
-    port: 15503
+    port: 24099
     type: anytls
     password: 29204996-a723-4291-8c70-30843b592d40
     udp: true
-    sni: kr08.lunartrace.io
+    sni: us56.pulsarcore.site
     skip-cert-verify: true
-  - name: 136 台湾
+  - name: 123 🇹🇼 TW
     server: tw73.cybergalaxy.me
     port: 443
     type: anytls
@@ -1767,81 +1611,65 @@ proxies:
     udp: true
     sni: tw73.cybergalaxy.me
     skip-cert-verify: true
-  - name: 137 台湾
-    server: tw4.miyazono-kaori.com
+  - name: 124 🇹🇼 TW
+    server: tw76.cybergalaxy.me
     port: 443
-    type: vless
-    uuid: 44817aed-4e54-4704-8ca1-9f22243ed1a5
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: IqsN_cPeCP6oEXtYQMMWBiUim-r9lxq7YGj_mE3992g
-      short-id: e6d59aff03e5b0
-    servername: dlcdnets.asus.com
-    client-fingerprint: chrome
-    network: tcp
+    type: anytls
+    password: 29204996-a723-4291-8c70-30843b592d40
     udp: true
-  - name: 138 美国
-    server: 216.133.145.24
-    port: 39128
-    type: vless
-    uuid: 5df38c80-ba70-4513-9dfb-58b2dc2aa03a
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: fTbEqV2hvje5L5APXuHBcfx6SkoKKQTlHgx_NltXoBI
-      short-id: c9bc13b2
-    servername: apple.com
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 139 日本
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: 5qkRIcB3SAxOr6m76YHUHNFdhsaK7HXWPipELhPD8j4
-      short-id: 64299c2e
-    server: xaxaxa.kdns.fr
-    tls: true
-    type: vless
-    udp: true
-    uuid: 5c958497-4461-499a-881b-b5e5bfeade62
-    servername: www.oracle.com
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 140 美国
-    network: tcp
-    port: 40444
-    reality-opts:
-      public-key: ZZK_Oo5-iDDgoWzxIURTLWoKPbC8NFto3Mk7OvAZgRU
-      short-id: b3f2a1c9
-    server: 5.253.38.67
-    tls: true
-    type: vless
-    udp: true
-    uuid: 16e747d6-b7c2-49a0-a9c7-90bb622db36f
-    servername: www.lovelive-anime.jp
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 141 台湾
-    network: tcp
-    port: 443
-    reality-opts:
-      public-key: F4AYPvAh1ULZaiUHQjm0dE6DMmJlapXxIAjR9Ux91lw
-      short-id: c253cfff
-    server: tw7.china-206xswl.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: ce551b1c-95f5-4ea2-b6fc-5e9ef472fae1
-    xudp: true
-    servername: blzddist1-a.akamaihd.net
-  - name: 142 美国
-    type: hysteria2
+    sni: tw76.cybergalaxy.me
+    skip-cert-verify: true
+  - name: 125 🇺🇸 US
     server: 104.129.54.249
     port: 50160
+    type: hysteria2
     password: a7c561fe673c05f2ad2fe6f7f1aee41c
+    auth: a7c561fe673c05f2ad2fe6f7f1aee41c
     sni: www.bing.com
     skip-cert-verify: true
+  - name: 126 🇺🇸 US
+    server: yazhouany02.downapptwo.cc
+    port: 59585
+    type: anytls
+    password: 29204996-a723-4291-8c70-30843b592d40
+    udp: true
+    sni: us26.pulsarcore.site
+    skip-cert-verify: true
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 127 🇺🇸 US
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: XOcyZvF63CHDPnh3UCL-u-X8HYeNGiRtrwDVRLBC1DI
+      short-id: f41bc0b00ca1a978
+    server: 80.76.44.141
+    skip-cert-verify: true
+    tfo: false
+    tls: true
+    type: vless
+    uuid: c6cff605-90cf-4953-bf97-0a44e43f229d
+    servername: nl4.murhost.network
+  - auth: 1671a252e2a97dc2bda4e515475931da
+    name: 128 🇰🇷 KR
+    password: 1671a252e2a97dc2bda4e515475931da
+    port: 50160
+    server: 132.226.226.189
+    skip-cert-verify: true
+    sni: www.bing.com
+    type: hysteria2
+    udp: true
+  - name: 129 🇯🇵JP
+    type: vless
+    server: 162.141.131.102
+    port: 50159
+    uuid: 063e01c2-4c0f-418e-9375-3cc1312f635b
+    udp: true
+    network: tcp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: www.cloudflare.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: fLtEa_5BiN89xQDypfFMOu5o6DoUf6ch42jGdkXy6zE
+      short-id: 7f24526f7307c07a
