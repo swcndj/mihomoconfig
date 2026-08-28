@@ -9,21 +9,22 @@ const REQUEST_TIMEOUT = 15000;
 const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
 
 // 名称初筛正则：仅用于减少查询量，不做最终判定
-const PRE_FILTER_REGEX = /香港|Hong Kong|HK|台湾|Taiwan|TW|日本|Japen|JP|韩国|Korea|KR|新加坡|Singapore|SG|美国|United States|US/i;
-// 目标地区代码集合：仅用于筛选，重命名直接使用 countryCode 本身
-const TARGET_COUNTRY_CODES = new Set(['HK', 'TW', 'JP', 'KR', 'SG', 'US']);
+const PRE_FILTER_REGEX = /香港|Hong Kong|HK|澳门|Macau|MO|台湾|Taiwan|TW|日本|Japen|JP|韩国|Korea|KR|新加坡|Singapore|SG|马来西亚|Malaysia|MY|泰国|Thailand|TH|澳大利亚|Australia|AU|美国|United States|US/i;
+// 目标地区代码集合：仅用于筛选，重命名直接使用 countryCode
+const TARGET_COUNTRY_CODES = new Set(['HK', 'MO', 'TW', 'JP', 'KR', 'SG', 'MY', 'TH', 'AU', 'US']);
 
-// IP批量查询配置（免费批量接口仅支持HTTP）
+// IP 批量查询配置
 const BATCH_ENDPOINT = 'http://ip-api.com/batch';
 const BATCH_SIZE = 50;
-const BATCH_INTERVAL = 4500;
-const BATCH_FIELDS = 'status,countryCode'; // 仅保留必需字段，最小化响应体积
+const BATCH_INTERVAL = 3000;
+const BATCH_FIELDS = 'status,countryCode';
 
-// 域名单查配置（支持HTTPS，兼容域名自动解析）
+// 域名单查配置
 const SINGLE_ENDPOINT = 'http://ip-api.com/json';
 const DOMAIN_QUERY_INTERVAL = 1500;
 
-const DEBUG_BATCH = false; // 详细调试日志开关
+// 调试日志开关
+const DEBUG_BATCH = false;
 // -------------------------------------------------- 配置区 --------------------------------------------------
 
 // -------------------------------------------------- 工具函数 --------------------------------------------------
@@ -45,7 +46,7 @@ function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// 判断是否为IP地址（IPv4/IPv6）
+// 判断是否为 IP 地址
 function isIpAddress(str) {
   if (!str) return false;
   const ipv4Regex = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
@@ -53,7 +54,7 @@ function isIpAddress(str) {
   return ipv4Regex.test(str) || ipv6Regex.test(str);
 }
 
-// 批量查询IP的国家代码，返回 Map<ip, countryCode|null>
+// 批量查询 IP 的国家代码
 async function batchQueryIpCountry(ipList) {
   try {
     const res = await fetchWithTimeout(`${BATCH_ENDPOINT}?fields=${encodeURIComponent(BATCH_FIELDS)}`, {
@@ -61,30 +62,24 @@ async function batchQueryIpCountry(ipList) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(ipList)
     });
-
     if (!res.ok) {
       console.log(`    ❌ 批量请求失败 HTTP ${res.status}`);
       return null;
     }
-
     const data = await res.json();
     const resultMap = new Map();
-
     data.forEach((item, index) => {
       const ip = ipList[index];
       const cc = item?.status === 'success' ? String(item.countryCode).toUpperCase() : null;
       resultMap.set(ip, cc);
-
       if (DEBUG_BATCH) {
         console.log(`      ${ip} -> ${cc ? `✅ ${cc}` : `❌ 失败: ${item?.message || '未知错误'}`}`);
       }
     });
-
     if (DEBUG_BATCH) {
       const success = [...resultMap.values()].filter(Boolean).length;
       console.log(`    --- 本批统计：成功 ${success}，失败 ${ipList.length - success} ---`);
     }
-
     return resultMap;
   } catch (e) {
     console.log(`    ❌ 批量请求异常：${e.message}`);
@@ -143,8 +138,7 @@ async function getIpCountryCode(ipOrDomain) {
     if (type === 'vless') {
       const hasReality = !!p['reality-opts'];
       const hasXhttp = !!p['xhttp-opts'];
-      const hasWs = !!p['ws-opts'];
-      if (!hasReality && !hasXhttp && !hasWs) return false;
+      if (!hasReality && !hasXhttp) return false;
       if (p.encryption && typeof p.encryption === 'string' && p.encryption.length > 50) return false;
     }
     return true;
@@ -170,9 +164,8 @@ async function getIpCountryCode(ipOrDomain) {
     // 4.1 名称初筛
     const preFiltered = dedupList.filter(p => PRE_FILTER_REGEX.test(p.name || ''));
     console.log(`\n名称初筛候选节点数：${preFiltered.length}`);
-
     if (preFiltered.length > 0) {
-      // 4.2 拆分IP/域名节点
+      // 4.2 拆分 IP /域名节点
       const ipNodes = [];
       const domainNodes = [];
       for (const node of preFiltered) {
@@ -180,13 +173,11 @@ async function getIpCountryCode(ipOrDomain) {
         isIpAddress(node.server) ? ipNodes.push(node) : domainNodes.push(node);
       }
       console.log(`节点拆分：IP ${ipNodes.length} 个，域名 ${domainNodes.length} 个`);
-
       const allResultMap = new Map();
-
-      // 4.3 IP批量查询
+      // 4.3 IP 批量查询
       if (ipNodes.length > 0) {
         const batchCount = Math.ceil(ipNodes.length / BATCH_SIZE);
-        console.log(`\n--- IP批量查询，共 ${ipNodes.length} 个，分 ${batchCount} 批 ---`);
+        console.log(`--- IP批量查询，共 ${ipNodes.length} 个，分 ${batchCount} 批 ---`);
         for (let i = 0; i < batchCount; i++) {
           const batch = ipNodes.slice(i * BATCH_SIZE, (i + 1) * BATCH_SIZE);
           const batchIps = batch.map(p => p.server);
@@ -196,10 +187,9 @@ async function getIpCountryCode(ipOrDomain) {
           if (i < batchCount - 1) await delay(BATCH_INTERVAL);
         }
       }
-
       // 4.4 域名单个查询
       if (domainNodes.length > 0) {
-        console.log(`\n--- 域名单查，共 ${domainNodes.length} 个 ---`);
+        console.log(`--- 域名单查，共 ${domainNodes.length} 个 ---`);
         for (let i = 0; i < domainNodes.length; i++) {
           const server = domainNodes[i].server;
           if (DEBUG_BATCH) console.log(`  [${i + 1}/${domainNodes.length}] 查询 ${server}`);
@@ -209,7 +199,6 @@ async function getIpCountryCode(ipOrDomain) {
           if (i < domainNodes.length - 1) await delay(DOMAIN_QUERY_INTERVAL);
         }
       }
-
       // 4.5 匹配目标地区并重命名
       let matchCount = 0;
       let failCount = 0;
@@ -221,13 +210,12 @@ async function getIpCountryCode(ipOrDomain) {
           regionFiltered.push(newNode);
         }
       }
-
-      console.log(`\n地区校验统计：`);
+      console.log(`地区校验统计：`);
       console.log(`  候选节点：${preFiltered.length}`);
       console.log(`  查询失败：${failCount}`);
       console.log(`  命中目标：${matchCount}`);
     }
-    console.log(`\n地区最终筛选后节点数：${regionFiltered.length}`);
+    console.log(`地区最终筛选后节点数：${regionFiltered.length}`);
   } else {
     console.log(`⚠️ 未配置目标地区，跳过地区筛选`);
   }
