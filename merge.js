@@ -143,8 +143,7 @@ async function getIpCountryCode(ipOrDomain) {
     if (type === 'vless') {
       const hasReality = !!p['reality-opts'];
       const hasXhttp = !!p['xhttp-opts'];
-      const hasWs = !!p['ws-opts'];
-      if (!hasReality && !hasXhttp && !hasWs) return false;
+      if (!hasReality && !hasXhttp) return false;
       if (p.encryption && typeof p.encryption === 'string' && p.encryption.length > 50) return false;
     }
     return true;
