@@ -9,7 +9,7 @@ const REQUEST_TIMEOUT = 15000;
 const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
 
 // 名称初筛正则：仅用于减少查询量，不做最终判定
-const PRE_FILTER_REGEX = /香港|Hong Kong|HK|澳门|Macau|MO|台湾|Taiwan|TW|日本|Japen|JP|韩国|Korea|KR|新加坡|Singapore|SG|马来西亚|Malaysia|MY|泰国|Thailand|TH|澳大利亚|Australia|AU|美国|United States|US/i;
+const PRE_FILTER_REGEX = /香港|Hong Kong|HK|🇭🇰|澳门|Macau|MO|🇲🇴|台湾|Taiwan|TW|🇹🇼|日本|Japen|JP|🇯🇵|韩国|Korea|KR|🇰🇷|新加坡|Singapore|SG|🇸🇬|马来西亚|Malaysia|MY|🇲🇾|泰国|Thailand|TH|🇹🇭|澳大利亚|Australia|AU|🇦🇺|美国|United States|US|🇺🇸/iu;
 // 目标地区代码集合：仅用于筛选，重命名直接使用 countryCode
 const TARGET_COUNTRY_CODES = new Set(['HK', 'MO', 'TW', 'JP', 'KR', 'SG', 'MY', 'TH', 'AU', 'US']);
 
@@ -220,7 +220,7 @@ async function getIpCountryCode(ipOrDomain) {
     console.log(`⚠️ 未配置目标地区，跳过地区筛选`);
   }
 
-  // 5. 输出结果（修复链式调用问题，改回分步写法）
+  // 5. 输出结果
   const docAll = new yaml.Document();
   docAll.set('proxies', dedupList);
   fs.writeFileSync(OUTPUT_FILE, docAll.toString({ indent: 2, lineWidth: 0 }));
