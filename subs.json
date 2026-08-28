@@ -1,8 +1,7 @@
 [
-  "https://raw.githubusercontent.com/free-nodes/clashfree/main/sub.yml",
-  "https://raw.githubusercontent.com/mahdibland/SSAggregator/master/sub/sub_merge_yaml.yml",
-  "https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/merged.yaml",
   "https://raw.githubusercontent.com/dongchengjie/airport/main/subs/merged/tested_within.yaml",
+  "https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/merged.yaml",
+  "https://raw.githubusercontent.com/mahdibland/SSAggregator/master/sub/sub_merge_yaml.yml",
   "https://raw.githubusercontent.com/free18/v2ray/main/c.yaml",
   "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml",
   "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes.meta.yml",
@@ -17,5 +16,6 @@
   "https://raw.githubusercontent.com/firefoxmmx2/v2rayshare_subcription/main/subscription/clash_sub.yaml",
   "https://raw.githubusercontent.com/go4sharing/sub/main/sub.yaml",
   "https://raw.githubusercontent.com/PuddinCat/BestClash/main/proxies.yaml",
-  "https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash"
+  "https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash",
+  "https://raw.githubusercontent.com/free-nodes/clashfree/main/sub.yml"
 ]
