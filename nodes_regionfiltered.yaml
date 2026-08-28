@@ -1218,21 +1218,6 @@ proxies:
     flow: xtls-rprx-vision
     name: 89 HK
     network: tcp
-    port: 15003
-    reality-opts:
-      public-key: R_3usai5pYqcc0aIzXPfaoe-VE_7JOe60fUNMicwfQ8
-      short-id: 4c517b9e
-    server: 82.38.46.66
-    servername: www.cloudflare.com
-    skip-cert-verify: true
-    tfo: false
-    tls: true
-    type: vless
-    uuid: 399c4c9b-27e1-37f1-9dce-22ccc2727a86
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 90 HK
-    network: tcp
     port: 15007
     reality-opts:
       public-key: qVNutDFjEp3v2wjeUl_Yy6l9TXawXfSjAsFj3iktmRA
@@ -1244,7 +1229,7 @@ proxies:
     tls: true
     type: vless
     uuid: 399c4c9b-27e1-37f1-9dce-22ccc2727a86
-  - name: 91 SG
+  - name: 90 SG
     password: 0a344117cfeef3d6602e338c2f1e7957
     port: 50160
     server: 38.180.190.215
@@ -1252,7 +1237,7 @@ proxies:
     sni: www.bing.com
     tls: false
     type: hysteria2
-  - name: 92 HK
+  - name: 91 HK
     password: 1427eb10-7529-4d38-a6a2-01b337868b37
     port: 4433
     server: hk2.xiaoliyu.cyou
@@ -1260,7 +1245,7 @@ proxies:
     sni: hk2.xiaoliyu.cyou
     tls: false
     type: hysteria2
-  - name: 93 US
+  - name: 92 US
     password: 3b8c82ed-fe66-472d-915e-034ccb57103f
     port: 443
     server: us.frkn.org
@@ -1268,7 +1253,7 @@ proxies:
     sni: us.frkn.org
     tls: false
     type: hysteria2
-  - name: 94 SG
+  - name: 93 SG
     password: 41f0d6d3-4a45-4635-8225-2abd2284189b
     port: 2056
     server: xjp1.mangshe.xyz
@@ -1276,7 +1261,7 @@ proxies:
     sni: xjp1.mangshe.xyz
     tls: false
     type: hysteria2
-  - name: 95 JP
+  - name: 94 JP
     password: Foc_Mcxi45rM9v3ve_N92fdrK_10_Ssc5
     port: 8443
     server: 185.39.31.117
@@ -1284,14 +1269,14 @@ proxies:
     sni: grape-beer.yyuyy.com
     tls: false
     type: hysteria2
-  - name: 96 US
+  - name: 95 US
     password: VB92_Ka9qwef143K_L23K1hz3_bF_Hz62uT_Bn1_sC
     port: 8080
     server: 82.39.214.98
     sni: hopp-us.yyuyy.com
     tls: false
     type: hysteria2
-  - name: 97 SG
+  - name: 96 SG
     obfs: salamander
     obfs-password: MBd0Kzj3ZcY3
     password: VL0N0IPJ5Tqj672H7FsxYw==
@@ -1300,7 +1285,7 @@ proxies:
     sni: c.hbapp.xyz
     tls: false
     type: hysteria2
-  - name: 98 JP
+  - name: 97 JP
     password: a9081889-1949-49ba-a2aa-7054515716de
     port: 3488
     server: c2.bestai.beauty
@@ -1308,7 +1293,7 @@ proxies:
     sni: c2.bestai.beauty
     tls: false
     type: hysteria2
-  - name: 99 JP
+  - name: 98 JP
     password: ef18d810-719c-4bf1-83c6-615d01f217eb
     port: 443
     server: jp.cryptoofarm.com
@@ -1316,14 +1301,14 @@ proxies:
     sni: jp.cryptoofarm.com
     tls: false
     type: hysteria2
-  - name: 100 HK
+  - name: 99 HK
     password: f4927789e58bcd24b6f6
     port: 10444
     server: h.zz2233.cyou
     sni: h.zz2233.cyou
     tls: false
     type: hysteria2
-  - name: 101 SG
+  - name: 100 SG
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 13.229.54.166
@@ -1331,7 +1316,7 @@ proxies:
     sni: vpn-sg-001.fastervpn.world
     tls: false
     type: hysteria2
-  - name: 102 SG
+  - name: 101 SG
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 13.229.82.184
@@ -1339,7 +1324,7 @@ proxies:
     sni: vpn-sg-001.fastervpn.world
     tls: false
     type: hysteria2
-  - name: 103 SG
+  - name: 102 SG
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 47.129.155.42
@@ -1347,7 +1332,7 @@ proxies:
     sni: vpn-sg-001.fastervpn.world
     tls: false
     type: hysteria2
-  - name: 104 SG
+  - name: 103 SG
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 54.254.190.23
@@ -1356,24 +1341,8 @@ proxies:
     tls: false
     type: hysteria2
   - client-fingerprint: chrome
-    encryption: none
     flow: xtls-rprx-vision
-    name: 105 HK
-    network: raw
-    port: "15003"
-    reality-opts:
-      public-key: R_3usai5pYqcc0aIzXPfaoe-VE_7JOe60fUNMicwfQ8
-      short-id: 4c517b9e
-    server: nian.001.url111.kcloud02.top
-    servername: www.cloudflare.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: 399c4c9b-27e1-37f1-9dce-22ccc2727a86
-    xudp: true
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 106 US
+    name: 104 US
     network: tcp
     port: 443
     reality-opts:
@@ -1388,7 +1357,7 @@ proxies:
     uuid: 5905d91f-c3bc-4e80-bd66-4b17beb166cb
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 107 US
+    name: 105 US
     network: tcp
     port: 11094
     reality-opts:
@@ -1403,7 +1372,7 @@ proxies:
     uuid: f1fa0ad9-b122-4b7c-da82-4bea9edc48dd
   - client-fingerprint: firefox
     flow: xtls-rprx-vision
-    name: 108 US
+    name: 106 US
     network: tcp
     port: 443
     reality-opts:
@@ -1418,7 +1387,7 @@ proxies:
     uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 109 US
+    name: 107 US
     network: tcp
     port: 29893
     reality-opts:
@@ -1433,7 +1402,7 @@ proxies:
     uuid: f06c6039-a489-3d78-a676-ed43be6deca3
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 110 US
+    name: 108 US
     network: tcp
     port: 39399
     reality-opts:
@@ -1448,7 +1417,7 @@ proxies:
     uuid: f06c6039-a489-3d78-a676-ed43be6deca3
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 111 US
+    name: 109 US
     network: tcp
     port: 39211
     reality-opts:
@@ -1461,78 +1430,7 @@ proxies:
     type: vless
     udp: true
     uuid: f06c6039-a489-3d78-a676-ed43be6deca3
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 112 HK
-    port: 10011
-    reality-opts:
-      public-key: 82bbZIdU-0s8fydncIhp9_sNDYQQH9ZY_7RVI5apXnk
-      short-id: 447f3a05ace2b748
-    server: 103.123.162.50
-    servername: www.microsoft.com
-    tls: true
-    type: vless
-    uuid: 17011a43-97e2-44b0-b0da-a2ea151ad75c
-  - insecure: "1"
-    mport: 40000-49999
-    name: 113 TW
-    obfs: salamander
-    obfs-password: YzgyOTkwNDk4ZTU2NT6iNA==
-    password: a7c5d30b-ce9b-4e34-b5cb-66f8308790ef
-    port: 40000
-    server: tw.9966690.xyz
-    skip-cert-verify: true
-    tls:
-      enabled: true
-      insecure: true
-      server_name: iosapps.itunes.apple.com
-    type: hysteria2
-  - client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    host: apple.com
-    name: 114 US
-    network: tcp
-    port: 54254
-    reality-opts:
-      public-key: HFEz9fAOugljXea_ZVOUHMju08su8h0P9RANNcHP2y4
-      short-id: db35ffdc
-    security: reality
-    server: 134.33.73.249
-    servername: apple.com
-    tls: true
-    type: vless
-    uuid: acba684c-4098-4eca-f519-828b09f96464
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 115 US
-    network: tcp
-    port: 12443
-    reality-opts:
-      public-key: D3bNJPmy4YJqhWQ3Xv1Fu3Z1danrTzswShytnkkG9Q4
-      short-id: ca4a1317e03791b3
-    security: reality
-    server: 31.58.87.71
-    servername: sun6-21.userapi.com
-    tls: true
-    type: vless
-    uuid: ea484535-0170-4ec8-bb3c-a9dbaa7412d7
-  - name: 116 US
-    password: 17aVvwmiSU
-    port: 10929
-    server: do.aigh.store
-    skip-cert-verify: true
-    sni: do.aigh.store
-    tls: false
-    type: hysteria2
-  - name: 117 HK
-    password: 9q3Mb0IzSVbnwaqK
-    port: 16001
-    server: 18.162.42.61
-    sni: hk-ls-r-1.czzhkractqqakfzdmrgd.cc
-    tls: false
-    type: hysteria2
-  - name: 118 JP
+  - name: 110 JP
     server: dafeizhu.xxxyun.top
     port: 55102
     type: anytls
@@ -1540,7 +1438,14 @@ proxies:
     udp: true
     sni: atlhk2.jueduibupao.top
     skip-cert-verify: true
-  - name: 119 JP
+  - name: 111 JP
+    server: dafeizhu.xxxyun.top
+    port: 55003
+    type: anytls
+    password: 5b2012ba-d040-4281-b92c-4f005badd179
+    sni: atlsg1.jueduibupao.top
+    skip-cert-verify: true
+  - name: 112 JP
     server: 96.126.130.176
     port: 443
     type: vless
@@ -1554,29 +1459,53 @@ proxies:
     client-fingerprint: chrome
     network: tcp
     udp: true
-  - name: 120 JP
-    server: 177.2.185.222
-    port: 38888
-    type: hysteria2
-    password: b504c8ce7f607a6c910ec5209e526b7e
-    auth: b504c8ce7f607a6c910ec5209e526b7e
-    sni: 177.2.185.222
-    skip-cert-verify: true
-  - name: 121 HK
-    server: nian.001.url111.kcloud02.top
-    port: 15007
+  - name: 113 JP
+    server: 154.40.63.51
+    port: 443
     type: vless
-    uuid: 399c4c9b-27e1-37f1-9dce-22ccc2727a86
+    uuid: 825c049b-403c-49e0-b60f-379bdb8611e9
     tls: true
     flow: xtls-rprx-vision
     reality-opts:
-      public-key: qVNutDFjEp3v2wjeUl_Yy6l9TXawXfSjAsFj3iktmRA
-      short-id: 2c4d005b
-    servername: www.bing.com
+      public-key: _Y72a3RHai401_LwN_pf2OIQpbvNLeKNP-qlYcWm2CY
+      short-id: dff207
+    servername: www.japan-travel.cn
     client-fingerprint: chrome
     network: tcp
     udp: true
-  - name: 122 KR
+  - name: 114 KR
+    server: kr5-r.link-t7.com
+    port: 10050
+    type: vless
+    uuid: 690FC783-6CE9-4137-8559-40DBA8EDAD31
+    tls: true
+    reality-opts:
+      public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+      short-id: 686c0ef0
+    servername: s0.awsstatic.com
+    client-fingerprint: chrome
+    network: grpc
+    grpc-opts:
+      grpc-mode: gun
+      grpc-service-name: update
+    udp: true
+  - name: 115 KR
+    server: kr4-r.link-t7.com
+    port: 10049
+    type: vless
+    uuid: 690FC783-6CE9-4137-8559-40DBA8EDAD31
+    tls: true
+    reality-opts:
+      public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+      short-id: 686c0ef0
+    servername: s0.awsstatic.com
+    client-fingerprint: chrome
+    network: grpc
+    grpc-opts:
+      grpc-mode: gun
+      grpc-service-name: update
+    udp: true
+  - name: 116 KR
     server: kr1-r.link-t7.com
     port: 10046
     type: vless
@@ -1592,7 +1521,7 @@ proxies:
       grpc-mode: gun
       grpc-service-name: update
     udp: true
-  - name: 123 KR
+  - name: 117 KR
     server: kr2-r.link-t7.com
     port: 10047
     type: vless
@@ -1608,23 +1537,15 @@ proxies:
       grpc-mode: gun
       grpc-service-name: update
     udp: true
-  - name: 124 KR
-    server: kr3-r.link-t7.com
-    port: 10048
-    type: vless
-    uuid: 690FC783-6CE9-4137-8559-40DBA8EDAD31
-    tls: true
-    reality-opts:
-      public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-      short-id: 686c0ef0
-    servername: s0.awsstatic.com
-    client-fingerprint: chrome
-    network: grpc
-    grpc-opts:
-      grpc-mode: gun
-      grpc-service-name: update
-    udp: true
-  - name: 125 SG
+  - name: 118 MY
+    server: mlxy.mangshe.xyz
+    port: 2060
+    type: hysteria2
+    password: 41f0d6d3-4a45-4635-8225-2abd2284189b
+    auth: 41f0d6d3-4a45-4635-8225-2abd2284189b
+    sni: mlxy.mangshe.xyz
+    skip-cert-verify: true
+  - name: 119 SG
     server: sg3-r.link-t7.com
     port: 10038
     type: vless
@@ -1640,7 +1561,7 @@ proxies:
       grpc-mode: gun
       grpc-service-name: update
     udp: true
-  - name: 126 SG
+  - name: 120 SG
     server: sg2-r.link-t7.com
     port: 10037
     type: vless
@@ -1656,79 +1577,96 @@ proxies:
       grpc-mode: gun
       grpc-service-name: update
     udp: true
-  - name: 127 HK
-    server: 82.38.46.66
-    port: 15006
+  - name: 121 SG
+    server: 185.115.207.173
+    port: 3389
     type: vless
-    uuid: 399c4c9b-27e1-37f1-9dce-22ccc2727a86
+    uuid: 825c049b-403c-49e0-b60f-379bdb8611e9
     tls: true
     flow: xtls-rprx-vision
     reality-opts:
-      public-key: g9KZONtwSL8mL772rps2nXVAuQpsgHY33K_pHpI89Rg
-      short-id: 029a6cc4
-    servername: www.adobe.com
+      public-key: s5t86eacAGCBMt6TWPF3Zhq8KFkBnmNZY3ZkKBrxHkY
+      short-id: a4115cac
+    servername: www.ntu.edu.sg
+    client-fingerprint: chrome
+    network: tcp
+    udp: true
+  - name: 122 US
+    server: 179.255.157.57
+    port: 443
+    type: vless
+    uuid: 825c049b-403c-49e0-b60f-379bdb8611e9
+    tls: true
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: Qi9MdfOI5K7XG24uD53wYE4R-wHeKM8BxLrqrtLVZns
+      short-id: 1fb9fe8bc1
+    servername: www.cloudflare.com
+    client-fingerprint: edge
+    network: tcp
+    udp: true
+  - name: 123 US
+    server: 179.198.49.32
+    port: 443
+    type: vless
+    uuid: 9df64172-ca96-4fab-998c-d6412f5ad674
+    tls: true
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: t53ZdCzvE2oKpEa5Mr0Dzi7f0GjArqeoYn1Tto5ePDU
+      short-id: 7d42a8f5c19b603e
+    servername: www.cloudflare.com
     client-fingerprint: firefox
     network: tcp
-  - name: 128 US
-    server: usa.dfsah.org
-    port: 56468
+    udp: true
+  - name: 124 US
+    server: 154.29.154.186
+    port: 443
     type: vless
-    uuid: 65e294c6-9733-40cd-ade4-9bcf4017a1bd
+    uuid: 825c049b-403c-49e0-b60f-379bdb8611e9
     tls: true
+    flow: xtls-rprx-vision
     reality-opts:
-      public-key: 9KepeuHMqhTZ1JIGAee8Jenw6ow9DUVhI0hyXcZHZSI
-      short-id: fbd7fd1eead44e9e
-    servername: amp-api-edge.apps.apple.com
+      public-key: ZcGnu5e_5l7jikc0NU8hrF5aHLyhYjNiR06gcYVYX00
+      short-id: bc0a
+    servername: www.cloudflare.com
     client-fingerprint: edge
-    network: xhttp
-    xhttp-opts:
-      path: /b4920d9c064cfe38c0021723
-      host: amp-api-edge.apps.apple.com
-      mode: auto
+    network: tcp
     udp: true
-  - name: 129 KR
-    password: ea2cc1fd-27a6-4ac5-9de5-5c76178e262a
-    port: 40041
-    server: kr1.catzl.top
+  - client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 125 HK
+    network: tcp
+    port: "15007"
+    reality-opts:
+      public-key: qVNutDFjEp3v2wjeUl_Yy6l9TXawXfSjAsFj3iktmRA
+      short-id: 2c4d005b
+    server: nian.001.url111.kcloud02.top
+    servername: www.bing.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 399c4c9b-27e1-37f1-9dce-22ccc2727a86
+    xudp: true
+  - fingerprint: ""
+    name: 126 SG
+    password: 5b2012ba-d040-4281-b92c-4f005badd179
+    port: "7000"
+    server: asg2.jueduibupao.top
+    skip-cert-verify: true
+    sni: www.microsoft.com
     type: anytls
     udp: true
-    sni: kr1.catzl.top
-  - name: 130 TW
-    password: ea2cc1fd-27a6-4ac5-9de5-5c76178e262a
-    port: 40071
-    server: tw1.catzl.top
-    type: anytls
-    udp: true
-    sni: tw1.catzl.top
-  - name: 131 TW
-    password: ea2cc1fd-27a6-4ac5-9de5-5c76178e262a
-    port: 40073
-    server: tw3.catzl.top
-    type: anytls
-    udp: true
-    sni: tw3.catzl.top
-  - name: 132 TW
-    password: 693b57ec-4937-4fe5-8563-9c6b8f225e9a
-    port: 40072
-    server: tw2.catzl.top
-    type: anytls
-    udp: true
-    sni: tw2.catzl.top
-  - name: 133 KR
-    password: ea2cc1fd-27a6-4ac5-9de5-5c76178e262a
-    port: 40042
-    server: kr2.catzl.top
-    type: anytls
-    udp: true
-    sni: kr2.catzl.top
-  - name: 134 KR
+    username: 5b2012ba-d040-4281-b92c-4f005badd179
+  - name: 127 SG
     type: anytls
     server: yazhouany02.downapptwo.cc
     port: 47053
     password: 29204996-a723-4291-8c70-30843b592d40
     udp: true
     skip-cert-verify: true
-  - name: 135 HK
+  - name: 128 HK
     type: vless
     server: hk4.miyazono-kaori.com
     port: 443
@@ -1740,3 +1678,10 @@ proxies:
     reality-opts:
       public-key: KhRbgahSFqlPKB6QNp9QYb4oXMy2SIgi440tm6iFZHA
       short-id: ea6b43
+  - name: 129 JP
+    type: hysteria2
+    server: 177.2.185.222
+    port: 38888
+    password: b504c8ce7f607a6c910ec5209e526b7e
+    sni: 177.2.185.222
+    skip-cert-verify: true
