@@ -612,21 +612,7 @@ proxies:
     spx: /
     tls: true
     uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
-  - client-fingerprint: firefox
-    flow: xtls-rprx-vision
-    name: 40 US
-    port: 443
-    reality-opts:
-      public-key: zpXR6Y36C8qUCIVk2p_j8C9KGeBk5xisLw66j3WFOls
-      short-id: 9f1fc5a631ef3126
-    server: 2.24.124.64
-    servername: www.cloudflare.com
-    skip-cert-verify: true
-    tls: true
-    type: vless
-    udp: true
-    uuid: 719b9354-45e2-4718-8709-d965b64554db
-  - name: 41 HK
+  - name: 40 HK
     password: b0917015b656b3dd2286b5633af0c5c1
     port: 50160
     server: 31.57.248.176
@@ -634,7 +620,7 @@ proxies:
     sni: www.bing.com
     type: hysteria2
     udp: true
-  - name: 42 US
+  - name: 41 US
     password: gf1:gfhysteria2024
     port: 443
     server: 66.94.121.46
@@ -643,7 +629,7 @@ proxies:
     type: hysteria2
     udp: true
   - client-fingerprint: firefox
-    name: 43 US
+    name: 42 US
     port: 2053
     reality-opts:
       public-key: q-3ozCtN4ylZ-ribiIrhIYzMieCnRUvGfS34d_eWmCs
@@ -655,21 +641,63 @@ proxies:
     type: vless
     udp: true
     uuid: ba12daae-cba5-475b-9289-40a99c0d3f19
-  - client-fingerprint: qq
+  - client-fingerprint: firefox
     flow: xtls-rprx-vision
-    name: 44 US
-    port: 443
+    name: 43 HK
+    port: 15003
     reality-opts:
-      public-key: t_qv0VOfWhKZJV_giGC55-ipgHYWo44Yfvik_B8T8ik
-      short-id: 4a46213c935e2ee4
-    server: 31.76.70.32
-    servername: baltic.cendora.ru
+      public-key: R_3usai5pYqcc0aIzXPfaoe-VE_7JOe60fUNMicwfQ8
+      short-id: 4c517b9e
+    server: 82.38.46.66
+    servername: www.cloudflare.com
     skip-cert-verify: true
     tls: true
     type: vless
     udp: true
-    uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-  - name: 45 AU
+    uuid: 399c4c9b-27e1-37f1-9dce-22ccc2727a86
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 44 HK
+    port: 15003
+    reality-opts:
+      public-key: R_3usai5pYqcc0aIzXPfaoe-VE_7JOe60fUNMicwfQ8
+      short-id: 4c517b9e
+    server: nian.001.url111.kcloud02.top
+    servername: www.cloudflare.com
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: 399c4c9b-27e1-37f1-9dce-22ccc2727a86
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: 45 HK
+    port: 15006
+    reality-opts:
+      public-key: g9KZONtwSL8mL772rps2nXVAuQpsgHY33K_pHpI89Rg
+      short-id: 029a6cc4
+    server: nian.001.url111.kcloud02.top
+    servername: www.adobe.com
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: 399c4c9b-27e1-37f1-9dce-22ccc2727a86
+  - client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    name: 46 HK
+    port: 15006
+    reality-opts:
+      public-key: g9KZONtwSL8mL772rps2nXVAuQpsgHY33K_pHpI89Rg
+      short-id: 029a6cc4
+    server: 82.38.46.66
+    servername: www.adobe.com
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: 399c4c9b-27e1-37f1-9dce-22ccc2727a86
+  - name: 47 AU
     obfs: salamander
     obfs-password: a34f3990b69f44bfa0d32385
     password: a34f3990b69f44bfa0d32385
@@ -679,18 +707,8 @@ proxies:
     sni: rmgyvpn.rest
     type: hysteria2
     udp: true
-  - name: 46 AU
-    obfs: salamander
-    obfs-password: b42d90fa667942aebc734d60
-    password: b42d90fa667942aebc734d60
-    port: 20000
-    server: 149.118.71.57
-    skip-cert-verify: true
-    sni: rmgyvpn.rest
-    type: hysteria2
-    udp: true
   - client-fingerprint: chrome
-    name: 47 US
+    name: 48 US
     port: 8443
     reality-opts:
       public-key: rRRBbLyYSuC10iG_J7obkZktq52w4nRsGbvaMQ99ziQ
@@ -702,7 +720,7 @@ proxies:
     type: vless
     udp: true
     uuid: ee511cf0-41c6-408e-9358-23a793c3f2be
-  - name: 48 TW
+  - name: 49 TW
     password: 29204996-a723-4291-8c70-30843b592d40
     port: 443
     server: tw72.cybergalaxy.me
@@ -710,7 +728,7 @@ proxies:
     tls: true
     type: anytls
     udp: true
-  - name: 49 TW
+  - name: 50 TW
     password: 29204996-a723-4291-8c70-30843b592d40
     port: 443
     server: tw71.cybergalaxy.me
@@ -718,38 +736,9 @@ proxies:
     tls: true
     type: anytls
     udp: true
-  - alpn:
-      - h2
-      - http/1.1
-    client-fingerprint: chrome
-    encryption: none
-    name: 50 US
-    network: xhttp
-    packet-encoding: xudp
-    port: 443
-    server: 69.46.46.9
-    servername: ezaccess1-slv-ezaccess1-f7d0.up.railway.app
-    sub_tag: V006-260618
-    tls: true
-    type: vless
-    udp: true
-    uuid: FixPingBot
-    xhttp-opts:
-      host: ezaccess1-slv-ezaccess1-f7d0.up.railway.app
-      mode: stream-up
-      path: /xhttp/vless/stream-up/FixPingBot
-    xudp: true
-  - auth: oU4tGn37oQ9JGmqnlTGkU3knrfAbclsq
-    name: 51 JP
-    password: oU4tGn37oQ9JGmqnlTGkU3knrfAbclsq
-    port: 32135
-    server: vip-jp-4.hkd4fwmg.vip
-    skip-cert-verify: false
-    sni: vip-jp-4.hkd4fwmg.vip
-    type: hysteria2
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 52 JP
+    name: 51 JP
     port: 443
     reality-opts:
       public-key: qBtxq4RZxDLCJT8i48iaGMhacv8MOI0yhIFiuwYJm08
@@ -763,7 +752,7 @@ proxies:
     uuid: 94d2d711-76e5-4d82-a3c9-4f06fd5558c8
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 53 US
+    name: 52 US
     port: 16565
     reality-opts:
       public-key: JqblL-dYqxHH3pAju89x3OkXlBQ8k5LzO2Yoadi8ylk
@@ -777,7 +766,7 @@ proxies:
     uuid: 8a3756ec-179b-48fe-b861-27c0287710ae
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 54 JP
+    name: 53 JP
     port: 443
     reality-opts:
       public-key: d1LjsQHtTCj7kHx2LHFisVDPc_xOtKnugy5YRFKXqUs
@@ -791,7 +780,7 @@ proxies:
     uuid: 12e35bfe-1e79-4cf1-8a8e-22a242e97408
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 55 KR
+    name: 54 KR
     port: 443
     reality-opts:
       public-key: fI-eoLmyyeYXgUHr2SWzHcwxkhxmDj2QBnivpUPYfVY
@@ -805,7 +794,7 @@ proxies:
     uuid: 5822b465-036b-4a3b-89d0-b3e52ae20815
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 56 HK
+    name: 55 HK
     port: 13443
     reality-opts:
       public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
@@ -819,7 +808,7 @@ proxies:
     uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
   - client-fingerprint: firefox
     flow: xtls-rprx-vision
-    name: 57 SG
+    name: 56 SG
     port: 443
     reality-opts:
       public-key: eaRNeC8fccrx0nBNvBpAXZgK4m4FxfnQ-t0W7NOM7mU
@@ -835,7 +824,7 @@ proxies:
     http-opts:
       path:
         - /
-    name: 58 US
+    name: 57 US
     network: http
     port: 443
     reality-opts:
@@ -852,7 +841,7 @@ proxies:
     http-opts:
       path:
         - /
-    name: 59 US
+    name: 58 US
     network: http
     port: 443
     reality-opts:
@@ -869,7 +858,7 @@ proxies:
     http-opts:
       path:
         - /
-    name: 60 US
+    name: 59 US
     network: http
     port: 443
     reality-opts:
@@ -882,18 +871,22 @@ proxies:
     type: vless
     udp: true
     uuid: fbd1bcab-3480-4344-b3da-ae42d728ef51
-  - client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    name: 61 US
-    port: 10001
-    reality-opts:
-      public-key: 4jNz4Bw-FZlaX-WtfAdwK0hegY28W_k8AttGd-7hZn4
-      short-id: fb2c6678
-    server: 156.229.161.107
-    servername: www.icloud.com
+  - name: 60 TW
+    password: 29204996-a723-4291-8c70-30843b592d40
+    port: 443
+    server: tw58.cybergalaxy.me
+    skip-cert-verify: true
     tls: true
-    type: vless
-    uuid: 9c79aceb-4649-44ea-9698-b5e9ecf6d6da
+    type: anytls
+    udp: true
+  - auth: oU4tGn37oQ9JGmqnlTGkU3knrfAbclsq
+    name: 61 JP
+    password: oU4tGn37oQ9JGmqnlTGkU3knrfAbclsq
+    port: 32135
+    server: vip-jp-4.hkd4fwmg.vip
+    skip-cert-verify: false
+    sni: vip-jp-4.hkd4fwmg.vip
+    type: hysteria2
   - client-fingerprint: chrome
     grpc-opts:
       grpc-mode: gun
@@ -1199,28 +1192,8 @@ proxies:
     tls: true
     type: vless
     uuid: 0eb057bc-f4b2-425b-80c9-1ed982916480
-  - client-fingerprint: chrome
-    encryption: none
-    flow: xtls-rprx-vision
-    http-opts:
-      headers: {}
-      path:
-        - /
-    name: 88 HK
-    network: tcp
-    port: 15006
-    reality-opts:
-      public-key: g9KZONtwSL8mL772rps2nXVAuQpsgHY33K_pHpI89Rg
-      short-id: 029a6cc4
-    server: nian.001.url111.kcloud02.top
-    servername: www.adobe.com
-    tls: true
-    type: vless
-    udp: true
-    uuid: 399c4c9b-27e1-37f1-9dce-22ccc2727a86
-    xudp: true
   - auth: f87376e17da040ed04c9665ce8972930
-    name: 89 SG
+    name: 88 SG
     password: f87376e17da040ed04c9665ce8972930
     port: 50160
     server: 138.2.73.238
@@ -1228,7 +1201,7 @@ proxies:
     sni: www.bing.com
     type: hysteria2
     udp: true
-  - name: 90 SG
+  - name: 89 SG
     password: 0a344117cfeef3d6602e338c2f1e7957
     port: 50160
     server: 38.180.190.215
@@ -1236,7 +1209,7 @@ proxies:
     sni: www.bing.com
     tls: false
     type: hysteria2
-  - name: 91 HK
+  - name: 90 HK
     password: 1427eb10-7529-4d38-a6a2-01b337868b37
     port: 4433
     server: hk2.xiaoliyu.cyou
@@ -1244,7 +1217,7 @@ proxies:
     sni: hk2.xiaoliyu.cyou
     tls: false
     type: hysteria2
-  - name: 92 US
+  - name: 91 US
     password: 3b8c82ed-fe66-472d-915e-034ccb57103f
     port: 443
     server: us.frkn.org
@@ -1252,7 +1225,7 @@ proxies:
     sni: us.frkn.org
     tls: false
     type: hysteria2
-  - name: 93 SG
+  - name: 92 SG
     password: 41f0d6d3-4a45-4635-8225-2abd2284189b
     port: 2056
     server: xjp1.mangshe.xyz
@@ -1260,7 +1233,7 @@ proxies:
     sni: xjp1.mangshe.xyz
     tls: false
     type: hysteria2
-  - name: 94 JP
+  - name: 93 JP
     password: Foc_Mcxi45rM9v3ve_N92fdrK_10_Ssc5
     port: 8443
     server: 185.39.31.117
@@ -1268,14 +1241,14 @@ proxies:
     sni: grape-beer.yyuyy.com
     tls: false
     type: hysteria2
-  - name: 95 US
+  - name: 94 US
     password: VB92_Ka9qwef143K_L23K1hz3_bF_Hz62uT_Bn1_sC
     port: 8080
     server: 82.39.214.98
     sni: hopp-us.yyuyy.com
     tls: false
     type: hysteria2
-  - name: 96 SG
+  - name: 95 SG
     obfs: salamander
     obfs-password: MBd0Kzj3ZcY3
     password: VL0N0IPJ5Tqj672H7FsxYw==
@@ -1284,7 +1257,7 @@ proxies:
     sni: c.hbapp.xyz
     tls: false
     type: hysteria2
-  - name: 97 JP
+  - name: 96 JP
     password: a9081889-1949-49ba-a2aa-7054515716de
     port: 3488
     server: c2.bestai.beauty
@@ -1292,7 +1265,7 @@ proxies:
     sni: c2.bestai.beauty
     tls: false
     type: hysteria2
-  - name: 98 JP
+  - name: 97 JP
     password: ef18d810-719c-4bf1-83c6-615d01f217eb
     port: 443
     server: jp.cryptoofarm.com
@@ -1300,14 +1273,14 @@ proxies:
     sni: jp.cryptoofarm.com
     tls: false
     type: hysteria2
-  - name: 99 HK
+  - name: 98 HK
     password: f4927789e58bcd24b6f6
     port: 10444
     server: h.zz2233.cyou
     sni: h.zz2233.cyou
     tls: false
     type: hysteria2
-  - name: 100 SG
+  - name: 99 SG
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 13.229.54.166
@@ -1315,7 +1288,7 @@ proxies:
     sni: vpn-sg-001.fastervpn.world
     tls: false
     type: hysteria2
-  - name: 101 SG
+  - name: 100 SG
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 13.229.82.184
@@ -1323,7 +1296,7 @@ proxies:
     sni: vpn-sg-001.fastervpn.world
     tls: false
     type: hysteria2
-  - name: 102 SG
+  - name: 101 SG
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 47.129.155.42
@@ -1331,7 +1304,7 @@ proxies:
     sni: vpn-sg-001.fastervpn.world
     tls: false
     type: hysteria2
-  - name: 103 US
+  - name: 102 US
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 54.213.89.22
@@ -1339,7 +1312,7 @@ proxies:
     sni: vk.com
     tls: false
     type: hysteria2
-  - name: 104 SG
+  - name: 103 SG
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 54.254.190.23
@@ -1351,7 +1324,7 @@ proxies:
     grpc-opts:
       grpc-mode: gun
       grpc-service-name: update
-    name: 105 JP
+    name: 104 JP
     network: grpc
     port: 10032
     reality-opts:
@@ -1367,7 +1340,7 @@ proxies:
     grpc-opts:
       grpc-mode: gun
       grpc-service-name: update
-    name: 106 KR
+    name: 105 KR
     network: grpc
     port: 10048
     reality-opts:
@@ -1382,7 +1355,7 @@ proxies:
   - client-fingerprint: firefox
     encryption: none
     flow: xtls-rprx-vision
-    name: 107 SG
+    name: 106 SG
     network: tcp
     port: "49449"
     reality-opts:
@@ -1398,7 +1371,7 @@ proxies:
   - client-fingerprint: firefox
     encryption: none
     flow: xtls-rprx-vision
-    name: 108 US
+    name: 107 US
     network: tcp
     port: "56605"
     reality-opts:
@@ -1413,7 +1386,7 @@ proxies:
     xudp: true
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 109 US
+    name: 108 US
     network: tcp
     port: 443
     reality-opts:
@@ -1428,7 +1401,7 @@ proxies:
     uuid: 5905d91f-c3bc-4e80-bd66-4b17beb166cb
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 110 US
+    name: 109 US
     network: tcp
     port: 11094
     reality-opts:
@@ -1443,7 +1416,7 @@ proxies:
     uuid: f1fa0ad9-b122-4b7c-da82-4bea9edc48dd
   - client-fingerprint: firefox
     flow: xtls-rprx-vision
-    name: 111 US
+    name: 110 US
     network: tcp
     port: 443
     reality-opts:
@@ -1458,7 +1431,7 @@ proxies:
     uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 112 US
+    name: 111 US
     network: tcp
     port: 29893
     reality-opts:
@@ -1473,7 +1446,7 @@ proxies:
     uuid: f06c6039-a489-3d78-a676-ed43be6deca3
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 113 US
+    name: 112 US
     network: tcp
     port: 39399
     reality-opts:
@@ -1488,7 +1461,7 @@ proxies:
     uuid: f06c6039-a489-3d78-a676-ed43be6deca3
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 114 US
+    name: 113 US
     network: tcp
     port: 39211
     reality-opts:
@@ -1501,7 +1474,7 @@ proxies:
     type: vless
     udp: true
     uuid: f06c6039-a489-3d78-a676-ed43be6deca3
-  - name: 115 SG
+  - name: 114 SG
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
     server: 54.254.157.26
@@ -1509,14 +1482,14 @@ proxies:
     sni: speedtest.tinkoff.ru
     tls: false
     type: hysteria2
-  - name: 116 HK
+  - name: 115 HK
     server: hk.mjhy2.com
     port: 1443
     type: hysteria2
     password: dd1fd40d-7e11-43ee-8460-94a4170ccdc8
     auth: dd1fd40d-7e11-43ee-8460-94a4170ccdc8
     skip-cert-verify: true
-  - name: 117 HK
+  - name: 116 HK
     server: hk2-r.link-t7.com
     port: 10127
     type: vless
@@ -1532,7 +1505,7 @@ proxies:
       grpc-mode: gun
       grpc-service-name: update
     udp: true
-  - name: 118 JP
+  - name: 117 JP
     server: 52.197.69.21
     port: 16205
     type: vless
@@ -1546,7 +1519,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 119 JP
+  - name: 118 JP
     server: 43.206.235.72
     port: 15476
     type: vless
@@ -1560,7 +1533,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 120 SG
+  - name: 119 SG
     server: 13.213.249.57
     port: 52786
     type: vless
@@ -1574,7 +1547,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 121 SG
+  - name: 120 SG
     server: 13.212.45.128
     port: 12322
     type: vless
@@ -1588,7 +1561,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 122 SG
+  - name: 121 SG
     server: 54.251.59.156
     port: 40785
     type: vless
@@ -1602,7 +1575,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 123 SG
+  - name: 122 SG
     server: 47.131.32.199
     port: 35470
     type: vless
@@ -1616,7 +1589,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 124 SG
+  - name: 123 SG
     server: 47.129.204.35
     port: 58335
     type: vless
@@ -1630,7 +1603,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 125 SG
+  - name: 124 SG
     server: 52.76.84.249
     port: 12804
     type: vless
@@ -1644,7 +1617,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 126 SG
+  - name: 125 SG
     server: 47.131.13.46
     port: 16176
     type: vless
@@ -1658,7 +1631,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 127 SG
+  - name: 126 SG
     server: 47.128.228.95
     port: 20069
     type: vless
@@ -1672,7 +1645,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 128 SG
+  - name: 127 SG
     server: 46.137.202.178
     port: 12512
     type: vless
@@ -1686,7 +1659,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 129 SG
+  - name: 128 SG
     server: 122.248.209.131
     port: 25436
     type: vless
@@ -1700,7 +1673,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 130 SG
+  - name: 129 SG
     server: 47.129.168.63
     port: 18603
     type: vless
@@ -1714,7 +1687,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 131 SG
+  - name: 130 SG
     server: 54.169.200.246
     port: 41688
     type: vless
@@ -1728,7 +1701,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 132 SG
+  - name: 131 SG
     server: 52.76.82.32
     port: 17611
     type: vless
@@ -1742,7 +1715,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 133 SG
+  - name: 132 SG
     server: 18.143.103.4
     port: 33709
     type: vless
@@ -1756,7 +1729,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 134 SG
+  - name: 133 SG
     server: 47.131.253.190
     port: 11380
     type: vless
@@ -1770,7 +1743,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 135 SG
+  - name: 134 SG
     server: 18.136.125.3
     port: 54618
     type: vless
@@ -1784,7 +1757,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 136 SG
+  - name: 135 SG
     server: 54.151.153.129
     port: 59180
     type: vless
@@ -1798,7 +1771,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 137 US
+  - name: 136 US
     server: 172.233.139.46
     port: 53734
     type: vless
@@ -1812,7 +1785,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 138 US
+  - name: 137 US
     server: 45.33.107.60
     port: 10974
     type: vless
@@ -1826,7 +1799,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 139 US
+  - name: 138 US
     server: 192.155.87.188
     port: 10092
     type: vless
@@ -1840,7 +1813,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 140 US
+  - name: 139 US
     server: 179.198.49.32
     port: 443
     type: vless
@@ -1854,7 +1827,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 141 US
+  - name: 140 US
     server: 172.236.252.35
     port: 46645
     type: vless
@@ -1868,7 +1841,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 142 US
+  - name: 141 US
     server: 192.81.131.225
     port: 11256
     type: vless
@@ -1882,7 +1855,7 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - name: 143 US
+  - name: 142 US
     server: 216.167.21.162
     port: 39035
     type: vless
@@ -1896,45 +1869,713 @@ proxies:
     client-fingerprint: firefox
     network: tcp
     udp: true
-  - client-fingerprint: chrome
+  - client-fingerprint: firefox
+    encryption: none
     flow: xtls-rprx-vision
-    name: 144 JP
+    name: 143 JP
     network: tcp
-    port: 443
+    port: "32913"
     reality-opts:
-      public-key: sPdtqEglJBpjsEgeOHkyafVgHSDcGzIn4ChX3gY4aVg
-      short-id: 280e30b0075dfda0
-    server: 96.126.130.176
+      public-key: iJhoNzfiPiua04PL88iAAyZz2u39su4ChSCiGVoekRQ
+      short-id: a8f0a95931a52732
+    server: 43.207.162.145
+    servername: www.intel.com
     tls: true
     type: vless
     udp: true
-    uuid: 825c049b-403c-49e0-b60f-379bdb8611e9
+    uuid: 15836880-212b-4690-b29c-1889a749bf72
     xudp: true
-    servername: www.japan-travel.cn
-  - name: 145 HK
-    password: 55e7e53d-c6af-45ca-a389-dbd2b330b704
-    port: 40013
-    server: hk3.catzl.top
-    type: anytls
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 144 US
+    network: tcp
+    port: "50900"
+    reality-opts:
+      public-key: vdE4t2bYhYun6fZ9Weu_f6MXtsmq8iJ7XQBUj62scR0
+      short-id: 12fa394e28d52011
+    server: 173.230.155.55
+    servername: www.amd.com
+    tls: true
+    type: vless
     udp: true
-    sni: hk3.catzl.top
-  - name: 146 US
-    password: 55e7e53d-c6af-45ca-a389-dbd2b330b704
-    port: 40022
-    server: us2.catzl.top
-    type: anytls
+    uuid: 2c082e78-bd9d-4960-b9f3-cde0040cb4f3
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 145 SG
+    network: tcp
+    port: "25066"
+    reality-opts:
+      public-key: AU-qWQ9Vs1RXJfY9UawaDULc9LsxuinVJe8hNsyPezQ
+      short-id: ac4b9f02123aa50b
+    server: 52.77.187.151
+    servername: www.amd.com
+    tls: true
+    type: vless
     udp: true
-    sni: us2.catzl.top
-  - name: 147 JP
-    password: 55e7e53d-c6af-45ca-a389-dbd2b330b704
-    port: 40055
-    server: jp5.catzl.top
-    type: anytls
+    uuid: 2f790dfd-d1fd-4f77-a494-6d75798135b5
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 146 JP
+    network: tcp
+    port: "29224"
+    reality-opts:
+      public-key: HqLe_f1G54_pDZGbCnermTm-vqDiNp6cXVMaasg3NWE
+      short-id: fcbdd08920d4c8
+    server: 13.231.129.39
+    servername: www.sony.com
+    tls: true
+    type: vless
     udp: true
-    sni: jp5.catzl.top
+    uuid: 3298044a-024f-4b48-a598-ba56c75e99f3
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 147 SG
+    network: tcp
+    port: "41077"
+    reality-opts:
+      public-key: dd41CxgkW8Nzb4424-YNVaVkody-X9xAY30bUOjEohI
+      short-id: 3f7addb532645b1c
+    server: 13.212.253.233
+    servername: www.tesla.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 32d1be4e-5094-4881-984f-f927e9961edb
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 148 JP
+    network: tcp
+    port: "18538"
+    reality-opts:
+      public-key: zBZDFZ2P54fpr1-tl51jN4ZyBCrEJ0syOna-KJXZ3h4
+      short-id: d5cd4778d2da33
+    server: 54.250.13.242
+    servername: www.tesla.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 3317270c-c577-4803-9c28-011152223f79
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 149 JP
+    network: tcp
+    port: "42263"
+    reality-opts:
+      public-key: lLbzgXK1hx6K2J6rDUARlzZzjWqVXMjIhHsKmgEQI0U
+      short-id: d5cd4778d2da33
+    server: 35.77.87.249
+    servername: www.sony.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 37c00ed0-de07-4c7d-a4cf-049805c98713
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 150 JP
+    network: tcp
+    port: "27898"
+    reality-opts:
+      public-key: Pd8NKW1KgKjHl6lzGTB3qIAThLbT7alN_I1uIbAQrxA
+      short-id: 9e638ff3d3d9265c
+    server: 54.95.137.141
+    servername: www.amd.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 40a726db-6815-44de-9c2f-80e7bfb8f81c
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 151 JP
+    network: tcp
+    port: "41773"
+    reality-opts:
+      public-key: 46x-QHcmrMdu5VknsdR_1-lMLxRmgZQkmcjN6ziTRjs
+      short-id: c9f30034dc2cc665
+    server: 35.72.188.24
+    servername: www.nvidia.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 440ffeb3-72ce-4301-8039-2bfc329c460b
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 152 JP
+    network: tcp
+    port: "18384"
+    reality-opts:
+      public-key: cRwzK1c65HdBluJqM3GS8YN4N-TqTCmI6X_3eEgAVms
+      short-id: 3f316a236d64c1
+    server: 13.230.222.139
+    servername: www.tesla.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 50641912-a16b-4ac3-aa2f-312c88b617e1
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 153 JP
+    network: tcp
+    port: "33528"
+    reality-opts:
+      public-key: cs0Gy8Yp-GWHukLSkeq-P08qydj71eWPBinBIxm2bWU
+      short-id: adcde615c1dd88b7
+    server: 52.193.64.73
+    servername: www.amd.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 519a17ff-05a3-4488-8fd8-47cf13d1310c
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 154 JP
+    network: tcp
+    port: "32652"
+    reality-opts:
+      public-key: 6OOibzbkPmuVsl6LgqgUJ0FLHNEqt4VYSzqygL1GL2w
+      short-id: b5c421053ba4
+    server: 13.114.63.132
+    servername: www.tesla.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 5bf65fa6-d8af-4932-970e-a13d444a24af
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 155 SG
+    network: tcp
+    port: "39960"
+    reality-opts:
+      public-key: epKJ_k5Dc4ywEPSIIXhk27GBrJlcAJWO5kLJaOyaLTQ
+      short-id: f98458f4235fd5e3
+    server: 47.129.152.58
+    servername: www.amd.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 6019d1ee-5fcf-4ce4-b5cb-e47fd3c29b2a
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 156 JP
+    network: tcp
+    port: "48086"
+    reality-opts:
+      public-key: qq9vUmReS92PojPLpSyUY_c6CydUUtut7ffxc3V0LTo
+      short-id: 7083d685446ce576
+    server: 3.112.131.211
+    servername: www.nvidia.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 620ca966-d78b-4c88-a5c9-acf13c7d252f
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 157 JP
+    network: tcp
+    port: "23082"
+    reality-opts:
+      public-key: lbFqrC1Be1nP6BceqztrFDBENdxyQzAdjj_bOmZB8nc
+      short-id: e064889ce12c46f0
+    server: 18.179.7.11
+    servername: www.tesla.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 66f9ea74-295d-425c-af01-331161bae8d9
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 158 JP
+    network: tcp
+    port: "22536"
+    reality-opts:
+      public-key: hd3qje4UtfiFnCxsD7VKCLB3ArNR5zRjkwk2MTzP3WU
+      short-id: 4c8b46e500b0f3ad
+    server: 54.238.241.88
+    servername: www.tesla.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 6b9f1019-d700-434e-adad-437fb3ad81da
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 159 JP
+    network: tcp
+    port: "46753"
+    reality-opts:
+      public-key: 2McJ3AOyFVxGTNF-1xnEupfSE-VXx6hE2cTISFbZFxo
+      short-id: b9eda5ff206920ed
+    server: 35.79.56.221
+    servername: www.intel.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 72de2254-547a-4b82-8006-bc72e6d7abcc
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 160 JP
+    network: tcp
+    port: "36024"
+    reality-opts:
+      public-key: z1IzZjwLcymnYShSSGE6NkK10-S6aIGbe1_qQotmplU
+      short-id: d1d28c01d2c3c6
+    server: 3.112.129.179
+    servername: www.nvidia.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 7ad407b1-b8f3-4591-ae75-05cf4035e09e
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 161 SG
+    network: tcp
+    port: "41402"
+    reality-opts:
+      public-key: 01tt0RH0sSR4OAdW3C5vl9dR0kzXp4tq3tr7u26_LA0
+      short-id: 9309ca4c8ce50673
+    server: 54.169.160.148
+    servername: www.intel.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 7c36417c-be20-49c5-910e-23f759de1bc9
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 162 JP
+    network: tcp
+    port: "18442"
+    reality-opts:
+      public-key: gX8O1ZEjAMmQwaQAe8nJbeLjb2FuB_xYB6GUpGv6eng
+      short-id: 36cd768dea0661
+    server: 52.195.12.44
+    servername: www.nvidia.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 7e684409-9d30-402a-a084-2f5417fd53f6
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 163 SG
+    network: tcp
+    port: "52457"
+    reality-opts:
+      public-key: nA2aGvkk6Wf3NvrKavmZg_g01xujyrYAiCJS4x0kFHc
+      short-id: 93ed34c8eea01f
+    server: 54.254.51.144
+    servername: www.intel.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 81853004-816d-40c1-973f-2be269ba8051
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 164 SG
+    network: tcp
+    port: "22872"
+    reality-opts:
+      public-key: RSikfX950b5w04iH_VvXYAkC5zku5qilSsSIJoXzyhc
+      short-id: 2798448b96fff0e0
+    server: 52.221.220.242
+    servername: www.intel.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 8abb4009-5efe-4d27-aa56-d50c37d2b1b8
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 165 JP
+    network: tcp
+    port: "32114"
+    reality-opts:
+      public-key: zsxQcqhGeGLxY7Y8PYZ0LyYvD3lJgRYd8FHp3WI9mSU
+      short-id: 9bdea8e40dba4c
+    server: 57.180.21.90
+    servername: www.amd.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 8d644890-a8cd-46e5-a318-f2e64cce7a60
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 166 SG
+    network: tcp
+    port: "24146"
+    reality-opts:
+      public-key: VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo
+      short-id: 7205d9079521832c
+    server: 54.251.9.130
+    servername: www.intel.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 167 SG
+    network: tcp
+    port: "20221"
+    reality-opts:
+      public-key: Fd3DtGiQyvw9IBKoMqKtgaKVkdvjnaErL_1ib-zXqxY
+      short-id: 85ae3d83d037b7
+    server: 13.212.211.73
+    servername: www.intel.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 9f752e03-411f-4df4-841f-a23c4c43d183
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 168 SG
+    network: tcp
+    port: "51382"
+    reality-opts:
+      public-key: hPOkfyi6Ck1euOqdlX0WCQpMfooi0TWYiydeGQkR3x8
+      short-id: e692a8250d2e2fd0
+    server: 122.248.203.37
+    servername: www.intel.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: a2428d88-0d96-4109-abbb-e1904bc4890e
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 169 JP
+    network: tcp
+    port: "24406"
+    reality-opts:
+      public-key: CGn1d1G4oSLsdSzF6mKV8EDzB5n4QOzB-Xe_OpKW8G0
+      short-id: a52a5b7c1eec1b29
+    server: 57.181.72.81
+    servername: www.intel.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: a8eced73-0dbf-4312-90b8-551641a0f4d2
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 170 SG
+    network: tcp
+    port: "26146"
+    reality-opts:
+      public-key: 4cD2BKaVODTdo4soH4gLcB7Yj-hdLDKDhvbSNQgZLEM
+      short-id: 3ced8a51ce74468c
+    server: 56.10.83.247
+    servername: www.intel.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: a965aaba-e7d0-44fc-84ad-cd7c341249aa
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 171 JP
+    network: tcp
+    port: "18732"
+    reality-opts:
+      public-key: lsp2a_PzZnzFtikI5FMkSYh3kpTewVNgU6A0VSZCJUI
+      short-id: 7946e1980d32555c
+    server: 13.112.217.203
+    servername: www.amd.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: abdb9efb-a552-4b12-bd95-e56f4820fed8
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 172 JP
+    network: tcp
+    port: "24620"
+    reality-opts:
+      public-key: eZthMfn0kQJFNr_srk502fr8yUHMoHQ7Oh3v4_HfTBI
+      short-id: db2cb3b3c2dbb711
+    server: 13.231.7.104
+    servername: www.amd.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: b969ef8f-7bdb-474f-9481-d8f3c5686fb8
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 173 JP
+    network: tcp
+    port: "23252"
+    reality-opts:
+      public-key: fkFnev1VOzEKvHo0SXtxtS8ryGGRf0JvXjJl0_x8-xc
+      short-id: 244a0bb5457ef9
+    server: 52.196.75.65
+    servername: www.tesla.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: bbb7de25-ba85-4bf8-aae4-07402f5a8ff4
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 174 JP
+    network: tcp
+    port: "35229"
+    reality-opts:
+      public-key: JKEgmSckzu3wmGo2_wl8Xij0-PsE8QOvrEO6jS8IfFY
+      short-id: "0056222303"
+    server: 13.231.69.194
+    servername: www.nvidia.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: caaa44ad-b3d5-4f55-9507-5b57942f6922
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 175 MY
+    network: tcp
+    port: "22732"
+    reality-opts:
+      public-key: vHWs24ZHKIvNpToXCwB68TK0mybgKe1Yfq1Jdnas5TU
+      short-id: 2a2aa1d1366cef
+    server: 56.69.197.40
+    servername: www.amd.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: cb3c9f84-903b-4701-9107-701b6347b0aa
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 176 SG
+    network: tcp
+    port: "55011"
+    reality-opts:
+      public-key: oQEJKlraquZ7I7sJaaOnNB72RJxDkXcw9geP9PgGtGc
+      short-id: 816de7fe3de8b0
+    server: 3.0.116.103
+    servername: www.tesla.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: d6112c2b-b961-4850-826e-d30cb0f0c9d5
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 177 JP
+    network: tcp
+    port: "48203"
+    reality-opts:
+      public-key: nxC5EiVCdXMnvfRa1LoNUs21ZNS2DdP36gfHayvUXRU
+      short-id: 5b63c338f69077
+    server: 3.113.9.16
+    servername: www.nvidia.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: e5a9a8be-886e-4522-b11d-3edde88c9c8c
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 178 JP
+    network: tcp
+    port: "58573"
+    reality-opts:
+      public-key: P_qGsMinT163P1KLO6LzedQXEeHimWQ1CrqM4cYkFB8
+      short-id: 4de17b381e6af2
+    server: 13.230.140.251
+    servername: www.nvidia.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: ea3fb423-d86c-461a-9610-cbad189253e2
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 179 JP
+    network: tcp
+    port: "33486"
+    reality-opts:
+      public-key: 0XefSfdaAV77RBJrVSVBIdRNUHUlaMGmFT5mX_Aw6G8
+      short-id: 1671781f157ac27e
+    server: 52.194.245.53
+    servername: www.intel.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: eddee2c9-fdf9-4b55-b8ac-3481a680b060
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 180 JP
+    network: tcp
+    port: "31497"
+    reality-opts:
+      public-key: UsFXvqh6G4IrPRVWtUUFvZUYHbV8facFnRyAl1vrbUY
+      short-id: 5b63c338f69077
+    server: 13.193.9.59
+    servername: www.sony.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: f485492b-2c69-4334-b193-403b1e4ec1a4
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 181 SG
+    network: tcp
+    port: "39254"
+    reality-opts:
+      public-key: c04tnfk5tdZXpUqqlOUUsu4Pf8tzYcNUsQ0OHFcQj1k
+      short-id: 7f342137c20387
+    server: 18.143.93.179
+    servername: www.amd.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: f88db45e-4178-4545-91b5-5374d676bfbb
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 182 JP
+    network: tcp
+    port: "49032"
+    reality-opts:
+      public-key: dzdupl2cvM0mpe_hVDDBshTivuX0bOY-3QbavnoorV0
+      short-id: 36cd768dea0661
+    server: 52.195.111.107
+    servername: www.amd.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: ffbc5924-65f9-45b5-9089-5bc5b2048823
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 183 SG
+    network: tcp
+    port: "30666"
+    reality-opts:
+      public-key: 3fKobetnIIC1NFGtQEPkBx75UdTMmq886OAr9bOt2S4
+      short-id: c919090e3c660c
+    server: 13.212.10.131
+    servername: www.sony.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 37834c00-7fa5-46ba-a4b9-7e13c8fcdf8f
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 184 SG
+    network: tcp
+    port: "20414"
+    reality-opts:
+      public-key: H4ZErlTUck4uQYnxtURj9aHLVXQIUHIPMI8dBz7wMVg
+      short-id: ed2cfa4d6d47e0
+    server: 13.229.47.178
+    servername: www.sony.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: c3e2c992-6721-443f-a051-331cb8a29fad
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 185 JP
+    network: tcp
+    port: "28573"
+    reality-opts:
+      public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
+      short-id: 03653bc03be10c97
+    server: 18.183.215.124
+    servername: www.sony.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 186 JP
+    network: tcp
+    port: "18614"
+    reality-opts:
+      public-key: w0jjW_RLHvQc2tk_7sbxfBawdMlJZfb7rKROwg051gA
+      short-id: c6966bed91ecd9
+    server: 13.114.124.85
+    servername: www.tesla.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 926912d3-1656-4e83-9971-411b283f7998
+    xudp: true
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 148 HK
+    name: 187 HK
     network: tcp
     port: 59750
     reality-opts:
@@ -1947,7 +2588,7 @@ proxies:
     uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
     servername: www.amd.com
   - client-fingerprint: chrome
-    name: 149 US
+    name: 188 US
     network: tcp
     port: 40056
     reality-opts:
@@ -1960,7 +2601,7 @@ proxies:
     uuid: 090122da-ad6b-42a1-92d7-bab2630e2511
     servername: www.cloudflare.com
   - client-fingerprint: chrome
-    name: 150 KR
+    name: 189 KR
     network: tcp
     port: 8686
     reality-opts:
@@ -1974,7 +2615,7 @@ proxies:
     servername: www.apple.com
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 151 JP
+    name: 190 JP
     network: tcp
     port: 20725
     reality-opts:
@@ -1987,7 +2628,7 @@ proxies:
     uuid: 6dcb725e-947e-4bbe-bb35-903374d57179
     servername: buylite.tv.apple.com
   - client-fingerprint: chrome
-    name: 152 US
+    name: 191 US
     network: tcp
     port: 30906
     reality-opts:
@@ -1999,7 +2640,7 @@ proxies:
     udp: true
     uuid: 43a13764-23dd-4e01-8b79-cde8a16e13ce
     servername: www.cloudflare.com
-  - name: 153 JP
+  - name: 192 JP
     type: vless
     server: gndybirds.sparrowvl08.gjtxyszcicaly.com
     port: 28108
@@ -2011,7 +2652,7 @@ proxies:
     reality-opts:
       public-key: V7aQPeJYEgNHcw1A35n3uLby2sOASOAyz7vtjajBfwM
       short-id: 2f7be5d0
-  - name: 154 JP
+  - name: 193 JP
     type: vless
     server: guzsasfreuivcluie51.gxsdfewocinexuxiqee.com
     port: 28151
@@ -2023,7 +2664,7 @@ proxies:
     reality-opts:
       public-key: HBeH_uPYOMp9D7Mq1KxBzduX07OZ9C8rT4zSHNjiO3g
       short-id: c1cd56a8
-  - name: 155 JP
+  - name: 194 JP
     type: vless
     server: guzsasfreuivcluie41.gxsdfewocinexuxiqee.com
     port: 28141
@@ -2035,7 +2676,7 @@ proxies:
     reality-opts:
       public-key: HBeH_uPYOMp9D7Mq1KxBzduX07OZ9C8rT4zSHNjiO3g
       short-id: c1cd56a8
-  - name: 156 JP
+  - name: 195 JP
     type: vless
     server: gumagician.clownlv15.gjtxyszcicaly.com
     port: 28115
