@@ -39,7 +39,7 @@ dns:
     - https://doh.pub/dns-query
   nameserver-policy:
     'rule-set:AWAvenue-Ads,category-ads-all': rcode://success
-    'rule-set:category-ai-!cn,cloudflare,github,youtube,google,meta,telegram,twitter,disney,hbo,netflix,spotify,geolocation-!cn':
+    'rule-set:category-ai-!cn,cloudflare,github,google,x,meta,telegram,netflix,disney,spotify,geolocation-!cn':
     - https://cloudflare-dns.com/dns-query#disable-ipv6=true
     - https://dns.google/dns-query#disable-ipv6=true
   nameserver:
@@ -174,13 +174,6 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
-  hbo:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/hbo.mrs"
-    path: ./rules/hbo.mrs
-    interval: 86400
-    behavior: domain
-    format: mrs
   meta:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/meta.mrs"
@@ -237,17 +230,10 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
-  twitter:
+  x:
     type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.mrs"
-    path: ./rules/twitter.mrs
-    interval: 86400
-    behavior: domain
-    format: mrs
-  youtube:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"
-    path: ./rules/youtube.mrs
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/x.mrs"
+    path: ./rules/x.mrs
     interval: 86400
     behavior: domain
     format: mrs
@@ -332,26 +318,24 @@ rules:
   - RULE-SET,category-ads-all,REJECT
   # IP分流，国外代理→国内直连
   - RULE-SET,ip_cloudflare,自动选择,no-resolve
-  - RULE-SET,ip_cloudfront,自动选择,no-resolve
-  - RULE-SET,ip_facebook,自动选择,no-resolve
-  - RULE-SET,ip_fastly,自动选择,no-resolve
   - RULE-SET,ip_google,自动选择,no-resolve
-  - RULE-SET,ip_netflix,自动选择,no-resolve
-  - RULE-SET,ip_telegram,自动选择,no-resolve
+  - RULE-SET,ip_cloudfront,自动选择,no-resolve
+  - RULE-SET,ip_fastly,自动选择,no-resolve
   - RULE-SET,ip_twitter,自动选择,no-resolve
+  - RULE-SET,ip_facebook,自动选择,no-resolve
+  - RULE-SET,ip_telegram,自动选择,no-resolve
+  - RULE-SET,ip_netflix,自动选择,no-resolve
   - RULE-SET,ip_cn,DIRECT,no-resolve
   # 域名分流，国外代理→国内直连
   - RULE-SET,category-ai-!cn,自动选择
   - RULE-SET,cloudflare,自动选择
   - RULE-SET,github,自动选择
-  - RULE-SET,youtube,自动选择
   - RULE-SET,google,自动选择
+  - RULE-SET,x,自动选择
   - RULE-SET,meta,自动选择
   - RULE-SET,telegram,自动选择
-  - RULE-SET,twitter,自动选择
-  - RULE-SET,disney,自动选择
-  - RULE-SET,hbo,自动选择
   - RULE-SET,netflix,自动选择
+  - RULE-SET,disney,自动选择
   - RULE-SET,spotify,自动选择
   - RULE-SET,apple,DIRECT
   - RULE-SET,onedrive,DIRECT
