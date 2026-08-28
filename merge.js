@@ -16,7 +16,7 @@ const TARGET_COUNTRY_CODES = new Set(['HK', 'TW', 'JP', 'KR', 'SG', 'US']);
 // IP批量查询配置（免费批量接口仅支持HTTP）
 const BATCH_ENDPOINT = 'http://ip-api.com/batch';
 const BATCH_SIZE = 50;
-const BATCH_INTERVAL = 3000;
+const BATCH_INTERVAL = 4500;
 const BATCH_FIELDS = 'status,countryCode'; // 仅保留必需字段，最小化响应体积
 
 // 域名单查配置（支持HTTPS，兼容域名自动解析）
@@ -143,7 +143,8 @@ async function getIpCountryCode(ipOrDomain) {
     if (type === 'vless') {
       const hasReality = !!p['reality-opts'];
       const hasXhttp = !!p['xhttp-opts'];
-      if (!hasReality && !hasXhttp) return false;
+      const hasWs = !!p['ws-opts'];
+      if (!hasReality && !hasXhttp && !hasWs) return false;
       if (p.encryption && typeof p.encryption === 'string' && p.encryption.length > 50) return false;
     }
     return true;
@@ -185,7 +186,7 @@ async function getIpCountryCode(ipOrDomain) {
       // 4.3 IP批量查询
       if (ipNodes.length > 0) {
         const batchCount = Math.ceil(ipNodes.length / BATCH_SIZE);
-        console.log(`--- IP批量查询，共 ${ipNodes.length} 个，分 ${batchCount} 批 ---`);
+        console.log(`\n--- IP批量查询，共 ${ipNodes.length} 个，分 ${batchCount} 批 ---`);
         for (let i = 0; i < batchCount; i++) {
           const batch = ipNodes.slice(i * BATCH_SIZE, (i + 1) * BATCH_SIZE);
           const batchIps = batch.map(p => p.server);
@@ -198,7 +199,7 @@ async function getIpCountryCode(ipOrDomain) {
 
       // 4.4 域名单个查询
       if (domainNodes.length > 0) {
-        console.log(`--- 域名单查，共 ${domainNodes.length} 个 ---`);
+        console.log(`\n--- 域名单查，共 ${domainNodes.length} 个 ---`);
         for (let i = 0; i < domainNodes.length; i++) {
           const server = domainNodes[i].server;
           if (DEBUG_BATCH) console.log(`  [${i + 1}/${domainNodes.length}] 查询 ${server}`);
@@ -221,26 +222,26 @@ async function getIpCountryCode(ipOrDomain) {
         }
       }
 
-      console.log(`地区校验统计：`);
+      console.log(`\n地区校验统计：`);
       console.log(`  候选节点：${preFiltered.length}`);
       console.log(`  查询失败：${failCount}`);
       console.log(`  命中目标：${matchCount}`);
     }
-    console.log(`地区最终筛选后节点数：${regionFiltered.length}`);
+    console.log(`\n地区最终筛选后节点数：${regionFiltered.length}`);
   } else {
     console.log(`⚠️ 未配置目标地区，跳过地区筛选`);
   }
 
-  // 5. 输出结果
-  fs.writeFileSync(OUTPUT_FILE, new yaml.Document()
-    .set('proxies', dedupList)
-    .toString({ indent: 2, lineWidth: 0 }));
+  // 5. 输出结果（修复链式调用问题，改回分步写法）
+  const docAll = new yaml.Document();
+  docAll.set('proxies', dedupList);
+  fs.writeFileSync(OUTPUT_FILE, docAll.toString({ indent: 2, lineWidth: 0 }));
   console.log(`\n✅ 已保存全量节点至 ${OUTPUT_FILE}`);
 
   if (regionFiltered.length) {
-    fs.writeFileSync(REGION_OUTPUT_FILE, new yaml.Document()
-      .set('proxies', regionFiltered)
-      .toString({ indent: 2, lineWidth: 0 }));
+    const docRegion = new yaml.Document();
+    docRegion.set('proxies', regionFiltered);
+    fs.writeFileSync(REGION_OUTPUT_FILE, docRegion.toString({ indent: 2, lineWidth: 0 }));
     console.log(`✅ 已保存地区筛选节点至 ${REGION_OUTPUT_FILE}`);
   } else {
     fs.writeFileSync(REGION_OUTPUT_FILE, 'proxies: []\n');
