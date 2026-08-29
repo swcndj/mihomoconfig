@@ -17783,27 +17783,6 @@ proxies:
       host: bg.tutvpn.com
       path: /tutcdn/
     xudp: true
-  - name: 🇺🇸US_2|2.4MB/s
-    password: 821caa77-cd62-4f81-8764-a679d51a1726
-    port: 40022
-    server: us2.catzl.top
-    type: anytls
-    udp: true
-    sni: us2.catzl.top
-  - name: 🇭🇰HK_1|1.3MB/s
-    password: 821caa77-cd62-4f81-8764-a679d51a1726
-    port: 40011
-    server: hk1.catzl.top
-    type: anytls
-    udp: true
-    sni: hk1.catzl.top
-  - name: 🇯🇵JP_1|5.6MB/s
-    password: 821caa77-cd62-4f81-8764-a679d51a1726
-    port: 40055
-    server: jp5.catzl.top
-    type: anytls
-    udp: true
-    sni: jp5.catzl.top
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
     name: 🇭🇰 001  | ⬇️ 66KB/s

@@ -3484,30 +3484,9 @@ proxies:
     client-fingerprint: ios
     network: tcp
     udp: true
-  - name: 259 US
-    password: 821caa77-cd62-4f81-8764-a679d51a1726
-    port: 40022
-    server: us2.catzl.top
-    type: anytls
-    udp: true
-    sni: us2.catzl.top
-  - name: 260 HK
-    password: 821caa77-cd62-4f81-8764-a679d51a1726
-    port: 40011
-    server: hk1.catzl.top
-    type: anytls
-    udp: true
-    sni: hk1.catzl.top
-  - name: 261 JP
-    password: 821caa77-cd62-4f81-8764-a679d51a1726
-    port: 40055
-    server: jp5.catzl.top
-    type: anytls
-    udp: true
-    sni: jp5.catzl.top
   - client-fingerprint: qq
     flow: xtls-rprx-vision
-    name: 262 JP
+    name: 259 JP
     network: tcp
     port: 20725
     reality-opts:
