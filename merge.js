@@ -6,6 +6,7 @@ const SUBS = JSON.parse(fs.readFileSync("./subs.json", "utf8"));
 const OUTPUT_FILE = "nodes.yaml";
 const REGION_OUTPUT_FILE = "nodes_regionfiltered.yaml";
 const REQUEST_TIMEOUT = 15000;
+
 const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
 
 // 名称初筛正则：仅用于减少查询量，不做最终判定
@@ -15,18 +16,15 @@ const TARGET_COUNTRY_CODES = new Set(['HK', 'MO', 'TW', 'JP', 'KR', 'SG', 'MY', 
 
 // IP 批量查询配置
 const BATCH_ENDPOINT = 'http://ip-api.com/batch';
-const BATCH_SIZE = 50;
-const BATCH_INTERVAL = 3000;
+const BATCH_SIZE = 80;
+const BATCH_INTERVAL = 4500;
 const BATCH_FIELDS = 'status,countryCode';
-
 // 域名单查配置
 const SINGLE_ENDPOINT = 'http://ip-api.com/json';
 const DOMAIN_QUERY_INTERVAL = 1500;
-
 // 调试日志开关
 const DEBUG_BATCH = false;
 // -------------------------------------------------- 配置区 --------------------------------------------------
-
 // -------------------------------------------------- 工具函数 --------------------------------------------------
 async function fetchWithTimeout(url, options = {}) {
   const controller = new AbortController();
@@ -49,7 +47,7 @@ function delay(ms) {
 // 判断是否为 IP 地址
 function isIpAddress(str) {
   if (!str) return false;
-  const ipv4Regex = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+  const ipv4Regex = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[01]?[0-9][0-9]?)$/;
   const ipv6Regex = /^[0-9a-fA-F]{1,4}(?::[0-9a-fA-F]{1,4}){2,7}$/;
   return ipv4Regex.test(str) || ipv6Regex.test(str);
 }
@@ -99,12 +97,10 @@ async function getIpCountryCode(ipOrDomain) {
   }
 }
 // -------------------------------------------------- 工具函数 --------------------------------------------------
-
 // -------------------------------------------------- 主程序区 --------------------------------------------------
 (async function main() {
   console.log(`===== 开始处理，共 ${SUBS.length} 个订阅 =====\n`);
   const allRawProxies = [];
-
   // 1. 拉取所有订阅
   for (let i = 0; i < SUBS.length; i++) {
     const subUrl = SUBS[i];
@@ -129,7 +125,7 @@ async function getIpCountryCode(ipOrDomain) {
     }
   }
   console.log(`\n总原始节点数：${allRawProxies.length}`);
-
+  
   // 2. 节点类型过滤
   const typeFiltered = allRawProxies.filter(p => {
     if (!isValidNode(p)) return false;
@@ -144,7 +140,7 @@ async function getIpCountryCode(ipOrDomain) {
     return true;
   });
   console.log(`类型过滤后节点数：${typeFiltered.length}`);
-
+  
   // 3. 节点去重
   const seen = new Set();
   const dedupList = typeFiltered.filter(p => {
@@ -157,15 +153,27 @@ async function getIpCountryCode(ipOrDomain) {
     return true;
   });
   console.log(`去重后节点数：${dedupList.length}`);
-
-  // 4. 地区筛选
+  
+  // 4. 地区筛选【修改此处逻辑】
   const regionFiltered = [];
   if (TARGET_COUNTRY_CODES.size > 0) {
-    // 4.1 名称初筛
-    const preFiltered = dedupList.filter(p => PRE_FILTER_REGEX.test(p.name || ''));
-    console.log(`\n名称初筛候选节点数：${preFiltered.length}`);
+    const allIpNodes = [];
+    const domainCandidateNodes = [];
+    // 4.1拆分：IP节点全部保留；域名节点先做名称初筛
+    for(const node of dedupList){
+      if(!node.server) continue;
+      if(isIpAddress(node.server)){
+        allIpNodes.push(node);
+      }else{
+        if(PRE_FILTER_REGEX.test(node.name || '')){
+          domainCandidateNodes.push(node);
+        }
+      }
+    }
+    const preFiltered = [...allIpNodes, ...domainCandidateNodes];
+    console.log(`\n名称初筛候选节点数：${preFiltered.length}（IP节点:${allIpNodes.length}，域名初筛后:${domainCandidateNodes.length}）`);
     if (preFiltered.length > 0) {
-      // 4.2 拆分 IP /域名节点
+      // 4.2 再次拆分 IP /域名节点（用于区分批量/单查）
       const ipNodes = [];
       const domainNodes = [];
       for (const node of preFiltered) {
@@ -219,13 +227,12 @@ async function getIpCountryCode(ipOrDomain) {
   } else {
     console.log(`⚠️ 未配置目标地区，跳过地区筛选`);
   }
-
+  
   // 5. 输出结果
   const docAll = new yaml.Document();
   docAll.set('proxies', dedupList);
   fs.writeFileSync(OUTPUT_FILE, docAll.toString({ indent: 2, lineWidth: 0 }));
-  console.log(`\n✅ 已保存全量节点至 ${OUTPUT_FILE}`);
-
+  console.log(`\n✅ 已保存去重后节点至 ${OUTPUT_FILE}`);
   if (regionFiltered.length) {
     const docRegion = new yaml.Document();
     docRegion.set('proxies', regionFiltered);
