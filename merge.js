@@ -106,7 +106,7 @@ async function getIpCountryCode(ipOrDomain) {
         console.log(`  ⚠️ 无 proxies 数组`);
         continue;
       }
-      console.log(`  🌐 原始节点：${proxies.length}`);
+      console.log(`  原始节点：${proxies.length}`);
       allRawProxies.push(...proxies);
     } catch (e) {
       console.log(`  ❌ 失败：${e.message}`);
