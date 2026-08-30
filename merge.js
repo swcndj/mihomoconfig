@@ -56,7 +56,7 @@ async function batchQueryIpCountry(ipList) {
       body: JSON.stringify(ipList)
     });
     if (!res.ok) {
-      console.log(`    ❌ 批量请求失败 HTTP ${res.status}`);
+      console.log(`    ❌ 批量查询请求失败 HTTP ${res.status}`);
       return null;
     }
     const data = await res.json();
@@ -68,7 +68,7 @@ async function batchQueryIpCountry(ipList) {
     });
     return resultMap;
   } catch (e) {
-    console.log(`    ❌ 批量请求异常：${e.message}`);
+    console.log(`    ⚠️ 批量请求异常：${e.message}`);
     return null;
   }
 }
@@ -96,7 +96,7 @@ async function getIpCountryCode(ipOrDomain) {
     try {
       const res = await fetchWithTimeout(subUrl);
       if (!res.ok) {
-        console.log(`  ❌ HTTP ${res.status}`);
+        console.log(`  ❌ 拉取订阅请求失败 HTTP ${res.status}`);
         continue;
       }
       const text = await res.text();
