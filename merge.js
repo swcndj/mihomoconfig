@@ -7,6 +7,7 @@ const OUTPUT_FILE = "nodes.yaml";
 const REGION_OUTPUT_FILE = "nodes_regionfiltered.yaml";
 const REQUEST_TIMEOUT = 15000;
 
+// 协议黑名单
 const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
 
 // 名称初筛正则：仅用于减少查询量，不做最终判定
@@ -22,10 +23,12 @@ const BATCH_FIELDS = 'status,countryCode';
 // 域名单查配置
 const SINGLE_ENDPOINT = 'http://ip-api.com/json';
 const DOMAIN_QUERY_INTERVAL = 1500;
+
 // 调试日志开关
 const DEBUG_BATCH = false;
 // -------------------------------------------------- 配置区 --------------------------------------------------
 // -------------------------------------------------- 工具函数 --------------------------------------------------
+// 带超时控制的网络请求封装函数
 async function fetchWithTimeout(url, options = {}) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT);
@@ -36,10 +39,12 @@ async function fetchWithTimeout(url, options = {}) {
   }
 }
 
+// 节点合法性校验函数
 function isValidNode(node) {
   return !!(node && node.type);
 }
 
+// 延时等待工具函数
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -101,6 +106,7 @@ async function getIpCountryCode(ipOrDomain) {
 (async function main() {
   console.log(`===== 开始处理，共 ${SUBS.length} 个订阅 =====\n`);
   const allRawProxies = [];
+  
   // 1. 拉取所有订阅
   for (let i = 0; i < SUBS.length; i++) {
     const subUrl = SUBS[i];
@@ -154,75 +160,77 @@ async function getIpCountryCode(ipOrDomain) {
   });
   console.log(`去重后节点数：${dedupList.length}`);
   
-  // 4. 地区筛选【修改此处逻辑】
+  // 4. 地区筛选
   const regionFiltered = [];
   if (TARGET_COUNTRY_CODES.size > 0) {
-    const allIpNodes = [];
-    const domainCandidateNodes = [];
-    // 4.1拆分：IP节点全部保留；域名节点先做名称初筛
+    const ipNodes = [];
+    const domainNodes = [];
+    // 一次拆分：IP节点全部进入查询；域名节点执行名称初筛
     for(const node of dedupList){
       if(!node.server) continue;
       if(isIpAddress(node.server)){
-        allIpNodes.push(node);
+        ipNodes.push(node);
       }else{
         if(PRE_FILTER_REGEX.test(node.name || '')){
-          domainCandidateNodes.push(node);
+          domainNodes.push(node);
         }
       }
     }
-    const preFiltered = [...allIpNodes, ...domainCandidateNodes];
-    console.log(`\n名称初筛候选节点数：${preFiltered.length}（IP节点:${allIpNodes.length}，域名初筛后:${domainCandidateNodes.length}）`);
-    if (preFiltered.length > 0) {
-      // 4.2 再次拆分 IP /域名节点（用于区分批量/单查）
-      const ipNodes = [];
-      const domainNodes = [];
-      for (const node of preFiltered) {
-        if (!node.server) continue;
-        isIpAddress(node.server) ? ipNodes.push(node) : domainNodes.push(node);
+    console.log(`节点拆分：IP ${ipNodes.length} 个，域名 ${domainNodes.length} 个`);
+    const allResultMap = new Map();
+    let ipQueryFail = 0;
+    let ipMatchTarget = 0;
+    let domainQueryFail = 0;
+    let domainMatchTarget = 0;
+    // IP 批量查询
+    if (ipNodes.length > 0) {
+      const batchCount = Math.ceil(ipNodes.length / BATCH_SIZE);
+      console.log(`--- IP批量查询，共 ${ipNodes.length} 个，分 ${batchCount} 批 ---`);
+      for (let i = 0; i < batchCount; i++) {
+        const batch = ipNodes.slice(i * BATCH_SIZE, (i + 1) * BATCH_SIZE);
+        const batchIps = batch.map(p => p.server);
+        console.log(`  [${i + 1}/${batchCount}] 第 ${i + 1} 批，${batchIps.length} 个IP`);
+        const batchResult = await batchQueryIpCountry(batchIps);
+        if (batchResult) batchResult.forEach((cc, ip) => allResultMap.set(ip, cc));
+        if (i < batchCount - 1) await delay(BATCH_INTERVAL);
       }
-      console.log(`节点拆分：IP ${ipNodes.length} 个，域名 ${domainNodes.length} 个`);
-      const allResultMap = new Map();
-      // 4.3 IP 批量查询
-      if (ipNodes.length > 0) {
-        const batchCount = Math.ceil(ipNodes.length / BATCH_SIZE);
-        console.log(`--- IP批量查询，共 ${ipNodes.length} 个，分 ${batchCount} 批 ---`);
-        for (let i = 0; i < batchCount; i++) {
-          const batch = ipNodes.slice(i * BATCH_SIZE, (i + 1) * BATCH_SIZE);
-          const batchIps = batch.map(p => p.server);
-          console.log(`  [${i + 1}/${batchCount}] 第 ${i + 1} 批，${batchIps.length} 个IP`);
-          const batchResult = await batchQueryIpCountry(batchIps);
-          if (batchResult) batchResult.forEach((cc, ip) => allResultMap.set(ip, cc));
-          if (i < batchCount - 1) await delay(BATCH_INTERVAL);
-        }
-      }
-      // 4.4 域名单个查询
-      if (domainNodes.length > 0) {
-        console.log(`--- 域名单查，共 ${domainNodes.length} 个 ---`);
-        for (let i = 0; i < domainNodes.length; i++) {
-          const server = domainNodes[i].server;
-          if (DEBUG_BATCH) console.log(`  [${i + 1}/${domainNodes.length}] 查询 ${server}`);
-          const cc = await getIpCountryCode(server);
-          allResultMap.set(server, cc);
-          if (DEBUG_BATCH) console.log(`    ${cc ? `✅ ${cc}` : '❌ 失败'}`);
-          if (i < domainNodes.length - 1) await delay(DOMAIN_QUERY_INTERVAL);
-        }
-      }
-      // 4.5 匹配目标地区并重命名
-      let matchCount = 0;
-      let failCount = 0;
-      for (const node of preFiltered) {
+      // 统计IP节点
+      for(const node of ipNodes){
         const cc = allResultMap.get(node.server);
-        if (!cc) { failCount++; continue; }
-        if (TARGET_COUNTRY_CODES.has(cc)) {
-          const newNode = { ...node, name: `${++matchCount} ${cc}` };
+        if(!cc){
+          ipQueryFail++;
+        }else if(TARGET_COUNTRY_CODES.has(cc)){
+          ipMatchTarget++;
+          const newNode = { ...node, name: `${regionFiltered.length+1} ${cc}` };
           regionFiltered.push(newNode);
         }
       }
-      console.log(`地区校验统计：`);
-      console.log(`  候选节点：${preFiltered.length}`);
-      console.log(`  查询失败：${failCount}`);
-      console.log(`  命中目标：${matchCount}`);
     }
+    // 域名单个查询
+    if (domainNodes.length > 0) {
+      console.log(`--- 域名单查，共 ${domainNodes.length} 个 ---`);
+      for (let i = 0; i < domainNodes.length; i++) {
+        const server = domainNodes[i].server;
+        if (DEBUG_BATCH) console.log(`  [${i + 1}/${domainNodes.length}] 查询 ${server}`);
+        const cc = await getIpCountryCode(server);
+        allResultMap.set(server, cc);
+        if (DEBUG_BATCH) console.log(`    ${cc ? `✅ ${cc}` : '❌ 失败'}`);
+        if (i < domainNodes.length - 1) await delay(DOMAIN_QUERY_INTERVAL);
+      }
+      // 统计域名节点
+      for(const node of domainNodes){
+        const cc = allResultMap.get(node.server);
+        if(!cc){
+          domainQueryFail++;
+        }else if(TARGET_COUNTRY_CODES.has(cc)){
+          domainMatchTarget++;
+          const newNode = { ...node, name: `${regionFiltered.length+1} ${cc}` };
+          regionFiltered.push(newNode);
+        }
+      }
+    }
+    console.log(`IP节点统计：查询失败 ${ipQueryFail}，命中目标 ${ipMatchTarget}`);
+    console.log(`域名节点统计：查询失败 ${domainQueryFail}，命中目标 ${domainMatchTarget}`);
     console.log(`地区最终筛选后节点数：${regionFiltered.length}`);
   } else {
     console.log(`⚠️ 未配置目标地区，跳过地区筛选`);
