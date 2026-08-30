@@ -25,7 +25,7 @@ const SINGLE_ENDPOINT = 'http://ip-api.com/json';
 const DOMAIN_QUERY_INTERVAL = 1500;
 
 // 调试日志开关
-const DEBUG_BATCH = false;
+const DEBUG_BATCH = true;
 // -------------------------------------------------- 配置区 --------------------------------------------------
 // -------------------------------------------------- 工具函数 --------------------------------------------------
 // 带超时控制的网络请求封装函数
@@ -158,7 +158,7 @@ async function getIpCountryCode(ipOrDomain) {
     seen.add(fp);
     return true;
   });
-  console.log(`去重后节点数：${dedupList.length}`);
+  console.log(`🌐 去重后节点数：${dedupList.length}`);
   
   // 4. 地区筛选
   const regionFiltered = [];
@@ -176,7 +176,7 @@ async function getIpCountryCode(ipOrDomain) {
         }
       }
     }
-    console.log(`节点拆分：IP ${ipNodes.length} 个，域名 ${domainNodes.length} 个`);
+    console.log(`地区初筛：IP 节点全部保留，域名节点根据节点名称初筛`);
     const allResultMap = new Map();
     let ipQueryFail = 0;
     let ipMatchTarget = 0;
@@ -185,11 +185,10 @@ async function getIpCountryCode(ipOrDomain) {
     // IP 批量查询
     if (ipNodes.length > 0) {
       const batchCount = Math.ceil(ipNodes.length / BATCH_SIZE);
-      console.log(`--- IP批量查询，共 ${ipNodes.length} 个，分 ${batchCount} 批 ---`);
+      console.log(`--- IP 批量查询，共 ${ipNodes.length} 个 ---`);
       for (let i = 0; i < batchCount; i++) {
         const batch = ipNodes.slice(i * BATCH_SIZE, (i + 1) * BATCH_SIZE);
         const batchIps = batch.map(p => p.server);
-        console.log(`  [${i + 1}/${batchCount}] 第 ${i + 1} 批，${batchIps.length} 个IP`);
         const batchResult = await batchQueryIpCountry(batchIps);
         if (batchResult) batchResult.forEach((cc, ip) => allResultMap.set(ip, cc));
         if (i < batchCount - 1) await delay(BATCH_INTERVAL);
@@ -206,9 +205,10 @@ async function getIpCountryCode(ipOrDomain) {
         }
       }
     }
+    console.log(`IP 节点统计：查询失败 ${ipQueryFail}，命中目标 ${ipMatchTarget}`);
     // 域名单个查询
     if (domainNodes.length > 0) {
-      console.log(`--- 域名单查，共 ${domainNodes.length} 个 ---`);
+      console.log(`--- 域名单个查询，共 ${domainNodes.length} 个 ---`);
       for (let i = 0; i < domainNodes.length; i++) {
         const server = domainNodes[i].server;
         if (DEBUG_BATCH) console.log(`  [${i + 1}/${domainNodes.length}] 查询 ${server}`);
@@ -229,9 +229,8 @@ async function getIpCountryCode(ipOrDomain) {
         }
       }
     }
-    console.log(`IP节点统计：查询失败 ${ipQueryFail}，命中目标 ${ipMatchTarget}`);
     console.log(`域名节点统计：查询失败 ${domainQueryFail}，命中目标 ${domainMatchTarget}`);
-    console.log(`地区最终筛选后节点数：${regionFiltered.length}`);
+    console.log(`🌐 地区最终筛选后节点数：${regionFiltered.length}`);
   } else {
     console.log(`⚠️ 未配置目标地区，跳过地区筛选`);
   }
