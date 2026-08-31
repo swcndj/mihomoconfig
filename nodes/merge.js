@@ -2,9 +2,9 @@
 const fs = require('fs');
 const yaml = require('yaml');
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
-const SUBS = JSON.parse(fs.readFileSync("./subs.json", "utf8"));
-const OUTPUT_FILE = "nodes.yaml";
-const REGION_OUTPUT_FILE = "nodes_regionfiltered.yaml";
+const SUBS = JSON.parse(fs.readFileSync("./nodes/subs.json", "utf8"));
+const OUTPUT_FILE = "nodes/all.yaml";
+const REGION_OUTPUT_FILE = "nodes/regionfiltered.yaml";
 const REQUEST_TIMEOUT = 15000;
 // 协议黑名单
 const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
