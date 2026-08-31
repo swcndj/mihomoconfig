@@ -243,13 +243,6 @@ rule-providers:
     interval: 86400
     behavior: ipcidr
     format: mrs
-  ip_cloudfront:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cloudfront.mrs"
-    path: ./rules/ip_cloudfront.mrs
-    interval: 86400
-    behavior: ipcidr
-    format: mrs
   ip_cn:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"
@@ -261,13 +254,6 @@ rule-providers:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/facebook.mrs"
     path: ./rules/ip_facebook.mrs
-    interval: 86400
-    behavior: ipcidr
-    format: mrs
-  ip_fastly:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/fastly.mrs"
-    path: ./rules/ip_fastly.mrs
     interval: 86400
     behavior: ipcidr
     format: mrs
@@ -318,8 +304,6 @@ rules:
   # IP分流，国外代理→国内直连
   - RULE-SET,ip_cloudflare,自动选择,no-resolve
   - RULE-SET,ip_google,自动选择,no-resolve
-  - RULE-SET,ip_cloudfront,自动选择,no-resolve
-  - RULE-SET,ip_fastly,自动选择,no-resolve
   - RULE-SET,ip_twitter,自动选择,no-resolve
   - RULE-SET,ip_facebook,自动选择,no-resolve
   - RULE-SET,ip_telegram,自动选择,no-resolve
