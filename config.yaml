@@ -73,7 +73,7 @@ tun:
 proxy-providers:
   nodes_regionfiltered:
     type: http
-    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/nodes_regionfiltered.yaml"
+    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/nodes/regionfiltered.yaml"
     interval: 7200
     path: ./providers/nodes_regionfiltered.yaml
     health-check:
@@ -153,6 +153,12 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
+  domain_direct:
+    type: http
+    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/rules/domain_direct.yaml"
+    path: ./rules/domain_direct.yaml
+    interval: 86400
+    behavior: domain
   geolocation-!cn:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"
@@ -344,6 +350,7 @@ rules:
   - RULE-SET,category-games@cn,DIRECT
   - RULE-SET,category-game-platforms-download@cn,DIRECT
   - RULE-SET,cn,DIRECT
+  - RULE-SET,domain_direct,DIRECT
   # - RULE-SET,geolocation-!cn,自动选择
   # 全局兜底
   - MATCH,自动选择
