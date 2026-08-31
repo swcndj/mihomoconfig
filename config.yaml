@@ -346,11 +346,11 @@ rules:
   - RULE-SET,apple,DIRECT
   - RULE-SET,onedrive,DIRECT
   - RULE-SET,microsoft,DIRECT
+  - RULE-SET,domain_direct,DIRECT
   - RULE-SET,tracker,DIRECT
   - RULE-SET,category-games@cn,DIRECT
   - RULE-SET,category-game-platforms-download@cn,DIRECT
   - RULE-SET,cn,DIRECT
-  - RULE-SET,domain_direct,DIRECT
   # - RULE-SET,geolocation-!cn,自动选择
   # 全局兜底
   - MATCH,自动选择
