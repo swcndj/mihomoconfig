@@ -201,13 +201,6 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
-  onedrive:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/onedrive.mrs"
-    path: ./rules/onedrive.mrs
-    interval: 86400
-    behavior: domain
-    format: mrs
   private:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"
@@ -344,7 +337,6 @@ rules:
   - RULE-SET,disney,自动选择
   - RULE-SET,spotify,自动选择
   - RULE-SET,apple,DIRECT
-  - RULE-SET,onedrive,DIRECT
   - RULE-SET,microsoft,DIRECT
   - RULE-SET,domain_direct,DIRECT
   - RULE-SET,tracker,DIRECT
