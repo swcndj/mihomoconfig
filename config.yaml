@@ -39,7 +39,7 @@ dns:
     - https://doh.pub/dns-query
   nameserver-policy:
     'rule-set:AWAvenue-Ads,category-ads-all': rcode://success
-    'rule-set:category-ai-!cn,cloudflare,github,google,x,meta,telegram,netflix,disney,spotify,geolocation-!cn':
+    'rule-set:category-ai-!cn,cloudflare,github,google,x,meta,telegram,netflix,spotify,gfw':
     - https://cloudflare-dns.com/dns-query#disable-ipv6=true
     - https://dns.google/dns-query#disable-ipv6=true
   nameserver:
@@ -146,23 +146,16 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
-  disney:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/disney.mrs"
-    path: ./rules/disney.mrs
-    interval: 86400
-    behavior: domain
-    format: mrs
   domain_direct:
     type: http
     url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/rules/domain_direct.yaml"
     path: ./rules/domain_direct.yaml
     interval: 86400
     behavior: domain
-  geolocation-!cn:
+  gfw:
     type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"
-    path: ./rules/geolocation-!cn.mrs
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.mrs"
+    path: ./rules/gfw.mrs
     interval: 86400
     behavior: domain
     format: mrs
@@ -318,7 +311,6 @@ rules:
   - RULE-SET,meta,自动选择
   - RULE-SET,telegram,自动选择
   - RULE-SET,netflix,自动选择
-  - RULE-SET,disney,自动选择
   - RULE-SET,spotify,自动选择
   - RULE-SET,apple,DIRECT
   - RULE-SET,microsoft,DIRECT
@@ -327,6 +319,5 @@ rules:
   - RULE-SET,category-games@cn,DIRECT
   - RULE-SET,category-game-platforms-download@cn,DIRECT
   - RULE-SET,cn,DIRECT
-  # - RULE-SET,geolocation-!cn,自动选择
   # 全局兜底
   - MATCH,自动选择
