@@ -39,7 +39,7 @@ dns:
     - https://doh.pub/dns-query
   nameserver-policy:
     'rule-set:AWAvenue-Ads,category-ads-all': rcode://success
-    'rule-set:category-ai-!cn,cloudflare,github,google,x,meta,telegram,netflix,spotify,gfw':
+    'rule-set:category-ai-!cn,cloudflare,github,google,x,meta,telegram,netflix,spotify,gfw,domain_proxy':
     - https://cloudflare-dns.com/dns-query#disable-ipv6=true
     - https://dns.google/dns-query#disable-ipv6=true
   nameserver:
@@ -104,6 +104,13 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
+  apple@cn:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple@cn.mrs"
+    path: ./rules/apple@cn.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
   category-ads-all:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs"
@@ -152,6 +159,12 @@ rule-providers:
     path: ./rules/domain_direct.yaml
     interval: 86400
     behavior: domain
+  domain_proxy:
+    type: http
+    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/rules/domain_proxy.yaml"
+    path: ./rules/domain_proxy.yaml
+    interval: 86400
+    behavior: domain
   gfw:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.mrs"
@@ -184,6 +197,13 @@ rule-providers:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"
     path: ./rules/microsoft.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  microsoft@cn:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft@cn.mrs"
+    path: ./rules/microsoft@cn.mrs
     interval: 86400
     behavior: domain
     format: mrs
@@ -294,7 +314,7 @@ rules:
   # 广告拒绝
   - RULE-SET,AWAvenue-Ads,REJECT
   - RULE-SET,category-ads-all,REJECT
-  # IP分流，国外代理→国内直连
+  # IP分流
   - RULE-SET,ip_cloudflare,自动选择,no-resolve
   - RULE-SET,ip_google,自动选择,no-resolve
   - RULE-SET,ip_twitter,自动选择,no-resolve
@@ -302,7 +322,7 @@ rules:
   - RULE-SET,ip_telegram,自动选择,no-resolve
   - RULE-SET,ip_netflix,自动选择,no-resolve
   - RULE-SET,ip_cn,DIRECT,no-resolve
-  # 域名分流，国外代理→国内直连
+  # 域名分流
   - RULE-SET,category-ai-!cn,自动选择
   - RULE-SET,cloudflare,自动选择
   - RULE-SET,github,自动选择
@@ -312,12 +332,16 @@ rules:
   - RULE-SET,telegram,自动选择
   - RULE-SET,netflix,自动选择
   - RULE-SET,spotify,自动选择
-  - RULE-SET,apple,DIRECT
-  - RULE-SET,microsoft,DIRECT
-  - RULE-SET,domain_direct,DIRECT
-  - RULE-SET,tracker,DIRECT
-  - RULE-SET,category-games@cn,DIRECT
-  - RULE-SET,category-game-platforms-download@cn,DIRECT
-  - RULE-SET,cn,DIRECT
+  - RULE-SET,gfw,自动选择
+  - RULE-SET,domain_proxy,自动选择
+  # - RULE-SET,apple@cn,DIRECT
+  # - RULE-SET,apple,自动选择
+  # - RULE-SET,microsoft@cn,DIRECT
+  # - RULE-SET,microsoft,自动选择
+  # - RULE-SET,domain_direct,DIRECT
+  # - RULE-SET,tracker,DIRECT
+  # - RULE-SET,category-games@cn,DIRECT
+  # - RULE-SET,category-game-platforms-download@cn,DIRECT
+  # - RULE-SET,cn,DIRECT
   # 全局兜底
-  - MATCH,自动选择
+  - MATCH,DIRECT
