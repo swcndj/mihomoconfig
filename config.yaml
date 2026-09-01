@@ -334,10 +334,10 @@ rules:
   - RULE-SET,spotify,自动选择
   - RULE-SET,gfw,自动选择
   - RULE-SET,domain_proxy,自动选择
-  # - RULE-SET,apple@cn,DIRECT
-  # - RULE-SET,apple,自动选择
-  # - RULE-SET,microsoft@cn,DIRECT
-  # - RULE-SET,microsoft,自动选择
+  - RULE-SET,apple@cn,DIRECT
+  - RULE-SET,apple,自动选择
+  - RULE-SET,microsoft@cn,DIRECT
+  - RULE-SET,microsoft,自动选择
   # - RULE-SET,domain_direct,DIRECT
   # - RULE-SET,tracker,DIRECT
   # - RULE-SET,category-games@cn,DIRECT
