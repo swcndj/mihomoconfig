@@ -104,13 +104,6 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
-  apple@cn:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple@cn.mrs"
-    path: ./rules/apple@cn.mrs
-    interval: 86400
-    behavior: domain
-    format: mrs
   category-ads-all:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs"
@@ -197,13 +190,6 @@ rule-providers:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"
     path: ./rules/microsoft.mrs
-    interval: 86400
-    behavior: domain
-    format: mrs
-  microsoft@cn:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft@cn.mrs"
-    path: ./rules/microsoft@cn.mrs
     interval: 86400
     behavior: domain
     format: mrs
@@ -334,10 +320,8 @@ rules:
   - RULE-SET,spotify,自动选择
   - RULE-SET,gfw,自动选择
   - RULE-SET,domain_proxy,自动选择
-  - RULE-SET,apple@cn,DIRECT
-  - RULE-SET,apple,自动选择
-  - RULE-SET,microsoft@cn,DIRECT
-  - RULE-SET,microsoft,自动选择
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,microsoft,DIRECT
   # - RULE-SET,domain_direct,DIRECT
   # - RULE-SET,tracker,DIRECT
   # - RULE-SET,category-games@cn,DIRECT
