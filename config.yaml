@@ -342,6 +342,6 @@ rules:
   # - RULE-SET,tracker,DIRECT
   # - RULE-SET,category-games@cn,DIRECT
   # - RULE-SET,category-game-platforms-download@cn,DIRECT
-  # - RULE-SET,cn,DIRECT
+  - RULE-SET,cn,DIRECT
   # 全局兜底
   - MATCH,DIRECT
