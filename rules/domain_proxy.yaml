@@ -2,8 +2,9 @@ payload:
     - +.bitwarden.com
     - +.linux.do
     - +.bulianglin.com
-    - +.ipleak.net
-    - +.browserleaks.org
-    - +.ipapi.co
     - +.lololowe.com
     - +.ip.sb
+    - +.ipapi.co
+    - +.ipleak.net
+    - +.browserleaks.org
+    - +.browserleaks.com
