@@ -1,14 +1,8 @@
 payload:
     - +.linux.do
+    - +.ldstatic.com
     - +.bulianglin.com
     - +.lololowe.com
     
-    - +.ip.sb
-    - +.ipwho.is
-    - +.ipapi.co
-    
-    - +.ipleak.net
-    - +.dnsleaktest.com
-    - +.browserleaks.com
     - +.browserleaks.net
     - +.browserleaks.org
