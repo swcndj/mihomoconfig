@@ -1,10 +1,10 @@
 payload:
-    - +.bitwarden.com
     - +.linux.do
     - +.bulianglin.com
     - +.lololowe.com
     - +.ip.sb
     - +.ipapi.co
     - +.ipleak.net
-    - +.browserleaks.org
     - +.browserleaks.com
+    - +.browserleaks.net
+    - +.browserleaks.org
