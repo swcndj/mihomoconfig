@@ -146,12 +146,6 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
-  domain_direct:
-    type: http
-    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/rules/domain_direct.yaml"
-    path: ./rules/domain_direct.yaml
-    interval: 86400
-    behavior: domain
   domain_proxy:
     type: http
     url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/rules/domain_proxy.yaml"
@@ -221,13 +215,6 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
-  tracker:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tracker.mrs"
-    path: ./rules/tracker.mrs
-    interval: 86400
-    behavior: domain
-    format: mrs
   x:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/x.mrs"
@@ -293,9 +280,9 @@ rule-providers:
     format: mrs
 # ======================================== 路由规则 ========================================
 rules:
-  # 私有域名、IP、自定义直连
-  - RULE-SET,private,DIRECT
+  # 私有IP、域名直连
   - RULE-SET,ip_private,DIRECT,no-resolve
+  - RULE-SET,private,DIRECT
   - DOMAIN-SUFFIX,loz.dpdns.org,DIRECT
   # 广告拒绝
   - RULE-SET,AWAvenue-Ads,REJECT
@@ -322,10 +309,8 @@ rules:
   - RULE-SET,domain_proxy,自动选择
   - RULE-SET,apple,DIRECT
   - RULE-SET,microsoft,DIRECT
-  # - RULE-SET,domain_direct,DIRECT
-  # - RULE-SET,tracker,DIRECT
-  # - RULE-SET,category-games@cn,DIRECT
-  # - RULE-SET,category-game-platforms-download@cn,DIRECT
+  - RULE-SET,category-games@cn,DIRECT
+  - RULE-SET,category-game-platforms-download@cn,DIRECT
   - RULE-SET,cn,DIRECT
   # 全局兜底
   - MATCH,DIRECT
