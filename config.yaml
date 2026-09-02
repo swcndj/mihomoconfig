@@ -39,7 +39,7 @@ dns:
     - https://doh.pub/dns-query
   nameserver-policy:
     'rule-set:AWAvenue-Ads,category-ads-all': rcode://success
-    'rule-set:category-ai-!cn,cloudflare,github,google,x,meta,telegram,netflix,spotify,gfw,domain_proxy':
+    'rule-set:category-ai-!cn,cloudflare,github,google,x,meta,telegram,netflix,spotify,domain_proxy,category-ip-geo-detect,gfw':
     - https://cloudflare-dns.com/dns-query#disable-ipv6=true
     - https://dns.google/dns-query#disable-ipv6=true
   nameserver:
@@ -129,6 +129,13 @@ rule-providers:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-game-platforms-download@cn.mrs"
     path: ./rules/category-game-platforms-download@cn.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  category-ip-geo-detect:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ip-geo-detect.mrs"
+    path: ./rules/category-ip-geo-detect.mrs
     interval: 86400
     behavior: domain
     format: mrs
@@ -305,8 +312,9 @@ rules:
   - RULE-SET,telegram,自动选择
   - RULE-SET,netflix,自动选择
   - RULE-SET,spotify,自动选择
-  - RULE-SET,gfw,自动选择
   - RULE-SET,domain_proxy,自动选择
+  - RULE-SET,category-ip-geo-detect,自动选择
+  - RULE-SET,gfw,自动选择
   - RULE-SET,apple,DIRECT
   - RULE-SET,microsoft,DIRECT
   - RULE-SET,category-games@cn,DIRECT
