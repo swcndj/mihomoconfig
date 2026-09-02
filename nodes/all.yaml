@@ -15472,14 +15472,6 @@ proxies:
     sni: lmny.mangshe.xyz
     tls: false
     type: hysteria2
-  - name: 🇸🇬SG
-    password: 41f0d6d3-4a45-4635-8225-2abd2284189b
-    port: 2056
-    server: xjp1.mangshe.xyz
-    skip-cert-verify: true
-    sni: xjp1.mangshe.xyz
-    tls: false
-    type: hysteria2
   - name: 德国
     obfs: salamander
     obfs-password: Xydh1mcz51VQHbbJ
@@ -15523,7 +15515,7 @@ proxies:
     sni: ltu-01.node.lumixnet.com
     tls: false
     type: hysteria2
-  - name: "🇬🇧GB #1"
+  - name: 🇬🇧GB
     password: 8674df07-56b3-43ea-b687-aef2b1a20137
     port: 443
     server: 31.76.22.210
@@ -15583,15 +15575,6 @@ proxies:
     port: 8080
     server: 85.204.107.181
     sni: hopp-romania-new.roxa.org
-    tls: false
-    type: hysteria2
-  - name: "🇸🇬SG #1"
-    obfs: salamander
-    obfs-password: MBd0Kzj3ZcY3
-    password: VL0N0IPJ5Tqj672H7FsxYw==
-    port: 12451
-    server: 18.136.199.31
-    sni: c.hbapp.xyz
     tls: false
     type: hysteria2
   - name: "日本 #1"
@@ -15661,13 +15644,6 @@ proxies:
     sni: hopp-transit.1cooldns.com
     tls: false
     type: hysteria2
-  - name: 🇭🇰 HK
-    password: f4927789e58bcd24b6f6
-    port: 10444
-    server: h.zz2233.cyou
-    sni: h.zz2233.cyou
-    tls: false
-    type: hysteria2
   - name: 英国
     password: h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT
     port: 8080
@@ -15676,22 +15652,19 @@ proxies:
     sni: hopp-legend-se.roxa.org
     tls: false
     type: hysteria2
-  - name: "英国 #1"
+  - down: ""
+    fingerprint: ""
+    name: 🇬🇱GL_1|2.4MB/s
+    obfs: ""
+    obfs-password: ""
     password: h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT
-    port: 8080
+    port: "8080"
     server: 138.124.0.168
     skip-cert-verify: true
     sni: hopp-legend-se.roxa.org
     tls: false
     type: hysteria2
-  - name: "🇸🇬SG #2"
-    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-    port: 443
-    server: 13.229.54.166
-    skip-cert-verify: true
-    sni: vpn-sg-001.fastervpn.world
-    tls: false
-    type: hysteria2
+    up: ""
   - name: "新加坡 #2"
     password: qQe1z5kU8kN6SlKnDt9Ru3Qp
     port: 443
@@ -15738,13 +15711,6 @@ proxies:
     server: 167.179.34.31
     skip-cert-verify: true
     sni: gorbachev-new-th.kvnfreetest.uk
-    tls: false
-    type: hysteria2
-  - name: 🇩🇪158848 | ⚡️Telegram = t.me/S...
-    password: 1a17fbd6-a54f-456c-8e71-5282893e2b69
-    port: 443
-    server: 31.76.106.61
-    sni: gos.ultimagamest.com
     tls: false
     type: hysteria2
   - alpn:
@@ -15843,70 +15809,18 @@ proxies:
     sni: giftcard.gateway-stream.com
     tls: false
     type: hysteria2
-  - name: "@MIGAVPNPRO"
-    obfs: salamander
-    obfs-password: fuw2k1ddrouwxr3u
-    password: 4savc5ig1n3549e4
-    port: 52000
-    server: giftcard.gateway-stream.com
+  - name: 🇩🇪159280 | ⚡️Telegram = t.me/S...
+    password: 2_hysteria2_fastlane_udfa4x14j
+    port: 443
+    server: 2.27.25.75
     skip-cert-verify: false
-    sni: giftcard.gateway-stream.com
-    tls: false
-    type: hysteria2
-  - name: "@MIGAVPNPRO #1"
-    obfs: salamander
-    obfs-password: fuw2k1ddrouwxr3u
-    password: 4savc5ig1n3549e4
-    port: 52002
-    server: giftcard.gateway-stream.com
-    skip-cert-verify: false
-    sni: giftcard.gateway-stream.com
-    tls: false
-    type: hysteria2
-  - name: "@MIGAVPNPRO #2"
-    obfs: salamander
-    obfs-password: fuw2k1ddrouwxr3u
-    password: 4savc5ig1n3549e4
-    port: 52013
-    server: giftcard.gateway-stream.com
-    skip-cert-verify: false
-    sni: giftcard.gateway-stream.com
-    tls: false
-    type: hysteria2
-  - name: "@MIGAVPNPRO #3"
-    obfs: salamander
-    obfs-password: fuw2k1ddrouwxr3u
-    password: 4savc5ig1n3549e4
-    port: 52020
-    server: giftcard.gateway-stream.com
-    skip-cert-verify: false
-    sni: giftcard.gateway-stream.com
-    tls: false
-    type: hysteria2
-  - name: "@MIGAVPNPRO #5"
-    obfs: salamander
-    obfs-password: fuw2k1ddrouwxr3u
-    password: 4savc5ig1n3549e4
-    port: 52022
-    server: giftcard.gateway-stream.com
-    skip-cert-verify: false
-    sni: giftcard.gateway-stream.com
+    sni: de11.h.fastlanehosting.ru
     tls: false
     type: hysteria2
   - name: "@Daily_Configs"
     password: 4savc5ig1n3549e4
     port: 52023
     server: giftcard.gateway-stream.com
-    sni: giftcard.gateway-stream.com
-    tls: false
-    type: hysteria2
-  - name: "@MIGAVPNPRO #7"
-    obfs: salamander
-    obfs-password: fuw2k1ddrouwxr3u
-    password: 4savc5ig1n3549e4
-    port: 52026
-    server: giftcard.gateway-stream.com
-    skip-cert-verify: false
     sni: giftcard.gateway-stream.com
     tls: false
     type: hysteria2
@@ -15920,46 +15834,6 @@ proxies:
     sni: giftcard.gateway-stream.com
     tls: false
     type: hysteria2
-  - name: "@MIGAVPNPRO #8"
-    obfs: salamander
-    obfs-password: fuw2k1ddrouwxr3u
-    password: 4savc5ig1n3549e4
-    port: 52035
-    server: giftcard.gateway-stream.com
-    skip-cert-verify: false
-    sni: giftcard.gateway-stream.com
-    tls: false
-    type: hysteria2
-  - name: "@MIGAVPNPRO #9"
-    obfs: salamander
-    obfs-password: fuw2k1ddrouwxr3u
-    password: 4savc5ig1n3549e4
-    port: 52051
-    server: giftcard.gateway-stream.com
-    skip-cert-verify: false
-    sni: giftcard.gateway-stream.com
-    tls: false
-    type: hysteria2
-  - name: "@MIGAVPNPRO #10"
-    obfs: salamander
-    obfs-password: fuw2k1ddrouwxr3u
-    password: 4savc5ig1n3549e4
-    port: 52056
-    server: giftcard.gateway-stream.com
-    skip-cert-verify: false
-    sni: giftcard.gateway-stream.com
-    tls: false
-    type: hysteria2
-  - name: "@MIGAVPNPRO #11"
-    obfs: salamander
-    obfs-password: fuw2k1ddrouwxr3u
-    password: 4savc5ig1n3549e4
-    port: 52061
-    server: giftcard.gateway-stream.com
-    skip-cert-verify: false
-    sni: giftcard.gateway-stream.com
-    tls: false
-    type: hysteria2
   - alpn:
       - h3
     name: "@vpnbaz 🍋‍🟩"
@@ -15967,46 +15841,6 @@ proxies:
     obfs-password: fuw2k1ddrouwxr3u
     password: 4savc5ig1n3549e4
     port: 52062
-    server: giftcard.gateway-stream.com
-    skip-cert-verify: false
-    sni: giftcard.gateway-stream.com
-    tls: false
-    type: hysteria2
-  - name: "@MIGAVPNPRO #14"
-    obfs: salamander
-    obfs-password: fuw2k1ddrouwxr3u
-    password: 4savc5ig1n3549e4
-    port: 52064
-    server: giftcard.gateway-stream.com
-    skip-cert-verify: false
-    sni: giftcard.gateway-stream.com
-    tls: false
-    type: hysteria2
-  - name: "@MIGAVPNPRO #15"
-    obfs: salamander
-    obfs-password: fuw2k1ddrouwxr3u
-    password: 4savc5ig1n3549e4
-    port: 52071
-    server: giftcard.gateway-stream.com
-    skip-cert-verify: false
-    sni: giftcard.gateway-stream.com
-    tls: false
-    type: hysteria2
-  - name: "@MIGAVPNPRO #16"
-    obfs: salamander
-    obfs-password: fuw2k1ddrouwxr3u
-    password: 4savc5ig1n3549e4
-    port: 52079
-    server: giftcard.gateway-stream.com
-    skip-cert-verify: false
-    sni: giftcard.gateway-stream.com
-    tls: false
-    type: hysteria2
-  - name: "@MIGAVPNPRO #17"
-    obfs: salamander
-    obfs-password: fuw2k1ddrouwxr3u
-    password: 4savc5ig1n3549e4
-    port: 52081
     server: giftcard.gateway-stream.com
     skip-cert-verify: false
     sni: giftcard.gateway-stream.com
@@ -16114,15 +15948,33 @@ proxies:
     sni: giftcard.gateway-stream.com
     tls: false
     type: hysteria2
-  - alpn:
-      - h3
-    client-fingerprint: chrome
-    name: 🇫🇮158928 | ⚡️Telegram = t.me/S...
+  - name: "@Daily_Configs #2"
     obfs: salamander
     obfs-password: fuw2k1ddrouwxr3u
     password: 8f0gvz5eul6omhq4
-    port: 52050
+    port: 52022
     server: giftcard.gateway-stream.com
+    skip-cert-verify: false
+    sni: giftcard.gateway-stream.com
+    tls: false
+    type: hysteria2
+  - name: "@GozargahAzad|🇫🇮"
+    obfs: salamander
+    obfs-password: fuw2k1ddrouwxr3u
+    password: 8f0gvz5eul6omhq4
+    port: 52056
+    server: giftcard.gateway-stream.com
+    skip-cert-verify: false
+    sni: ""
+    tls: false
+    type: hysteria2
+  - name: Telegram 🆔@Cnetvpn 🇺🇲
+    obfs: salamander
+    obfs-password: fuw2k1ddrouwxr3u
+    password: 8f0gvz5eul6omhq4
+    port: 52087
+    server: giftcard.gateway-stream.com
+    skip-cert-verify: false
     sni: giftcard.gateway-stream.com
     tls: false
     type: hysteria2
@@ -16136,19 +15988,11 @@ proxies:
     sni: gift-catalog.aroonia.ir
     tls: false
     type: hysteria2
-  - name: 🇩🇪All⁶ | @BigSmoke_Config
-    password: AstroVPN_official
-    port: 36896
-    server: ptserv.accuratenetworkchecker.ir
-    sni: lms22.gelzaro.ir
-    tls: false
-    type: hysteria2
-  - name: 🇨🇦158854 | ⚡️Telegram = t.me/S...
-    password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  - name: 👝96@oneclickvpnkeys
+    password: GSPOBvG-ZwYcBFMr0ekFGO_Zga3wK6v_
     port: 443
-    server: 15.223.183.81
-    skip-cert-verify: true
-    sni: t.me
+    server: hy2-latvia2.unlimited-access.ru
+    sni: hy2-latvia2.unlimited-access.ru
     tls: false
     type: hysteria2
   - name: 🩵+@Azarakhsh_Proxy+🩷
@@ -16219,6 +16063,14 @@ proxies:
     sni: YAPC-1.afshin.ir
     tls: false
     type: hysteria2
+  - name: 👝94@oneclickvpnkeys
+    password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
+    port: 443
+    server: admin.wwwinternetvideo.click
+    skip-cert-verify: true
+    sni: admin.wwwinternetvideo.click
+    tls: false
+    type: hysteria2
   - name: "کانال تلگرام : Free_VPN_CH@ #2"
     obfs: salamander
     obfs-password: "@JavidnamanIran-Javid-SHAH-KingRezaPahlavi"
@@ -16227,6 +16079,13 @@ proxies:
     server: 5.175.249.174
     skip-cert-verify: false
     sni: api.kermanshahi.org
+    tls: false
+    type: hysteria2
+  - name: 👝85@oneclickvpnkeys
+    password: b504a1c7-1bfe-461f-9329-cbc653deb3d7
+    port: 443
+    server: 144.31.217.201
+    sni: 144-31-217-201.sslip.io
     tls: false
     type: hysteria2
   - name: "[🇷🇺]t.me/ConfigV2RayNG"
@@ -16239,7 +16098,7 @@ proxies:
     sni: ru1.sferavpn.pro
     tls: false
     type: hysteria2
-  - name: "Channel : @Daily_Configs #4"
+  - name: "Channel : @Daily_Configs #5"
     obfs: salamander
     obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
     password: cd74c0a406664a5bc0bac098220a2468
@@ -16247,6 +16106,26 @@ proxies:
     server: de1.sferavpn.pro
     skip-cert-verify: false
     sni: de1.sferavpn.pro
+    tls: false
+    type: hysteria2
+  - name: 🇺🇸159431 | ⚡️Telegram = t.me/S...
+    password: dongtaiwang.com
+    port: 44356
+    server: 142.249.37.90
+    skip-cert-verify: false
+    sni: hy2.561891.xyz
+    tls: false
+    type: hysteria2
+  - alpn:
+      - h3
+    client-fingerprint: chrome
+    name: dc-udp-🇦🇱 Albania-Tirana
+    obfs: salamander
+    obfs-password: fuw2k1ddrouwxr3u
+    password: g2d0ooqq3ykzsacc
+    port: 52000
+    server: giftcard.gateway-stream.com
+    sni: giftcard.gateway-stream.com
     tls: false
     type: hysteria2
   - alpn:
@@ -16257,6 +16136,18 @@ proxies:
     obfs-password: fuw2k1ddrouwxr3u
     password: g2d0ooqq3ykzsacc
     port: 52001
+    server: giftcard.gateway-stream.com
+    sni: giftcard.gateway-stream.com
+    tls: false
+    type: hysteria2
+  - alpn:
+      - h3
+    client-fingerprint: chrome
+    name: dc-udp-🇦🇹 Austria-Vienna
+    obfs: salamander
+    obfs-password: fuw2k1ddrouwxr3u
+    password: g2d0ooqq3ykzsacc
+    port: 52002
     server: giftcard.gateway-stream.com
     sni: giftcard.gateway-stream.com
     tls: false
@@ -16283,6 +16174,14 @@ proxies:
     sni: giftcard.gateway-stream.com
     tls: false
     type: hysteria2
+  - name: 👝79@oneclickvpnkeys
+    password: gf1
+    port: 443
+    server: 185.156.44.99
+    skip-cert-verify: true
+    sni: css.rbxcdn.com
+    tls: false
+    type: hysteria2
   - alpn:
       - h3
     client-fingerprint: chrome
@@ -16293,6 +16192,26 @@ proxies:
     port: 52046
     server: giftcard.gateway-stream.com
     sni: giftcard.gateway-stream.com
+    tls: false
+    type: hysteria2
+  - alpn:
+      - h3
+    client-fingerprint: chrome
+    name: dc-udp-🇳🇱 Netherlands-Amsterda...
+    obfs: salamander
+    obfs-password: fuw2k1ddrouwxr3u
+    password: mdq80x0xv9wt7520
+    port: 52050
+    server: giftcard.gateway-stream.com
+    sni: giftcard.gateway-stream.com
+    tls: false
+    type: hysteria2
+  - name: 👝62@oneclickvpnkeys
+    password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
+    port: 443
+    server: 64.188.98.171
+    skip-cert-verify: true
+    sni: germany3.h2corp.local
     tls: false
     type: hysteria2
   - name: 👝35@oneclickvpnkeys
@@ -16320,6 +16239,14 @@ proxies:
     sni: vpn-de-001.fastervpn.world
     tls: false
     type: hysteria2
+  - name: 🇸🇬159278 | ⚡️Telegram = t.me/S...
+    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+    port: 443
+    server: 47.129.0.20
+    skip-cert-verify: true
+    sni: speedtest.tinkoff.ru
+    tls: false
+    type: hysteria2
   - alpn:
       - h3
     client-fingerprint: chrome
@@ -16332,7 +16259,7 @@ proxies:
     sni: pro2.riziro.ir
     tls: false
     type: hysteria2
-  - name: "@meliproxyy #1"
+  - name: "@meliproxyy #2"
     obfs: salamander
     obfs-password: b6d1f3888ab1d90dd11aac1dce427b81
     password: tnnls
@@ -16373,34 +16300,112 @@ proxies:
     sni: giftcard.gateway-stream.com
     tls: false
     type: hysteria2
-  - name: 🇭🇰HK_1|4.0MB/s
+  - client-fingerprint: firefox
+    name: 🇩🇪DE_1|3.7MB/s
+    network: xhttp
+    port: 443
+    server: 188.72.103.4
+    servername: cdn.huananconn.xyz
+    tls: true
+    type: vless
+    udp: true
+    uuid: 9329556f-f4c2-42fe-8859-c52ce5f95c23
+    xhttp-opts:
+      host: cdn.huananconn.xyz
+      mode: packet-up
+      path: /api/v1/assets
+      uplink-http-method: GET
+      x-padding-bytes: 16-64
+      x-padding-header: X-Signature
+      x-padding-key: _token
+      x-padding-method: tokenish
+      x-padding-obfs-mode: true
+      x-padding-placement: query
+  - name: ❓Other_1|1.6MB/s
     password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    port: 25135
-    server: yazhouany02.downapptwo.cc
+    port: 32193
+    server: yzany01.downapptwo.cc
     skip-cert-verify: true
-    sni: hk27.pulsarcore.site
+    sni: taiguo01.pulsarcore.site
     type: anytls
     udp: true
-  - auth: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-    name: 🇳🇱NL_1|1.5MB/s
-    password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-    port: 8443
-    server: 46.229.243.152
-    skip-cert-verify: true
-    sni: grape-turbo-fr.roxa.org
-    type: hysteria2
-  - down: ""
-    fingerprint: ""
-    name: 🇳🇱NL_2|1.6MB/s
-    obfs: ""
-    obfs-password: ""
-    password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-    port: "8443"
-    server: 46.229.243.132
-    skip-cert-verify: true
-    sni: grape-turbo-fr.roxa.org
-    type: hysteria2
-    up: ""
+  - client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    name: 🇷🇺RU_1|3.0MB/s
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: ZZwdN1Lt-fIR8A4Y1NbYCCEI6th2YXYHHRLHraVXyn0
+      short-id: 72461ccce5373103
+    server: 50.7.33.218
+    servername: edge-fr2.mystatic-cdn.ru
+    tls: true
+    type: vless
+    udp: true
+    uuid: 252f7811-d86f-4dc2-97e0-83d3172ef4b8
+  - client-fingerprint: chrome
+    encryption: none
+    name: 🇰🇷KR_1|1.5MB/s
+    network: tcp
+    port: "8686"
+    reality-opts:
+      public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+      short-id: 628b3c90c98ead4f
+    server: 13.125.170.60
+    servername: www.apple.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+    xudp: true
+  - client-fingerprint: chrome
+    encryption: none
+    name: 🇸🇬SG_3|1.6MB/s
+    network: tcp
+    port: "8686"
+    reality-opts:
+      public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+      short-id: 628b3c90c98ead4f
+    server: 13.251.27.32
+    servername: www.apple.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+    xudp: true
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: 🇰🇷KR_2|6.5MB/s
+    network: tcp
+    port: "443"
+    reality-opts:
+      public-key: me6tyn-I8IolkgJK4sggSsC9sinhkLPBdPwtVlPk5TI
+      short-id: 0d6903ea350815e1
+    server: 47.80.63.187
+    servername: kr1.hat.onl
+    tls: true
+    type: vless
+    udp: true
+    uuid: 8c64cae9-a513-4e37-a68c-980bcaf2c591
+    xudp: true
+  - client-fingerprint: edge
+    encryption: none
+    grpc-opts:
+      grpc-service-name: gun
+    name: 🇳🇱NL_12|3.6MB/s
+    network: grpc
+    port: "443"
+    reality-opts:
+      public-key: QJW15WZWLNjA8KEpe4GqSdOe4rfW8KgqjjVmKxPk-ng
+      short-id: 3fa234ea9feaa048
+    server: 90.156.218.143
+    servername: mint.ubuntuhosting.host
+    tls: true
+    type: vless
+    udp: true
+    uuid: d7430ae7-320c-4658-808b-3006d0627d82
+    xudp: true
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
     name: US_speednode_0130
@@ -16536,6 +16541,240 @@ proxies:
     type: vless
     udp: true
     uuid: ec31f6d7-c71a-413d-93aa-24296805a594
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: "B - 🇭🇰 HK 05 TG: @nodpai"
+    port: 10011
+    reality-opts:
+      public-key: 82bbZIdU-0s8fydncIhp9_sNDYQQH9ZY_7RVI5apXnk
+      short-id: 447f3a05ace2b748
+    server: 103.123.162.50
+    servername: www.microsoft.com
+    tls: true
+    type: vless
+    uuid: 17011a43-97e2-44b0-b0da-a2ea151ad75c
+  - insecure: "1"
+    mport: 40000-49999
+    name: "A - 🇹🇼 TW 01 TG: @nodpai"
+    obfs: salamander
+    obfs-password: YzgyOTkwNDk4ZTU2NT6iNA==
+    password: a7c5d30b-ce9b-4e34-b5cb-66f8308790ef
+    port: 40000
+    server: tw.9966690.xyz
+    skip-cert-verify: true
+    tls:
+      enabled: true
+      insecure: true
+      server_name: iosapps.itunes.apple.com
+    type: hysteria2
+  - alpn:
+      - http/1.1
+    client-fingerprint: edge
+    encryption: none
+    flow: xtls-rprx-vision
+    name: "A - 🇸🇬 SG 10 TG: @nodpai"
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: ZHEMPjSWslk6_qD2JNQzd5enUPz8nY9mYRRuM6NkZmU
+      short-id: 67ccfc02
+    security: reality
+    server: 46.149.71.46
+    servername: www.avito.ru
+    tls: true
+    type: vless
+    uuid: 0dc3fe97-73e3-4cc2-89a7-331e66540365
+  - client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    host: apple.com
+    name: "B - 🇺🇸 US 25 TG: @nodpai"
+    network: tcp
+    port: 54254
+    reality-opts:
+      public-key: HFEz9fAOugljXea_ZVOUHMju08su8h0P9RANNcHP2y4
+      short-id: db35ffdc
+    security: reality
+    server: 134.33.73.249
+    servername: apple.com
+    tls: true
+    type: vless
+    uuid: acba684c-4098-4eca-f519-828b09f96464
+  - client-fingerprint: chrome
+    encryption: none
+    grpc-opts:
+      grpc-service-name: moktana.net.v1.StreamService
+    name: "B - 🇺🇸 US 27 TG: @nodpai"
+    network: grpc
+    port: 443
+    reality-opts:
+      public-key: _yzmX8WwaZJD4ddVgOZWJsx6r0lJzhTrTbkQLhwiWXk
+      short-id: c8540a3e9e1d8136
+    security: reality
+    server: usr.moktana.app
+    servername: us.moktana.app
+    tls: true
+    type: vless
+    uuid: 7841aff6-8552-4f8e-ad0c-06c3b73e6440
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: "B - 🇺🇸 US 28 TG: @nodpai"
+    network: tcp
+    port: 12443
+    reality-opts:
+      public-key: D3bNJPmy4YJqhWQ3Xv1Fu3Z1danrTzswShytnkkG9Q4
+      short-id: ca4a1317e03791b3
+    security: reality
+    server: 31.58.87.71
+    servername: sun6-21.userapi.com
+    tls: true
+    type: vless
+    uuid: ea484535-0170-4ec8-bb3c-a9dbaa7412d7
+  - client-fingerprint: chrome
+    encryption: none
+    grpc-opts:
+      grpc-mode: gun
+      grpc-service-name: GrpcFuckRKN
+    name: "A - 🇩🇪 DE 04 TG: @nodpai"
+    network: grpc
+    port: 443
+    reality-opts:
+      public-key: cjCwI7alv-GUgef0TW7i-S7jNgnIoZ6aooGYH7Nopxs
+      short-id: deadbeef
+    security: reality
+    server: 194.58.41.65
+    servername: www.microsoft.com
+    tls: true
+    type: vless
+    uuid: afc941a0-b6b4-42d1-b284-d59a42f083fd
+  - client-fingerprint: chrome
+    encryption: none
+    grpc-opts:
+      grpc-service-name: GrpcFuckRKN
+    name: "A - 🇩🇪 DE 05 TG: @nodpai"
+    network: grpc
+    port: 443
+    reality-opts:
+      public-key: cjCwI7alv-GUgef0TW7i-S7jNgnIoZ6aooGYH7Nopxs
+      short-id: deadbeef
+    security: reality
+    server: 194.58.41.65-uhe66vr6.nike77prime.ru
+    servername: www.microsoft.com
+    tls: true
+    type: vless
+    uuid: afc941a0-b6b4-42d1-b284-d59a42f083fd
+  - client-fingerprint: chrome
+    encryption: none
+    flow: xtls-rprx-vision
+    name: "B - 🇩🇪 DE 07 TG: @nodpai"
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: C1hW1bTA9WOacIK-fHHg-HLkDZ3FY7FhEhAyldMSUEA
+      short-id: a1b2c3d4e5f6
+    security: reality
+    server: 84.21.189.197
+    servername: queuev4.vk.com
+    tls: true
+    type: vless
+    uuid: 3ea2d8f2-12c1-4189-8cc5-91d0ee9f5ca0
+  - client-fingerprint: firefox
+    encryption: none
+    flow: xtls-rprx-vision
+    name: "A - 🇫🇷 FR 03 TG: @nodpai"
+    network: tcp
+    port: 7443
+    reality-opts:
+      public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI
+    security: reality
+    server: 152.89.253.239
+    servername: ya.ru
+    tls: true
+    type: vless
+    uuid: 54a54ea0-4409-4030-ad9b-44c45849c05a
+  - client-fingerprint: randomized
+    encryption: none
+    flow: xtls-rprx-vision
+    name: "A - 🇳🇱 NL 03 TG: @nodpai"
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: ivgTfLR13A6xBsicIA28OPoav2tXlsstTTmGuETfnSk
+      short-id: 6d6f13013d3e1d0c
+    security: reality
+    server: g10.steptofsvo.com
+    servername: g10.steptofsvo.com
+    tls: true
+    type: vless
+    uuid: 279828c6-13f2-439c-9a4e-ea7d4f470fa4
+  - client-fingerprint: qq
+    grpc-opts:
+      grpc-mode: gun
+      grpc-service-name: grpc
+    name: "A - 🇳🇱 NL 05 TG: @nodpai"
+    network: grpc
+    port: 443
+    reality-opts:
+      public-key: ne8wv6o6AYcQoVvz30PiTjSxviGa3_Kw5ClIEDdg-3A
+      short-id: 6ba85179e30d4fc2
+    security: reality
+    server: 46.182.24.123
+    servername: ads.x5.ru
+    spider-x: /
+    tls: true
+    type: vless
+    uuid: 16e7af2f-4066-4fa9-ae41-3103a1250591
+  - client-fingerprint: random
+    flow: xtls-rprx-vision
+    name: "B - 🇳🇱 NL 06 TG: @nodpai"
+    network: tcp
+    port: 18443
+    reality-opts:
+      public-key: YoVxvwAP6l4vRG9HZmePBcHxy9oaRyWKmp1fIXVzPAY
+      short-id: "16"
+    security: reality
+    server: nl.omuvpn.tech
+    servername: www.miro.com
+    spider-x: /vhgEUJaTXMbWbkj
+    tls: true
+    type: vless
+    uuid: 6db7ea14-ed33-4591-a9b1-f1e91b1c0ff5
+  - client-fingerprint: qq
+    encryption: none
+    name: "B - 🇫🇮 FI 01 TG: @nodpai"
+    network: tcp
+    port: 8083
+    reality-opts:
+      public-key: Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw
+      short-id: 7dbf7d3233971d5c
+    security: reality
+    server: 176.109.101.215
+    servername: ads.x5.ru
+    tls: true
+    type: vless
+    uuid: 6cd7e37c-fd86-48bb-a930-5f685a6c0213
+  - multiplexing: MULTIPLEXING_LOW
+    name: "B - 🇿🇦 ZA 04 TG: @nodpai"
+    password: dongtaiwang.com
+    port: 28866
+    server: 45.221.98.11
+    transport: TCP
+    type: mieru
+    username: dongtaiwang.com
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: "A - 🇲🇩 MD 01 TG: @nodpai"
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: ps7eCLLKAqgSGPFRQl1-R1PhzUeO1Z1EwNl02Ac63UA
+      short-id: 514d02a2addd6476
+    security: reality
+    server: 94.103.0.230
+    servername: pl.prostosetup.org
+    tls: true
+    type: vless
+    uuid: 1b43419a-b711-40d4-a0ee-eb5c73e60c92
   - name: 🇩🇪 德国 | DEU
     server: 2.26.128.80
     port: 443
@@ -16549,27 +16788,6 @@ proxies:
     servername: wombat.mycdn-me.ru
     client-fingerprint: qq
     network: tcp
-    udp: true
-  - name: 🇩🇪 德国 | DEU 2
-    server: 188.72.103.4
-    port: 443
-    type: vless
-    uuid: 9329556f-f4c2-42fe-8859-c52ce5f95c23
-    tls: true
-    servername: cdn.huananconn.xyz
-    client-fingerprint: firefox
-    network: xhttp
-    xhttp-opts:
-      path: /api/v1/assets
-      host: cdn.huananconn.xyz
-      mode: packet-up
-      uplink-http-method: GET
-      x-padding-bytes: 16-64
-      x-padding-header: X-Signature
-      x-padding-key: _token
-      x-padding-method: tokenish
-      x-padding-obfs-mode: true
-      x-padding-placement: query
     udp: true
   - name: 🇩🇪 德国 | DEU 4
     server: dl.xn--6qq79v59whul.net
@@ -16685,14 +16903,6 @@ proxies:
     udp: true
     sni: us02.swiftrelay.cc
     skip-cert-verify: true
-  - name: 🇰🇷 韩国 | KOR 7
-    server: yzany01.downapptwo.cc
-    port: 32193
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: taiguo01.pulsarcore.site
-    skip-cert-verify: true
   - name: 🇰🇷 韩国 | KOR 8
     server: yzany01.downapptwo.cc
     port: 17930
@@ -16733,20 +16943,6 @@ proxies:
     udp: true
     sni: hk08.jdddyy01.cc
     skip-cert-verify: true
-  - name: 🇷🇺 俄罗斯 | RUS
-    server: 50.7.33.218
-    port: 443
-    type: vless
-    uuid: 252f7811-d86f-4dc2-97e0-83d3172ef4b8
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: ZZwdN1Lt-fIR8A4Y1NbYCCEI6th2YXYHHRLHraVXyn0
-      short-id: 72461ccce5373103
-    servername: edge-fr2.mystatic-cdn.ru
-    client-fingerprint: firefox
-    network: tcp
-    udp: true
   - name: 🇷🇺 俄罗斯 | RUS 2
     server: 50.7.248.82
     port: 443
@@ -16796,6 +16992,14 @@ proxies:
     password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
     udp: true
     sni: tuerqi01.swiftrelay.cc
+    skip-cert-verify: true
+  - name: 🇸🇬 新加坡 | SGP 2
+    server: yazhouany02.downapptwo.cc
+    port: 25135
+    type: anytls
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    udp: true
+    sni: hk27.pulsarcore.site
     skip-cert-verify: true
   - name: 🇸🇬 新加坡 | SGP 3
     server: yazhouany02.downapptwo.cc
@@ -16916,86 +17120,8 @@ proxies:
     sni: us18.pulsarcore.site
     skip-cert-verify: true
   - client-fingerprint: chrome
-    encryption: none
-    grpc-opts:
-      grpc-mode: gun
-      grpc-service-name: update
-    name: 🇸🇬SG_2|1.1MB/s
-    network: grpc
-    packet-encoding: xudp
-    port: 10040
-    reality-opts:
-      public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-      short-id: 686c0ef0
-    server: sg5-r.link-t7.com
-    tls: true
-    type: vless
-    uuid: C1CE3941-AC6F-4E98-9791-3B33ABBAF64F
-    servername: d1.awsstatic.com
-  - client-fingerprint: chrome
-    name: 🇭🇰HK_5|985KB/s
-    network: tcp
-    port: 8445
-    reality-opts:
-      public-key: -K1duONyE_eg3aEspZRH0-B1awpCNH_5jx4-W9IiyxU
-      short-id: a1b2c3d4
-    server: 154.64.252.38
-    tls: true
-    type: vless
-    udp: true
-    uuid: 67164aca-993f-40ef-9375-1a5f1bc1a40b
-    servername: www.apple.com
-  - client-fingerprint: chrome
-    name: 🇯🇵JP_4|628KB/s
-    password: c0cc55a3-b4bd-710c-db35-52db8cfbbc9e
-    port: 10007
-    server: 154.64.252.38
-    skip-cert-verify: true
-    type: anytls
-    udp: true
-  - name: 🇺🇸US_3|2.4MB/s
-    password: a96fc645-ddee-4259-ac5c-08fbc8746c4d
-    port: 40022
-    server: us2.catzl.top
-    type: anytls
-    udp: true
-    sni: us2.catzl.top
-  - name: 🇯🇵JP_5|4.5MB/s
-    password: bd746f89-e18b-4cec-97a3-e8853266ee20
-    port: 40055
-    server: jp5.catzl.top
-    type: anytls
-    udp: true
-    sni: jp5.catzl.top
-  - auth: c217ec6c-e2b9-4a0e-9864-e9ad4fbb7c00
-    down: 1000
-    name: 🇮🇳IN_1|3.8MB/s
-    obfs: salamander
-    obfs-password: pFtJOns91naGv8MD
-    password: c217ec6c-e2b9-4a0e-9864-e9ad4fbb7c00
-    port: 34509
-    server: sgaws.fffo.cc
-    skip-cert-verify: false
-    sni: yindu.pooo.cc
-    type: hysteria2
-    udp: true
-    up: 1000
-  - client-fingerprint: chrome
-    name: 🇭🇰HK_9|1.1MB/s
-    network: tcp
-    port: 8444
-    reality-opts:
-      public-key: QBwJvMwbxa59HtZvVmwaTgHsPZR1AFxxAQdu6zRXF2M
-      short-id: a1b2c3d4
-    server: 154.64.252.38
-    tls: true
-    type: vless
-    udp: true
-    uuid: 73366238-9316-44f3-956a-59b8a7472451
-    servername: www.apple.com
-  - client-fingerprint: chrome
     flow: xtls-rprx-vision
-    name: 🇭🇰HK_11|878KB/s
+    name: 🇭🇰HK_1|987KB/s
     network: tcp
     port: 8443
     reality-opts:
@@ -17005,7 +17131,33 @@ proxies:
     tls: true
     type: vless
     udp: true
-    uuid: 296b475f-f09e-41b6-b6e6-e9a98571bd00
+    uuid: 5c7d8f55-a8fa-4597-96ab-ecf02a573a14
+    servername: www.apple.com
+  - client-fingerprint: chrome
+    name: 🇭🇰HK_2|581KB/s
+    network: tcp
+    port: 8444
+    reality-opts:
+      public-key: QBwJvMwbxa59HtZvVmwaTgHsPZR1AFxxAQdu6zRXF2M
+      short-id: a1b2c3d4
+    server: 154.64.252.38
+    tls: true
+    type: vless
+    udp: true
+    uuid: 5c7d8f55-a8fa-4597-96ab-ecf02a573a14
+    servername: www.apple.com
+  - client-fingerprint: chrome
+    name: 🇭🇰HK_3|978KB/s
+    network: tcp
+    port: 8445
+    reality-opts:
+      public-key: -K1duONyE_eg3aEspZRH0-B1awpCNH_5jx4-W9IiyxU
+      short-id: a1b2c3d4
+    server: 154.64.252.38
+    tls: true
+    type: vless
+    udp: true
+    uuid: 6e207399-69f0-49c4-92f6-bf303d18cdb6
     servername: www.apple.com
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
@@ -17308,25 +17460,40 @@ proxies:
       public-key: HAuFt4Q6WDEwNYO1BOTpekM2HXwTaZxXYVReYyP3NVI
     network: tcp
     servername: fastsync.xyz
-  - name: US - zhuhai.uk
-    type: vless
-    server: 129.80.99.88
-    port: 443
-    uuid: 450ed4bd-fc3e-4aab-b50d-33f2cdfcfc18
-    flow: xtls-rprx-vision
-    tls: true
-    servername: updates.cdn-apple.com
-    client-fingerprint: ios
-    reality-opts:
-      public-key: CmZcK-NJ3i5iVDRiiBY3RpeiR2kooDbtJBOmPq29ABY
-      short-id: 0ccb4b57
-  - name: KR - zhuhai.uk 02
+  - name: HK - zhuhai.uk
     type: anytls
-    server: yazhouany02.downapptwo.cc
-    port: 31289
+    server: yzany01.downapptwo.cc
+    port: 35853
     password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
     udp: true
-    sni: kr01.lunartrace.io
+    sni: hk01.pulsarcore.site
+  - name: KR - zhuhai.uk
+    type: hysteria2
+    server: 150-230-252-217.liao.kdns.fr
+    port: 50160
+    password: 9cfc9458e48c028ec03ff86ebc71c744
+    sni: 150-230-252-217.liao.kdns.fr
+  - name: SG - zhuhai.uk
+    type: hysteria2
+    server: 138.2.73.238
+    port: 50160
+    password: f87376e17da040ed04c9665ce8972930
+    sni: www.bing.com
+    skip-cert-verify: true
+  - name: SG - zhuhai.uk 02
+    type: vless
+    server: sg5-r.link-t7.com
+    port: 10040
+    uuid: C1CE3941-AC6F-4E98-9791-3B33ABBAF64F
+    tls: true
+    servername: d1.awsstatic.com
+    client-fingerprint: chrome
+    network: grpc
+    grpc-opts:
+      grpc-service-name: update
+    reality-opts:
+      public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+      short-id: 686c0ef0
   - name: us|7a73|puddincat07@Telegram
     password: gf1:gfhysteria2024
     port: 443
