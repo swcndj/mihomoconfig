@@ -280,9 +280,9 @@ rule-providers:
     format: mrs
 # ======================================== 路由规则 ========================================
 rules:
-  # 私有IP、域名直连
-  - RULE-SET,ip_private,DIRECT,no-resolve
+  # 私有域名、IP直连
   - RULE-SET,private,DIRECT
+  - RULE-SET,ip_private,DIRECT,no-resolve
   - DOMAIN-SUFFIX,loz.dpdns.org,DIRECT
   # 广告拒绝
   - RULE-SET,AWAvenue-Ads,REJECT
