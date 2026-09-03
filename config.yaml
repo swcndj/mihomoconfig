@@ -39,7 +39,7 @@ dns:
     - https://doh.pub/dns-query
   nameserver-policy:
     'rule-set:AWAvenue-Ads,category-ads-all': rcode://success
-    'rule-set:category-ai-!cn,cloudflare,github,google,x,meta,telegram,netflix,spotify,domain_proxy,gfw':
+    'rule-set:category-ai-!cn,cloudflare,github,google,x,meta,telegram,netflix,spotify,gfw,domain_proxy':
     - https://cloudflare-dns.com/dns-query#disable-ipv6=true
     - https://dns.google/dns-query#disable-ipv6=true
   nameserver:
@@ -287,30 +287,31 @@ rules:
   # 广告拒绝
   - RULE-SET,AWAvenue-Ads,REJECT
   - RULE-SET,category-ads-all,REJECT
-  # IP分流
-  - RULE-SET,ip_cloudflare,自动选择,no-resolve
-  - RULE-SET,ip_google,自动选择,no-resolve
-  - RULE-SET,ip_twitter,自动选择,no-resolve
-  - RULE-SET,ip_facebook,自动选择,no-resolve
-  - RULE-SET,ip_telegram,自动选择,no-resolve
-  - RULE-SET,ip_netflix,自动选择,no-resolve
-  - RULE-SET,ip_cn,DIRECT,no-resolve
-  # 域名分流
+  # 阻断非 cn 的 UDP 443 流量，强迫其降级为 TCP 流量
+  - AND,((NETWORK,UDP),(DST-PORT,443),(NOT,((RULE-SET,cn))),(NOT,((RULE-SET,ip_cn)))),REJECT
+  # 分流规则
   - RULE-SET,category-ai-!cn,自动选择
   - RULE-SET,cloudflare,自动选择
+  - RULE-SET,ip_cloudflare,自动选择,no-resolve
   - RULE-SET,github,自动选择
   - RULE-SET,google,自动选择
+  - RULE-SET,ip_google,自动选择,no-resolve
   - RULE-SET,x,自动选择
+  - RULE-SET,ip_twitter,自动选择,no-resolve
   - RULE-SET,meta,自动选择
+  - RULE-SET,ip_facebook,自动选择,no-resolve
   - RULE-SET,telegram,自动选择
+  - RULE-SET,ip_telegram,自动选择,no-resolve
   - RULE-SET,netflix,自动选择
+  - RULE-SET,ip_netflix,自动选择,no-resolve
   - RULE-SET,spotify,自动选择
-  - RULE-SET,domain_proxy,自动选择
   - RULE-SET,gfw,自动选择
+  - RULE-SET,domain_proxy,自动选择
   - RULE-SET,apple,DIRECT
   - RULE-SET,microsoft,DIRECT
   - RULE-SET,category-games@cn,DIRECT
   - RULE-SET,category-game-platforms-download@cn,DIRECT
   - RULE-SET,cn,DIRECT
+  - RULE-SET,ip_cn,DIRECT,no-resolve
   # 全局兜底
   - MATCH,DIRECT
