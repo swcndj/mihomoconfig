@@ -287,8 +287,9 @@ rules:
   # 广告拒绝
   - RULE-SET,AWAvenue-Ads,REJECT
   - RULE-SET,category-ads-all,REJECT
-  # 阻断非 cn 的 UDP 443 流量，强迫其降级为 TCP 流量
-  - AND,((NETWORK,UDP),(DST-PORT,443),(NOT,((RULE-SET,cn))),(NOT,((RULE-SET,ip_cn,no-resolve)))),REJECT
+  # 阻断 UDP 443 流量，降级为 TCP 流量
+  - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,gfw)),REJECT
+  - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,domain_proxy)),REJECT
   # 分流规则
   - RULE-SET,category-ai-!cn,自动选择
   - RULE-SET,cloudflare,自动选择
