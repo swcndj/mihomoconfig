@@ -38,7 +38,7 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   nameserver-policy:
-    'rule-set:AWAvenue-Ads,category-ads-all': rcode://success
+    'rule-set:ads-666OS,ads-AWAvenue,category-ads-all,tracking': rcode://success
     'rule-set:category-ai-!cn,cloudflare,github,google,x,meta,telegram,netflix,spotify,gfw,domain_proxy':
     - https://cloudflare-dns.com/dns-query#disable-ipv6=true
     - https://dns.google/dns-query#disable-ipv6=true
@@ -90,10 +90,17 @@ proxy-groups:
     - nodes_regionfiltered
 # ======================================== 规则订阅 ========================================
 rule-providers:
-  AWAvenue-Ads:
+  ads-666OS:
+    type: http
+    url: "https://github.com/666OS/rules/raw/release/mihomo/domain/Advertising.mrs"
+    path: ./rules/ads-666OS.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  ads-AWAvenue:
     type: http
     url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.mrs"
-    path: ./rules/AWAvenue-Ads.mrs
+    path: ./rules/ads-AWAvenue.mrs
     interval: 86400
     behavior: domain
     format: mrs
@@ -215,6 +222,13 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
+  tracking:
+    type: http
+    url: "https://github.com/666OS/rules/raw/release/mihomo/domain/Tracking.mrs"
+    path: ./rules/tracking.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
   x:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/x.mrs"
@@ -284,9 +298,11 @@ rules:
   - RULE-SET,private,DIRECT
   - RULE-SET,ip_private,DIRECT,no-resolve
   - DOMAIN-SUFFIX,loz.dpdns.org,DIRECT
-  # 广告拒绝
-  - RULE-SET,AWAvenue-Ads,REJECT
+  # 广告、追踪拒绝
+  - RULE-SET,ads-666OS,REJECT
+  - RULE-SET,ads-AWAvenue,REJECT
   - RULE-SET,category-ads-all,REJECT
+  - RULE-SET,tracking,REJECT
   # 阻断 UDP 443 流量，降级为 TCP 流量
   - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,gfw)),REJECT
   - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,domain_proxy)),REJECT
