@@ -16608,65 +16608,23 @@ proxies:
     sni: giftcard.gateway-stream.com
     tls: false
     type: hysteria2
-  - down: ""
-    fingerprint: ""
-    name: 🇳🇱NL_3|3.4MB/s
-    obfs: ""
-    obfs-password: ""
-    password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-    port: "8443"
-    server: 46.229.243.149
-    skip-cert-verify: true
-    sni: grape-turbo-fr.roxa.org
-    type: hysteria2
-    up: ""
   - client-fingerprint: firefox
     encryption: none
-    name: 🇸🇪SE_2|3.3MB/s
+    name: 🇺🇸US_6|1.1MB/s
     network: xhttp
     port: "443"
     reality-opts:
-      public-key: fz_xpZfQks3oa9c_d1OSokmTgmJuGbvFMkyK0Qt8w3I
-      short-id: 0066a7326f06d426
-    server: 135.106.142.209
-    servername: alfastat.ru
+      public-key: q-8lriuP627DilumgJAvbowp7YGzWBZg9gSDgbmowjk
+      short-id: 9f3df965329a8e7f
+    server: usa.savesafe.co
+    servername: usa.savesafe.co
     tls: true
     type: vless
     udp: true
-    uuid: ae6e6c4b-7b9b-002f-bd0e-42ce01b96f86
+    uuid: 39c42b0a-b823-4c93-bb99-74b4183e518d
     xhttp-opts:
-      download-settings:
-        path: /assets
-        port: 443
-        reality-opts:
-          public-key: fz_xpZfQks3oa9c_d1OSokmTgmJuGbvFMkyK0Qt8w3I
-          short-id: 75a0c0e236b0a436
-        server: 135.106.142.209
-        tls: true
-      mode: packet-up
-      path: /assets
-      reuse-settings:
-        c-max-reuse-times: "0"
-        h-keep-alive-period: 0
-        h-max-request-times: 900-1400
-        h-max-reusable-secs: 3600-5400
-        max-connections: 1-2
-    xudp: true
-  - client-fingerprint: firefox
-    encryption: none
-    flow: xtls-rprx-vision
-    name: 🇳🇱NL_4|4.2MB/s
-    network: tcp
-    port: "443"
-    reality-opts:
-      public-key: ZzIetLcQtENjIXQ9XZqFo8p3J81p8Emj0wi51Uy07n8
-      short-id: ""
-    server: 72.56.38.83
-    servername: absolute-disaster.org
-    tls: true
-    type: vless
-    udp: true
-    uuid: 88888888-8888-8888-8888-888888888888
+      host: usa.savesafe.co
+      path: /
     xudp: true
   - client-fingerprint: chrome
     flow: xtls-rprx-vision
@@ -16803,41 +16761,45 @@ proxies:
     type: vless
     udp: true
     uuid: ec31f6d7-c71a-413d-93aa-24296805a594
-  - name: 🇨🇭 瑞士 | CHE 2
+  - name: 🇦🇪 阿联酋 | ARE 2
+    server: sell66n.arakphone.ir
+    port: 28622
+    type: vless
+    uuid: c29a8191-1757-4cf9-b9ae-c033bad76445
+    tls: true
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: cVL0q5WQKQzER93GiiGFmfPYfWrPWvVZ1ty4zz6sJVU
+      short-id: bfc29f03e395cdbf
+    servername: amp-api-edge.apps.apple.com
+    client-fingerprint: ios
+    network: tcp
+    udp: true
+  - name: 🇨🇦 加拿大 | CAN
+    server: jpglobal-identity-federation-auth.younai-ytl.shop
+    port: 16011
+    type: anytls
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    udp: true
+    sni: jnd0111.swiftrelay.cc
+    skip-cert-verify: true
+  - name: 🇨🇭 瑞士 | CHE
     server: ch-xh01.tcp-reset-club.net
     port: 443
     type: vless
-    uuid: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+    uuid: 0678ed07-980a-49c1-9066-05caec654967
     tls: true
     reality-opts:
       public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
       short-id: f79448a30d
     servername: s3.netavex.com
-    client-fingerprint: firefox
+    client-fingerprint: random
     network: xhttp
     xhttp-opts:
       path: /assets/v2/pkg
       host: s3.netavex.com
       mode: packet-up
     udp: true
-  - name: 🇩🇪 德国 | DEU 5
-    server: wings.xn--frxs53apxw.lol
-    port: 15782
-    type: anytls
-    password: c94e1f26-b171-4e50-a03c-b350ec9b8ddd
-    udp: true
-    skip-cert-verify: true
-    alpn:
-      - h2
-      - http/1.1
-  - name: 🇫🇷 法国 | FRA
-    server: 62.210.7.139
-    port: 60111
-    type: hysteria2
-    password: github.com/Alvin9999-newpac/fanqiang
-    auth: github.com/Alvin9999-newpac/fanqiang
-    sni: bing.com
-    skip-cert-verify: true
   - name: 🇬🇧 英国 | GBR 2
     server: yazhouany02.downapptwo.cc
     port: 53991
@@ -16846,17 +16808,25 @@ proxies:
     udp: true
     sni: jp03.pulsarcore.site
     skip-cert-verify: true
-  - name: 🇭🇰 香港 | HKG 3
+  - name: 🇬🇧 英国 | GBR 4
     server: yzany01.downapptwo.cc
-    port: 24318
+    port: 63720
     type: anytls
     password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
     udp: true
-    sni: hk08.jdddyy01.cc
+    sni: yg01.swiftrelay.cc
     skip-cert-verify: true
-  - name: 🇮🇳 印度 | IND
+  - name: 🇭🇰 香港 | HKG 3
+    server: yzany01.downapptwo.cc
+    port: 27631
+    type: anytls
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    udp: true
+    sni: hk03.jdddyy01.cc
+    skip-cert-verify: true
+  - name: 🇭🇰 香港 | HKG 7
     server: wings.xn--frxs53apxw.lol
-    port: 23418
+    port: 42105
     type: anytls
     password: c94e1f26-b171-4e50-a03c-b350ec9b8ddd
     udp: true
@@ -16864,15 +16834,59 @@ proxies:
     alpn:
       - h2
       - http/1.1
-  - name: 🇯🇵 日本 | JPN
-    server: jd-us78.y1static-content-distribution.shop
-    port: 443
+  - name: 🇰🇷 韩国 | KOR 3
+    server: jpglobal-identity-federation-auth.younai-ytl.shop
+    port: 13483
     type: anytls
     password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
     udp: true
-    sni: jd-us78.y1static-content-distribution.shop
+    sni: kr02.lunartrace.io
     skip-cert-verify: true
-  - name: 🇸🇬 新加坡 | SGP 3
+  - name: 🇳🇴 挪威 | NOR
+    server: 151.242.168.182
+    port: 443
+    type: vless
+    uuid: 5899ca33-5cb2-4fa2-9557-b496bde9c974
+    tls: true
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: urD2miGxEfHylELSqqggBKCYIMSNXNTbdPijru7-eAQ
+      short-id: 46babe29a750b634
+    servername: kibi-institut.de
+    client-fingerprint: firefox
+    network: tcp
+    udp: true
+  - name: 🇵🇭 菲律宾 | PHL
+    server: yzany01.downapptwo.cc
+    port: 17930
+    type: anytls
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    udp: true
+    sni: flv02.swiftrelay.cc
+    skip-cert-verify: true
+  - name: 🇷🇺 俄罗斯 | RUS
+    server: yzany01.downapptwo.cc
+    port: 45959
+    type: anytls
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    udp: true
+    sni: eluosi01.pulsarcore.site
+    skip-cert-verify: true
+  - name: 🇸🇪 瑞典 | SWE
+    server: se1.mycloud1.org
+    port: 443
+    type: vless
+    uuid: 99ab6a06-d45e-46c3-9993-24e1c0e92d82
+    tls: true
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E
+      short-id: afee962d
+    servername: se1.mycloud1.org
+    client-fingerprint: firefox
+    network: tcp
+    udp: true
+  - name: 🇸🇬 新加坡 | SGP
     server: yazhouany02.downapptwo.cc
     port: 41453
     type: anytls
@@ -16880,89 +16894,112 @@ proxies:
     udp: true
     sni: yz236.y1static-content-distribution.shop
     skip-cert-verify: true
-  - name: 🇸🇬 新加坡 | SGP 5
+  - name: 🇸🇬 新加坡 | SGP 2
+    server: sg01.uzifan.monster
+    port: 8443
+    type: tuic
+    password: 56d8a8fd-68b8-47f8-8c7f-98cc675902db
+    uuid: 56d8a8fd-68b8-47f8-8c7f-98cc675902db
+    sni: www.bing.com
+    skip-cert-verify: true
+    alpn:
+      - h3
+    disable-sni: false
+    reduce-rtt: false
+    request-timeout: 0
+    udp-relay-mode: native
+    congestion-controller: bbr
+  - name: 🇹🇼 🇨🇳 台湾 | TWN 2
     server: yazhouany02.downapptwo.cc
-    port: 33368
+    port: 37236
     type: anytls
     password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
     udp: true
-    sni: tw01.swiftrelay.cc
+    sni: tw16.swiftrelay.cc
     skip-cert-verify: true
-  - name: 🇹🇷 土耳其 | TUR
-    server: yazhouany02.downapptwo.cc
-    port: 45114
+  - name: 🇺🇸 美国 | USA
+    server: wings.xn--frxs53apxw.lol
+    port: 27456
     type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    password: c94e1f26-b171-4e50-a03c-b350ec9b8ddd
     udp: true
-    sni: tuerqi01.swiftrelay.cc
     skip-cert-verify: true
-  - name: 🇹🇼 🇨🇳 台湾 | TWN
-    server: tw77.cybergalaxy.me
-    port: 443
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: tw77.cybergalaxy.me
-    skip-cert-verify: true
-  - name: 🇹🇼 🇨🇳 台湾 | TWN 3
-    server: tw74.cybergalaxy.me
-    port: 443
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: tw74.cybergalaxy.me
-    skip-cert-verify: true
-  - name: 🇺🇸 美国 | USA 2
+    alpn:
+      - h2
+      - http/1.1
+  - name: 🇺🇸 美国 | USA 13
     server: svip.skycon808.com
-    port: 21386
+    port: 49380
     type: anytls
     password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
     udp: true
-    sni: us50.lunartrace.io
+    sni: us08.pulsarcore.site
     skip-cert-verify: true
-  - name: 🇺🇸 美国 | USA 3
-    server: yzany01.downapptwo.cc
-    port: 38302
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+  - name: 🇺🇸 美国 | USA 15
+    server: 216.167.123.207
+    port: 36823
+    type: vless
+    uuid: c538c9dd-2e3f-488f-a8ca-ac5b7c0773f3
+    tls: true
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: g-oxbqigzCaXqARxuyD2_vbTYeMD9zn8wnTo02S69QM
+    servername: www.nvidia.com
+    client-fingerprint: chrome
+    network: tcp
+  - down: ""
+    fingerprint: ""
+    name: 🇳🇱NL_4|2.7MB/s
+    obfs: ""
+    obfs-password: ""
+    password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+    port: "8443"
+    server: 46.229.243.149
+    skip-cert-verify: true
+    sni: grape-turbo-fr.roxa.org
+    type: hysteria2
+    up: ""
+  - down: ""
+    fingerprint: ""
+    name: 🇺🇸US_18|1016KB/s
+    obfs: salamander
+    obfs-password: b6d1f3888ab1d90dd11aac1dce427b81
+    password: tnnls:b735eacd-3ca7-4019-b98c-3559918100e6
+    port: "30000"
+    server: bwdf2fnt.xn--e1aatfr8bwa.online
+    skip-cert-verify: false
+    sni: bwdf2fnt.xn--e1aatfr8bwa.online
+    type: hysteria2
+    up: ""
+  - client-fingerprint: firefox
+    name: 🇰🇷KR_1|1.7MB/s
+    network: tcp
+    port: "2053"
+    reality-opts:
+      public-key: k9narlSK7fUqy94_p0rrqKl52W35QLNsp3W8xaGq_Go
+      short-id: 37b4f3ae8bf23763
+    server: 151.245.106.49
+    servername: www.apple.com
+    tls: true
+    type: vless
     udp: true
-    sni: us71.pulsarcore.site
-    skip-cert-verify: true
-  - name: 🇺🇸 美国 | USA 4
-    server: yazhouany02.downapptwo.cc
-    port: 11996
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: us67.pulsarcore.site
-    skip-cert-verify: true
-  - name: 🇺🇸 美国 | USA 6
-    server: yzany01.downapptwo.cc
-    port: 25558
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: us40.pulsarcore.site
-    skip-cert-verify: true
-  - name: 🇺🇸 美国 | USA 8
-    server: yzany01.downapptwo.cc
-    port: 38400
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: us16.pulsarcore.site
-    skip-cert-verify: true
-  - name: 🇺🇸 美国 | USA 9
-    server: svip.skycon808.com
-    port: 32578
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: us58.pulsarcore.site
-    skip-cert-verify: true
+    uuid: 579ac5bd-a43d-49d4-b83e-a9e3ddd1f706
+    xudp: true
+  - down: ""
+    fingerprint: ""
+    name: 🇩🇪DE_3|2.0MB/s
+    obfs: ""
+    obfs-password: ""
+    password: dffb4c3d-1e84-4938-8881-cad917e8efb2
+    port: "443"
+    server: de1.apexvpn.space
+    skip-cert-verify: false
+    sni: de1.apexvpn.space
+    type: hysteria2
+    up: ""
   - client-fingerprint: chrome
     encryption: none
-    name: 🇳🇱NL_6|556KB/s
+    name: 🇳🇱NL_6|721KB/s
     network: tcp
     port: 8080
     reality-opts:
@@ -16975,47 +17012,6 @@ proxies:
     uuid: 52b7a871-1455-4a6e-9e9c-78a0a1e43f86
     xudp: true
     servername: the.world.of.the.champions.retrovip.net
-  - name: 🇺🇸US_2|2.6MB/s
-    password: d25ccc71-ffbc-4319-92af-70042e122e36
-    port: 40022
-    server: us2.catzl.top
-    type: anytls
-    udp: true
-    sni: us2.catzl.top
-  - name: 🇹🇼TW_1|2.8MB/s
-    password: d25ccc71-ffbc-4319-92af-70042e122e36
-    port: 40071
-    server: tw1.catzl.top
-    type: anytls
-    udp: true
-    sni: tw1.catzl.top
-  - auth: c217ec6c-e2b9-4a0e-9864-e9ad4fbb7c00
-    down: 1000
-    name: 🇮🇳IN_1|4.0MB/s
-    obfs: salamander
-    obfs-password: pFtJOns91naGv8MD
-    password: c217ec6c-e2b9-4a0e-9864-e9ad4fbb7c00
-    port: 34509
-    server: sgaws.fffo.cc
-    skip-cert-verify: false
-    sni: yindu.pooo.cc
-    type: hysteria2
-    udp: true
-    up: 1000
-  - name: 🇯🇵JP_1|4.8MB/s
-    password: d25ccc71-ffbc-4319-92af-70042e122e36
-    port: 40055
-    server: jp5.catzl.top
-    type: anytls
-    udp: true
-    sni: jp5.catzl.top
-  - name: 🇹🇼TW_2|5.7MB/s
-    password: 77724c54-b2a4-493e-aa7e-a133f8cc41b1
-    port: 40072
-    server: tw2.catzl.top
-    type: anytls
-    udp: true
-    sni: tw2.catzl.top
   - type: vless
     name: 🇭🇰 016  | ⬇️ 181KB/s
     server: 47.238.210.5
@@ -17091,6 +17087,14 @@ proxies:
     port: 50160
     password: 84a506ca5aca505696a454d828420b3f
     sni: www.bing.com
+    skip-cert-verify: true
+    tfo: false
+  - type: hysteria2
+    name: 🇫🇷 031  | ⬇️ 1MB/s
+    server: 62.210.7.139
+    port: 60111
+    password: github.com/Alvin9999-newpac/fanqiang
+    sni: bing.com
     skip-cert-verify: true
     tfo: false
   - name: 🇺🇸 125  | ⬇️ 94KB/s
@@ -17282,27 +17286,35 @@ proxies:
     sni: hopp-netherland-new.dynuddns.net
     skip-cert-verify: false
     tfo: false
-  - name: SG - zhuhai.uk 02
+  - name: US - zhuhai.uk
     type: anytls
-    server: yzany01.downapptwo.cc
-    port: 56277
+    server: svip.skycon808.com
+    port: 32578
     password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
     udp: true
-    sni: xjp03.pulsarcore.site
-  - name: nl|7363|puddincat07@Telegram
-    password: gf1:gfhysteria2024
-    port: 443
-    server: 5.129.235.85
+    sni: us58.pulsarcore.site
     skip-cert-verify: true
-    sni: www.linux.com
-    type: hysteria2
+  - name: KH - zhuhai.uk
+    type: anytls
+    server: yazhouany02.downapptwo.cc
+    port: 16075
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
     udp: true
+    sni: jpz01.swiftrelay.cc
   - name: us|7a73|puddincat07@Telegram
     password: gf1:gfhysteria2024
     port: 443
     server: 66.94.121.46
     skip-cert-verify: true
     sni: www.broadcom.com
+    type: hysteria2
+    udp: true
+  - name: nl|7363|puddincat07@Telegram
+    password: gf1:gfhysteria2024
+    port: 443
+    server: 5.129.235.85
+    skip-cert-verify: true
+    sni: www.linux.com
     type: hysteria2
     udp: true
   - name: 未知 VLESS-507 | free-nodes
