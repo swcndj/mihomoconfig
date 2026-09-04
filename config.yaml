@@ -67,8 +67,6 @@ sniffer:
     - "www.msftconnecttest.com"
     - "www.msftncsi.com"
     - "time.windows.com"
-    - "+.stun.*"
-    - "+.turn.*"
 # ======================================== Tun模式 ========================================
 tun:
   enable: false
@@ -304,7 +302,7 @@ rule-providers:
     format: mrs
 # ======================================== 路由规则 ========================================
 rules:
-  # 私有域名、IP直连
+  # 内网、私有域名直连
   - RULE-SET,private,DIRECT
   - RULE-SET,ip_private,DIRECT,no-resolve
   - DOMAIN-SUFFIX,loz.dpdns.org,DIRECT
@@ -313,9 +311,6 @@ rules:
   - RULE-SET,ads-AWAvenue,REJECT
   - RULE-SET,category-ads-all,REJECT
   - RULE-SET,tracking,REJECT
-  # 阻断 UDP 443 流量，降级为 TCP 流量
-  - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,gfw)),REJECT
-  - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,domain_proxy)),REJECT
   # 分流规则
   - RULE-SET,cloudflare,自动选择
   - RULE-SET,ip_cloudflare,自动选择,no-resolve
@@ -340,5 +335,12 @@ rules:
   - RULE-SET,category-game-platforms-download@cn,DIRECT
   - RULE-SET,cn,DIRECT
   - RULE-SET,ip_cn,DIRECT,no-resolve
+  # 阻断 UDP 443 流量，降级为 TCP 流量
+  - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,cloudflare)),REJECT
+  - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,ip_cloudflare,no-resolve)),REJECT
+  - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,google)),REJECT
+  - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,ip_google,no-resolve)),REJECT
+  - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,gfw)),REJECT
+  - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,domain_proxy)),REJECT
   # 全局兜底
   - MATCH,DIRECT
