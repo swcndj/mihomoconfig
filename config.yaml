@@ -39,7 +39,7 @@ dns:
     - https://doh.pub/dns-query
   nameserver-policy:
     'rule-set:ads-AWAvenue,category-ads-all': rcode://success
-    'rule-set:cloudflare,github,google,x,meta,telegram,netflix,spotify,category-ai-!cn,gfw,domain_proxy':
+    'rule-set:cloudflare,github,google,x,meta,telegram,netflix,spotify,category-ai-!cn,category-ip-geo-detect,gfw,domain_proxy':
     - https://cloudflare-dns.com/dns-query#disable-ipv6=true
     - https://dns.google/dns-query#disable-ipv6=true
   nameserver:
@@ -130,6 +130,13 @@ rule-providers:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs"
     path: ./rules/category-ai-!cn.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  category-ip-geo-detect:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ip-geo-detect.mrs"
+    path: ./rules/category-ip-geo-detect.mrs
     interval: 86400
     behavior: domain
     format: mrs
@@ -304,6 +311,7 @@ rules:
   - RULE-SET,ip_netflix,自动选择,no-resolve
   - RULE-SET,spotify,自动选择
   - RULE-SET,category-ai-!cn,自动选择
+  - RULE-SET,category-ip-geo-detect,自动选择
   - RULE-SET,gfw,自动选择
   - RULE-SET,domain_proxy,自动选择
   - RULE-SET,apple,DIRECT
