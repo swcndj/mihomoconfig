@@ -335,12 +335,5 @@ rules:
   - RULE-SET,category-game-platforms-download@cn,DIRECT
   - RULE-SET,cn,DIRECT
   - RULE-SET,ip_cn,DIRECT,no-resolve
-  # 阻断 UDP 443 流量，降级为 TCP 流量
-  - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,cloudflare)),REJECT
-  - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,ip_cloudflare,no-resolve)),REJECT
-  - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,google)),REJECT
-  - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,ip_google,no-resolve)),REJECT
-  - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,gfw)),REJECT
-  - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,domain_proxy)),REJECT
   # 全局兜底
   - MATCH,DIRECT
