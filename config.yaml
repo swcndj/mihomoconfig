@@ -39,7 +39,7 @@ dns:
     - https://doh.pub/dns-query
   nameserver-policy:
     'rule-set:ads-666OS,ads-AWAvenue,category-ads-all,tracking': rcode://success
-    'rule-set:category-ai-!cn,cloudflare,github,google,x,meta,telegram,netflix,spotify,gfw,domain_proxy':
+    'rule-set:cloudflare,github,google,x,meta,telegram,netflix,spotify,category-ai-!cn,gfw,domain_proxy':
     - https://cloudflare-dns.com/dns-query#disable-ipv6=true
     - https://dns.google/dns-query#disable-ipv6=true
   nameserver:
@@ -48,17 +48,27 @@ dns:
 # ======================================== 域名嗅探 ========================================
 sniffer:
   enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: true
   sniff:
     HTTP:
       ports: [80, 8080-8880]
-      override-destination: true
     TLS:
       ports: [443, 8443]
     QUIC:
       ports: [443, 8443]
   skip-domain:
     - "Mijia Cloud"
+    - "dlg.io.mi.com"
     - "+.push.apple.com"
+    - "time.apple.com"
+    - "dns.msftncsi.com"
+    - "www.msftconnecttest.com"
+    - "www.msftncsi.com"
+    - "time.windows.com"
+    - "+.stun.*"
+    - "+.turn.*"
 # ======================================== Tun模式 ========================================
 tun:
   enable: false
@@ -307,7 +317,6 @@ rules:
   - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,gfw)),REJECT
   - AND,((NETWORK,UDP),(DST-PORT,443),(RULE-SET,domain_proxy)),REJECT
   # 分流规则
-  - RULE-SET,category-ai-!cn,自动选择
   - RULE-SET,cloudflare,自动选择
   - RULE-SET,ip_cloudflare,自动选择,no-resolve
   - RULE-SET,github,自动选择
@@ -322,6 +331,7 @@ rules:
   - RULE-SET,netflix,自动选择
   - RULE-SET,ip_netflix,自动选择,no-resolve
   - RULE-SET,spotify,自动选择
+  - RULE-SET,category-ai-!cn,自动选择
   - RULE-SET,gfw,自动选择
   - RULE-SET,domain_proxy,自动选择
   - RULE-SET,apple,DIRECT
