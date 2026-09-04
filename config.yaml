@@ -119,6 +119,13 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
+  bitwarden:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bitwarden.mrs"
+    path: ./rules/bitwarden.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
   category-ads-all:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs"
@@ -130,20 +137,6 @@ rule-providers:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs"
     path: ./rules/category-ai-!cn.mrs
-    interval: 86400
-    behavior: domain
-    format: mrs
-  category-games@cn:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-games@cn.mrs"
-    path: ./rules/category-games@cn.mrs
-    interval: 86400
-    behavior: domain
-    format: mrs
-  category-game-platforms-download@cn:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-game-platforms-download@cn.mrs"
-    path: ./rules/category-game-platforms-download@cn.mrs
     interval: 86400
     behavior: domain
     format: mrs
@@ -330,9 +323,8 @@ rules:
   - RULE-SET,gfw,自动选择
   - RULE-SET,domain_proxy,自动选择
   - RULE-SET,apple,DIRECT
+  - RULE-SET,bitwarden,DIRECT
   - RULE-SET,microsoft,DIRECT
-  - RULE-SET,category-games@cn,DIRECT
-  - RULE-SET,category-game-platforms-download@cn,DIRECT
   - RULE-SET,cn,DIRECT
   - RULE-SET,ip_cn,DIRECT,no-resolve
   # 全局兜底
