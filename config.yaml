@@ -38,7 +38,7 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   nameserver-policy:
-    'rule-set:ads-666OS,ads-AWAvenue,category-ads-all,tracking': rcode://success
+    'rule-set:ads-AWAvenue,category-ads-all': rcode://success
     'rule-set:cloudflare,github,google,x,meta,telegram,netflix,spotify,category-ai-!cn,gfw,domain_proxy':
     - https://cloudflare-dns.com/dns-query#disable-ipv6=true
     - https://dns.google/dns-query#disable-ipv6=true
@@ -98,13 +98,6 @@ proxy-groups:
     - nodes_regionfiltered
 # ======================================== 规则订阅 ========================================
 rule-providers:
-  ads-666OS:
-    type: http
-    url: "https://github.com/666OS/rules/raw/release/mihomo/domain/Advertising.mrs"
-    path: ./rules/ads-666OS.mrs
-    interval: 86400
-    behavior: domain
-    format: mrs
   ads-AWAvenue:
     type: http
     url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.mrs"
@@ -223,13 +216,6 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
-  tracking:
-    type: http
-    url: "https://github.com/666OS/rules/raw/release/mihomo/domain/Tracking.mrs"
-    path: ./rules/tracking.mrs
-    interval: 86400
-    behavior: domain
-    format: mrs
   x:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/x.mrs"
@@ -299,11 +285,9 @@ rules:
   - RULE-SET,private,DIRECT
   - RULE-SET,ip_private,DIRECT,no-resolve
   - DOMAIN-SUFFIX,loz.dpdns.org,DIRECT
-  # 广告、追踪拒绝
-  - RULE-SET,ads-666OS,REJECT
+  # 广告拒绝
   - RULE-SET,ads-AWAvenue,REJECT
   - RULE-SET,category-ads-all,REJECT
-  - RULE-SET,tracking,REJECT
   # 分流规则
   - RULE-SET,cloudflare,自动选择
   - RULE-SET,ip_cloudflare,自动选择,no-resolve
