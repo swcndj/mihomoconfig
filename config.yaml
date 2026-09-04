@@ -64,8 +64,8 @@ sniffer:
     - "+.push.apple.com"
     - "time.apple.com"
     - "dns.msftncsi.com"
-    - "www.msftconnecttest.com"
     - "www.msftncsi.com"
+    - "www.msftconnecttest.com"
     - "time.windows.com"
 # ======================================== Tun模式 ========================================
 tun:
