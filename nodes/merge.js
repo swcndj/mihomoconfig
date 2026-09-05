@@ -5,9 +5,9 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 const SUBS = JSON.parse(fs.readFileSync("./nodes/subs.json", "utf8"));
 const OUTPUT_FILE = "nodes/all.yaml";
 const REGION_OUTPUT_FILE = "nodes/regionfiltered.yaml";
-const REQUEST_TIMEOUT = 15000;
+const REQUEST_TIMEOUT = 1500;
 // 协议黑名单
-const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "trojan", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
+const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
 // 名称初筛正则：仅用于减少查询量，不做最终判定
 const PRE_FILTER_REGEX = /香港|Hong Kong|HK|🇭🇰|澳门|Macau|MO|🇲🇴|台湾|Taiwan|TW|🇹🇼|日本|Japen|JP|🇯🇵|韩国|Korea|KR|🇰🇷|新加坡|Singapore|SG|🇸🇬|马来西亚|Malaysia|MY|🇲🇾|泰国|Thailand|TH|🇹🇭|澳大利亚|Australia|AU|🇦🇺|美国|United States|US|🇺🇸/iu;
 // 目标地区代码集合：仅用于筛选，重命名直接使用 countryCode
@@ -88,7 +88,6 @@ async function getIpCountryCode(ipOrDomain) {
 (async function main() {
   console.log(`===== 开始处理，共 ${SUBS.length} 个订阅 =====\n`);
   const allRawProxies = [];
-
   // 1. 拉取所有订阅
   for (let i = 0; i < SUBS.length; i++) {
     const subUrl = SUBS[i];
@@ -113,7 +112,6 @@ async function getIpCountryCode(ipOrDomain) {
     }
   }
   console.log(`\n总原始节点数：${allRawProxies.length}`);
-
   // 2. 节点类型过滤
   const typeFiltered = allRawProxies.filter(p => {
     if (!isValidNode(p)) return false;
@@ -124,11 +122,13 @@ async function getIpCountryCode(ipOrDomain) {
       const hasXhttp = !!p['xhttp-opts'];
       if (!hasReality && !hasXhttp) return false;
       if (p.encryption && typeof p.encryption === 'string' && p.encryption.length > 50) return false;
+    } else if (type === 'trojan') {
+      const hasWsOpts = !!p['ws-opts'];
+      if (!hasWsOpts) return false;
     }
     return true;
   });
   console.log(`类型过滤后节点数：${typeFiltered.length}`);
-
   // 3. 节点去重
   const seen = new Set();
   const dedupList = typeFiltered.filter(p => {
@@ -141,7 +141,6 @@ async function getIpCountryCode(ipOrDomain) {
     return true;
   });
   console.log(`🌐 去重后节点数：${dedupList.length}`);
-
   // 4. 地区筛选
   const regionFiltered = [];
   if (TARGET_COUNTRY_CODES.size > 0) {
@@ -220,7 +219,6 @@ async function getIpCountryCode(ipOrDomain) {
   } else {
     console.log(`⚠️ 未配置目标地区，跳过地区筛选`);
   }
-
   // 5. 输出结果
   const docAll = new yaml.Document();
   docAll.set('proxies', dedupList);
