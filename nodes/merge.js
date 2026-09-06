@@ -8,10 +8,12 @@ const REGION_OUTPUT_FILE = "nodes/regionfiltered.yaml";
 const REQUEST_TIMEOUT = 1500;
 // 协议黑名单
 const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
+// 地区筛选协议白名单：geo查询成功则保留(不限制目标国家)，按countryCode重命名
+const REGION_SKIP_PROTO_WHITELIST = new Set(["anytls","mieru","hysteria2","tuic"]);
 // 名称初筛正则：仅用于减少查询量，不做最终判定
-const PRE_FILTER_REGEX = /香港|Hong Kong|HK|🇭🇰|澳门|Macau|MO|🇲🇴|台湾|Taiwan|TW|🇹🇼|日本|Japen|JP|🇯🇵|韩国|Korea|KR|🇰🇷|新加坡|Singapore|SG|🇸🇬|马来西亚|Malaysia|MY|🇲🇾|泰国|Thailand|TH|🇹🇭|澳大利亚|Australia|AU|🇦🇺|美国|United States|US|🇺🇸/iu;
-// 目标地区代码集合：仅用于筛选，重命名直接使用 countryCode
-const TARGET_COUNTRY_CODES = new Set(['HK', 'MO', 'TW', 'JP', 'KR', 'SG', 'MY', 'TH', 'AU', 'US']);
+const PRE_FILTER_REGEX = /香港|Hong Kong|HK|🇭🇰|澳门|Macau|MO|🇲🇴|台湾|Taiwan|TW|🇹🇼|日本|Japen|JP|🇯🇵|韩国|Korea|KR|🇰🇷|新加坡|Singapore|SG|🇸🇬|美国|United States|US|🇺🇸/iu;
+// 目标地区代码集合：普通协议地区过滤；白名单协议不过滤
+const TARGET_COUNTRY_CODES = new Set(['HK', 'MO', 'TW', 'JP', 'KR', 'SG', 'US']);
 // IP 批量查询配置
 const BATCH_ENDPOINT = 'http://ip-api.com/batch';
 const BATCH_SIZE = 80;
@@ -120,7 +122,8 @@ async function getIpCountryCode(ipOrDomain) {
     if (type === 'vless') {
       const hasReality = !!p['reality-opts'];
       const hasXhttp = !!p['xhttp-opts'];
-      if (!hasReality && !hasXhttp) return false;
+      const hasWs = !!p['ws-opts'];
+      if (!hasReality && !hasXhttp && !hasWs) return false;
       if (p.encryption && typeof p.encryption === 'string' && p.encryption.length > 50) return false;
     } else if (type === 'trojan') {
       const hasWsOpts = !!p['ws-opts'];
@@ -144,10 +147,23 @@ async function getIpCountryCode(ipOrDomain) {
   // 4. 地区筛选
   const regionFiltered = [];
   if (TARGET_COUNTRY_CODES.size > 0) {
+    // 拆分为：白名单协议、普通协议
+    const whiteProtoList = [];
+    const normalList = [];
+    for (const node of dedupList) {
+      const t = node.type.toLowerCase();
+      if (REGION_SKIP_PROTO_WHITELIST.has(t)) {
+        whiteProtoList.push(node);
+      } else {
+        normalList.push(node);
+      }
+    }
+    console.log(`\n白名单协议节点总数：${whiteProtoList.length}，普通协议节点总数：${normalList.length}`);
+    // 合并全部节点一起做geo查询
+    const allQueryNodes = [...whiteProtoList, ...normalList];
     const ipNodes = [];
     const domainNodes = [];
-    // 一次拆分：IP节点全部进入查询；域名节点执行名称初筛
-    for(const node of dedupList){
+    for(const node of allQueryNodes){
       if(!node.server) continue;
       if(isIpAddress(node.server)){
         ipNodes.push(node);
@@ -176,17 +192,31 @@ async function getIpCountryCode(ipOrDomain) {
         if (batchResult) batchResult.forEach((cc, ip) => allResultMap.set(ip, cc));
         if (i < batchCount - 1) await delay(BATCH_INTERVAL);
       }
-      // 统计IP节点
+      // 处理IP节点结果
       for(const node of ipNodes){
         const cc = allResultMap.get(node.server);
-        if(!cc){
-          ipQueryFail++;
-        }else if(TARGET_COUNTRY_CODES.has(cc)){
-          ipMatchTarget++;
-          const newNode = { ...node, name: `${regionFiltered.length+1} ${cc}` };
-          regionFiltered.push(newNode);
+        const t = node.type.toLowerCase();
+        const isWhiteProto = REGION_SKIP_PROTO_WHITELIST.has(t);
+        if(isWhiteProto){
+          // 白名单协议：查询成功拿到cc才保留，全部国家都接受；查询失败直接丢弃
+          if(cc){
+            const newNode = {...node};
+            newNode.name = `${regionFiltered.length+1} ${cc}`;
+            regionFiltered.push(newNode);
+          }else{
+            ipQueryFail++;
+          }
         }else{
-          ipSkipOtherCountry++;
+          // 普通协议：执行地区过滤
+          if(!cc){
+            ipQueryFail++;
+          }else if(TARGET_COUNTRY_CODES.has(cc)){
+            ipMatchTarget++;
+            const newNode = { ...node, name: `${regionFiltered.length+1} ${cc}` };
+            regionFiltered.push(newNode);
+          }else{
+            ipSkipOtherCountry++;
+          }
         }
       }
     }
@@ -200,22 +230,35 @@ async function getIpCountryCode(ipOrDomain) {
         allResultMap.set(server, cc);
         if (i < domainNodes.length - 1) await delay(DOMAIN_QUERY_INTERVAL);
       }
-      // 统计域名节点
+      // 处理域名节点结果
       for(const node of domainNodes){
         const cc = allResultMap.get(node.server);
-        if(!cc){
-          domainQueryFail++;
-        }else if(TARGET_COUNTRY_CODES.has(cc)){
-          domainMatchTarget++;
-          const newNode = { ...node, name: `${regionFiltered.length+1} ${cc}` };
-          regionFiltered.push(newNode);
+        const t = node.type.toLowerCase();
+        const isWhiteProto = REGION_SKIP_PROTO_WHITELIST.has(t);
+        if(isWhiteProto){
+          // 白名单协议：必须查询成功拿到cc，否则丢弃
+          if(cc){
+            const newNode = {...node};
+            newNode.name = `${regionFiltered.length+1} ${cc}`;
+            regionFiltered.push(newNode);
+          }else{
+            domainQueryFail++;
+          }
         }else{
-          domainSkipOtherCountry++;
+          if(!cc){
+            domainQueryFail++;
+          }else if(TARGET_COUNTRY_CODES.has(cc)){
+            domainMatchTarget++;
+            const newNode = { ...node, name: `${regionFiltered.length+1} ${cc}` };
+            regionFiltered.push(newNode);
+          }else{
+            domainSkipOtherCountry++;
+          }
         }
       }
     }
     console.log(`域名节点查询统计：失败 ${domainQueryFail}，成功但非目标国家 ${domainSkipOtherCountry}，命中目标 ${domainMatchTarget}`);
-    console.log(`🌐 地区最终筛选后节点数：${regionFiltered.length}`);
+    console.log(`🌐 地区最终筛选后节点数（白名单协议含全部地区）：${regionFiltered.length}`);
   } else {
     console.log(`⚠️ 未配置目标地区，跳过地区筛选`);
   }
