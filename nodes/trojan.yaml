@@ -1643,6 +1643,18 @@ proxies:
     ws-opts:
       path: /assignment
   - name: 580 US
+    type: trojan
+    server: blog.webex.com
+    port: 443
+    network: ws
+    password: afbcd89a-5a90-4a44-a42a-be08f444aa3f
+    skip-cert-verify: false
+    sni: unnes.ac.id.yxls.eu.cc
+    ws-opts:
+      headers:
+        Host: unnes.ac.id.yxls.eu.cc
+      path: /br-orcl
+  - name: 581 US
     network: ws
     password: humanity
     port: 443
@@ -1655,7 +1667,7 @@ proxies:
       headers:
         host: www.creationlong.org
       path: /assignment
-  - name: 581 US
+  - name: 582 US
     network: ws
     password: humanity
     port: 443
@@ -1668,7 +1680,7 @@ proxies:
       headers:
         host: www.creationlong.org
       path: /assignment
-  - name: 633 SG
+  - name: 634 SG
     network: ws
     password: "521314"
     port: 443
@@ -1681,7 +1693,7 @@ proxies:
       headers:
         host: tjplay.lxdxo.kdns.fr
       path: /
-  - name: 640 US
+  - name: 641 US
     server: 95.164.33.62
     port: 443
     type: trojan
@@ -1693,7 +1705,7 @@ proxies:
       path: /websocket
       headers:
         Host: sourceforge.net
-  - name: 641 US
+  - name: 642 US
     server: 66.228.55.178
     port: 2083
     type: trojan
@@ -1705,18 +1717,6 @@ proxies:
       path: /
       headers:
         Host: gstatic.com
-  - name: 878 US
-    type: trojan
-    server: blog.webex.com
-    port: 443
-    network: ws
-    password: afbcd89a-5a90-4a44-a42a-be08f444aa3f
-    skip-cert-verify: false
-    sni: unnes.ac.id.yxls.eu.cc
-    ws-opts:
-      headers:
-        Host: unnes.ac.id.yxls.eu.cc
-      path: /br-orcl
   - name: 951 US
     server: notdirect.howhealthyistoomajreally.homes
     port: 443
