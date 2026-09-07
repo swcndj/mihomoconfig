@@ -1,0 +1,9 @@
+proxies:
+  - name: 73 US
+    type: mieru
+    server: 157.254.223.44
+    port: 34567
+    multiplexing: MULTIPLEXING_LOW
+    password: dongtaiwang.com
+    transport: TCP
+    username: dongtaiwang.com
