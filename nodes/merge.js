@@ -14,7 +14,7 @@ const REGIONFILTER_SKIP_PROTOLIST = new Set(["hysteria2", "anytls", "tuic", "mie
 // 目标国家代码集合，非豁免协议必须命中
 const TARGET_COUNTRY_CODES = new Set(['HK', 'MO', 'TW', 'JP', 'KR', 'SG', 'US']);
 
-// ip‑api batch
+// ip-api.com批量查询接口
 const BATCH_ENDPOINT = 'http://ip-api.com/batch';
 const BATCH_SIZE = 100;
 const BATCH_INTERVAL = 4500;
@@ -25,6 +25,7 @@ const DNS_CONCURRENCY = 30;
 const DNS_TIMEOUT = 5000;
 const DNS_UPSTREAM = ["1.1.1.1","8.8.8.8"];
 // -------------------------------------------------- 工具函数 --------------------------------------------------
+// 带超时控制的网络请求封装函数
 async function fetchWithTimeout(url, options = {}) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT);
@@ -35,14 +36,17 @@ async function fetchWithTimeout(url, options = {}) {
   }
 }
 
+// 节点合法性校验函数
 function isValidNode(node) {
   return !!(node && node.type && node.server);
 }
 
+// 延时等待工具函数
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+// 判断是否为 IP 地址
 function isIpAddress(str) {
   if (!str) return false;
   const ipv4Regex = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
@@ -50,6 +54,7 @@ function isIpAddress(str) {
   return ipv4Regex.test(str) || ipv6Regex.test(str);
 }
 
+// 域名DNS解析，获取第一个IPv4地址
 async function dnsResolveHost(host) {
   const resolver = new dns.Resolver();
   resolver.setServers(DNS_UPSTREAM);
@@ -63,6 +68,7 @@ async function dnsResolveHost(host) {
   }
 }
 
+// 简易异步并发任务池，控制最大并发数量
 async function limitedTaskPool(taskList, concurrency){
   const results = new Array(taskList.length);
   let ptr = 0;
@@ -81,6 +87,7 @@ async function limitedTaskPool(taskList, concurrency){
   return results;
 }
 
+// 批量查询 IP 的国家代码
 async function batchQueryIpCountry(ipList) {
   try {
     const res = await fetchWithTimeout(`${BATCH_ENDPOINT}?fields=${encodeURIComponent(BATCH_FIELDS)}`, {
