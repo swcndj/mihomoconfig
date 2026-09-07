@@ -1617,7 +1617,7 @@ proxies:
       headers:
         host: www.gossipglove.com
       path: /assignment
-  - name: 537 SG
+  - name: 538 SG
     network: ws
     password: "521314"
     port: 443
@@ -1630,7 +1630,7 @@ proxies:
       headers:
         host: tjplay.lxdxo.kdns.fr
       path: /
-  - name: 580 US
+  - name: 581 US
     network: ws
     password: humanity
     port: 443
@@ -1704,7 +1704,20 @@ proxies:
       path: /
       headers:
         Host: gstatic.com
-  - name: 762 US
+  - name: 735 US
+    server: 167.68.4.199
+    port: 2053
+    type: trojan
+    password: Aimer
+    sni: epge.muarua.filegear-sg.me
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?proxyip=ts.hpc.tw
+      headers:
+        Host: epge.muarua.filegear-sg.me
+    udp: true
+  - name: 863 US
     type: trojan
     server: blog.webex.com
     port: 443
@@ -1716,7 +1729,7 @@ proxies:
       headers:
         Host: unnes.ac.id.yxls.eu.cc
       path: /br-orcl
-  - name: 820 US
+  - name: 928 US
     server: notdirect.howhealthyistoomajreally.homes
     port: 443
     type: trojan
@@ -1728,7 +1741,7 @@ proxies:
       path: /ilb9fuWfuqWDjlQrGCkIH66kMFPa
       headers:
         Host: notdirect.howhealthyistoomajreally.homes
-  - name: 821 US
+  - name: 929 US
     server: cnamemc1.cdncisco4.co
     port: 443
     type: trojan
@@ -1740,7 +1753,7 @@ proxies:
       path: /422Kdfwzf49IxeZJa
       headers:
         Host: c1mc.cdncisco4.co
-  - name: 838 US
+  - name: 940 US
     network: ws
     password: e20fd145-65f1-4aa3-96be-da0524bbb16e
     port: 20230
