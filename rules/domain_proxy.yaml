@@ -1,7 +1,9 @@
 payload:
     - +.ldstatic.com
     - +.bulianglin.com
+    - +.geolocation.onetrust.com
     - +.ahfun.me
+    
     - +.browserleaks.net
     - +.browserleaks.org
     - +.dnsleaktest.org
