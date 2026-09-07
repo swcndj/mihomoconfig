@@ -2,13 +2,12 @@ payload:
     # ----- linux.do -----
     - +.ldstatic.com
     
-    # ----- onetrust 隐私合规平台 -----
+    # ----- 隐私 -----
     - +.onetrust.com
+    - +.scorecardresearch.com
     
-    # ----- 阿房 -----
+    # ----- 个人网站 -----
     - +.ahfun.me
-    
-    # ----- 不良林 -----
     - +.bulianglin.com
     
     # ----- DNS泄漏测试 -----
