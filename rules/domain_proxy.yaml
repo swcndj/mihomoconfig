@@ -1,9 +1,17 @@
 payload:
+    # ----- linux.do -----
     - +.ldstatic.com
-    - +.bulianglin.com
+    
+    # ----- onetrust 隐私合规平台 -----
     - +.onetrust.com
+    
+    # ----- 阿房 -----
     - +.ahfun.me
     
+    # ----- 不良林 -----
+    - +.bulianglin.com
+    
+    # ----- DNS泄漏测试 -----
     - +.browserleaks.net
     - +.browserleaks.org
     - +.dnsleaktest.org
