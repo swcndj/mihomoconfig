@@ -1591,8 +1591,9 @@ proxies:
       headers:
         User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36
       path: /assignment
-  - name: 477 US
-    network: ws
+  - alpn:
+      - http/1.1
+    name: 477 US
     password: MiTiVPN
     port: 443
     server: 151.101.56.7
@@ -1602,9 +1603,9 @@ proxies:
     udp: true
     ws-opts:
       headers:
-        Host: ssl.fastly.com
-      path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e2@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
-  - name: 504 US
+        Host: mitivpn-mitivpn-mitivpn--mitivpn-mitivpn--mitivpn.global.ssl.fastly.net
+      path: "@mehrosaboran"
+  - name: 502 US
     network: ws
     password: humanity
     port: 443
@@ -1617,7 +1618,7 @@ proxies:
       headers:
         host: www.gossipglove.com
       path: /assignment
-  - name: 538 SG
+  - name: 535 SG
     network: ws
     password: "521314"
     port: 443
@@ -1630,7 +1631,7 @@ proxies:
       headers:
         host: tjplay.lxdxo.kdns.fr
       path: /
-  - name: 581 US
+  - name: 578 US
     network: ws
     password: humanity
     port: 443
@@ -1641,7 +1642,7 @@ proxies:
     udp: true
     ws-opts:
       path: /assignment
-  - name: 582 US
+  - name: 580 US
     network: ws
     password: humanity
     port: 443
@@ -1654,7 +1655,7 @@ proxies:
       headers:
         host: www.creationlong.org
       path: /assignment
-  - name: 583 US
+  - name: 581 US
     network: ws
     password: humanity
     port: 443
@@ -1667,7 +1668,7 @@ proxies:
       headers:
         host: www.creationlong.org
       path: /assignment
-  - name: 635 SG
+  - name: 633 SG
     network: ws
     password: "521314"
     port: 443
@@ -1680,7 +1681,7 @@ proxies:
       headers:
         host: tjplay.lxdxo.kdns.fr
       path: /
-  - name: 648 US
+  - name: 640 US
     server: 95.164.33.62
     port: 443
     type: trojan
@@ -1692,7 +1693,7 @@ proxies:
       path: /websocket
       headers:
         Host: sourceforge.net
-  - name: 649 US
+  - name: 641 US
     server: 66.228.55.178
     port: 2083
     type: trojan
@@ -1704,20 +1705,7 @@ proxies:
       path: /
       headers:
         Host: gstatic.com
-  - name: 735 US
-    server: 167.68.4.199
-    port: 2053
-    type: trojan
-    password: Aimer
-    sni: epge.muarua.filegear-sg.me
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /?proxyip=ts.hpc.tw
-      headers:
-        Host: epge.muarua.filegear-sg.me
-    udp: true
-  - name: 863 US
+  - name: 865 US
     type: trojan
     server: blog.webex.com
     port: 443
@@ -1729,7 +1717,7 @@ proxies:
       headers:
         Host: unnes.ac.id.yxls.eu.cc
       path: /br-orcl
-  - name: 928 US
+  - name: 937 US
     server: notdirect.howhealthyistoomajreally.homes
     port: 443
     type: trojan
@@ -1741,7 +1729,7 @@ proxies:
       path: /ilb9fuWfuqWDjlQrGCkIH66kMFPa
       headers:
         Host: notdirect.howhealthyistoomajreally.homes
-  - name: 929 US
+  - name: 938 US
     server: cnamemc1.cdncisco4.co
     port: 443
     type: trojan
@@ -1753,7 +1741,7 @@ proxies:
       path: /422Kdfwzf49IxeZJa
       headers:
         Host: c1mc.cdncisco4.co
-  - name: 940 US
+  - name: 948 US
     network: ws
     password: e20fd145-65f1-4aa3-96be-da0524bbb16e
     port: 20230
