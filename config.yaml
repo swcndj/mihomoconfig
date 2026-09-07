@@ -106,6 +106,15 @@ proxy-providers:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
+  nodes_trojan:
+    type: http
+    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/nodes/trojan.yaml"
+    interval: 7200
+    path: ./providers/nodes_trojan.yaml
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
   nodes_tuic:
     type: http
     url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/nodes/tuic.yaml"
