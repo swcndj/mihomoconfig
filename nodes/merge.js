@@ -2,29 +2,29 @@
 const fs = require('fs');
 const yaml = require('yaml');
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+const dns = require('dns').promises;
+
 const SUBS = JSON.parse(fs.readFileSync("./nodes/subs.json", "utf8"));
-const OUTPUT_FILE = "nodes/all.yaml";
-const REGION_OUTPUT_FILE = "nodes/regionfiltered.yaml";
-const REQUEST_TIMEOUT = 1500;
-// 协议黑名单
-const SKIP_TYPES = new Set(["http", "socks5", "ss", "ssr", "vmess", "hysteria", "wireguard", "tailscale", "ssh", "openvpn"]);
-// 地区筛选协议白名单：geo查询成功则保留(不限制目标国家)，按countryCode重命名
-const REGION_SKIP_PROTO_WHITELIST = new Set(["anytls","mieru","hysteria2","tuic"]);
-// 名称初筛正则：仅用于减少查询量，不做最终判定
-const PRE_FILTER_REGEX = /香港|Hong Kong|HK|🇭🇰|澳门|Macau|MO|🇲🇴|台湾|Taiwan|TW|🇹🇼|日本|Japen|JP|🇯🇵|韩国|Korea|KR|🇰🇷|新加坡|Singapore|SG|🇸🇬|美国|United States|US|🇺🇸/iu;
-// 目标地区代码集合：普通协议地区过滤；白名单协议不过滤
+const REQUEST_TIMEOUT = 15000;
+
+// 协议白名单，只放行列表内协议
+const PROTO_WHITELIST = new Set(["vless", "trojan", "hysteria2", "anytls", "tuic", "mieru"]);
+// 地区过滤豁免协议：geo拿到cc就全部保留，不校验目标国家
+const REGIONFILTER_SKIP_PROTOLIST = new Set(["hysteria2", "anytls", "tuic", "mieru"]);
+// 目标国家代码集合，非豁免协议必须命中
 const TARGET_COUNTRY_CODES = new Set(['HK', 'MO', 'TW', 'JP', 'KR', 'SG', 'US']);
-// IP 批量查询配置
+
+// ip‑api batch
 const BATCH_ENDPOINT = 'http://ip-api.com/batch';
-const BATCH_SIZE = 80;
+const BATCH_SIZE = 100;
 const BATCH_INTERVAL = 4500;
 const BATCH_FIELDS = 'status,countryCode';
-// 域名单查配置
-const SINGLE_ENDPOINT = 'http://ip-api.com/json';
-const DOMAIN_QUERY_INTERVAL = 1500;
-// -------------------------------------------------- 配置区 --------------------------------------------------
+
+// DNS解析配置
+const DNS_CONCURRENCY = 30;
+const DNS_TIMEOUT = 5000;
+const DNS_UPSTREAM = ["1.1.1.1","8.8.8.8"];
 // -------------------------------------------------- 工具函数 --------------------------------------------------
-// 带超时控制的网络请求封装函数
 async function fetchWithTimeout(url, options = {}) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT);
@@ -34,22 +34,53 @@ async function fetchWithTimeout(url, options = {}) {
     clearTimeout(timer);
   }
 }
-// 节点合法性校验函数
+
 function isValidNode(node) {
-  return !!(node && node.type);
+  return !!(node && node.type && node.server);
 }
-// 延时等待工具函数
+
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-// 判断是否为 IP 地址
+
 function isIpAddress(str) {
   if (!str) return false;
   const ipv4Regex = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
   const ipv6Regex = /^[0-9a-fA-F]{1,4}(?::[0-9a-fA-F]{1,4}){2,7}$/;
   return ipv4Regex.test(str) || ipv6Regex.test(str);
 }
-// 批量查询 IP 的国家代码
+
+async function dnsResolveHost(host) {
+  const resolver = new dns.Resolver();
+  resolver.setServers(DNS_UPSTREAM);
+  const timeoutPromise = delay(DNS_TIMEOUT).then(()=>null);
+  try {
+    const ips = await Promise.race([resolver.resolve4(host), timeoutPromise]);
+    if(!ips || !Array.isArray(ips) || ips.length ===0) return null;
+    return ips[0];
+  }catch{
+    return null;
+  }
+}
+
+async function limitedTaskPool(taskList, concurrency){
+  const results = new Array(taskList.length);
+  let ptr = 0;
+  const worker = async ()=>{
+    while(ptr < taskList.length){
+      const idx = ptr++;
+      try{
+        results[idx] = await taskList[idx]();
+      }catch{
+        results[idx] = null;
+      }
+    }
+  };
+  const workers = Array.from({length:concurrency}, worker);
+  await Promise.all(workers);
+  return results;
+}
+
 async function batchQueryIpCountry(ipList) {
   try {
     const res = await fetchWithTimeout(`${BATCH_ENDPOINT}?fields=${encodeURIComponent(BATCH_FIELDS)}`, {
@@ -74,51 +105,39 @@ async function batchQueryIpCountry(ipList) {
     return null;
   }
 }
-// 单个查询IP/域名的国家代码
-async function getIpCountryCode(ipOrDomain) {
-  try {
-    const res = await fetchWithTimeout(`${SINGLE_ENDPOINT}/${encodeURIComponent(ipOrDomain)}?fields=status,countryCode`);
-    if (!res.ok) return null;
-    const data = await res.json();
-    return data.status === 'success' ? String(data.countryCode).toUpperCase() : null;
-  } catch {
-    return null;
-  }
-}
-// -------------------------------------------------- 工具函数 --------------------------------------------------
-// -------------------------------------------------- 主程序区 --------------------------------------------------
+// -------------------------------------------------- 主程序 --------------------------------------------------
 (async function main() {
   console.log(`===== 开始处理，共 ${SUBS.length} 个订阅 =====\n`);
   const allRawProxies = [];
-  // 1. 拉取所有订阅
+
+  // 拉取订阅
   for (let i = 0; i < SUBS.length; i++) {
     const subUrl = SUBS[i];
     console.log(`--- [${i + 1}/${SUBS.length}] ${subUrl}`);
     try {
       const res = await fetchWithTimeout(subUrl);
       if (!res.ok) {
-        console.log(`  ❌ 拉取订阅请求失败 HTTP ${res.status}`);
+        console.log(`  ❌ 拉取订阅失败 HTTP ${res.status}`);
         continue;
       }
       const text = await res.text();
       const doc = yaml.parse(text);
       const proxies = doc?.proxies || (Array.isArray(doc) ? doc : []);
-      if (!proxies.length) {
-        console.log(`  ⚠️ 无 proxies 数组`);
-        continue;
-      }
-      console.log(`    原始节点：${proxies.length}`);
+      if (!proxies.length) continue;
+      console.log(`    原始节点数量：${proxies.length}`);
       allRawProxies.push(...proxies);
     } catch (e) {
       console.log(`  ❌ 失败：${e.message}`);
     }
   }
   console.log(`\n总原始节点数：${allRawProxies.length}`);
-  // 2. 节点类型过滤
+
+  // 协议白名单 + 字段校验
   const typeFiltered = allRawProxies.filter(p => {
     if (!isValidNode(p)) return false;
     const type = p.type.toLowerCase();
-    if (SKIP_TYPES.has(type)) return false;
+    if (!PROTO_WHITELIST.has(type)) return false;
+
     if (type === 'vless') {
       const hasReality = !!p['reality-opts'];
       const hasXhttp = !!p['xhttp-opts'];
@@ -131,8 +150,9 @@ async function getIpCountryCode(ipOrDomain) {
     }
     return true;
   });
-  console.log(`类型过滤后节点数：${typeFiltered.length}`);
-  // 3. 节点去重
+  console.log(`协议过滤后节点数量：${typeFiltered.length}`);
+
+  // 节点去重
   const seen = new Set();
   const dedupList = typeFiltered.filter(p => {
     const type = p.type.toLowerCase();
@@ -143,138 +163,104 @@ async function getIpCountryCode(ipOrDomain) {
     seen.add(fp);
     return true;
   });
-  console.log(`🌐 去重后节点数：${dedupList.length}`);
-  // 4. 地区筛选
-  const regionFiltered = [];
-  if (TARGET_COUNTRY_CODES.size > 0) {
-    // 拆分为：白名单协议、普通协议
-    const whiteProtoList = [];
-    const normalList = [];
-    for (const node of dedupList) {
-      const t = node.type.toLowerCase();
-      if (REGION_SKIP_PROTO_WHITELIST.has(t)) {
-        whiteProtoList.push(node);
-      } else {
-        normalList.push(node);
-      }
-    }
-    console.log(`\n白名单协议节点总数：${whiteProtoList.length}，普通协议节点总数：${normalList.length}`);
-    // 合并全部节点一起做geo查询
-    const allQueryNodes = [...whiteProtoList, ...normalList];
-    const ipNodes = [];
-    const domainNodes = [];
-    for(const node of allQueryNodes){
-      if(!node.server) continue;
-      if(isIpAddress(node.server)){
-        ipNodes.push(node);
-      }else{
-        if(PRE_FILTER_REGEX.test(node.name || '')){
-          domainNodes.push(node);
-        }
-      }
-    }
-    console.log(`地区初筛：IP 节点全部保留，域名节点根据节点名称初筛`);
-    const allResultMap = new Map();
-    let ipQueryFail = 0;
-    let ipMatchTarget = 0;
-    let ipSkipOtherCountry = 0;
-    let domainQueryFail = 0;
-    let domainMatchTarget = 0;
-    let domainSkipOtherCountry = 0;
-    // IP 批量查询
-    if (ipNodes.length > 0) {
-      const batchCount = Math.ceil(ipNodes.length / BATCH_SIZE);
-      console.log(`--- IP 批量查询，共 ${ipNodes.length} 个 ---`);
-      for (let i = 0; i < batchCount; i++) {
-        const batch = ipNodes.slice(i * BATCH_SIZE, (i + 1) * BATCH_SIZE);
-        const batchIps = batch.map(p => p.server);
-        const batchResult = await batchQueryIpCountry(batchIps);
-        if (batchResult) batchResult.forEach((cc, ip) => allResultMap.set(ip, cc));
-        if (i < batchCount - 1) await delay(BATCH_INTERVAL);
-      }
-      // 处理IP节点结果
-      for(const node of ipNodes){
-        const cc = allResultMap.get(node.server);
-        const t = node.type.toLowerCase();
-        const isWhiteProto = REGION_SKIP_PROTO_WHITELIST.has(t);
-        if(isWhiteProto){
-          // 白名单协议：查询成功拿到cc才保留，全部国家都接受；查询失败直接丢弃
-          if(cc){
-            const newNode = {...node};
-            newNode.name = `${regionFiltered.length+1} ${cc}`;
-            regionFiltered.push(newNode);
-          }else{
-            ipQueryFail++;
-          }
-        }else{
-          // 普通协议：执行地区过滤
-          if(!cc){
-            ipQueryFail++;
-          }else if(TARGET_COUNTRY_CODES.has(cc)){
-            ipMatchTarget++;
-            const newNode = { ...node, name: `${regionFiltered.length+1} ${cc}` };
-            regionFiltered.push(newNode);
-          }else{
-            ipSkipOtherCountry++;
-          }
-        }
-      }
-    }
-    console.log(`IP 节点查询统计：失败 ${ipQueryFail}，成功但非目标国家 ${ipSkipOtherCountry}，命中目标 ${ipMatchTarget}`);
-    // 域名单个查询
-    if (domainNodes.length > 0) {
-      console.log(`--- 域名单个查询，共 ${domainNodes.length} 个 ---`);
-      for (let i = 0; i < domainNodes.length; i++) {
-        const server = domainNodes[i].server;
-        const cc = await getIpCountryCode(server);
-        allResultMap.set(server, cc);
-        if (i < domainNodes.length - 1) await delay(DOMAIN_QUERY_INTERVAL);
-      }
-      // 处理域名节点结果
-      for(const node of domainNodes){
-        const cc = allResultMap.get(node.server);
-        const t = node.type.toLowerCase();
-        const isWhiteProto = REGION_SKIP_PROTO_WHITELIST.has(t);
-        if(isWhiteProto){
-          // 白名单协议：必须查询成功拿到cc，否则丢弃
-          if(cc){
-            const newNode = {...node};
-            newNode.name = `${regionFiltered.length+1} ${cc}`;
-            regionFiltered.push(newNode);
-          }else{
-            domainQueryFail++;
-          }
-        }else{
-          if(!cc){
-            domainQueryFail++;
-          }else if(TARGET_COUNTRY_CODES.has(cc)){
-            domainMatchTarget++;
-            const newNode = { ...node, name: `${regionFiltered.length+1} ${cc}` };
-            regionFiltered.push(newNode);
-          }else{
-            domainSkipOtherCountry++;
-          }
-        }
-      }
-    }
-    console.log(`域名节点查询统计：失败 ${domainQueryFail}，成功但非目标国家 ${domainSkipOtherCountry}，命中目标 ${domainMatchTarget}`);
-    console.log(`🌐 地区最终筛选后节点数（白名单协议含全部地区）：${regionFiltered.length}`);
-  } else {
-    console.log(`⚠️ 未配置目标地区，跳过地区筛选`);
+  console.log(`去重后节点数量：${dedupList.length}`);
+
+  // 拆分IP/域名节点
+  const originIpNodes = [];
+  const domainNodes = [];
+  for(const node of dedupList){
+    if(isIpAddress(node.server)) originIpNodes.push(node);
+    else domainNodes.push(node);
   }
-  // 5. 输出结果
-  const docAll = new yaml.Document();
-  docAll.set('proxies', dedupList);
-  fs.writeFileSync(OUTPUT_FILE, docAll.toString({ indent: 2, lineWidth: 0 }));
-  console.log(`\n✅ 已保存去重后节点至 ${OUTPUT_FILE}`);
-  if (regionFiltered.length) {
-    const docRegion = new yaml.Document();
-    docRegion.set('proxies', regionFiltered);
-    fs.writeFileSync(REGION_OUTPUT_FILE, docRegion.toString({ indent: 2, lineWidth: 0 }));
-    console.log(`✅ 已保存地区筛选节点至 ${REGION_OUTPUT_FILE}`);
-  } else {
-    fs.writeFileSync(REGION_OUTPUT_FILE, 'proxies: []\n');
-    console.log(`⚠️ 地区筛选结果为空，已写入空文件`);
+  console.log(`IP节点数量：${originIpNodes.length}，域名节点数量：${domainNodes.length}`);
+
+  // ip -> 原始节点映射
+  const ipToNodesMap = new Map();
+  for(const n of originIpNodes){
+    if(!ipToNodesMap.has(n.server)) ipToNodesMap.set(n.server,[]);
+    ipToNodesMap.get(n.server).push(n);
   }
-})();
-// -------------------------------------------------- 主程序区 --------------------------------------------------
+
+  // 域名并发DNS解析
+  const dnsTasks = domainNodes.map(node=> async ()=>{
+    const ip = await dnsResolveHost(node.server);
+    if(!ip) return null;
+    return {node, resolvedIp:ip};
+  });
+  const dnsResults = await limitedTaskPool(dnsTasks,DNS_CONCURRENCY);
+  for(const item of dnsResults){
+    if(!item) continue;
+    const {node,resolvedIp} = item;
+    if(!ipToNodesMap.has(resolvedIp)) ipToNodesMap.set(resolvedIp,[]);
+    ipToNodesMap.get(resolvedIp).push(node);
+  }
+
+  const uniqueIpList = Array.from(ipToNodesMap.keys());
+  console.log(`待批量查询IP数量：${uniqueIpList.length}`);
+
+  // ip‑api批量查询
+  const ipCcMap = new Map();
+  if(uniqueIpList.length>0){
+    const batchCount = Math.ceil(uniqueIpList.length / BATCH_SIZE);
+    console.log(`--- ip‑api查询，共${batchCount}批 ---`);
+    for(let i=0;i<batchCount;i++){
+      const chunk = uniqueIpList.slice(i*BATCH_SIZE,(i+1)*BATCH_SIZE);
+      const batchRet = await batchQueryIpCountry(chunk);
+      if(batchRet){
+        for(const [ip,cc] of batchRet) ipCcMap.set(ip,cc);
+      }
+      if(i < batchCount-1) await delay(BATCH_INTERVAL);
+    }
+  }
+
+  // 回填国家码，丢弃无cc节点
+  const taggedAllNodes = [];
+  for(const [ip,nodeList] of ipToNodesMap){
+    const cc = ipCcMap.get(ip);
+    if(!cc) continue;
+    for(const rawNode of nodeList){
+      taggedAllNodes.push({node:rawNode, cc});
+    }
+  }
+  console.log(`geo查询成功节点数量：${taggedAllNodes.length}`);
+
+  // 地区筛选
+  const passList = [];
+  for(const item of taggedAllNodes){
+    const {node,cc} = item;
+    const t = node.type.toLowerCase();
+    if(REGIONFILTER_SKIP_PROTOLIST.has(t)){
+      passList.push({node,cc});
+    }else{
+      if(TARGET_COUNTRY_CODES.has(cc)){
+        passList.push({node,cc});
+      }
+    }
+  }
+
+  // 全局序号重命名
+  passList.forEach((item,idx)=>{
+    item.node.name = `${idx+1} ${item.cc}`;
+  });
+  const finalProxies = passList.map(i=>i.node);
+  console.log(`✅ 地区筛选后节点数量：${finalProxies.length}`);
+
+  // 按协议分组输出yaml
+  const groupMap = {};
+  for(const p of finalProxies){
+    const tp = p.type.toLowerCase();
+    if(!groupMap[tp]) groupMap[tp] = [];
+    groupMap[tp].push(p);
+  }
+  for(const [proto,proxyList] of Object.entries(groupMap)){
+    const docProto = new yaml.Document();
+    docProto.set("proxies",proxyList);
+    const outPath = `nodes/${proto}.yaml`;
+    fs.writeFileSync(outPath, docProto.toString({ indent:2, lineWidth:0 }));
+    console.log(`👉 ${outPath} 输出 ${proxyList.length} 个节点`);
+  }
+
+})().catch(err=>{
+  console.error("脚本异常：",err);
+  process.exit(1);
+});
