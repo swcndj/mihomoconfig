@@ -1618,7 +1618,7 @@ proxies:
       headers:
         host: www.gossipglove.com
       path: /assignment
-  - name: 535 SG
+  - name: 536 SG
     network: ws
     password: "521314"
     port: 443
@@ -1631,7 +1631,7 @@ proxies:
       headers:
         host: tjplay.lxdxo.kdns.fr
       path: /
-  - name: 578 US
+  - name: 579 US
     network: ws
     password: humanity
     port: 443
@@ -1705,7 +1705,7 @@ proxies:
       path: /
       headers:
         Host: gstatic.com
-  - name: 865 US
+  - name: 878 US
     type: trojan
     server: blog.webex.com
     port: 443
@@ -1717,7 +1717,7 @@ proxies:
       headers:
         Host: unnes.ac.id.yxls.eu.cc
       path: /br-orcl
-  - name: 937 US
+  - name: 951 US
     server: notdirect.howhealthyistoomajreally.homes
     port: 443
     type: trojan
@@ -1729,7 +1729,7 @@ proxies:
       path: /ilb9fuWfuqWDjlQrGCkIH66kMFPa
       headers:
         Host: notdirect.howhealthyistoomajreally.homes
-  - name: 938 US
+  - name: 952 US
     server: cnamemc1.cdncisco4.co
     port: 443
     type: trojan
@@ -1741,7 +1741,7 @@ proxies:
       path: /422Kdfwzf49IxeZJa
       headers:
         Host: c1mc.cdncisco4.co
-  - name: 948 US
+  - name: 962 US
     network: ws
     password: e20fd145-65f1-4aa3-96be-da0524bbb16e
     port: 20230
