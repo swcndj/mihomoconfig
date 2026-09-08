@@ -1,5 +1,5 @@
 proxies:
-  - name: 73 US
+  - name: 65 US
     type: mieru
     server: 157.254.223.44
     port: 34567
