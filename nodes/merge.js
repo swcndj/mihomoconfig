@@ -12,7 +12,7 @@ const PROTO_WHITELIST = new Set(["vless", "trojan", "hysteria2", "anytls", "tuic
 // 地区筛选豁免协议
 const REGIONFILTER_SKIP_PROTOLIST = new Set(["hysteria2", "anytls", "tuic", "mieru"]);
 // 非豁免协议目标地区
-const TARGET_COUNTRY_CODES = new Set(['HK', 'MO', 'TW', 'JP', 'KR', 'SG', 'US']);
+const TARGET_COUNTRY_CODES = new Set(['HK', 'MO', 'TW', 'JP', 'KR', 'SG', 'MY', 'TH', 'VN', 'PH', 'ID', 'AU', 'US']);
 
 // ip-api.com 批量查询接口
 const BATCH_ENDPOINT = 'http://ip-api.com/batch';
