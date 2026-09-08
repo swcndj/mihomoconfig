@@ -1,16 +1,4 @@
 payload:
-    # ----- linux.do -----
-    - +.ldstatic.com
-    
-    # ----- 隐私 -----
-    - +.onetrust.com
-    - +.scorecardresearch.com
-    
-    # ----- 个人网站 -----
-    - +.ahfun.me
-    - +.bulianglin.com
-    
-    # ----- DNS泄漏测试 -----
     - +.browserleaks.net
     - +.browserleaks.org
     - +.dnsleaktest.org
