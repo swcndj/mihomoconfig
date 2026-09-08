@@ -3113,8 +3113,39 @@ proxies:
     ws-opts:
       path: /sg-melbi
   - client-fingerprint: chrome
-    encryption: none
     name: 356 US
+    network: ws
+    port: 443
+    server: support.zoom.us
+    servername: support.zoom.us.yxls.eu.cc
+    skip-cert-verify: false
+    tls: true
+    type: vless
+    udp: true
+    uuid: 6680846a-8a57-4dfd-9a0e-63209cfc8535
+    ws-opts:
+      headers:
+        Host: support.zoom.us.yxls.eu.cc
+      path: /sg-amz
+  - name: 357 US
+    network: ws
+    packet-encoding: xudp
+    port: 80
+    server: support.zoom.us
+    servername: support.zoom.us
+    sub_tag: A004-260618
+    type: vless
+    udp: true
+    uuid: 6aa028bc-08a9-41d1-a397-d60ce65df081
+    ws-opts:
+      headers:
+        Host: shalana.xyz
+        User-Agent: Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
+      path: /shalana
+    xudp: true
+  - client-fingerprint: chrome
+    encryption: none
+    name: 358 US
     network: ws
     packet-encoding: xudp
     port: 30021
@@ -3131,7 +3162,7 @@ proxies:
         User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
       path: /@Marisa_kristi
     xudp: true
-  - name: 357 US
+  - name: 359 US
     network: ws
     packet-encoding: xudp
     port: 3087
@@ -3146,7 +3177,7 @@ proxies:
         User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36
       path: /@s5gydl
     xudp: true
-  - name: 358 US
+  - name: 360 US
     network: ws
     port: 3116
     server: node67.lunes.host
@@ -3158,7 +3189,7 @@ proxies:
       headers:
         Host: node67.lunes.host
       path: /@s5gydl
-  - name: 359 US
+  - name: 361 US
     network: ws
     port: 3087
     server: node67.lunes.host
@@ -3171,7 +3202,7 @@ proxies:
         Host: node67.lunes.host
       path: /@s5gydl
   - encryption: none
-    name: 360 US
+    name: 362 US
     network: ws
     packet-encoding: xudp
     port: 80
@@ -3190,7 +3221,7 @@ proxies:
     xudp: true
   - client-fingerprint: chrome
     encryption: none
-    name: 361 US
+    name: 363 US
     network: ws
     packet-encoding: xudp
     port: 443
@@ -3209,7 +3240,7 @@ proxies:
     xudp: true
   - client-fingerprint: chrome
     encryption: none
-    name: 362 SG
+    name: 364 SG
     network: ws
     packet-encoding: xudp
     port: 51262
@@ -3226,7 +3257,7 @@ proxies:
         User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
       path: /@Marisa_kristi
     xudp: true
-  - name: 363 US
+  - name: 365 US
     network: ws
     packet-encoding: xudp
     port: 8880
@@ -3242,7 +3273,7 @@ proxies:
       path: /
     xudp: true
   - client-fingerprint: chrome
-    name: 364 US
+    name: 366 US
     network: ws
     packet-encoding: xudp
     port: 2053
@@ -3259,7 +3290,7 @@ proxies:
         User-Agent: Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36
       path: /
     xudp: true
-  - name: 365 MY
+  - name: 367 MY
     network: ws
     packet-encoding: xudp
     port: 2087
@@ -3275,7 +3306,7 @@ proxies:
       path: /db55c40bbc75
     xudp: true
   - encryption: none
-    name: 366 PH
+    name: 368 PH
     network: ws
     packet-encoding: xudp
     port: 2087
@@ -3292,7 +3323,7 @@ proxies:
     xudp: true
   - client-fingerprint: chrome
     encryption: none
-    name: 367 US
+    name: 369 US
     network: ws
     packet-encoding: xudp
     port: 30021
@@ -3310,7 +3341,7 @@ proxies:
       path: /@Marisa_kristi
     xudp: true
   - encryption: none
-    name: 368 AU
+    name: 370 AU
     network: ws
     packet-encoding: xudp
     port: 8880
@@ -3327,7 +3358,7 @@ proxies:
     xudp: true
   - client-fingerprint: chrome
     encryption: none
-    name: 369 US
+    name: 371 US
     network: ws
     packet-encoding: xudp
     port: 443
@@ -3345,7 +3376,7 @@ proxies:
       path: /eyJqdW5rIjoiYW1sczlYWkFHOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
     xudp: true
   - encryption: none
-    name: 370 US
+    name: 372 US
     network: ws
     packet-encoding: xudp
     port: 8880
@@ -3362,7 +3393,7 @@ proxies:
       max-early-data: 2560
       path: /
     xudp: true
-  - name: 371 US
+  - name: 373 US
     network: ws
     packet-encoding: xudp
     port: 443
@@ -3377,7 +3408,7 @@ proxies:
         User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36
       path: /
     xudp: true
-  - name: 372 US
+  - name: 374 US
     network: ws
     packet-encoding: xudp
     port: 443
@@ -3392,7 +3423,7 @@ proxies:
         User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36
       path: /
     xudp: true
-  - name: 373 US
+  - name: 375 US
     network: ws
     packet-encoding: xudp
     port: 80
@@ -3405,37 +3436,6 @@ proxies:
       headers:
         Host: shalana.xyz
         User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36
-      path: /shalana
-    xudp: true
-  - client-fingerprint: chrome
-    name: 374 US
-    network: ws
-    port: 443
-    server: support.zoom.us
-    servername: support.zoom.us.yxls.eu.cc
-    skip-cert-verify: false
-    tls: true
-    type: vless
-    udp: true
-    uuid: 6680846a-8a57-4dfd-9a0e-63209cfc8535
-    ws-opts:
-      headers:
-        Host: support.zoom.us.yxls.eu.cc
-      path: /sg-amz
-  - name: 375 US
-    network: ws
-    packet-encoding: xudp
-    port: 80
-    server: support.zoom.us
-    servername: support.zoom.us
-    sub_tag: A004-260618
-    type: vless
-    udp: true
-    uuid: 6aa028bc-08a9-41d1-a397-d60ce65df081
-    ws-opts:
-      headers:
-        Host: shalana.xyz
-        User-Agent: Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
       path: /shalana
     xudp: true
   - client-fingerprint: chrome
@@ -5071,7 +5071,7 @@ proxies:
         Host: rutube.hampals.net
     skip-cert-verify: true
     udp: true
-  - name: 601 US
+  - name: 598 US
     type: vless
     server: python-graysongon.wasmer.app
     port: 443
@@ -5088,7 +5088,7 @@ proxies:
         User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.30 (KHTML, like Gecko) Slackware/Chrome/12.0.742.100 Safari/534.30
       path: /7bd180e8
     xudp: true
-  - name: 606 US
+  - name: 601 US
     type: vless
     server: rvg-production-cdb5.up.railway.app
     port: 443
@@ -5105,7 +5105,7 @@ proxies:
     uuid: 75747938-b9db-ec4a-e44a-5db2d21bd5b8
     ws-opts:
       path: /ws/75747938-b9db-ec4a-e44a-5db2d21bd5b8
-  - name: 609 US
+  - name: 604 US
     network: ws
     port: 80
     server: www.true.th
@@ -5120,7 +5120,7 @@ proxies:
         Host: d2pwbkmfr5lxa4.cloudfront.net
       path: /
   - client-fingerprint: chrome
-    name: 610 US
+    name: 605 US
     network: ws
     port: 443
     server: www.true.th
@@ -5135,7 +5135,7 @@ proxies:
   - alpn:
       - http/1.1
     client-fingerprint: chrome
-    name: 611 US
+    name: 606 US
     network: ws
     packet-encoding: xudp
     port: 443
@@ -5154,7 +5154,7 @@ proxies:
     xudp: true
   - client-fingerprint: chrome
     encryption: none
-    name: 612 JP
+    name: 607 JP
     network: ws
     packet-encoding: xudp
     port: 52226
@@ -5176,7 +5176,7 @@ proxies:
       - http/1.1
     client-fingerprint: chrome
     encryption: none
-    name: 613 US
+    name: 608 US
     network: xhttp
     packet-encoding: xudp
     port: 2087
@@ -5192,7 +5192,7 @@ proxies:
       path: /@v2_line
     xudp: true
   - client-fingerprint: chrome
-    name: 614 KR
+    name: 609 KR
     network: ws
     port: 443
     server: kr.mkdir.kdns.fr
@@ -5207,7 +5207,7 @@ proxies:
         Host: ai-verps.pages.dev
       path: /
   - client-fingerprint: chrome
-    name: 619 US
+    name: 614 US
     network: ws
     port: 443
     server: x4g-production-8eb3.up.railway.app
@@ -5218,7 +5218,7 @@ proxies:
     ws-opts:
       path: /ws/28e3703c-b92d-ae69-c217-0fbba3f1e309
   - client-fingerprint: firefox
-    name: 620 US
+    name: 615 US
     network: ws
     port: 443
     server: gcore.com
@@ -5229,7 +5229,7 @@ proxies:
     ws-opts:
       path: /
   - client-fingerprint: chrome
-    name: 621 US
+    name: 616 US
     network: ws
     port: 443
     server: 3x-ui-upgrade-prod.up.railway.app
@@ -5240,7 +5240,7 @@ proxies:
     ws-opts:
       path: /ws
   - client-fingerprint: ios
-    name: 622 US
+    name: 617 US
     network: ws
     port: 443
     server: x4g-production-d4c1.up.railway.app
@@ -5251,7 +5251,7 @@ proxies:
     ws-opts:
       path: /ws/1d737707-a14d-a990-c71a-aa04ce18ecee
   - client-fingerprint: chrome
-    name: 623 US
+    name: 618 US
     network: ws
     port: 443
     server: soskeynets-node-production-a5d6.up.railway.app
@@ -5262,7 +5262,7 @@ proxies:
     ws-opts:
       path: /vless
   - client-fingerprint: chrome
-    name: 624 US
+    name: 619 US
     network: ws
     port: 443
     server: x4g-production-7c06.up.railway.app
@@ -5273,7 +5273,7 @@ proxies:
     ws-opts:
       path: /ws/22470158-224c-f031-ee03-3f0826454a0f
   - client-fingerprint: chrome
-    name: 626 US
+    name: 621 US
     network: ws
     port: 443
     server: raygan.up.railway.app
@@ -5284,7 +5284,7 @@ proxies:
     ws-opts:
       path: /ws/df6d6d7b-299b-6cfb-c317-708405fb5fe9
   - client-fingerprint: chrome
-    name: 627 US
+    name: 622 US
     network: ws
     port: 443
     server: soskeynets.up.railway.app
@@ -5295,7 +5295,7 @@ proxies:
     ws-opts:
       path: /ws/df6d6d7b-299b-6cfb-c317-708405fb5fe9
   - client-fingerprint: chrome
-    name: 628 US
+    name: 623 US
     network: ws
     port: 443
     server: soskeynets-node-production-de530.up.railway.app
@@ -5306,7 +5306,7 @@ proxies:
     ws-opts:
       path: /vless
   - client-fingerprint: chrome
-    name: 629 US
+    name: 624 US
     network: ws
     port: 443
     server: marzban-node-production-de530.up.railway.app
@@ -5316,7 +5316,7 @@ proxies:
     ws-opts:
       path: /vless
   - client-fingerprint: chrome
-    name: 630 US
+    name: 625 US
     network: ws
     port: 443
     server: x4g-production-zps54.up.railway.app
@@ -5327,7 +5327,7 @@ proxies:
     ws-opts:
       path: /ws/34cc83ad-ff54-2a69-5b3a-b5779a9b74bd
   - client-fingerprint: chrome
-    name: 631 US
+    name: 626 US
     network: ws
     port: 443
     server: soskeynets-node-production-46eb.up.railway.app
@@ -5338,7 +5338,7 @@ proxies:
     ws-opts:
       path: /vless
   - client-fingerprint: chrome
-    name: 632 US
+    name: 627 US
     network: ws
     port: 443
     server: marzban-node-production-46eb.up.railway.app

@@ -1739,7 +1739,7 @@ proxies:
       path: /
       headers:
         Host: gstatic.com
-  - name: 605 US
+  - name: 600 US
     type: trojan
     server: blog.webex.com
     port: 443
@@ -1751,7 +1751,7 @@ proxies:
       headers:
         Host: unnes.ac.id.yxls.eu.cc
       path: /br-orcl
-  - name: 635 US
+  - name: 630 US
     server: notdirect.howhealthyistoomajreally.homes
     port: 443
     type: trojan
@@ -1763,7 +1763,7 @@ proxies:
       path: /ilb9fuWfuqWDjlQrGCkIH66kMFPa
       headers:
         Host: notdirect.howhealthyistoomajreally.homes
-  - name: 636 US
+  - name: 631 US
     server: cnamemc1.cdncisco4.co
     port: 443
     type: trojan
@@ -1775,7 +1775,7 @@ proxies:
       path: /422Kdfwzf49IxeZJa
       headers:
         Host: c1mc.cdncisco4.co
-  - name: 637 AU
+  - name: 632 AU
     server: cnamemt.ciscocdn1.live
     port: 443
     type: trojan
@@ -1787,7 +1787,7 @@ proxies:
       path: /rDCYQta83d0oPABKBhcIX
       headers:
         Host: c2mt.ciscocdn1.live
-  - name: 638 AU
+  - name: 633 AU
     server: cnamemk.ciscocdn1.live
     port: 443
     type: trojan
@@ -1799,7 +1799,7 @@ proxies:
       path: /rDCYQta83d0oPABKBhcIX
       headers:
         Host: c2mk.ciscocdn1.live
-  - name: 639 AU
+  - name: 634 AU
     server: cnamemc.ciscocdn1.live
     port: 443
     type: trojan
