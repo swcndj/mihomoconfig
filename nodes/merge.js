@@ -114,7 +114,7 @@ async function batchQueryIpCountry(ipList) {
 }
 // -------------------------------------------------- 主程序 --------------------------------------------------
 (async function main() {
-  console.log(`===== 开始处理，共 ${SUBS.length} 个订阅 =====\n`);
+  console.log(`\n--- 开始拉取，共 ${SUBS.length} 个订阅 ---`);
   const allRawProxies = [];
 
   // 拉取订阅
@@ -171,7 +171,8 @@ async function batchQueryIpCountry(ipList) {
     return true;
   });
   console.log(`去重后节点数量：${dedupList.length}`);
-
+  
+  console.log(`--- ip-api.com 批量查询 ---`);
   // 拆分IP/域名节点
   const originIpNodes = [];
   const domainNodes = [];
@@ -179,7 +180,7 @@ async function batchQueryIpCountry(ipList) {
     if(isIpAddress(node.server)) originIpNodes.push(node);
     else domainNodes.push(node);
   }
-  console.log(`  IP节点数量：${originIpNodes.length}，域名节点数量：${domainNodes.length}`);
+  console.log(`  IP 节点数量：${originIpNodes.length}，域名节点数量：${domainNodes.length}`);
 
   // ip -> 原始节点映射
   const ipToNodesMap = new Map();
@@ -203,13 +204,12 @@ async function batchQueryIpCountry(ipList) {
   }
 
   const uniqueIpList = Array.from(ipToNodesMap.keys());
-  console.log(`  待批量查询IP数量：${uniqueIpList.length}`);
+  console.log(`  待批量查询 IP 数量：${uniqueIpList.length}`);
 
   // ip‑api批量查询
   const ipCcMap = new Map();
   if(uniqueIpList.length>0){
     const batchCount = Math.ceil(uniqueIpList.length / BATCH_SIZE);
-    console.log(`  ip-api.com批量查询，共${batchCount}批`);
     for(let i=0;i<batchCount;i++){
       const chunk = uniqueIpList.slice(i*BATCH_SIZE,(i+1)*BATCH_SIZE);
       const batchRet = await batchQueryIpCountry(chunk);
@@ -229,7 +229,8 @@ async function batchQueryIpCountry(ipList) {
       taggedAllNodes.push({node:rawNode, cc});
     }
   }
-  console.log(`  geo查询成功节点数量：${taggedAllNodes.length}`);
+  console.log(`  地区查询成功节点数量：${taggedAllNodes.length}`);
+  console.log(`--- ip-api.com 批量查询 ---`);
 
   // 地区筛选
   const passList = [];
@@ -250,7 +251,7 @@ async function batchQueryIpCountry(ipList) {
     item.node.name = `${idx+1} ${item.cc}`;
   });
   const finalProxies = passList.map(i=>i.node);
-  console.log(`🌐 地区筛选后节点数量：${finalProxies.length}`);
+  console.log(`🌐 地区筛选后节点数量：${finalProxies.length}\n`);
 
   // 按协议分组输出yaml
   const groupMap = {};
