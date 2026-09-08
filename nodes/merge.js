@@ -7,20 +7,20 @@ const dns = require('dns').promises;
 const SUBS = JSON.parse(fs.readFileSync("./nodes/subs.json", "utf8"));
 const REQUEST_TIMEOUT = 15000;
 
-// 协议白名单，只放行列表内协议
+// 协议筛选白名单
 const PROTO_WHITELIST = new Set(["vless", "trojan", "hysteria2", "anytls", "tuic", "mieru"]);
-// 地区过滤豁免协议：geo拿到cc就全部保留，不校验目标国家
+// 地区筛选豁免协议
 const REGIONFILTER_SKIP_PROTOLIST = new Set(["hysteria2", "anytls", "tuic", "mieru"]);
-// 目标国家代码集合，非豁免协议必须命中
+// 非豁免协议目标地区
 const TARGET_COUNTRY_CODES = new Set(['HK', 'MO', 'TW', 'JP', 'KR', 'SG', 'US']);
 
-// ip-api.com批量查询接口
+// ip-api.com 批量查询接口
 const BATCH_ENDPOINT = 'http://ip-api.com/batch';
 const BATCH_SIZE = 100;
 const BATCH_INTERVAL = 4500;
 const BATCH_FIELDS = 'status,countryCode';
 
-// DNS解析配置
+// DNS 解析配置
 const DNS_CONCURRENCY = 30;
 const DNS_TIMEOUT = 5000;
 const DNS_UPSTREAM = ["1.1.1.1","8.8.8.8"];
@@ -54,7 +54,7 @@ function isIpAddress(str) {
   return ipv4Regex.test(str) || ipv6Regex.test(str);
 }
 
-// 域名DNS解析，获取第一个IPv4地址
+// 域名 DNS 解析，获取第一个 IPv4 地址
 async function dnsResolveHost(host) {
   const resolver = new dns.Resolver();
   resolver.setServers(DNS_UPSTREAM);
@@ -114,7 +114,7 @@ async function batchQueryIpCountry(ipList) {
 }
 // -------------------------------------------------- 主程序 --------------------------------------------------
 (async function main() {
-  console.log(`\n--- 开始拉取，共 ${SUBS.length} 个订阅 ---`);
+  console.log(`\n--- 开始拉取，共 ${SUBS.length} 个订阅`);
   const allRawProxies = [];
 
   // 拉取订阅
@@ -139,12 +139,12 @@ async function batchQueryIpCountry(ipList) {
   }
   console.log(`\n汇总节点数量：${allRawProxies.length}`);
 
-  // 协议白名单 + 字段校验
+  // 协议白名单 + 节点校验
   const typeFiltered = allRawProxies.filter(p => {
     if (!isValidNode(p)) return false;
     const type = p.type.toLowerCase();
     if (!PROTO_WHITELIST.has(type)) return false;
-    // 全局校验（所有协议）：server非空字符串，port 必须整数 1‑65535，tls、udp、skip‑cert‑verify 存在则必须布尔
+    // 全局校验（所有协议）：server 非空字符串，port 必须整数 1‑65535，tls、udp、skip‑cert‑verify 存在则必须布尔
     if (typeof p.server !== 'string' || p.server.trim() === '') return false;
     if (!Number.isInteger(p.port) || p.port < 1 || p.port > 65535) return false;
     if ('tls' in p && typeof p.tls !== 'boolean') return false;
@@ -184,7 +184,7 @@ async function batchQueryIpCountry(ipList) {
     }
     return true;
   });
-  console.log(`协议过滤后节点数量：${typeFiltered.length}`);
+  console.log(`协议筛选后节点数量：${typeFiltered.length}`);
 
   // 节点去重
   const seen = new Set();
@@ -216,7 +216,7 @@ async function batchQueryIpCountry(ipList) {
     ipToNodesMap.get(n.server).push(n);
   }
 
-  // 域名并发DNS解析
+  // 域名并发 DNS 解析
   const dnsTasks = domainNodes.map(node=> async ()=>{
     const ip = await dnsResolveHost(node.server);
     if(!ip) return null;
@@ -233,7 +233,7 @@ async function batchQueryIpCountry(ipList) {
   const uniqueIpList = Array.from(ipToNodesMap.keys());
   console.log(`  待批量查询 IP 数量：${uniqueIpList.length}`);
 
-  // ip‑api批量查询
+  // ip‑api 批量查询
   const ipCcMap = new Map();
   if(uniqueIpList.length>0){
     const batchCount = Math.ceil(uniqueIpList.length / BATCH_SIZE);
@@ -247,7 +247,7 @@ async function batchQueryIpCountry(ipList) {
     }
   }
 
-  // 回填国家码，丢弃无cc节点
+  // 回填国家码，丢弃无 cc 节点
   const taggedAllNodes = [];
   for(const [ip,nodeList] of ipToNodesMap){
     const cc = ipCcMap.get(ip);
@@ -280,7 +280,7 @@ async function batchQueryIpCountry(ipList) {
   const finalProxies = passList.map(i=>i.node);
   console.log(`🌐 地区筛选后节点数量：${finalProxies.length}\n`);
 
-  // 按协议分组输出yaml
+  // 按协议分组输出 yaml
   const groupMap = {};
   for(const p of finalProxies){
     const tp = p.type.toLowerCase();
