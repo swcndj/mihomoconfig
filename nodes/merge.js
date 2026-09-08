@@ -184,6 +184,7 @@ async function batchQueryIpCountry(ipList) {
     }
     return true;
   });
+  console.log(`协议过滤后节点数量：${typeFiltered.length}`);
 
   // 节点去重
   const seen = new Set();
