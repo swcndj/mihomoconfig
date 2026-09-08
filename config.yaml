@@ -39,7 +39,7 @@ dns:
     - https://doh.pub/dns-query
   nameserver-policy:
     'rule-set:ads-AWAvenue,category-ads-all': rcode://success
-    'rule-set:cloudflare,github,google,x,meta,telegram,netflix,spotify,category-ai-!cn,category-ip-geo-detect,gfw,domain_proxy':
+    'rule-set:cloudflare,github,google,x,meta,telegram,netflix,spotify,category-ai-!cn,category-ip-geo-detect,gfw,proxy':
     - https://cloudflare-dns.com/dns-query#disable-ipv6=true
     - https://dns.google/dns-query#disable-ipv6=true
   nameserver:
@@ -202,12 +202,6 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
-  domain_proxy:
-    type: http
-    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/rules/domain_proxy.yaml"
-    path: ./rules/domain_proxy.yaml
-    interval: 86400
-    behavior: domain
   gfw:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.mrs"
@@ -257,6 +251,12 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
+  proxy:
+    type: http
+    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/rules/geosite_proxy.yaml"
+    path: ./rules/proxy.yaml
+    interval: 86400
+    behavior: domain
   spotify:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.mrs"
@@ -361,7 +361,7 @@ rules:
   - RULE-SET,category-ai-!cn,自动选择
   - RULE-SET,category-ip-geo-detect,自动选择
   - RULE-SET,gfw,自动选择
-  - RULE-SET,domain_proxy,自动选择
+  - RULE-SET,proxy,自动选择
   - RULE-SET,apple,DIRECT
   - RULE-SET,bitwarden,DIRECT
   - RULE-SET,microsoft,DIRECT
