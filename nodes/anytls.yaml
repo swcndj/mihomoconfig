@@ -1,18 +1,13 @@
 proxies:
-  - name: 647 SG
-    password: 9d280633-bba9-40e7-92e1-a6f7715e016b
-    port: 7000
-    server: asg3.jueduibupao.top
+  - name: 640 HK
+    password: dCwrni
+    port: 7008
+    server: api.meituan88.com
     skip-cert-verify: true
+    sni: globalnetworktraffic.com
     type: anytls
-  - name: 648 SG
-    password: 9d280633-bba9-40e7-92e1-a6f7715e016b
-    port: 7000
-    server: asg2.jueduibupao.top
-    skip-cert-verify: true
-    sni: www.microsoft.com
-    type: anytls
-  - name: 706 JP
+    udp: true
+  - name: 697 JP
     server: as-jp39.y1static-content-distribution.shop
     port: 443
     type: anytls
@@ -20,7 +15,7 @@ proxies:
     udp: true
     sni: as-jp39.y1static-content-distribution.shop
     skip-cert-verify: true
-  - name: 707 KR
+  - name: 698 KR
     server: yazhouany02.downapptwo.cc
     port: 47053
     type: anytls
@@ -28,120 +23,8 @@ proxies:
     udp: true
     sni: xjp202.pulsarcore.site
     skip-cert-verify: true
-  - name: 708 SG
-    server: yzany01.downapptwo.cc
-    port: 27631
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: hk03.jdddyy01.cc
-    skip-cert-verify: true
-  - name: 709 SG
-    server: yzany01.downapptwo.cc
-    port: 38302
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: us71.pulsarcore.site
-    skip-cert-verify: true
-  - name: 710 SG
-    server: yzany01.downapptwo.cc
-    port: 25558
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: us40.pulsarcore.site
-    skip-cert-verify: true
-  - name: 711 KR
-    server: yazhouany02.downapptwo.cc
-    port: 37236
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: tw16.swiftrelay.cc
-    skip-cert-verify: true
-  - name: 712 KR
-    server: yazhouany02.downapptwo.cc
-    port: 33368
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: tw01.swiftrelay.cc
-    skip-cert-verify: true
-  - name: 713 KR
-    server: svip.skycon808.com
-    port: 35311
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: xjp88.swiftrelay.cc
-    skip-cert-verify: true
-  - name: 714 KR
-    server: svip.skycon808.com
-    port: 61134
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: us18.pulsarcore.site
-    skip-cert-verify: true
-  - name: 715 KR
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    port: 22216
-    server: svip.skycon808.com
-    skip-cert-verify: true
-    sni: us72.pulsarcore.site
-    type: anytls
-    udp: true
-  - name: 716 KR
-    server: svip.skycon808.com
-    port: 49380
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: us08.pulsarcore.site
-    skip-cert-verify: true
-  - name: 717 JP
-    server: jpglobal-identity-federation-auth.younai-ytl.shop
-    port: 28219
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: us05.pulsarcore.site
-    skip-cert-verify: true
-  - name: 718 JP
-    server: jpglobal-identity-federation-auth.younai-ytl.shop
-    port: 19620
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: us32.pulsarcore.site
-    skip-cert-verify: true
-  - name: 719 JP
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    port: 64293
-    server: jpglobal-identity-federation-auth.younai-ytl.shop
-    skip-cert-verify: true
-    sni: trq002.swiftrelay.cc
-    type: anytls
-    udp: true
-  - name: 720 JP
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    port: 12791
-    server: jpglobal-identity-federation-auth.younai-ytl.shop
-    skip-cert-verify: true
-    sni: jp10.pulsarcore.site
-    type: anytls
-    udp: true
-  - name: 721 SG
-    server: yzany01.downapptwo.cc
-    port: 25504
-    type: anytls
-    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
-    udp: true
-    sni: us02.swiftrelay.cc
-    skip-cert-verify: true
   - type: anytls
-    name: 722 SG
+    name: 699 KR
     server: yazhouany02.downapptwo.cc
     port: 25135
     udp: true
@@ -152,3 +35,115 @@ proxies:
     packetEncoding: none
     allowInsecure: "1"
     sub-tag: P002-260618
+  - name: 700 KR
+    server: yzany01.downapptwo.cc
+    port: 27631
+    type: anytls
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    udp: true
+    sni: hk03.jdddyy01.cc
+    skip-cert-verify: true
+  - name: 701 SG
+    server: yazhouany02.downapptwo.cc
+    port: 37236
+    type: anytls
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    udp: true
+    sni: tw16.swiftrelay.cc
+    skip-cert-verify: true
+  - name: 702 KR
+    server: svip.skycon808.com
+    port: 35311
+    type: anytls
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    udp: true
+    sni: xjp88.swiftrelay.cc
+    skip-cert-verify: true
+  - name: 703 KR
+    server: svip.skycon808.com
+    port: 61134
+    type: anytls
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    udp: true
+    sni: us18.pulsarcore.site
+    skip-cert-verify: true
+  - name: 704 KR
+    server: svip.skycon808.com
+    port: 49380
+    type: anytls
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    udp: true
+    sni: us08.pulsarcore.site
+    skip-cert-verify: true
+  - name: 705 KR
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    port: 22216
+    server: svip.skycon808.com
+    skip-cert-verify: true
+    sni: us72.pulsarcore.site
+    type: anytls
+    udp: true
+  - name: 706 KR
+    server: yazhouany02.downapptwo.cc
+    port: 33368
+    type: anytls
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    udp: true
+    sni: tw01.swiftrelay.cc
+    skip-cert-verify: true
+  - name: 707 JP
+    server: jpglobal-identity-federation-auth.younai-ytl.shop
+    port: 28219
+    type: anytls
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    udp: true
+    sni: us05.pulsarcore.site
+    skip-cert-verify: true
+  - name: 708 JP
+    server: jpglobal-identity-federation-auth.younai-ytl.shop
+    port: 19620
+    type: anytls
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    udp: true
+    sni: us32.pulsarcore.site
+    skip-cert-verify: true
+  - name: 709 JP
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    port: 64293
+    server: jpglobal-identity-federation-auth.younai-ytl.shop
+    skip-cert-verify: true
+    sni: trq002.swiftrelay.cc
+    type: anytls
+    udp: true
+  - name: 710 JP
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    port: 12791
+    server: jpglobal-identity-federation-auth.younai-ytl.shop
+    skip-cert-verify: true
+    sni: jp10.pulsarcore.site
+    type: anytls
+    udp: true
+  - name: 711 SG
+    server: yzany01.downapptwo.cc
+    port: 25504
+    type: anytls
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    udp: true
+    sni: us02.swiftrelay.cc
+    skip-cert-verify: true
+  - name: 712 SG
+    server: yzany01.downapptwo.cc
+    port: 38302
+    type: anytls
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    udp: true
+    sni: us71.pulsarcore.site
+    skip-cert-verify: true
+  - name: 713 SG
+    server: yzany01.downapptwo.cc
+    port: 25558
+    type: anytls
+    password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+    udp: true
+    sni: us40.pulsarcore.site
+    skip-cert-verify: true
