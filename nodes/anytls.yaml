@@ -1,24 +1,168 @@
 proxies:
-  - name: 715 HK
-    password: dCwrni
-    port: 7008
-    server: api.meituan88.com
+  - alpn:
+      - h2
+      - http/1.1
+    client-fingerprint: chrome
+    name: 742 HK
+    password: 9d131888-b23b-48a1-87f0-efac30937df3
+    port: 64012
+    server: cccct.284.pics
     skip-cert-verify: true
-    sni: globalnetworktraffic.com
+    sni: 9527app.site
     type: anytls
     udp: true
-  - name: 775 US
-    server: anytls.864106.xyz
-    port: 18001
+  - alpn:
+      - h2
+      - http/1.1
+    client-fingerprint: chrome
+    name: 743 HK
+    password: 9d131888-b23b-48a1-87f0-efac30937df3
+    port: 64022
+    server: cccct.284.pics
+    skip-cert-verify: true
+    sni: 9527app.site
     type: anytls
+    udp: true
+  - alpn:
+      - h2
+      - http/1.1
+    client-fingerprint: chrome
+    name: 744 HK
+    password: 9d131888-b23b-48a1-87f0-efac30937df3
+    port: 64102
+    server: cccct.284.pics
+    skip-cert-verify: true
+    sni: 9527app.site
+    type: anytls
+    udp: true
+  - alpn:
+      - h2
+      - http/1.1
+    client-fingerprint: chrome
+    name: 745 SG
+    password: 9d131888-b23b-48a1-87f0-efac30937df3
+    port: 64031
+    server: jjjjp.358.onl
+    skip-cert-verify: true
+    sni: 9527app.site
+    type: anytls
+    udp: true
+  - alpn:
+      - h2
+      - http/1.1
+    client-fingerprint: chrome
+    name: 746 SG
+    password: 9d131888-b23b-48a1-87f0-efac30937df3
+    port: 64051
+    server: jjjjp.358.onl
+    skip-cert-verify: true
+    sni: 9527app.site
+    type: anytls
+    udp: true
+  - alpn:
+      - h2
+      - http/1.1
+    client-fingerprint: chrome
+    name: 747 SG
+    password: 9d131888-b23b-48a1-87f0-efac30937df3
+    port: 64041
+    server: jjjjp.358.onl
+    skip-cert-verify: true
+    sni: 9527app.site
+    type: anytls
+    udp: true
+  - alpn:
+      - h2
+      - http/1.1
+    client-fingerprint: chrome
+    name: 748 SG
+    password: 9d131888-b23b-48a1-87f0-efac30937df3
+    port: 64071
+    server: jjjjp.358.onl
+    skip-cert-verify: true
+    sni: 9527app.site
+    type: anytls
+    udp: true
+  - alpn:
+      - h2
+      - http/1.1
+    client-fingerprint: chrome
+    name: 749 SG
+    password: 9d131888-b23b-48a1-87f0-efac30937df3
+    port: 64081
+    server: jjjjp.358.onl
+    skip-cert-verify: true
+    sni: 9527app.site
+    type: anytls
+    udp: true
+  - name: 750 US
+    password: github.com/Alvin9999-newpac/fanqiang
+    port: 19000
+    server: anytls2.864106.xyz
+    skip-cert-verify: true
+    sni: anytls2.864106.xyz
+    type: anytls
+  - name: 751 US
     password: fanvpn.net
-    udp: true
-    sni: anytls.864106.xyz
+    port: 18001
+    server: anytls.864106.xyz
     skip-cert-verify: true
-  - name: 776 JP
-    password: 79843bd8-445a-4704-a216-8179fed3f0a8
+    sni: anytls.864106.xyz
+    type: anytls
+  - name: 752 KR
+    password: 13f0acfa-38c1-4e82-a758-583aa31740df
+    port: 60005
+    server: svip.skycon808.com
+    skip-cert-verify: true
+    sni: xjp18.2uuzhe.com
+    type: anytls
+    udp: true
+  - name: 753 JP
+    password: XrgOXIVkpI
+    port: 54324
+    server: jpsui.jzy88.top
+    skip-cert-verify: true
+    sni: jpsui.jzy88.top
+    type: anytls
+  - name: 811 KR
+    password: cff54a1b-ae1e-4700-b833-625179cc0f93
+    port: 40042
+    server: kr2.catzl.top
+    type: anytls
+    udp: true
+    sni: kr2.catzl.top
+  - name: 812 US
+    password: cff54a1b-ae1e-4700-b833-625179cc0f93
+    port: 40022
+    server: us2.catzl.top
+    type: anytls
+    udp: true
+    sni: us2.catzl.top
+  - name: 813 KR
+    password: cff54a1b-ae1e-4700-b833-625179cc0f93
+    port: 40041
+    server: kr1.catzl.top
+    type: anytls
+    udp: true
+    sni: kr1.catzl.top
+  - name: 814 JP
+    password: cff54a1b-ae1e-4700-b833-625179cc0f93
     port: 40055
     server: jp5.catzl.top
     type: anytls
     udp: true
     sni: jp5.catzl.top
+  - name: 815 TW
+    password: cff54a1b-ae1e-4700-b833-625179cc0f93
+    port: 40072
+    server: tw2.catzl.top
+    type: anytls
+    udp: true
+    sni: tw2.catzl.top
+  - name: 816 TW
+    password: cff54a1b-ae1e-4700-b833-625179cc0f93
+    port: 40071
+    server: tw1.catzl.top
+    type: anytls
+    udp: true
+    sni: tw1.catzl.top

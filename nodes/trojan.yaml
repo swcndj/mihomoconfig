@@ -1569,7 +1569,7 @@ proxies:
         User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
       path: /?proxyip=ts.hpc.tw
   - client-fingerprint: chrome
-    name: 353 US
+    name: 354 US
     network: ws
     password: humanity
     port: 8443
@@ -1586,7 +1586,7 @@ proxies:
   - alpn:
       - http/1.1
     client-fingerprint: chrome
-    name: 384 US
+    name: 386 US
     network: ws
     password: humanity
     port: 443
@@ -1600,7 +1600,7 @@ proxies:
       headers:
         User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36
       path: /assignment
-  - name: 389 US
+  - name: 391 US
     password: MiTiVPN
     port: 443
     server: 199.232.78.160
@@ -1614,7 +1614,7 @@ proxies:
       path: /
   - alpn:
       - http/1.1
-    name: 390 US
+    name: 392 US
     password: MiTiVPN
     port: 443
     server: 151.101.56.7
@@ -1626,7 +1626,7 @@ proxies:
       headers:
         Host: mitivpn-mitivpn-mitivpn--mitivpn-mitivpn--mitivpn.global.ssl.fastly.net
       path: "@mehrosaboran"
-  - name: 401 US
+  - name: 436 US
     network: ws
     password: humanity
     port: 443
@@ -1639,7 +1639,7 @@ proxies:
       headers:
         host: www.gossipglove.com
       path: /assignment
-  - name: 430 SG
+  - name: 464 SG
     network: ws
     password: "521314"
     port: 443
@@ -1652,7 +1652,7 @@ proxies:
       headers:
         host: tjplay.lxdxo.kdns.fr
       path: /
-  - name: 470 US
+  - name: 504 US
     network: ws
     password: humanity
     port: 443
@@ -1663,7 +1663,7 @@ proxies:
     udp: true
     ws-opts:
       path: /assignment
-  - name: 471 US
+  - name: 506 US
     network: ws
     password: humanity
     port: 443
@@ -1676,7 +1676,7 @@ proxies:
       headers:
         host: www.creationlong.org
       path: /assignment
-  - name: 472 US
+  - name: 507 US
     network: ws
     password: humanity
     port: 443
@@ -1689,7 +1689,7 @@ proxies:
       headers:
         host: www.creationlong.org
       path: /assignment
-  - name: 522 SG
+  - name: 557 SG
     network: ws
     password: "521314"
     port: 443
@@ -1702,7 +1702,7 @@ proxies:
       headers:
         host: tjplay.lxdxo.kdns.fr
       path: /
-  - name: 523 SG
+  - name: 558 SG
     network: ws
     password: "521314"
     port: 443
@@ -1715,7 +1715,7 @@ proxies:
       headers:
         host: tjplay.lxdxo.kdns.fr
       path: /
-  - name: 530 US
+  - name: 562 US
     server: 95.164.33.62
     port: 443
     type: trojan
@@ -1727,7 +1727,7 @@ proxies:
       path: /websocket
       headers:
         Host: sourceforge.net
-  - name: 531 US
+  - name: 563 US
     server: 66.228.55.178
     port: 2083
     type: trojan
@@ -1739,7 +1739,7 @@ proxies:
       path: /
       headers:
         Host: gstatic.com
-  - name: 673 US
+  - name: 702 US
     type: trojan
     server: blog.webex.com
     port: 443
@@ -1751,7 +1751,7 @@ proxies:
       headers:
         Host: unnes.ac.id.yxls.eu.cc
       path: /br-orcl
-  - name: 710 US
+  - name: 737 US
     server: notdirect.howhealthyistoomajreally.homes
     port: 443
     type: trojan
@@ -1763,7 +1763,7 @@ proxies:
       path: /ilb9fuWfuqWDjlQrGCkIH66kMFPa
       headers:
         Host: notdirect.howhealthyistoomajreally.homes
-  - name: 711 US
+  - name: 738 US
     server: cnamemc1.cdncisco4.co
     port: 443
     type: trojan
@@ -1775,7 +1775,7 @@ proxies:
       path: /422Kdfwzf49IxeZJa
       headers:
         Host: c1mc.cdncisco4.co
-  - name: 712 AU
+  - name: 739 AU
     server: cnamemt.ciscocdn1.live
     port: 443
     type: trojan
@@ -1787,7 +1787,7 @@ proxies:
       path: /rDCYQta83d0oPABKBhcIX
       headers:
         Host: c2mt.ciscocdn1.live
-  - name: 713 AU
+  - name: 740 AU
     server: cnamemk.ciscocdn1.live
     port: 443
     type: trojan
@@ -1799,7 +1799,7 @@ proxies:
       path: /rDCYQta83d0oPABKBhcIX
       headers:
         Host: c2mk.ciscocdn1.live
-  - name: 714 AU
+  - name: 741 AU
     server: cnamemc.ciscocdn1.live
     port: 443
     type: trojan
