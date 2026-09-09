@@ -3,7 +3,7 @@ proxies:
       - h2
       - http/1.1
     client-fingerprint: chrome
-    name: 740 HK
+    name: 737 HK
     password: 9d131888-b23b-48a1-87f0-efac30937df3
     port: 64012
     server: cccct.284.pics
@@ -15,7 +15,7 @@ proxies:
       - h2
       - http/1.1
     client-fingerprint: chrome
-    name: 741 HK
+    name: 738 HK
     password: 9d131888-b23b-48a1-87f0-efac30937df3
     port: 64022
     server: cccct.284.pics
@@ -27,7 +27,7 @@ proxies:
       - h2
       - http/1.1
     client-fingerprint: chrome
-    name: 742 HK
+    name: 739 HK
     password: 9d131888-b23b-48a1-87f0-efac30937df3
     port: 64102
     server: cccct.284.pics
@@ -39,7 +39,7 @@ proxies:
       - h2
       - http/1.1
     client-fingerprint: chrome
-    name: 743 SG
+    name: 740 SG
     password: 9d131888-b23b-48a1-87f0-efac30937df3
     port: 64031
     server: jjjjp.358.onl
@@ -51,7 +51,7 @@ proxies:
       - h2
       - http/1.1
     client-fingerprint: chrome
-    name: 744 SG
+    name: 741 SG
     password: 9d131888-b23b-48a1-87f0-efac30937df3
     port: 64051
     server: jjjjp.358.onl
@@ -63,7 +63,7 @@ proxies:
       - h2
       - http/1.1
     client-fingerprint: chrome
-    name: 745 SG
+    name: 742 SG
     password: 9d131888-b23b-48a1-87f0-efac30937df3
     port: 64041
     server: jjjjp.358.onl
@@ -75,7 +75,7 @@ proxies:
       - h2
       - http/1.1
     client-fingerprint: chrome
-    name: 746 SG
+    name: 743 SG
     password: 9d131888-b23b-48a1-87f0-efac30937df3
     port: 64071
     server: jjjjp.358.onl
@@ -87,7 +87,7 @@ proxies:
       - h2
       - http/1.1
     client-fingerprint: chrome
-    name: 747 SG
+    name: 744 SG
     password: 9d131888-b23b-48a1-87f0-efac30937df3
     port: 64081
     server: jjjjp.358.onl
@@ -95,21 +95,21 @@ proxies:
     sni: 9527app.site
     type: anytls
     udp: true
-  - name: 748 US
+  - name: 745 US
     password: github.com/Alvin9999-newpac/fanqiang
     port: 19000
     server: anytls2.864106.xyz
     skip-cert-verify: true
     sni: anytls2.864106.xyz
     type: anytls
-  - name: 749 US
+  - name: 746 US
     password: fanvpn.net
     port: 18001
     server: anytls.864106.xyz
     skip-cert-verify: true
     sni: anytls.864106.xyz
     type: anytls
-  - name: 750 KR
+  - name: 747 KR
     password: 13f0acfa-38c1-4e82-a758-583aa31740df
     port: 60005
     server: svip.skycon808.com
@@ -117,52 +117,10 @@ proxies:
     sni: xjp18.2uuzhe.com
     type: anytls
     udp: true
-  - name: 751 JP
+  - name: 748 JP
     password: XrgOXIVkpI
     port: 54324
     server: jpsui.jzy88.top
     skip-cert-verify: true
     sni: jpsui.jzy88.top
     type: anytls
-  - name: 809 TW
-    password: 1ec9dfbd-4808-4cd9-80e8-52b5f81996e1
-    port: 40072
-    server: tw2.catzl.top
-    type: anytls
-    udp: true
-    sni: tw2.catzl.top
-  - name: 810 TW
-    password: 1ec9dfbd-4808-4cd9-80e8-52b5f81996e1
-    port: 40073
-    server: tw3.catzl.top
-    type: anytls
-    udp: true
-    sni: tw3.catzl.top
-  - name: 811 US
-    password: 1ec9dfbd-4808-4cd9-80e8-52b5f81996e1
-    port: 40022
-    server: us2.catzl.top
-    type: anytls
-    udp: true
-    sni: us2.catzl.top
-  - name: 812 JP
-    password: 1ec9dfbd-4808-4cd9-80e8-52b5f81996e1
-    port: 40055
-    server: jp5.catzl.top
-    type: anytls
-    udp: true
-    sni: jp5.catzl.top
-  - name: 813 KR
-    password: 1ec9dfbd-4808-4cd9-80e8-52b5f81996e1
-    port: 40041
-    server: kr1.catzl.top
-    type: anytls
-    udp: true
-    sni: kr1.catzl.top
-  - name: 814 TW
-    password: 1ec9dfbd-4808-4cd9-80e8-52b5f81996e1
-    port: 40071
-    server: tw1.catzl.top
-    type: anytls
-    udp: true
-    sni: tw1.catzl.top
