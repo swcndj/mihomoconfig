@@ -1,5 +1,5 @@
 proxies:
-  - name: 599 SG
+  - name: 672 SG
     type: tuic
     server: sg2-8sb.6121999.dpdns.org
     port: 33738
@@ -10,16 +10,4 @@ proxies:
     sni: sg2-8sb.6121999.dpdns.org
     udp-relay-mode: quic
     uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-    version: 5
-  - type: tuic
-    name: 712 JP
-    server: de0bc027-teisg0-thtg7i-1lkt0.jp5.hyhuawei.com
-    port: 443
-    password: cd1b0ae0-4010-11ee-953a-f23c9164ca5d
-    uuid: cd1b0ae0-4010-11ee-953a-f23c9164ca5d
-    alpn:
-      - h3
-    congestion-controller: bbr
-    sni: de0bc027-teisg0-thtg7i-1lkt0.jp5.hyhuawei.com
-    udp-relay-mode: native
     version: 5
