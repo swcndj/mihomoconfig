@@ -38,7 +38,7 @@ dns:
     - https://223.5.5.5/dns-query
     - https://1.12.12.12/dns-query
   nameserver-policy:
-    'rule-set:ads-AWAvenue,category-ads-all': rcode://success
+    'rule-set:anti-ad,ads-AWAvenue,category-ads-all': rcode://success
     'rule-set:cloudflare,github,google,x,meta,telegram,netflix,spotify,category-ai-!cn,category-ip-geo-detect,gfw,proxy':
     - https://8.8.8.8/dns-query#disable-ipv6=true
     - https://1.1.1.1/dns-query#disable-ipv6=true
@@ -146,6 +146,13 @@ proxy-groups:
     - nodes_tuic
 # ======================================== 规则订阅 ========================================
 rule-providers:
+  anti-ad:
+    type: http
+    url: "https://anti-ad.net/mihomo.mrs"
+    path: ./rules/anti-ad.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
   ads-AWAvenue:
     type: http
     url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.mrs"
@@ -341,6 +348,7 @@ rules:
   - RULE-SET,private_ip,DIRECT,no-resolve
   - DOMAIN-SUFFIX,loz.dpdns.org,DIRECT
   # 广告拒绝
+  - RULE-SET,anti-ad,REJECT
   - RULE-SET,ads-AWAvenue,REJECT
   - RULE-SET,category-ads-all,REJECT
   # 分流规则
