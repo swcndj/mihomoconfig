@@ -1664,18 +1664,6 @@ proxies:
     ws-opts:
       path: /assignment
   - name: 502 US
-    type: trojan
-    server: blog.webex.com
-    port: 443
-    network: ws
-    password: afbcd89a-5a90-4a44-a42a-be08f444aa3f
-    skip-cert-verify: false
-    sni: unnes.ac.id.yxls.eu.cc
-    ws-opts:
-      headers:
-        Host: unnes.ac.id.yxls.eu.cc
-      path: /br-orcl
-  - name: 503 US
     network: ws
     password: humanity
     port: 443
@@ -1688,7 +1676,7 @@ proxies:
       headers:
         host: www.creationlong.org
       path: /assignment
-  - name: 504 US
+  - name: 503 US
     network: ws
     password: humanity
     port: 443
@@ -1701,7 +1689,7 @@ proxies:
       headers:
         host: www.creationlong.org
       path: /assignment
-  - name: 554 SG
+  - name: 553 SG
     network: ws
     password: "521314"
     port: 443
@@ -1714,7 +1702,7 @@ proxies:
       headers:
         host: tjplay.lxdxo.kdns.fr
       path: /
-  - name: 555 SG
+  - name: 554 SG
     network: ws
     password: "521314"
     port: 443
@@ -1727,7 +1715,7 @@ proxies:
       headers:
         host: tjplay.lxdxo.kdns.fr
       path: /
-  - name: 559 US
+  - name: 558 US
     server: 95.164.33.62
     port: 443
     type: trojan
@@ -1739,7 +1727,7 @@ proxies:
       path: /websocket
       headers:
         Host: sourceforge.net
-  - name: 560 US
+  - name: 559 US
     server: 66.228.55.178
     port: 2083
     type: trojan
@@ -1751,7 +1739,19 @@ proxies:
       path: /
       headers:
         Host: gstatic.com
-  - name: 737 US
+  - name: 702 US
+    type: trojan
+    server: blog.webex.com
+    port: 443
+    network: ws
+    password: afbcd89a-5a90-4a44-a42a-be08f444aa3f
+    skip-cert-verify: false
+    sni: unnes.ac.id.yxls.eu.cc
+    ws-opts:
+      headers:
+        Host: unnes.ac.id.yxls.eu.cc
+      path: /br-orcl
+  - name: 736 US
     server: notdirect.howhealthyistoomajreally.homes
     port: 443
     type: trojan
@@ -1763,7 +1763,7 @@ proxies:
       path: /ilb9fuWfuqWDjlQrGCkIH66kMFPa
       headers:
         Host: notdirect.howhealthyistoomajreally.homes
-  - name: 738 US
+  - name: 737 US
     server: cnamemc1.cdncisco4.co
     port: 443
     type: trojan
@@ -1775,7 +1775,7 @@ proxies:
       path: /422Kdfwzf49IxeZJa
       headers:
         Host: c1mc.cdncisco4.co
-  - name: 739 AU
+  - name: 738 AU
     server: cnamemt.ciscocdn1.live
     port: 443
     type: trojan
@@ -1787,7 +1787,7 @@ proxies:
       path: /rDCYQta83d0oPABKBhcIX
       headers:
         Host: c2mt.ciscocdn1.live
-  - name: 740 AU
+  - name: 739 AU
     server: cnamemk.ciscocdn1.live
     port: 443
     type: trojan
@@ -1799,7 +1799,7 @@ proxies:
       path: /rDCYQta83d0oPABKBhcIX
       headers:
         Host: c2mk.ciscocdn1.live
-  - name: 741 AU
+  - name: 740 AU
     server: cnamemc.ciscocdn1.live
     port: 443
     type: trojan
