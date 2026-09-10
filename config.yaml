@@ -152,7 +152,6 @@ rule-providers:
     path: ./rules/anti-ad-whitelist.yaml
     interval: 86400
     behavior: domain
-    format: mrs
   anti-ad:
     type: http
     url: "https://anti-ad.net/mihomo.mrs"
