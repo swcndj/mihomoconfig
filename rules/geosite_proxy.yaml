@@ -1,4 +1,5 @@
 payload:
+    - +.geolocation.onetrust.com
     - +.browserleaks.net
     - +.browserleaks.org
     - +.dnsleaktest.org
