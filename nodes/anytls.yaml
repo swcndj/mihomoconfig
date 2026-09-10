@@ -3,7 +3,7 @@ proxies:
       - h2
       - http/1.1
     client-fingerprint: chrome
-    name: 737 HK
+    name: 732 HK
     password: 9d131888-b23b-48a1-87f0-efac30937df3
     port: 64012
     server: cccct.284.pics
@@ -15,7 +15,7 @@ proxies:
       - h2
       - http/1.1
     client-fingerprint: chrome
-    name: 738 HK
+    name: 733 HK
     password: 9d131888-b23b-48a1-87f0-efac30937df3
     port: 64022
     server: cccct.284.pics
@@ -27,7 +27,7 @@ proxies:
       - h2
       - http/1.1
     client-fingerprint: chrome
-    name: 739 HK
+    name: 734 HK
     password: 9d131888-b23b-48a1-87f0-efac30937df3
     port: 64102
     server: cccct.284.pics
@@ -39,7 +39,7 @@ proxies:
       - h2
       - http/1.1
     client-fingerprint: chrome
-    name: 740 SG
+    name: 735 SG
     password: 9d131888-b23b-48a1-87f0-efac30937df3
     port: 64031
     server: jjjjp.358.onl
@@ -51,7 +51,7 @@ proxies:
       - h2
       - http/1.1
     client-fingerprint: chrome
-    name: 741 SG
+    name: 736 SG
     password: 9d131888-b23b-48a1-87f0-efac30937df3
     port: 64051
     server: jjjjp.358.onl
@@ -63,7 +63,7 @@ proxies:
       - h2
       - http/1.1
     client-fingerprint: chrome
-    name: 742 SG
+    name: 737 SG
     password: 9d131888-b23b-48a1-87f0-efac30937df3
     port: 64041
     server: jjjjp.358.onl
@@ -75,7 +75,7 @@ proxies:
       - h2
       - http/1.1
     client-fingerprint: chrome
-    name: 743 SG
+    name: 738 SG
     password: 9d131888-b23b-48a1-87f0-efac30937df3
     port: 64071
     server: jjjjp.358.onl
@@ -87,7 +87,7 @@ proxies:
       - h2
       - http/1.1
     client-fingerprint: chrome
-    name: 744 SG
+    name: 739 SG
     password: 9d131888-b23b-48a1-87f0-efac30937df3
     port: 64081
     server: jjjjp.358.onl
@@ -95,21 +95,21 @@ proxies:
     sni: 9527app.site
     type: anytls
     udp: true
-  - name: 745 US
+  - name: 740 US
     password: github.com/Alvin9999-newpac/fanqiang
     port: 19000
     server: anytls2.864106.xyz
     skip-cert-verify: true
     sni: anytls2.864106.xyz
     type: anytls
-  - name: 746 US
+  - name: 741 US
     password: fanvpn.net
     port: 18001
     server: anytls.864106.xyz
     skip-cert-verify: true
     sni: anytls.864106.xyz
     type: anytls
-  - name: 747 KR
+  - name: 742 KR
     password: 13f0acfa-38c1-4e82-a758-583aa31740df
     port: 60005
     server: svip.skycon808.com
@@ -117,10 +117,65 @@ proxies:
     sni: xjp18.2uuzhe.com
     type: anytls
     udp: true
-  - name: 748 JP
+  - name: 743 JP
     password: XrgOXIVkpI
     port: 54324
     server: jpsui.jzy88.top
     skip-cert-verify: true
     sni: jpsui.jzy88.top
     type: anytls
+  - name: 798 SG
+    server: xjb.salirukou.shop
+    port: 51337
+    type: anytls
+    password: 34da2119-c5ff-45df-870c-9ddb75d88d3b
+    udp: true
+    sni: sxxcva.qhrgobull.fun
+    skip-cert-verify: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: 799 SG
+    server: xj.salirukou.shop
+    port: 23126
+    type: anytls
+    password: fd992476-1b80-477b-9411-a5a009e114d1
+    udp: true
+    sni: ygdfsb.efgo.my
+    skip-cert-verify: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: 800 SG
+    server: xj.salirukou.shop
+    port: 21123
+    type: anytls
+    password: fd992476-1b80-477b-9411-a5a009e114d1
+    udp: true
+    sni: tdfycft.yfftftf.shop
+    skip-cert-verify: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: 801 SG
+    server: xj.salirukou.shop
+    port: 46801
+    type: anytls
+    password: fd992476-1b80-477b-9411-a5a009e114d1
+    udp: true
+    sni: gtdsdf.efgo.my
+    skip-cert-verify: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: 802 SG
+    server: xjb.salirukou.shop
+    port: 32132
+    type: anytls
+    password: 34da2119-c5ff-45df-870c-9ddb75d88d3b
+    udp: true
+    sni: buvauh.yfftftf.shop
+    skip-cert-verify: true
+    alpn:
+      - h2
+      - http/1.1
