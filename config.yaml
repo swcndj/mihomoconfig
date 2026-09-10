@@ -195,12 +195,26 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
+  cloudflare_ip:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cloudflare.mrs"
+    path: ./rules/cloudflare_ip.mrs
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
   cn:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"
     path: ./rules/cn.mrs
     interval: 86400
     behavior: domain
+    format: mrs
+  cn_ip:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"
+    path: ./rules/cn_ip.mrs
+    interval: 86400
+    behavior: ipcidr
     format: mrs
   gfw:
     type: http
@@ -223,12 +237,26 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
+  google_ip:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"
+    path: ./rules/google_ip.mrs
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
   meta:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/meta.mrs"
     path: ./rules/meta.mrs
     interval: 86400
     behavior: domain
+    format: mrs
+  facebook_ip:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/facebook.mrs"
+    path: ./rules/facebook_ip.mrs
+    interval: 86400
+    behavior: ipcidr
     format: mrs
   microsoft:
     type: http
@@ -244,12 +272,26 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
+  netflix_ip:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs"
+    path: ./rules/netflix_ip.mrs
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
   private:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"
     path: ./rules/private.mrs
     interval: 86400
     behavior: domain
+    format: mrs
+  private_ip:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs"
+    path: ./rules/private_ip.mrs
+    interval: 86400
+    behavior: ipcidr
     format: mrs
   proxy:
     type: http
@@ -271,6 +313,13 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
+  telegram_ip:
+    type: http
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"
+    path: ./rules/telegram_ip.mrs
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
   x:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/x.mrs"
@@ -278,59 +327,10 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
-  ip_cloudflare:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cloudflare.mrs"
-    path: ./rules/ip_cloudflare.mrs
-    interval: 86400
-    behavior: ipcidr
-    format: mrs
-  ip_cn:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"
-    path: ./rules/ip_cn.mrs
-    interval: 86400
-    behavior: ipcidr
-    format: mrs
-  ip_facebook:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/facebook.mrs"
-    path: ./rules/ip_facebook.mrs
-    interval: 86400
-    behavior: ipcidr
-    format: mrs
-  ip_google:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"
-    path: ./rules/ip_google.mrs
-    interval: 86400
-    behavior: ipcidr
-    format: mrs
-  ip_netflix:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs"
-    path: ./rules/ip_netflix.mrs
-    interval: 86400
-    behavior: ipcidr
-    format: mrs
-  ip_private:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs"
-    path: ./rules/ip_private.mrs
-    interval: 86400
-    behavior: ipcidr
-    format: mrs
-  ip_telegram:
-    type: http
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"
-    path: ./rules/ip_telegram.mrs
-    interval: 86400
-    behavior: ipcidr
-    format: mrs
-  ip_twitter:
+  twitter_ip:
     type: http
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/twitter.mrs"
-    path: ./rules/ip_twitter.mrs
+    path: ./rules/twitter_ip.mrs
     interval: 86400
     behavior: ipcidr
     format: mrs
@@ -338,25 +338,25 @@ rule-providers:
 rules:
   # 内网、私有域名直连
   - RULE-SET,private,DIRECT
-  - RULE-SET,ip_private,DIRECT,no-resolve
+  - RULE-SET,private_ip,DIRECT,no-resolve
   - DOMAIN-SUFFIX,loz.dpdns.org,DIRECT
   # 广告拒绝
   - RULE-SET,ads-AWAvenue,REJECT
   - RULE-SET,category-ads-all,REJECT
   # 分流规则
   - RULE-SET,cloudflare,自动选择
-  - RULE-SET,ip_cloudflare,自动选择,no-resolve
+  - RULE-SET,cloudflare_ip,自动选择,no-resolve
   - RULE-SET,github,自动选择
   - RULE-SET,google,自动选择
-  - RULE-SET,ip_google,自动选择,no-resolve
+  - RULE-SET,google_ip,自动选择,no-resolve
   - RULE-SET,x,自动选择
-  - RULE-SET,ip_twitter,自动选择,no-resolve
+  - RULE-SET,twitter_ip,自动选择,no-resolve
   - RULE-SET,meta,自动选择
-  - RULE-SET,ip_facebook,自动选择,no-resolve
+  - RULE-SET,facebook_ip,自动选择,no-resolve
   - RULE-SET,telegram,自动选择
-  - RULE-SET,ip_telegram,自动选择,no-resolve
+  - RULE-SET,telegram_ip,自动选择,no-resolve
   - RULE-SET,netflix,自动选择
-  - RULE-SET,ip_netflix,自动选择,no-resolve
+  - RULE-SET,netflix_ip,自动选择,no-resolve
   - RULE-SET,spotify,自动选择
   - RULE-SET,category-ai-!cn,自动选择
   - RULE-SET,category-ip-geo-detect,自动选择
@@ -366,6 +366,6 @@ rules:
   - RULE-SET,bitwarden,DIRECT
   - RULE-SET,microsoft,DIRECT
   - RULE-SET,cn,DIRECT
-  - RULE-SET,ip_cn,DIRECT,no-resolve
+  - RULE-SET,cn_ip,DIRECT,no-resolve
   # 全局兜底
   - MATCH,DIRECT
