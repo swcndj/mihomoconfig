@@ -343,6 +343,8 @@ rules:
   # 广告拒绝
   - RULE-SET,ads-AWAvenue,REJECT
   - RULE-SET,category-ads-all,REJECT
+  # 阻断 UDP 443 流量，转为 TCP 流量
+  - AND,((NETWORK,UDP),(DST‑PORT,443)),(RULE‑SET,gfw),DIRECT
   # 分流规则
   - RULE-SET,cloudflare,自动选择
   - RULE-SET,ip_cloudflare,自动选择,no-resolve
