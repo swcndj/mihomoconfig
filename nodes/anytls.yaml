@@ -1,88 +1,36 @@
 proxies:
-  - alpn:
-      - h2
-      - http/1.1
-    client-fingerprint: chrome
-    name: 730 HK
-    password: 9d131888-b23b-48a1-87f0-efac30937df3
-    port: 64012
-    server: cccct.284.pics
-    skip-cert-verify: true
-    sni: 9527app.site
-    type: anytls
-    udp: true
-  - alpn:
-      - h2
-      - http/1.1
-    client-fingerprint: chrome
-    name: 731 HK
-    password: 9d131888-b23b-48a1-87f0-efac30937df3
-    port: 64022
-    server: cccct.284.pics
-    skip-cert-verify: true
-    sni: 9527app.site
-    type: anytls
-    udp: true
-  - alpn:
-      - h2
-      - http/1.1
-    client-fingerprint: chrome
-    name: 732 HK
-    password: 9d131888-b23b-48a1-87f0-efac30937df3
-    port: 64102
-    server: cccct.284.pics
-    skip-cert-verify: true
-    sni: 9527app.site
-    type: anytls
-    udp: true
-  - name: 733 US
+  - name: 743 US
     password: github.com/Alvin9999-newpac/fanqiang
     port: 19000
     server: anytls2.864106.xyz
     skip-cert-verify: true
     sni: anytls2.864106.xyz
     type: anytls
-  - name: 734 US
-    password: fanvpn.net
-    port: 18001
-    server: anytls.864106.xyz
-    skip-cert-verify: true
-    sni: anytls.864106.xyz
-    type: anytls
-  - name: 735 KR
-    password: 13f0acfa-38c1-4e82-a758-583aa31740df
-    port: 60005
-    server: svip.skycon808.com
-    skip-cert-verify: true
-    sni: xjp18.2uuzhe.com
+  - name: 796 KR
+    password: ec15d3a6-543c-43fd-b4fb-c2e88f889152
+    port: 40041
+    server: kr1.catzl.top
     type: anytls
     udp: true
-  - name: 736 JP
-    password: XrgOXIVkpI
-    port: 54324
-    server: jpsui.jzy88.top
-    skip-cert-verify: true
-    sni: jpsui.jzy88.top
-    type: anytls
-  - alpn:
-      - h2
-      - http/1.1
-    name: 790 SG
-    password: 34da2119-c5ff-45df-870c-9ddb75d88d3b
-    port: 21123
-    server: xj.salirukou.shop
-    skip-cert-verify: true
-    sni: tdfycft.yfftftf.shop
+    sni: kr1.catzl.top
+  - name: 797 US
+    password: ec15d3a6-543c-43fd-b4fb-c2e88f889152
+    port: 40022
+    server: us2.catzl.top
     type: anytls
     udp: true
-  - alpn:
-      - h2
-      - http/1.1
-    name: 791 SG
-    password: fd992476-1b80-477b-9411-a5a009e114d1
-    port: 46801
-    server: xj.salirukou.shop
-    skip-cert-verify: true
-    sni: gtdsdf.efgo.my
+    sni: us2.catzl.top
+  - name: 798 KR
+    password: ec15d3a6-543c-43fd-b4fb-c2e88f889152
+    port: 40042
+    server: kr2.catzl.top
     type: anytls
     udp: true
+    sni: kr2.catzl.top
+  - name: 799 JP
+    password: ec15d3a6-543c-43fd-b4fb-c2e88f889152
+    port: 40055
+    server: jp5.catzl.top
+    type: anytls
+    udp: true
+    sni: jp5.catzl.top
