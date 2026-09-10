@@ -146,6 +146,13 @@ proxy-groups:
     - nodes_tuic
 # ======================================== 规则订阅 ========================================
 rule-providers:
+  anti-ad-whitelist:
+    type: http
+    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/rules/anti-ad-whitelist.yaml"
+    path: ./rules/anti-ad-whitelist.yaml
+    interval: 86400
+    behavior: domain
+    format: mrs
   anti-ad:
     type: http
     url: "https://anti-ad.net/mihomo.mrs"
@@ -302,7 +309,7 @@ rule-providers:
     format: mrs
   proxy:
     type: http
-    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/rules/geosite_proxy.yaml"
+    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/rules/proxy.yaml"
     path: ./rules/proxy.yaml
     interval: 86400
     behavior: domain
@@ -348,6 +355,7 @@ rules:
   - RULE-SET,private_ip,DIRECT,no-resolve
   - DOMAIN-SUFFIX,loz.dpdns.org,DIRECT
   # 广告拒绝
+  - RULE-SET,anti-ad-whitelist,DIRECT
   - RULE-SET,anti-ad,REJECT
   - RULE-SET,ads-AWAvenue,REJECT
   - RULE-SET,category-ads-all,REJECT
