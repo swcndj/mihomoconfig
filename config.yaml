@@ -35,16 +35,16 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
   proxy-server-nameserver:
-    - https://223.5.5.5/dns-query
-    - https://1.12.12.12/dns-query
+    - https://223.5.5.5/dns-query#h3=true
+    - https://doh.pub/dns-query
   nameserver-policy:
-    'rule-set:ads-AWAvenue,category-ads-all': rcode://success
+    'rule-set:ads-AWAvenue,ads-666OS,category-ads-all': rcode://success
     'rule-set:cloudflare,github,google,x,meta,telegram,netflix,spotify,category-ai-!cn,category-ip-geo-detect,gfw,proxy':
-    - https://8.8.8.8/dns-query#disable-ipv6=true
-    - https://1.1.1.1/dns-query#disable-ipv6=true
+    - https://dns.google/dns-query#disable-ipv6=true
+    - https://cloudflare-dns.com/dns-query#disable-ipv6=true
   nameserver:
-    - https://223.5.5.5/dns-query
-    - https://1.12.12.12/dns-query
+    - https://223.5.5.5/dns-query#h3=true
+    - https://doh.pub/dns-query
 # ======================================== 域名嗅探 ========================================
 sniffer:
   enable: true
@@ -63,10 +63,6 @@ sniffer:
     - "dlg.io.mi.com"
     - "+.push.apple.com"
     - "time.apple.com"
-    - "dns.msftncsi.com"
-    - "www.msftncsi.com"
-    - "www.msftconnecttest.com"
-    - "time.windows.com"
 # ======================================== Tun模式 ========================================
 tun:
   enable: false
@@ -79,15 +75,6 @@ tun:
   auto-detect-interface: true
 # ======================================== 代理集合 ========================================
 proxy-providers:
-  nodes_anytls:
-    type: http
-    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/nodes/anytls.yaml"
-    interval: 7200
-    path: ./providers/nodes_anytls.yaml
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
   nodes_hysteria2:
     type: http
     url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/nodes/hysteria2.yaml"
@@ -97,20 +84,11 @@ proxy-providers:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
-  nodes_mieru:
+  nodes_anytls:
     type: http
-    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/nodes/mieru.yaml"
+    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/nodes/anytls.yaml"
     interval: 7200
-    path: ./providers/nodes_mieru.yaml
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-  nodes_trojan:
-    type: http
-    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/nodes/trojan.yaml"
-    interval: 7200
-    path: ./providers/nodes_trojan.yaml
+    path: ./providers/nodes_anytls.yaml
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
@@ -124,11 +102,11 @@ proxy-providers:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
-  nodes_vless:
+  nodes_mieru:
     type: http
-    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/nodes/vless.yaml"
+    url: "https://raw.githubusercontent.com/swcndj/mihomoconfig/main/nodes/mieru.yaml"
     interval: 7200
-    path: ./providers/nodes_vless.yaml
+    path: ./providers/nodes_mieru.yaml
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
@@ -138,18 +116,24 @@ proxy-groups:
   - name: "自动选择"
     type: url-test
     tolerance: 50
-    disable-udp: false
     use:
-    - nodes_anytls
     - nodes_hysteria2
-    - nodes_mieru
+    - nodes_anytls
     - nodes_tuic
+    - nodes_mieru
 # ======================================== 规则订阅 ========================================
 rule-providers:
   ads-AWAvenue:
     type: http
     url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.mrs"
     path: ./rules/ads-AWAvenue.mrs
+    interval: 86400
+    behavior: domain
+    format: mrs
+  ads-666OS:
+    type: http
+    url: "https://raw.githubusercontent.com/666OS/rules/refs/heads/release/mihomo/domain/Advertising.mrs"
+    path: ./rules/ads-666OS.mrs
     interval: 86400
     behavior: domain
     format: mrs
@@ -342,6 +326,7 @@ rules:
   - DOMAIN-SUFFIX,loz.dpdns.org,DIRECT
   # 广告拒绝
   - RULE-SET,ads-AWAvenue,REJECT
+  - RULE-SET,ads-666OS,REJECT
   - RULE-SET,category-ads-all,REJECT
   # 分流规则
   - RULE-SET,cloudflare,自动选择
