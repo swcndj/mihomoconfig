@@ -1,6 +1,5 @@
 payload:
-    # 阿里系域名
-    - +.mmstat.com
-
     - +.gamer520.com
     - +.ilovepdf.com
+    # 阿里系域名
+    - +.mmstat.com
