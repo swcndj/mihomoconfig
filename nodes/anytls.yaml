@@ -1,43 +1,8 @@
 proxies:
-  - name: 770 US
+  - name: 759 US
     password: github.com/Alvin9999-newpac/fanqiang
     port: 19000
     server: anytls2.864106.xyz
     skip-cert-verify: true
     sni: anytls2.864106.xyz
     type: anytls
-  - name: 820 KR
-    password: 264b1836-14ce-4687-9287-64ba728654a3
-    port: 40042
-    server: kr2.catzl.top
-    type: anytls
-    udp: true
-    sni: kr2.catzl.top
-  - name: 821 KR
-    password: 264b1836-14ce-4687-9287-64ba728654a3
-    port: 40041
-    server: kr1.catzl.top
-    type: anytls
-    udp: true
-    sni: kr1.catzl.top
-  - name: 822 TW
-    password: 264b1836-14ce-4687-9287-64ba728654a3
-    port: 40072
-    server: tw2.catzl.top
-    type: anytls
-    udp: true
-    sni: tw2.catzl.top
-  - name: 823 US
-    password: 264b1836-14ce-4687-9287-64ba728654a3
-    port: 40022
-    server: us2.catzl.top
-    type: anytls
-    udp: true
-    sni: us2.catzl.top
-  - name: 824 JP
-    password: 264b1836-14ce-4687-9287-64ba728654a3
-    port: 40055
-    server: jp5.catzl.top
-    type: anytls
-    udp: true
-    sni: jp5.catzl.top
