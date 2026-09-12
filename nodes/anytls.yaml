@@ -1,50 +1,86 @@
 proxies:
-  - name: 665 US
+  - name: 570 DE
+    password: e70ec0f2ab60e8c22b316156bf9ac43fec98b45be6681401
+    port: 443
+    server: 178.105.126.242
+    skip-cert-verify: true
+    type: anytls
+  - name: 738 SG
+    password: 7212418a-c4e9-4378-8722-b34bda5f0467
+    port: 56304
+    server: a4.entrance.app.xdns.win
+    skip-cert-verify: true
+    sni: www.microsoft.com
+    type: anytls
+    udp: true
+  - name: 739 SG
+    password: 7212418a-c4e9-4378-8722-b34bda5f0467
+    port: 56301
+    server: a1.entrance.app.xdns.men
+    skip-cert-verify: true
+    sni: www.microsoft.com
+    type: anytls
+    udp: true
+  - name: 740 SG
+    password: 7212418a-c4e9-4378-8722-b34bda5f0467
+    port: 56306
+    server: a6.entrance.app.xdns.win
+    skip-cert-verify: true
+    sni: www.microsoft.com
+    type: anytls
+    udp: true
+  - name: 741 SG
+    password: 7212418a-c4e9-4378-8722-b34bda5f0467
+    port: 56307
+    server: a7.entrance.app.xdns.win
+    skip-cert-verify: true
+    sni: www.microsoft.com
+    type: anytls
+    udp: true
+  - name: 742 SG
+    password: 7212418a-c4e9-4378-8722-b34bda5f0467
+    port: 56301
+    server: a1.entrance.app.xdns.win
+    skip-cert-verify: true
+    sni: www.microsoft.com
+    type: anytls
+    udp: true
+  - name: 743 SG
+    password: 7212418a-c4e9-4378-8722-b34bda5f0467
+    port: 56305
+    server: a5.entrance.app.xdns.win
+    skip-cert-verify: true
+    sni: www.microsoft.com
+    type: anytls
+    udp: true
+  - name: 744 SG
+    password: 7212418a-c4e9-4378-8722-b34bda5f0467
+    port: 56308
+    server: a8.entrance.app.xdns.men
+    skip-cert-verify: true
+    sni: www.microsoft.com
+    type: anytls
+    udp: true
+  - name: 745 SG
+    password: 7212418a-c4e9-4378-8722-b34bda5f0467
+    port: 56302
+    server: a2.entrance.app.xdns.win
+    skip-cert-verify: true
+    sni: www.microsoft.com
+    type: anytls
+    udp: true
+  - name: 746 SG
+    password: 7212418a-c4e9-4378-8722-b34bda5f0467
+    port: 56303
+    server: a3.entrance.app.xdns.men
+    skip-cert-verify: true
+    sni: www.microsoft.com
+    type: anytls
+    udp: true
+  - name: 753 US
     password: github.com/Alvin9999-newpac/fanqiang
     port: 19000
     server: anytls2.864106.xyz
     skip-cert-verify: true
     sni: anytls2.864106.xyz
     type: anytls
-  - name: 710 TW
-    password: ec270101-b7c0-4f53-93cd-41ff2ad8983f
-    port: 40071
-    server: tw1.catzl.top
-    type: anytls
-    udp: true
-    sni: tw1.catzl.top
-  - name: 711 US
-    password: ec270101-b7c0-4f53-93cd-41ff2ad8983f
-    port: 40022
-    server: us2.catzl.top
-    type: anytls
-    udp: true
-    sni: us2.catzl.top
-  - name: 712 KR
-    password: 6d6a1924-ff1f-4791-9640-76b1b1424e4e
-    port: 40041
-    server: kr1.catzl.top
-    type: anytls
-    udp: true
-    sni: kr1.catzl.top
-  - name: 713 KR
-    password: ec270101-b7c0-4f53-93cd-41ff2ad8983f
-    port: 40042
-    server: kr2.catzl.top
-    type: anytls
-    udp: true
-    sni: kr2.catzl.top
-  - name: 714 JP
-    password: 6d6a1924-ff1f-4791-9640-76b1b1424e4e
-    port: 40054
-    server: jp4.catzl.top
-    type: anytls
-    udp: true
-    sni: jp4.catzl.top
-  - name: 715 JP
-    password: ec270101-b7c0-4f53-93cd-41ff2ad8983f
-    port: 40055
-    server: jp5.catzl.top
-    type: anytls
-    udp: true
-    sni: jp5.catzl.top
