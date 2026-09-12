@@ -1,5 +1,5 @@
 proxies:
-  - name: 697 SG
+  - name: 701 SG
     type: tuic
     server: sg2-8sb.6121999.dpdns.org
     port: 33738

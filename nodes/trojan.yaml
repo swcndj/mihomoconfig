@@ -1755,7 +1755,7 @@ proxies:
       headers:
         Host: mitivpn---ss--s---mitivpn-3.global.ssl.fastly.net
     udp: true
-  - name: 698 US
+  - name: 702 US
     type: trojan
     server: blog.webex.com
     port: 443
@@ -1767,7 +1767,7 @@ proxies:
       headers:
         Host: unnes.ac.id.yxls.eu.cc
       path: /br-orcl
-  - name: 733 US
+  - name: 738 US
     server: notdirect.howhealthyistoomajreally.homes
     port: 443
     type: trojan
@@ -1779,7 +1779,7 @@ proxies:
       path: /ilb9fuWfuqWDjlQrGCkIH66kMFPa
       headers:
         Host: notdirect.howhealthyistoomajreally.homes
-  - name: 734 US
+  - name: 739 US
     server: cnamemc1.cdncisco4.co
     port: 443
     type: trojan
@@ -1791,7 +1791,7 @@ proxies:
       path: /422Kdfwzf49IxeZJa
       headers:
         Host: c1mc.cdncisco4.co
-  - name: 735 AU
+  - name: 740 AU
     server: cnamemt.ciscocdn1.live
     port: 443
     type: trojan
@@ -1803,7 +1803,7 @@ proxies:
       path: /rDCYQta83d0oPABKBhcIX
       headers:
         Host: c2mt.ciscocdn1.live
-  - name: 736 AU
+  - name: 741 AU
     server: cnamemk.ciscocdn1.live
     port: 443
     type: trojan
@@ -1815,7 +1815,7 @@ proxies:
       path: /rDCYQta83d0oPABKBhcIX
       headers:
         Host: c2mk.ciscocdn1.live
-  - name: 737 AU
+  - name: 742 AU
     server: cnamemc.ciscocdn1.live
     port: 443
     type: trojan
