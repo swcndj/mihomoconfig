@@ -1481,7 +1481,7 @@ proxies:
     udp: true
     ws-opts:
       path: /assignment
-  - name: 289 US
+  - name: 288 US
     password: humanity
     port: 443
     server: 216.24.57.1
@@ -1493,7 +1493,7 @@ proxies:
       headers:
         Host: www.ignitelimit.com
       path: /assignment
-  - name: 290 US
+  - name: 289 US
     password: humanity
     port: 443
     server: render.com
@@ -1503,7 +1503,7 @@ proxies:
     udp: true
     ws-opts:
       path: /assignment
-  - name: 291 US
+  - name: 290 US
     password: humanity
     port: 443
     server: 130.250.137.171
@@ -1515,7 +1515,7 @@ proxies:
       headers:
         Host: www.ignitelimit.com
       path: /assignment
-  - name: 294 US
+  - name: 293 US
     password: humanity
     port: 443
     server: 8.6.112.0
@@ -1526,7 +1526,7 @@ proxies:
     ws-opts:
       path: /assignment
   - client-fingerprint: chrome
-    name: 321 US
+    name: 319 US
     network: ws
     password: humanity
     port: 8443
@@ -1541,7 +1541,7 @@ proxies:
         User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; FIG-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.80 Mobile Safari/537.36
       path: /assignment
   - client-fingerprint: chrome
-    name: 322 US
+    name: 320 US
     network: ws
     password: humanity
     port: 8443
@@ -1555,7 +1555,7 @@ proxies:
       headers:
         User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36
       path: /assignment
-  - name: 365 US
+  - name: 363 US
     network: ws
     password: humanity
     port: 443
@@ -1568,7 +1568,7 @@ proxies:
       headers:
         host: www.gossipglove.com
       path: /assignment
-  - name: 391 SG
+  - name: 389 SG
     network: ws
     password: "521314"
     port: 443
@@ -1584,7 +1584,7 @@ proxies:
   - alpn:
       - http/1.1
     client-fingerprint: chrome
-    name: 400 US
+    name: 398 US
     network: ws
     password: humanity
     port: 443
@@ -1598,8 +1598,20 @@ proxies:
       headers:
         User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36
       path: /assignment
+  - name: 405 US
+    type: trojan
+    server: 151.101.56.6
+    port: 443
+    password: MiTiVPN
+    sni: ssl.fastly.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+      headers:
+        Host: mitivpn---ss--s---mitivpn-1.global.ssl.fastly.net
+    udp: true
   - client-fingerprint: chrome
-    name: 444 US
+    name: 443 US
     network: ws
     password: Aimer
     port: 2053
@@ -1612,7 +1624,7 @@ proxies:
       headers:
         User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
       path: /?proxyip=ts.hpc.tw
-  - name: 459 US
+  - name: 458 US
     network: ws
     password: humanity
     port: 443
@@ -1625,7 +1637,7 @@ proxies:
       headers:
         host: www.gossipglove.com
       path: /assignment
-  - name: 487 SG
+  - name: 486 SG
     network: ws
     password: "521314"
     port: 443
@@ -1638,7 +1650,7 @@ proxies:
       headers:
         host: tjplay.lxdxo.kdns.fr
       path: /
-  - name: 527 US
+  - name: 526 US
     network: ws
     password: humanity
     port: 443
@@ -1649,7 +1661,7 @@ proxies:
     udp: true
     ws-opts:
       path: /assignment
-  - name: 528 US
+  - name: 527 US
     type: trojan
     server: blog.webex.com
     port: 443
@@ -1724,7 +1736,31 @@ proxies:
       path: /
       headers:
         Host: gstatic.com
-  - name: 754 US
+  - name: 596 US
+    type: trojan
+    server: 151.101.56.7
+    port: 443
+    password: MiTiVPN
+    sni: ssl.fastly.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e2@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+      headers:
+        Host: mitivpn---ss--s---mitivpn-2.global.ssl.fastly.net
+    udp: true
+  - name: 597 US
+    type: trojan
+    server: 167.82.76.27
+    port: 443
+    password: MiTiVPN
+    sni: ssl.fastly.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+      headers:
+        Host: mitivpn---ss--s---mitivpn-3.global.ssl.fastly.net
+    udp: true
+  - name: 760 US
     server: notdirect.howhealthyistoomajreally.homes
     port: 443
     type: trojan
@@ -1736,7 +1772,7 @@ proxies:
       path: /ilb9fuWfuqWDjlQrGCkIH66kMFPa
       headers:
         Host: notdirect.howhealthyistoomajreally.homes
-  - name: 755 US
+  - name: 761 US
     server: cnamemc1.cdncisco4.co
     port: 443
     type: trojan
@@ -1748,7 +1784,7 @@ proxies:
       path: /422Kdfwzf49IxeZJa
       headers:
         Host: c1mc.cdncisco4.co
-  - name: 756 AU
+  - name: 762 AU
     server: cnamemt.ciscocdn1.live
     port: 443
     type: trojan
@@ -1760,7 +1796,7 @@ proxies:
       path: /rDCYQta83d0oPABKBhcIX
       headers:
         Host: c2mt.ciscocdn1.live
-  - name: 757 AU
+  - name: 763 AU
     server: cnamemk.ciscocdn1.live
     port: 443
     type: trojan
@@ -1772,7 +1808,7 @@ proxies:
       path: /rDCYQta83d0oPABKBhcIX
       headers:
         Host: c2mk.ciscocdn1.live
-  - name: 758 AU
+  - name: 764 AU
     server: cnamemc.ciscocdn1.live
     port: 443
     type: trojan

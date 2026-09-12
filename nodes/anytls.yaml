@@ -1,5 +1,11 @@
 proxies:
-  - name: 760 US
+  - name: 647 DE
+    server: 178.105.126.242
+    port: 443
+    type: anytls
+    password: e70ec0f2ab60e8c22b316156bf9ac43fec98b45be6681401
+    skip-cert-verify: true
+  - name: 766 US
     password: github.com/Alvin9999-newpac/fanqiang
     port: 19000
     server: anytls2.864106.xyz
