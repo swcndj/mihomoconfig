@@ -1,14 +1,50 @@
 proxies:
-  - name: 647 DE
-    server: 178.105.126.242
-    port: 443
-    type: anytls
-    password: e70ec0f2ab60e8c22b316156bf9ac43fec98b45be6681401
-    skip-cert-verify: true
-  - name: 766 US
+  - name: 665 US
     password: github.com/Alvin9999-newpac/fanqiang
     port: 19000
     server: anytls2.864106.xyz
     skip-cert-verify: true
     sni: anytls2.864106.xyz
     type: anytls
+  - name: 710 TW
+    password: ec270101-b7c0-4f53-93cd-41ff2ad8983f
+    port: 40071
+    server: tw1.catzl.top
+    type: anytls
+    udp: true
+    sni: tw1.catzl.top
+  - name: 711 US
+    password: ec270101-b7c0-4f53-93cd-41ff2ad8983f
+    port: 40022
+    server: us2.catzl.top
+    type: anytls
+    udp: true
+    sni: us2.catzl.top
+  - name: 712 KR
+    password: 6d6a1924-ff1f-4791-9640-76b1b1424e4e
+    port: 40041
+    server: kr1.catzl.top
+    type: anytls
+    udp: true
+    sni: kr1.catzl.top
+  - name: 713 KR
+    password: ec270101-b7c0-4f53-93cd-41ff2ad8983f
+    port: 40042
+    server: kr2.catzl.top
+    type: anytls
+    udp: true
+    sni: kr2.catzl.top
+  - name: 714 JP
+    password: 6d6a1924-ff1f-4791-9640-76b1b1424e4e
+    port: 40054
+    server: jp4.catzl.top
+    type: anytls
+    udp: true
+    sni: jp4.catzl.top
+  - name: 715 JP
+    password: ec270101-b7c0-4f53-93cd-41ff2ad8983f
+    port: 40055
+    server: jp5.catzl.top
+    type: anytls
+    udp: true
+    sni: jp5.catzl.top
